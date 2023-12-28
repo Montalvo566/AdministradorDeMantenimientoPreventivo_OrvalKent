@@ -14,3 +14,4 @@ C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.exe
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.pdb
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.Login.resources
+C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.MenuPrincipal.resources
