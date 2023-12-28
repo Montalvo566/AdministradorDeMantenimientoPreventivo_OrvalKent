@@ -21,14 +21,14 @@ namespace Presentation
         //Funciones para ocultar el diseño de los paneles con submenus//
         private void personalizarDiseño()
         {
-            panelMenuPrincipal.Visible = false;
+            panelSecciones.Visible = false;
         }
 
         private void ocultarSubmenus()
         {
-            if (panelMenuPrincipal.Visible == true)
+            if (panelSecciones.Visible == true)
             {
-                panelMenuPrincipal.Visible = false;
+                panelSecciones.Visible = false;
             }
         }
 
@@ -51,11 +51,7 @@ namespace Presentation
         //Menu Principal
         private void btnMenuPrincipal_Click(object sender, EventArgs e)
         {
-            mostrarSubmenus(panelMenuPrincipal);
-        }
-        private void btnSeccionMenu_Click(object sender, EventArgs e)
-        {
-            abrirFormularioHijo(new Form1());
+            abrirFormularioHijo(new Form4());
             ocultarSubmenus();
         }
 
@@ -70,6 +66,17 @@ namespace Presentation
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             abrirFormularioHijo(new Form3());
+            ocultarSubmenus();
+        }
+
+        //Secciones desplegables
+        private void btnSecciones_Click(object sender, EventArgs e)
+        {
+            mostrarSubmenus(panelSecciones);
+        }
+        private void btnSeccionMenu_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new Form1());
             ocultarSubmenus();
         }
         //Fin//
@@ -93,6 +100,32 @@ namespace Presentation
             childForm.BringToFront();
             childForm.Show();
             
+        }
+        //Fin//
+
+        //Funcionalidades de los botones cerrar ventana, minimizar y maximizar//
+        private void btnCerrarVentana_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMinimizarVentana_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMaximizarVentana_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                // Si la ventana está en estado normal, maximízala
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                // Si la ventana está maximizada, restaura al tamaño original
+                this.WindowState = FormWindowState.Normal;
+            }
         }
         //Fin//
 
