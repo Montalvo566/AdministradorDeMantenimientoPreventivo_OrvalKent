@@ -7,17 +7,58 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FontAwesome.Sharp;
 
 namespace Presentation
 {
     public partial class MenuPrincipal : Form
     {
+        private IconButton currentBtn;
+        private Panel leftBorderBtn;
+
         public MenuPrincipal()
         {
             InitializeComponent();
             personalizarDiseño();
 
+            leftBorderBtn = new Panel();
+            leftBorderBtn.Size = new Size(7, 60);
+            pMenuLateral.Controls.Add(leftBorderBtn);
+
         }
+
+
+        //Estructura y diseño de los botones del menu lateral//
+        private struct RGBColors
+        {
+            public static Color color1 = Color.FromArgb(24, 161, 251);
+            public static Color color2 = Color.FromArgb(249, 88, 155);
+        }
+        private void botonActivado(object senderBtn, Color color)
+        {
+            if (senderBtn != null)
+            {
+                botonDesabilitado();
+
+                //Diseño de botones
+                currentBtn = (IconButton)senderBtn;
+                currentBtn.BackColor = Color.FromArgb(37, 36,81);
+                currentBtn.ForeColor = color;
+                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                currentBtn.IconColor = color;
+            }
+        }
+        private void botonDesabilitado()
+        {
+            if (currentBtn != null)
+            {
+                currentBtn.BackColor = Color.FromArgb(26, 25, 62);
+                currentBtn.ForeColor = Color.Gainsboro;
+                currentBtn.IconColor = Color.Gainsboro;
+            }
+        }
+        //Fin//
+
 
         //Funciones para ocultar el diseño de los paneles con submenus//
         private void personalizarDiseño()
@@ -52,6 +93,7 @@ namespace Presentation
         //Menu Principal
         private void btnMenuPrincipal_Click(object sender, EventArgs e)
         {
+            botonActivado(sender, RGBColors.color1);
             abrirFormularioHijo(new FormularioMenu());
             ocultarSubmenus();
         }
@@ -59,6 +101,7 @@ namespace Presentation
         //Actividades
         private void btnActividades_Click(object sender, EventArgs e)
         {
+            botonActivado(sender, RGBColors.color1);
             abrirFormularioHijo(new Actividades());
             ocultarSubmenus();
         }
@@ -66,6 +109,7 @@ namespace Presentation
         //Usuarios
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
+            botonActivado(sender, RGBColors.color1);
             abrirFormularioHijo(new Usuarios());
             ocultarSubmenus();
         }
@@ -73,6 +117,7 @@ namespace Presentation
         //Secciones desplegables
         private void btnTareasAsignadas_Click(object sender, EventArgs e)
         {
+            botonActivado(sender, RGBColors.color1);
             mostrarSubmenus(panelSeccionTareas);
         }
         private void btnSeccionTareas_Click(object sender, EventArgs e)
@@ -80,7 +125,15 @@ namespace Presentation
             abrirFormularioHijo(new TareasAsignadas());
             ocultarSubmenus();
         }
+
+        //Boton de cerrar sesión
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            botonActivado(sender, RGBColors.color2);
+            ocultarSubmenus();
+        }
         //Fin//
+
 
         //Funciones para abrir formularios hijos//
         private Form activeForm = null;

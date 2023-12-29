@@ -37,8 +37,9 @@ namespace Presentation
             this.btnActividades = new FontAwesome.Sharp.IconButton();
             this.btnMenuPrincipal = new FontAwesome.Sharp.IconButton();
             this.pLogo = new System.Windows.Forms.Panel();
-            this.panelFormularioHijo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelFormularioHijo = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
             this.pMenuLateral.SuspendLayout();
             this.panelSeccionTareas.SuspendLayout();
             this.pLogo.SuspendLayout();
@@ -48,7 +49,8 @@ namespace Presentation
             // pMenuLateral
             // 
             this.pMenuLateral.AutoScroll = true;
-            this.pMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.pMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.pMenuLateral.Controls.Add(this.btnCerrarSesion);
             this.pMenuLateral.Controls.Add(this.panelSeccionTareas);
             this.pMenuLateral.Controls.Add(this.btnTareasAsignadas);
             this.pMenuLateral.Controls.Add(this.btnUsuarios);
@@ -63,21 +65,22 @@ namespace Presentation
             // 
             // panelSeccionTareas
             // 
-            this.panelSeccionTareas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelSeccionTareas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.panelSeccionTareas.Controls.Add(this.btnSeccionTareas);
             this.panelSeccionTareas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSeccionTareas.Location = new System.Drawing.Point(0, 351);
+            this.panelSeccionTareas.Location = new System.Drawing.Point(0, 411);
             this.panelSeccionTareas.Name = "panelSeccionTareas";
-            this.panelSeccionTareas.Size = new System.Drawing.Size(244, 67);
+            this.panelSeccionTareas.Size = new System.Drawing.Size(244, 93);
             this.panelSeccionTareas.TabIndex = 2;
             // 
             // btnSeccionTareas
             // 
-            this.btnSeccionTareas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnSeccionTareas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.btnSeccionTareas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeccionTareas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSeccionTareas.FlatAppearance.BorderSize = 0;
             this.btnSeccionTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeccionTareas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeccionTareas.ForeColor = System.Drawing.Color.White;
             this.btnSeccionTareas.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSeccionTareas.IconColor = System.Drawing.Color.Black;
@@ -85,7 +88,7 @@ namespace Presentation
             this.btnSeccionTareas.Location = new System.Drawing.Point(0, 0);
             this.btnSeccionTareas.Name = "btnSeccionTareas";
             this.btnSeccionTareas.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnSeccionTareas.Size = new System.Drawing.Size(244, 40);
+            this.btnSeccionTareas.Size = new System.Drawing.Size(244, 55);
             this.btnSeccionTareas.TabIndex = 0;
             this.btnSeccionTareas.Text = "Seccion";
             this.btnSeccionTareas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -94,85 +97,102 @@ namespace Presentation
             // 
             // btnTareasAsignadas
             // 
-            this.btnTareasAsignadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnTareasAsignadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.btnTareasAsignadas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTareasAsignadas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTareasAsignadas.FlatAppearance.BorderSize = 0;
             this.btnTareasAsignadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTareasAsignadas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTareasAsignadas.ForeColor = System.Drawing.Color.White;
-            this.btnTareasAsignadas.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnTareasAsignadas.IconColor = System.Drawing.Color.Black;
+            this.btnTareasAsignadas.IconChar = FontAwesome.Sharp.IconChar.Sliders;
+            this.btnTareasAsignadas.IconColor = System.Drawing.Color.White;
             this.btnTareasAsignadas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTareasAsignadas.Location = new System.Drawing.Point(0, 306);
+            this.btnTareasAsignadas.IconSize = 30;
+            this.btnTareasAsignadas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTareasAsignadas.Location = new System.Drawing.Point(0, 351);
             this.btnTareasAsignadas.Name = "btnTareasAsignadas";
             this.btnTareasAsignadas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnTareasAsignadas.Size = new System.Drawing.Size(244, 45);
+            this.btnTareasAsignadas.Size = new System.Drawing.Size(244, 60);
             this.btnTareasAsignadas.TabIndex = 2;
             this.btnTareasAsignadas.Text = "Tareas Asignadas";
             this.btnTareasAsignadas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTareasAsignadas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTareasAsignadas.UseVisualStyleBackColor = false;
             this.btnTareasAsignadas.Click += new System.EventHandler(this.btnTareasAsignadas_Click);
             // 
             // btnUsuarios
             // 
-            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUsuarios.FlatAppearance.BorderSize = 0;
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnUsuarios.IconColor = System.Drawing.Color.Black;
+            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
+            this.btnUsuarios.IconColor = System.Drawing.Color.White;
             this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUsuarios.Location = new System.Drawing.Point(0, 261);
+            this.btnUsuarios.IconSize = 30;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 291);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnUsuarios.Size = new System.Drawing.Size(244, 45);
+            this.btnUsuarios.Size = new System.Drawing.Size(244, 60);
             this.btnUsuarios.TabIndex = 3;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUsuarios.UseVisualStyleBackColor = false;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnActividades
             // 
-            this.btnActividades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnActividades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.btnActividades.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActividades.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnActividades.FlatAppearance.BorderSize = 0;
             this.btnActividades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActividades.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActividades.ForeColor = System.Drawing.Color.White;
-            this.btnActividades.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnActividades.IconColor = System.Drawing.Color.Black;
+            this.btnActividades.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnActividades.IconColor = System.Drawing.Color.White;
             this.btnActividades.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnActividades.Location = new System.Drawing.Point(0, 216);
+            this.btnActividades.IconSize = 30;
+            this.btnActividades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActividades.Location = new System.Drawing.Point(0, 231);
             this.btnActividades.Name = "btnActividades";
             this.btnActividades.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnActividades.Size = new System.Drawing.Size(244, 45);
+            this.btnActividades.Size = new System.Drawing.Size(244, 60);
             this.btnActividades.TabIndex = 2;
             this.btnActividades.Text = "Actividades";
             this.btnActividades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActividades.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnActividades.UseVisualStyleBackColor = false;
             this.btnActividades.Click += new System.EventHandler(this.btnActividades_Click);
             // 
             // btnMenuPrincipal
             // 
+            this.btnMenuPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.btnMenuPrincipal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenuPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMenuPrincipal.FlatAppearance.BorderSize = 0;
             this.btnMenuPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuPrincipal.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuPrincipal.ForeColor = System.Drawing.Color.White;
-            this.btnMenuPrincipal.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnMenuPrincipal.IconColor = System.Drawing.Color.Black;
+            this.btnMenuPrincipal.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.btnMenuPrincipal.IconColor = System.Drawing.Color.White;
             this.btnMenuPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMenuPrincipal.IconSize = 30;
+            this.btnMenuPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuPrincipal.Location = new System.Drawing.Point(0, 171);
             this.btnMenuPrincipal.Name = "btnMenuPrincipal";
             this.btnMenuPrincipal.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMenuPrincipal.Size = new System.Drawing.Size(244, 45);
+            this.btnMenuPrincipal.Size = new System.Drawing.Size(244, 60);
             this.btnMenuPrincipal.TabIndex = 1;
             this.btnMenuPrincipal.Text = "Menú Principal";
             this.btnMenuPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuPrincipal.UseVisualStyleBackColor = true;
+            this.btnMenuPrincipal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenuPrincipal.UseVisualStyleBackColor = false;
             this.btnMenuPrincipal.Click += new System.EventHandler(this.btnMenuPrincipal_Click);
             // 
             // pLogo
@@ -184,15 +204,6 @@ namespace Presentation
             this.pLogo.Size = new System.Drawing.Size(244, 171);
             this.pLogo.TabIndex = 0;
             // 
-            // panelFormularioHijo
-            // 
-            this.panelFormularioHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.panelFormularioHijo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFormularioHijo.Location = new System.Drawing.Point(244, 0);
-            this.panelFormularioHijo.Name = "panelFormularioHijo";
-            this.panelFormularioHijo.Size = new System.Drawing.Size(825, 613);
-            this.panelFormularioHijo.TabIndex = 2;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentation.Properties.Resources.OrvalKentLogo;
@@ -202,6 +213,39 @@ namespace Presentation
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panelFormularioHijo
+            // 
+            this.panelFormularioHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            this.panelFormularioHijo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFormularioHijo.Location = new System.Drawing.Point(244, 0);
+            this.panelFormularioHijo.Name = "panelFormularioHijo";
+            this.panelFormularioHijo.Size = new System.Drawing.Size(825, 613);
+            this.panelFormularioHijo.TabIndex = 2;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            this.btnCerrarSesion.IconColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarSesion.IconSize = 30;
+            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 553);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(244, 60);
+            this.btnCerrarSesion.TabIndex = 4;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // MenuPrincipal
             // 
@@ -235,6 +279,7 @@ namespace Presentation
         private System.Windows.Forms.Panel panelFormularioHijo;
         private FontAwesome.Sharp.IconButton btnTareasAsignadas;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton btnCerrarSesion;
     }
 }
 

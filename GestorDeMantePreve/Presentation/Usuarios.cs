@@ -19,7 +19,7 @@ namespace Presentation
 
         private void btnCerrarFormulario_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
     }
 }
