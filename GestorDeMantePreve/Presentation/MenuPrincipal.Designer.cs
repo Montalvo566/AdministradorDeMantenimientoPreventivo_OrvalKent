@@ -30,24 +30,27 @@ namespace Presentation
         private void InitializeComponent()
         {
             this.pMenuLateral = new System.Windows.Forms.Panel();
-            this.panelSecciones = new System.Windows.Forms.Panel();
-            this.btnSeccionMenu = new FontAwesome.Sharp.IconButton();
-            this.btnSecciones = new FontAwesome.Sharp.IconButton();
+            this.panelSeccionTareas = new System.Windows.Forms.Panel();
+            this.btnSeccionTareas = new FontAwesome.Sharp.IconButton();
+            this.btnTareasAsignadas = new FontAwesome.Sharp.IconButton();
             this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.btnActividades = new FontAwesome.Sharp.IconButton();
             this.btnMenuPrincipal = new FontAwesome.Sharp.IconButton();
             this.pLogo = new System.Windows.Forms.Panel();
             this.panelFormularioHijo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pMenuLateral.SuspendLayout();
-            this.panelSecciones.SuspendLayout();
+            this.panelSeccionTareas.SuspendLayout();
+            this.pLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pMenuLateral
             // 
             this.pMenuLateral.AutoScroll = true;
             this.pMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.pMenuLateral.Controls.Add(this.panelSecciones);
-            this.pMenuLateral.Controls.Add(this.btnSecciones);
+            this.pMenuLateral.Controls.Add(this.panelSeccionTareas);
+            this.pMenuLateral.Controls.Add(this.btnTareasAsignadas);
             this.pMenuLateral.Controls.Add(this.btnUsuarios);
             this.pMenuLateral.Controls.Add(this.btnActividades);
             this.pMenuLateral.Controls.Add(this.btnMenuPrincipal);
@@ -58,57 +61,57 @@ namespace Presentation
             this.pMenuLateral.Size = new System.Drawing.Size(244, 613);
             this.pMenuLateral.TabIndex = 0;
             // 
-            // panelSecciones
+            // panelSeccionTareas
             // 
-            this.panelSecciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelSecciones.Controls.Add(this.btnSeccionMenu);
-            this.panelSecciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSecciones.Location = new System.Drawing.Point(0, 326);
-            this.panelSecciones.Name = "panelSecciones";
-            this.panelSecciones.Size = new System.Drawing.Size(244, 67);
-            this.panelSecciones.TabIndex = 2;
+            this.panelSeccionTareas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelSeccionTareas.Controls.Add(this.btnSeccionTareas);
+            this.panelSeccionTareas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSeccionTareas.Location = new System.Drawing.Point(0, 351);
+            this.panelSeccionTareas.Name = "panelSeccionTareas";
+            this.panelSeccionTareas.Size = new System.Drawing.Size(244, 67);
+            this.panelSeccionTareas.TabIndex = 2;
             // 
-            // btnSeccionMenu
+            // btnSeccionTareas
             // 
-            this.btnSeccionMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnSeccionMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSeccionMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSeccionMenu.FlatAppearance.BorderSize = 0;
-            this.btnSeccionMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeccionMenu.ForeColor = System.Drawing.Color.White;
-            this.btnSeccionMenu.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnSeccionMenu.IconColor = System.Drawing.Color.Black;
-            this.btnSeccionMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSeccionMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnSeccionMenu.Name = "btnSeccionMenu";
-            this.btnSeccionMenu.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnSeccionMenu.Size = new System.Drawing.Size(244, 40);
-            this.btnSeccionMenu.TabIndex = 0;
-            this.btnSeccionMenu.Text = "Seccion";
-            this.btnSeccionMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeccionMenu.UseVisualStyleBackColor = false;
-            this.btnSeccionMenu.Click += new System.EventHandler(this.btnSeccionMenu_Click);
+            this.btnSeccionTareas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnSeccionTareas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeccionTareas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSeccionTareas.FlatAppearance.BorderSize = 0;
+            this.btnSeccionTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeccionTareas.ForeColor = System.Drawing.Color.White;
+            this.btnSeccionTareas.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnSeccionTareas.IconColor = System.Drawing.Color.Black;
+            this.btnSeccionTareas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSeccionTareas.Location = new System.Drawing.Point(0, 0);
+            this.btnSeccionTareas.Name = "btnSeccionTareas";
+            this.btnSeccionTareas.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnSeccionTareas.Size = new System.Drawing.Size(244, 40);
+            this.btnSeccionTareas.TabIndex = 0;
+            this.btnSeccionTareas.Text = "Seccion";
+            this.btnSeccionTareas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeccionTareas.UseVisualStyleBackColor = false;
+            this.btnSeccionTareas.Click += new System.EventHandler(this.btnSeccionTareas_Click);
             // 
-            // btnSecciones
+            // btnTareasAsignadas
             // 
-            this.btnSecciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.btnSecciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSecciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSecciones.FlatAppearance.BorderSize = 0;
-            this.btnSecciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSecciones.ForeColor = System.Drawing.Color.White;
-            this.btnSecciones.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnSecciones.IconColor = System.Drawing.Color.Black;
-            this.btnSecciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSecciones.Location = new System.Drawing.Point(0, 281);
-            this.btnSecciones.Name = "btnSecciones";
-            this.btnSecciones.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSecciones.Size = new System.Drawing.Size(244, 45);
-            this.btnSecciones.TabIndex = 2;
-            this.btnSecciones.Text = "Secciones";
-            this.btnSecciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSecciones.UseVisualStyleBackColor = false;
-            this.btnSecciones.Click += new System.EventHandler(this.btnSecciones_Click);
+            this.btnTareasAsignadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnTareasAsignadas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTareasAsignadas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTareasAsignadas.FlatAppearance.BorderSize = 0;
+            this.btnTareasAsignadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTareasAsignadas.ForeColor = System.Drawing.Color.White;
+            this.btnTareasAsignadas.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnTareasAsignadas.IconColor = System.Drawing.Color.Black;
+            this.btnTareasAsignadas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTareasAsignadas.Location = new System.Drawing.Point(0, 306);
+            this.btnTareasAsignadas.Name = "btnTareasAsignadas";
+            this.btnTareasAsignadas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTareasAsignadas.Size = new System.Drawing.Size(244, 45);
+            this.btnTareasAsignadas.TabIndex = 2;
+            this.btnTareasAsignadas.Text = "Tareas Asignadas";
+            this.btnTareasAsignadas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTareasAsignadas.UseVisualStyleBackColor = false;
+            this.btnTareasAsignadas.Click += new System.EventHandler(this.btnTareasAsignadas_Click);
             // 
             // btnUsuarios
             // 
@@ -121,7 +124,7 @@ namespace Presentation
             this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnUsuarios.IconColor = System.Drawing.Color.Black;
             this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUsuarios.Location = new System.Drawing.Point(0, 236);
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 261);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnUsuarios.Size = new System.Drawing.Size(244, 45);
@@ -142,7 +145,7 @@ namespace Presentation
             this.btnActividades.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnActividades.IconColor = System.Drawing.Color.Black;
             this.btnActividades.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnActividades.Location = new System.Drawing.Point(0, 191);
+            this.btnActividades.Location = new System.Drawing.Point(0, 216);
             this.btnActividades.Name = "btnActividades";
             this.btnActividades.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnActividades.Size = new System.Drawing.Size(244, 45);
@@ -162,7 +165,7 @@ namespace Presentation
             this.btnMenuPrincipal.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnMenuPrincipal.IconColor = System.Drawing.Color.Black;
             this.btnMenuPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMenuPrincipal.Location = new System.Drawing.Point(0, 146);
+            this.btnMenuPrincipal.Location = new System.Drawing.Point(0, 171);
             this.btnMenuPrincipal.Name = "btnMenuPrincipal";
             this.btnMenuPrincipal.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMenuPrincipal.Size = new System.Drawing.Size(244, 45);
@@ -174,10 +177,11 @@ namespace Presentation
             // 
             // pLogo
             // 
+            this.pLogo.Controls.Add(this.pictureBox1);
             this.pLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pLogo.Location = new System.Drawing.Point(0, 0);
             this.pLogo.Name = "pLogo";
-            this.pLogo.Size = new System.Drawing.Size(244, 146);
+            this.pLogo.Size = new System.Drawing.Size(244, 171);
             this.pLogo.TabIndex = 0;
             // 
             // panelFormularioHijo
@@ -188,6 +192,16 @@ namespace Presentation
             this.panelFormularioHijo.Name = "panelFormularioHijo";
             this.panelFormularioHijo.Size = new System.Drawing.Size(825, 613);
             this.panelFormularioHijo.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentation.Properties.Resources.OrvalKentLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(218, 140);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // MenuPrincipal
             // 
@@ -202,7 +216,9 @@ namespace Presentation
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Principal";
             this.pMenuLateral.ResumeLayout(false);
-            this.panelSecciones.ResumeLayout(false);
+            this.panelSeccionTareas.ResumeLayout(false);
+            this.pLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -213,11 +229,12 @@ namespace Presentation
         private FontAwesome.Sharp.IconButton btnActividades;
         private FontAwesome.Sharp.IconButton btnMenuPrincipal;
         private System.Windows.Forms.Panel pLogo;
-        private FontAwesome.Sharp.IconButton btnSeccionMenu;
+        private FontAwesome.Sharp.IconButton btnSeccionTareas;
         private FontAwesome.Sharp.IconButton btnUsuarios;
-        private System.Windows.Forms.Panel panelSecciones;
+        private System.Windows.Forms.Panel panelSeccionTareas;
         private System.Windows.Forms.Panel panelFormularioHijo;
-        private FontAwesome.Sharp.IconButton btnSecciones;
+        private FontAwesome.Sharp.IconButton btnTareasAsignadas;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

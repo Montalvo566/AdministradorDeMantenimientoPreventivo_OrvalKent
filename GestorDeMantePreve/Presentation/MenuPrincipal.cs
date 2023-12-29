@@ -22,14 +22,14 @@ namespace Presentation
         //Funciones para ocultar el diseño de los paneles con submenus//
         private void personalizarDiseño()
         {
-            panelSecciones.Visible = false;
+            panelSeccionTareas.Visible = false;
         }
 
         private void ocultarSubmenus()
         {
-            if (panelSecciones.Visible == true)
+            if (panelSeccionTareas.Visible == true)
             {
-                panelSecciones.Visible = false;
+                panelSeccionTareas.Visible = false;
             }
         }
 
@@ -71,13 +71,13 @@ namespace Presentation
         }
 
         //Secciones desplegables
-        private void btnSecciones_Click(object sender, EventArgs e)
+        private void btnTareasAsignadas_Click(object sender, EventArgs e)
         {
-            mostrarSubmenus(panelSecciones);
+            mostrarSubmenus(panelSeccionTareas);
         }
-        private void btnSeccionMenu_Click(object sender, EventArgs e)
+        private void btnSeccionTareas_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new Form1());
+            abrirFormularioHijo(new TareasAsignadas());
             ocultarSubmenus();
         }
         //Fin//

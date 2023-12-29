@@ -1,7 +1,7 @@
 ﻿
 namespace Presentation
 {
-    partial class Form1
+    partial class TareasAsignadas
     {
         /// <summary>
         /// Required designer variable.
