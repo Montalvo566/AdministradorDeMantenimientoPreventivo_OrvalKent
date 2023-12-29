@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Domain;
 
 namespace Presentation
 {
@@ -60,5 +61,52 @@ namespace Presentation
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         //Fin//
+
+        //Validación del Inicio de Sesión
+        private void btnInicioSesion_Click(object sender, EventArgs e)
+        {
+            if (tbUsuario.Text != "")
+            {
+                if(tbPassword.Text != "")
+                {
+                    UserModel user = new UserModel();
+                    var loginValido = user.LoginUser(tbUsuario.Text, tbPassword.Text);
+
+                    //Validacion para abrir el menu principal y cerrar el login
+                    if (loginValido == true)
+                    {
+                        MenuPrincipal menuPrincipal = new MenuPrincipal();
+                        menuPrincipal.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        errorMensajeLogin("Datos incorrectos, ingreselos otraves");
+                        tbPassword.Clear();
+                        tbUsuario.Focus();
+                    }
+                }
+                else
+                {
+                    errorMensajeLogin("Ingresa la contraseña");
+                }
+            }
+            else
+            {
+                errorMensajeLogin("Ingresa el correo electronico");
+            }
+        }
+        private void errorMensajeLogin(string mensaje)//Mensaje de campos vacios
+        {
+            lbErrorInicioSesion.Text = mensaje;
+            lbErrorInicioSesion.Visible = true;
+        }
+        //Fin//
+
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

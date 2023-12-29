@@ -40,13 +40,14 @@ namespace Presentation
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.btnInicioSesion = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbErrorInicioSesion = new System.Windows.Forms.Label();
             this.header1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // header1
             // 
-            this.header1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.header1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.header1.Controls.Add(this.label1);
             this.header1.Controls.Add(this.btnMinVentana);
             this.header1.Controls.Add(this.btnCerrarVentana);
@@ -117,7 +118,7 @@ namespace Presentation
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(38, 325);
+            this.label2.Location = new System.Drawing.Point(38, 288);
             this.label2.Margin = new System.Windows.Forms.Padding(3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(231, 30);
@@ -127,9 +128,9 @@ namespace Presentation
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentation.Properties.Resources.OrvalKentLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 57);
+            this.pictureBox1.Location = new System.Drawing.Point(43, 47);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(494, 227);
+            this.pictureBox1.Size = new System.Drawing.Size(494, 209);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -138,7 +139,7 @@ namespace Presentation
             // tbUsuario
             // 
             this.tbUsuario.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUsuario.Location = new System.Drawing.Point(43, 361);
+            this.tbUsuario.Location = new System.Drawing.Point(43, 324);
             this.tbUsuario.Multiline = true;
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(494, 38);
@@ -150,7 +151,7 @@ namespace Presentation
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(38, 431);
+            this.label3.Location = new System.Drawing.Point(38, 392);
             this.label3.Margin = new System.Windows.Forms.Padding(3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(281, 30);
@@ -160,7 +161,7 @@ namespace Presentation
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(43, 467);
+            this.tbPassword.Location = new System.Drawing.Point(43, 428);
             this.tbPassword.Multiline = true;
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(494, 38);
@@ -168,22 +169,23 @@ namespace Presentation
             // 
             // btnInicioSesion
             // 
-            this.btnInicioSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnInicioSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.btnInicioSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicioSesion.FlatAppearance.BorderSize = 0;
             this.btnInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInicioSesion.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicioSesion.ForeColor = System.Drawing.Color.White;
-            this.btnInicioSesion.Location = new System.Drawing.Point(43, 543);
+            this.btnInicioSesion.Location = new System.Drawing.Point(43, 558);
             this.btnInicioSesion.Name = "btnInicioSesion";
-            this.btnInicioSesion.Size = new System.Drawing.Size(494, 68);
+            this.btnInicioSesion.Size = new System.Drawing.Size(494, 62);
             this.btnInicioSesion.TabIndex = 9;
             this.btnInicioSesion.Text = "Iniciar Sesión";
             this.btnInicioSesion.UseVisualStyleBackColor = false;
+            this.btnInicioSesion.Click += new System.EventHandler(this.btnInicioSesion_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 639);
             this.panel1.Name = "panel1";
@@ -191,12 +193,24 @@ namespace Presentation
             this.panel1.TabIndex = 10;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
+            // lbErrorInicioSesion
+            // 
+            this.lbErrorInicioSesion.AutoSize = true;
+            this.lbErrorInicioSesion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbErrorInicioSesion.Location = new System.Drawing.Point(258, 502);
+            this.lbErrorInicioSesion.Name = "lbErrorInicioSesion";
+            this.lbErrorInicioSesion.Size = new System.Drawing.Size(158, 17);
+            this.lbErrorInicioSesion.TabIndex = 11;
+            this.lbErrorInicioSesion.Text = "Error de inicio de sesion";
+            this.lbErrorInicioSesion.Visible = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(578, 649);
+            this.Controls.Add(this.lbErrorInicioSesion);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnInicioSesion);
             this.Controls.Add(this.tbPassword);
@@ -210,6 +224,7 @@ namespace Presentation
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de Sesión";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             this.header1.ResumeLayout(false);
             this.header1.PerformLayout();
@@ -232,6 +247,7 @@ namespace Presentation
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Button btnInicioSesion;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbErrorInicioSesion;
     }
 }
 

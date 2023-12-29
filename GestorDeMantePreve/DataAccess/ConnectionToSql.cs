@@ -15,7 +15,7 @@ namespace DataAccess
         //Constructor
         public ConnectionToSql()
         {
-            connectionString = "Server=; DataBase=; integrated security=";
+            connectionString = "Server=DESKTOP-3FIQUSR; DataBase=SAMP_BasedeDatosTemporal; integrated security=true";
         }
 
         protected SqlConnection GetConnection()
