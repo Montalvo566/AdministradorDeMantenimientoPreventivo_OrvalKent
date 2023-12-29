@@ -1,7 +1,7 @@
 ﻿
 namespace Presentation
 {
-    partial class Form2
+    partial class Actividades
     {
         /// <summary>
         /// Required designer variable.
@@ -68,7 +68,7 @@ namespace Presentation
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Actividades";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

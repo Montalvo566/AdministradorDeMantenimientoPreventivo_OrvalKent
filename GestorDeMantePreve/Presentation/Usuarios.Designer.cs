@@ -1,7 +1,7 @@
 ﻿
 namespace Presentation
 {
-    partial class Form3
+    partial class Usuarios
     {
         /// <summary>
         /// Required designer variable.

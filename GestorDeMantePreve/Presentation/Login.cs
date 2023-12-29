@@ -33,11 +33,6 @@ namespace Presentation
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
         //Funcion para poder mover el formulario por la pantalla implementado a diferentes partes del Login//
         private void Login_MouseDown(object sender, MouseEventArgs e)
         {

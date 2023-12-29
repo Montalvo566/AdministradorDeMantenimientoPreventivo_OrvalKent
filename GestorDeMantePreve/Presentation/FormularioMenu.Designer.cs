@@ -1,7 +1,7 @@
 ﻿
 namespace Presentation
 {
-    partial class Form4
+    partial class FormularioMenu
     {
         /// <summary>
         /// Required designer variable.

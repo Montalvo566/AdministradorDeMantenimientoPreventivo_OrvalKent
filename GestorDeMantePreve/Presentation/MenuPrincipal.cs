@@ -52,21 +52,21 @@ namespace Presentation
         //Menu Principal
         private void btnMenuPrincipal_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new Form4());
+            abrirFormularioHijo(new FormularioMenu());
             ocultarSubmenus();
         }
 
         //Actividades
         private void btnActividades_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new Form2());
+            abrirFormularioHijo(new Actividades());
             ocultarSubmenus();
         }
 
         //Usuarios
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new Form3());
+            abrirFormularioHijo(new Usuarios());
             ocultarSubmenus();
         }
 

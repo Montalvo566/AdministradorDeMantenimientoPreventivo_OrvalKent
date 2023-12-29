@@ -46,7 +46,7 @@ namespace Presentation
             // 
             // header1
             // 
-            this.header1.BackColor = System.Drawing.Color.Blue;
+            this.header1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.header1.Controls.Add(this.label1);
             this.header1.Controls.Add(this.btnMinVentana);
             this.header1.Controls.Add(this.btnCerrarVentana);
@@ -60,7 +60,7 @@ namespace Presentation
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Blue;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 3);
@@ -73,9 +73,11 @@ namespace Presentation
             // 
             // btnMinVentana
             // 
+            this.btnMinVentana.BackColor = System.Drawing.Color.Transparent;
             this.btnMinVentana.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnMinVentana.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinVentana.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinVentana.FlatAppearance.BorderSize = 0;
             this.btnMinVentana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinVentana.ForeColor = System.Drawing.Color.Blue;
             this.btnMinVentana.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
@@ -86,14 +88,16 @@ namespace Presentation
             this.btnMinVentana.Name = "btnMinVentana";
             this.btnMinVentana.Size = new System.Drawing.Size(40, 29);
             this.btnMinVentana.TabIndex = 1;
-            this.btnMinVentana.UseVisualStyleBackColor = true;
+            this.btnMinVentana.UseVisualStyleBackColor = false;
             this.btnMinVentana.Click += new System.EventHandler(this.minVentana_Click);
             // 
             // btnCerrarVentana
             // 
+            this.btnCerrarVentana.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrarVentana.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCerrarVentana.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrarVentana.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCerrarVentana.FlatAppearance.BorderSize = 0;
             this.btnCerrarVentana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarVentana.ForeColor = System.Drawing.Color.Blue;
             this.btnCerrarVentana.IconChar = FontAwesome.Sharp.IconChar.X;
@@ -104,7 +108,7 @@ namespace Presentation
             this.btnCerrarVentana.Name = "btnCerrarVentana";
             this.btnCerrarVentana.Size = new System.Drawing.Size(40, 29);
             this.btnCerrarVentana.TabIndex = 0;
-            this.btnCerrarVentana.UseVisualStyleBackColor = true;
+            this.btnCerrarVentana.UseVisualStyleBackColor = false;
             this.btnCerrarVentana.Click += new System.EventHandler(this.cerrarVentana_Click);
             // 
             // label2
@@ -112,7 +116,7 @@ namespace Presentation
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(38, 325);
             this.label2.Margin = new System.Windows.Forms.Padding(3);
             this.label2.Name = "label2";
@@ -145,7 +149,7 @@ namespace Presentation
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(38, 431);
             this.label3.Margin = new System.Windows.Forms.Padding(3);
             this.label3.Name = "label3";
@@ -164,8 +168,9 @@ namespace Presentation
             // 
             // btnInicioSesion
             // 
-            this.btnInicioSesion.BackColor = System.Drawing.Color.Blue;
+            this.btnInicioSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnInicioSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInicioSesion.FlatAppearance.BorderSize = 0;
             this.btnInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInicioSesion.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicioSesion.ForeColor = System.Drawing.Color.White;
@@ -178,7 +183,7 @@ namespace Presentation
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Blue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 639);
             this.panel1.Name = "panel1";
@@ -190,7 +195,7 @@ namespace Presentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(578, 649);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnInicioSesion);
@@ -205,7 +210,6 @@ namespace Presentation
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de Sesión";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             this.header1.ResumeLayout(false);
             this.header1.PerformLayout();
