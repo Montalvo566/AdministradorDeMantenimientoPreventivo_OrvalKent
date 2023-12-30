@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using Common.Cache;
 
 namespace Presentation
 {
@@ -131,6 +132,12 @@ namespace Presentation
         {
             botonActivado(sender, RGBColors.color2);
             ocultarSubmenus();
+            //Mensaje de cerrar sesion y validación
+            if (MessageBox.Show("¿Desea cerrar la sesión?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
         //Fin//
 
@@ -157,6 +164,18 @@ namespace Presentation
         }
         //Fin//
 
+
+        //Funcion para mostrar los datos del usuario que inicio sesion//
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+            cargarDatosUsuario();
+        }
+        private void cargarDatosUsuario()
+        {
+            lbNombreInicioSesion.Text = UserLoginCache.Nombres;
+            lbCorreoInicioSesion.Text = UserLoginCache.Correo;
+        }
+        //Fin//
 
     }
 }

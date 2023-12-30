@@ -118,7 +118,7 @@ namespace Presentation
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(38, 288);
+            this.label2.Location = new System.Drawing.Point(38, 299);
             this.label2.Margin = new System.Windows.Forms.Padding(3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(231, 30);
@@ -130,7 +130,7 @@ namespace Presentation
             this.pictureBox1.Image = global::Presentation.Properties.Resources.OrvalKentLogo;
             this.pictureBox1.Location = new System.Drawing.Point(43, 47);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(494, 209);
+            this.pictureBox1.Size = new System.Drawing.Size(494, 220);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -139,7 +139,7 @@ namespace Presentation
             // tbUsuario
             // 
             this.tbUsuario.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUsuario.Location = new System.Drawing.Point(43, 324);
+            this.tbUsuario.Location = new System.Drawing.Point(43, 335);
             this.tbUsuario.Multiline = true;
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(494, 38);
@@ -151,7 +151,7 @@ namespace Presentation
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(38, 392);
+            this.label3.Location = new System.Drawing.Point(38, 406);
             this.label3.Margin = new System.Windows.Forms.Padding(3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(281, 30);
@@ -161,7 +161,7 @@ namespace Presentation
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(43, 428);
+            this.tbPassword.Location = new System.Drawing.Point(43, 442);
             this.tbPassword.Multiline = true;
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(494, 38);
@@ -196,10 +196,10 @@ namespace Presentation
             // lbErrorInicioSesion
             // 
             this.lbErrorInicioSesion.AutoSize = true;
-            this.lbErrorInicioSesion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbErrorInicioSesion.Location = new System.Drawing.Point(258, 502);
+            this.lbErrorInicioSesion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbErrorInicioSesion.Location = new System.Drawing.Point(192, 518);
             this.lbErrorInicioSesion.Name = "lbErrorInicioSesion";
-            this.lbErrorInicioSesion.Size = new System.Drawing.Size(158, 17);
+            this.lbErrorInicioSesion.Size = new System.Drawing.Size(186, 21);
             this.lbErrorInicioSesion.TabIndex = 11;
             this.lbErrorInicioSesion.Text = "Error de inicio de sesion";
             this.lbErrorInicioSesion.Visible = false;
@@ -224,7 +224,6 @@ namespace Presentation
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de Sesión";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             this.header1.ResumeLayout(false);
             this.header1.PerformLayout();

@@ -62,7 +62,8 @@ namespace Presentation
         }
         //Fin//
 
-        //Validación del Inicio de Sesión
+
+        //Validación del Inicio de Sesión//
         private void btnInicioSesion_Click(object sender, EventArgs e)
         {
             if (tbUsuario.Text != "")
@@ -77,6 +78,7 @@ namespace Presentation
                     {
                         MenuPrincipal menuPrincipal = new MenuPrincipal();
                         menuPrincipal.Show();
+                        menuPrincipal.FormClosed += cerrarSesion;//Sobrecargar el evento con la funcion de cerrar sesion
                         this.Hide();
                     }
                     else
@@ -103,10 +105,16 @@ namespace Presentation
         }
         //Fin//
 
-
-        private void Login_Load(object sender, EventArgs e)
+        //Función para cerrar la sesión del usuario//
+        private void cerrarSesion(object sender, FormClosedEventArgs e)
         {
-
+            tbUsuario.Clear();
+            tbUsuario.Focus();
+            tbPassword.Clear();
+            lbErrorInicioSesion.Visible = false;
+            this.Show();
         }
+        //Fin//
+        
     }
 }
