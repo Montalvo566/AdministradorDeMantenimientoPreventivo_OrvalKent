@@ -9,18 +9,22 @@ namespace DataAccess
 {
     public class ConnectionToSql
     {
-        //String de solo lectura para la cadena de conexión
-        private readonly string connectionString;
 
-        //Constructor
-        public ConnectionToSql()
+
+        private SqlConnection conexion = new SqlConnection("Server=DESKTOP-3FIQUSR; DataBase=SAMP_BasedeDatosTemporal; integrated security=true");
+        public SqlConnection AbrirConexion()
         {
-            connectionString = "Server=DESKTOP-3FIQUSR; DataBase=SAMP_BasedeDatosTemporal; integrated security=true";
+            if (conexion.State == System.Data.ConnectionState.Closed) conexion.Open();
+            {
+                return conexion;
+            }
         }
-
-        protected SqlConnection GetConnection()
+        public SqlConnection CerrarConexion()
         {
-            return new SqlConnection(connectionString);
+            if (conexion.State == System.Data.ConnectionState.Open) conexion.Close();
+            {
+                return conexion;
+            }
         }
     }
 }

@@ -22,12 +22,21 @@ namespace Domain
         }
         //Fin//
 
+
         //Funcion para agregar datos a la tabla de Usuarios: POST//
         public void InsertarUsuarios(string correo, string pass, string nombres, string apPaterno, string apMaterno)
         {
             userCrud.PostUsuarios(correo, pass, nombres, apPaterno, apMaterno);
             //Si quieres convertir datos de tipo int a string puedes usar
             //userCrud.PostUsuarios(Convert.ToDouble(telefono));
+        }
+        //Fin//
+
+
+        //Funcion para editar los datos a la tabla de Usuarios: PUT//
+        public void ActualizarUsuarios(string id, string correo, string pass, string nombres, string apPaterno, string apMaterno)
+        {
+            userCrud.PutUsuarios(Convert.ToInt32(id), correo, pass, nombres, apPaterno, apMaterno);
         }
         //Fin//
 
