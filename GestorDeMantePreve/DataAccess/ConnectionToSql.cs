@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace DataAccess
 {
-    public abstract class ConnectionToSql
+    public class ConnectionToSql
     {
         //String de solo lectura para la cadena de conexión
         private readonly string connectionString;

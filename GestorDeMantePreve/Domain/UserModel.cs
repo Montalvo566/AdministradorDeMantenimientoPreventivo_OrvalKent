@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Domain
 {
@@ -15,5 +17,7 @@ namespace Domain
         {
             return userDao.Login(user, pass);
         }
+
+        
     }
 }
