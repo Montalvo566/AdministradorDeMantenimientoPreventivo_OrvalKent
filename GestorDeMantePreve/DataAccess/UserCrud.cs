@@ -62,14 +62,13 @@ namespace DataAccess
 
 
         //Funcion para realizar modificaciones a los datos de la tabla de usuarios: PUT//
-        public void PutUsuarios(int id, string correo, string pass, string nombres, string apPaterno, string apMaterno)
+        public void PutUsuarios(string correo, string pass, string nombres, string apPaterno, string apMaterno, int id)
         {
             try
             {
                 command.Connection = conexion.AbrirConexion();
-                command.CommandText = "Insert Into Usuarios Values ('" + id + "', '" + correo + "', '" + pass + "', '" + nombres + "', '" + apPaterno + "', '" + apMaterno + "')";
+                command.CommandText = "UPDATE Usuarios SET Correo = '" + correo + "', Pass= '" + pass + "', Nombres = '" + nombres + "', ApPaterno = '" + apPaterno + "', ApMaterno = '" + apMaterno + "' WHERE Id = " + id;
                 command.ExecuteNonQuery();
-
             }
             catch (Exception ex)
             {
@@ -81,5 +80,29 @@ namespace DataAccess
             }
         }
         //Fin//
+
+
+        //Funcion para eliminar registro de la tabla de usuarios: DELETE//
+        public void DeleteUsuarios(int id)
+        {
+            try
+            {
+                command.Connection = conexion.AbrirConexion();
+                command.CommandText = "DELETE FROM Usuarios WHERE Id = @Id";
+                command.Parameters.AddWithValue("@Id", id);
+                command.ExecuteNonQuery();
+                command.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+                string msj = ex.ToString();
+            }
+            finally
+            {
+                command.Connection = conexion.CerrarConexion();
+            }
+        }
+        //Fin//
+
     }
 }
