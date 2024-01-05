@@ -21,4 +21,4 @@ C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.TareasAsignadas.resources
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\bin\Debug\Common.dll
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\bin\Debug\Common.pdb
-C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\bin\Debug\Guna.UI2.dll
+C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\bin\Debug\Guna.UI.dll

@@ -26,17 +26,18 @@ namespace Presentation
         private void Usuarios_Load(object sender, EventArgs e)
         {
             MostrarUsuariosTabla();
+            ConfigurarDataGridView();
         }
         private void MostrarUsuariosTabla()
         {
             UserCrudModel verTabla = new UserCrudModel();
-            gdgvUsuariosTabla.DataSource = verTabla.MostrarUsuarios();
+            dgvUsuariosTabla.DataSource = verTabla.MostrarUsuarios();
         }
         //Fin//
 
 
-        //Boton para guadar los cambios al momento de ejecutar la funcion de PUT y DELETE//
-        private void gbtnGuardarCambios_Click(object sender, EventArgs e)
+        //Boton para guadar los cambios al momento de ejecutar la funcion de PUT//
+        private void btnGuardarCambios_Click(object sender, EventArgs e)
         {
             if (Editar == true)
             {
@@ -67,7 +68,7 @@ namespace Presentation
 
 
         //Funcion para agregar registros a la tabla de usuarios//
-        private void gbtnNuevo_Click(object sender, EventArgs e)
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
             try
             {
@@ -94,18 +95,18 @@ namespace Presentation
 
 
         //Funcion para actualizar los registros de la tabla de usuarios//
-        private void gbtnEditar_Click(object sender, EventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (gdgvUsuariosTabla.SelectedRows.Count > 0)
+            if (dgvUsuariosTabla.SelectedRows.Count > 0)
             {
                 Editar = true;
 
-                tbCorreo.Text = gdgvUsuariosTabla.CurrentRow.Cells["Correo"].Value.ToString();
-                tbPass.Text = gdgvUsuariosTabla.CurrentRow.Cells["Pass"].Value.ToString();
-                tbNombres.Text = gdgvUsuariosTabla.CurrentRow.Cells["Nombres"].Value.ToString();
-                tbApPaterno.Text = gdgvUsuariosTabla.CurrentRow.Cells["ApPaterno"].Value.ToString();
-                tbApMaterno.Text = gdgvUsuariosTabla.CurrentRow.Cells["ApMaterno"].Value.ToString();
-                idUsuario = gdgvUsuariosTabla.CurrentRow.Cells["Id"].Value.ToString();
+                tbCorreo.Text = dgvUsuariosTabla.CurrentRow.Cells["Correo"].Value.ToString();
+                tbPass.Text = dgvUsuariosTabla.CurrentRow.Cells["Pass"].Value.ToString();
+                tbNombres.Text = dgvUsuariosTabla.CurrentRow.Cells["Nombres"].Value.ToString();
+                tbApPaterno.Text = dgvUsuariosTabla.CurrentRow.Cells["ApPaterno"].Value.ToString();
+                tbApMaterno.Text = dgvUsuariosTabla.CurrentRow.Cells["ApMaterno"].Value.ToString();
+                idUsuario = dgvUsuariosTabla.CurrentRow.Cells["Id"].Value.ToString();
             }
             else
             {
@@ -116,11 +117,11 @@ namespace Presentation
 
 
         //Funcion para eliminar campos de la tabla de usuarios//
-        private void gbtnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (gdgvUsuariosTabla.SelectedRows.Count > 0)
+            if (dgvUsuariosTabla.SelectedRows.Count > 0)
             {
-                idUsuario = gdgvUsuariosTabla.CurrentRow.Cells["Id"].Value.ToString();
+                idUsuario = dgvUsuariosTabla.CurrentRow.Cells["Id"].Value.ToString();
                 userCrudTabla.EliminarUsuarios(idUsuario);
                 MessageBox.Show("Usuario eliminado con exito");
                 LimpiarCampos();
@@ -147,7 +148,7 @@ namespace Presentation
 
 
         //Validacion de campos vacios en el formulario//
-        private bool EsCampoValido(Guna.UI2.WinForms.Guna2TextBox campo, string nombreCampo)
+        private bool EsCampoValido(Guna.UI.WinForms.GunaTextBox campo, string nombreCampo)
         {
             if (string.IsNullOrWhiteSpace(campo.Text))
             {
@@ -157,6 +158,12 @@ namespace Presentation
             return true;
         }
         //Fin//
+
+        private void ConfigurarDataGridView()
+        {
+            dgvUsuariosTabla.RowTemplate.Height = 50;
+        }
+
 
     }
 }
