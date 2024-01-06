@@ -33,6 +33,10 @@ namespace Presentation
             UserCrudModel verTabla = new UserCrudModel();
             dgvUsuariosTabla.DataSource = verTabla.MostrarUsuarios();
         }
+        private void ConfigurarDataGridView()
+        {
+            dgvUsuariosTabla.RowTemplate.Height = 50;
+        }
         //Fin//
 
 
@@ -158,12 +162,6 @@ namespace Presentation
             return true;
         }
         //Fin//
-
-        private void ConfigurarDataGridView()
-        {
-            dgvUsuariosTabla.RowTemplate.Height = 50;
-        }
-
 
     }
 }

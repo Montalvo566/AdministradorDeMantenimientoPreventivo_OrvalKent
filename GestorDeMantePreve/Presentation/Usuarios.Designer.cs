@@ -38,9 +38,9 @@ namespace Presentation
             this.btnEditar = new Guna.UI.WinForms.GunaButton();
             this.btnGuardarCambios = new Guna.UI.WinForms.GunaButton();
             this.btnNuevo = new Guna.UI.WinForms.GunaButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tbPass = new Guna.UI.WinForms.GunaTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tbCorreo = new Guna.UI.WinForms.GunaTextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -64,7 +64,6 @@ namespace Presentation
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -106,7 +105,7 @@ namespace Presentation
             this.btnEliminar.OnHoverImage = null;
             this.btnEliminar.OnPressedColor = System.Drawing.Color.Black;
             this.btnEliminar.Radius = 10;
-            this.btnEliminar.Size = new System.Drawing.Size(147, 62);
+            this.btnEliminar.Size = new System.Drawing.Size(138, 62);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -134,7 +133,7 @@ namespace Presentation
             this.btnEditar.OnHoverImage = null;
             this.btnEditar.OnPressedColor = System.Drawing.Color.Black;
             this.btnEditar.Radius = 10;
-            this.btnEditar.Size = new System.Drawing.Size(147, 62);
+            this.btnEditar.Size = new System.Drawing.Size(138, 62);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -162,7 +161,7 @@ namespace Presentation
             this.btnGuardarCambios.OnHoverImage = null;
             this.btnGuardarCambios.OnPressedColor = System.Drawing.Color.Black;
             this.btnGuardarCambios.Radius = 10;
-            this.btnGuardarCambios.Size = new System.Drawing.Size(147, 62);
+            this.btnGuardarCambios.Size = new System.Drawing.Size(138, 62);
             this.btnGuardarCambios.TabIndex = 1;
             this.btnGuardarCambios.Text = "Guardar";
             this.btnGuardarCambios.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -190,27 +189,16 @@ namespace Presentation
             this.btnNuevo.OnHoverImage = null;
             this.btnNuevo.OnPressedColor = System.Drawing.Color.Black;
             this.btnNuevo.Radius = 10;
-            this.btnNuevo.Size = new System.Drawing.Size(147, 62);
+            this.btnNuevo.Size = new System.Drawing.Size(138, 62);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Agregar Usuarios";
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.tbPass);
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.tbCorreo);
             this.panel4.Controls.Add(this.label6);
@@ -244,6 +232,18 @@ namespace Presentation
             this.tbPass.SelectedText = "";
             this.tbPass.Size = new System.Drawing.Size(313, 30);
             this.tbPass.TabIndex = 24;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 23);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Agregar Usuarios";
             // 
             // label7
             // 
@@ -397,7 +397,7 @@ namespace Presentation
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 5);
+            this.label2.Location = new System.Drawing.Point(13, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 23);
             this.label2.TabIndex = 2;
@@ -486,7 +486,6 @@ namespace Presentation
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Usuarios_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
