@@ -13,7 +13,7 @@ namespace Presentation
 {
     public partial class Actividades : Form
     {
-        
+        ActivitiesCrudModel actividad = new ActivitiesCrudModel();
 
         public Actividades()
         {
@@ -25,6 +25,8 @@ namespace Presentation
             ListarAreas();
             ListarEquipos();
             ListarFrecuencias();
+            MostrarTablaActividades();
+            ConfigurarDataGridView();
         }
 
         //Funciones para listar los datos del combobox//
@@ -50,6 +52,44 @@ namespace Presentation
             cmbFrecuencia.DataSource = actividad.ListadoFrecuencias();
             cmbFrecuencia.DisplayMember = "Freciencia";
             cmbFrecuencia.ValueMember = "Id";
+        }
+        //Fin//
+
+
+        //Funcion para mostrar los datos en la tabla de Actividades//
+        private void MostrarTablaActividades()
+        {
+            ActivitiesCrudModel actividad = new ActivitiesCrudModel();
+            dgvActividadesTabla.DataSource = actividad.MostrarActividades();
+        }
+        private void ConfigurarDataGridView()
+        {
+            dgvActividadesTabla.RowTemplate.Height = 50;
+        }
+        //Fin//
+
+
+        //Funcion para agregar datos a la tabla de Actividades//
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            actividad.InsertarActidad(Convert.ToInt32(cmbAreaEmpresa.SelectedValue), Convert.ToInt32(cmbEquipos.SelectedValue),
+            Convert.ToInt32(cmbFrecuencia.SelectedValue), tbFechaMantenimiento.Text, tbActividad.Text, tbFormato.Text);
+            MessageBox.Show("Actividad insertada con éxito");
+            MostrarTablaActividades();
+
+            // Limpiar campos al ejecutar la acción del botón
+            LimpiarCampos();
+        }
+        //Fin//
+
+
+        //Funcion para limpiar los textbox del formulario//
+        private void LimpiarCampos()
+        {
+            //limpiar campos al ejecutar la accion del boton
+            tbFechaMantenimiento.Clear();
+            tbActividad.Clear();
+            tbFormato.Clear();
         }
         //Fin//
 
