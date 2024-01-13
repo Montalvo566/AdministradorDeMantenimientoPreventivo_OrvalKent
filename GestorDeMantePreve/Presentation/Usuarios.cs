@@ -21,21 +21,50 @@ namespace Presentation
         {
             InitializeComponent();
         }
-
+        
         //Funcion para mostrar los datos de la tabla de usuarios//
         private void Usuarios_Load(object sender, EventArgs e)
         {
+            ListarDepartamentos();
+            ListarAreas();
+            ListarPuestos();
             MostrarUsuariosTabla();
             ConfigurarDataGridView();
+            ValdiacionesTipoCampo();
         }
         private void MostrarUsuariosTabla()
         {
-            UserCrudModel verTabla = new UserCrudModel();
-            dgvUsuariosTabla.DataSource = verTabla.MostrarUsuarios();
+            UserCrudModel userCrudTabla = new UserCrudModel();
+            dgvUsuariosTabla.DataSource = userCrudTabla.MostrarTablaUsuarios();
         }
         private void ConfigurarDataGridView()
         {
             dgvUsuariosTabla.RowTemplate.Height = 50;
+        }
+        //Fin//
+
+
+        //Funciones para listar los campos del textbox//
+        private void ListarDepartamentos()
+        {
+            UserCrudModel userCrudTabla = new UserCrudModel();
+            gcmbDepartamento.DataSource = userCrudTabla.ListadoDepartamentos();
+            gcmbDepartamento.DisplayMember = "Departamento";
+            gcmbDepartamento.ValueMember = "Id";
+        }
+        private void ListarAreas()
+        {
+            UserCrudModel userCrudTabla = new UserCrudModel();
+            gcmbArea.DataSource = userCrudTabla.ListadoAreas();
+            gcmbArea.DisplayMember = "Zona";
+            gcmbArea.ValueMember = "Id";
+        }
+        private void ListarPuestos()
+        {
+            UserCrudModel userCrudTabla = new UserCrudModel();
+            gcmbPuesto.DataSource = userCrudTabla.ListadoPuestos();
+            gcmbPuesto.DisplayMember = "Puesto";
+            gcmbPuesto.ValueMember = "Id";
         }
         //Fin//
 
@@ -47,19 +76,17 @@ namespace Presentation
             {
                 try
                 {
-                    if (EsCampoValido(tbNombres, "Nombre completo") &&
-                    EsCampoValido(tbApPaterno, "Apellido paterno") &&
-                    EsCampoValido(tbApMaterno, "Apellido materno") &&
-                    EsCampoValido(tbCorreo, "Correo electronico") &&
-                    EsCampoValido(tbPass, "Contraseña"))
+                    if (EsCampoValido(gtbNumeroTrabajador, "Numero de trabajador") && 
+                        EsCampoValido(gtbNombreCompleto, "Nombre completo") &&
+                        EsOpcionValidaSeleccionada(gcmbDepartamento, "Departamento")&&
+                        EsOpcionValidaSeleccionada(gcmbArea, "Area")&&
+                        EsOpcionValidaSeleccionada(gcmbPuesto, "Puesto")&&
+                        EsCampoValido(gtbCorreo, "Correo electronico")&&
+                        EsCampoValido(gtbPassword, "Contraseña")&&
+                        EsCampoValido(gtbFoto, "Foto"))
                     {
-                        userCrudTabla.ActualizarUsuarios(tbCorreo.Text, tbPass.Text, tbNombres.Text, tbApPaterno.Text, tbApMaterno.Text, idUsuario);
-                        MessageBox.Show("Usuario actualizado con exito");
-                        MostrarUsuariosTabla();
 
-                        //limpiar campos al ejecutar la accion del boton
                         LimpiarCampos();
-                        Editar = false;
                     }
                 }
                 catch (Exception ex)
@@ -76,18 +103,20 @@ namespace Presentation
         {
             try
             {
-                if (EsCampoValido(tbNombres, "Nombre completo") &&
-                    EsCampoValido(tbApPaterno, "Apellido paterno") &&
-                    EsCampoValido(tbApMaterno, "Apellido materno") &&
-                    EsCampoValido(tbCorreo, "Correo electronico") &&
-                    EsCampoValido(tbPass, "Contraseña"))
+                if (EsCampoValido(gtbNumeroTrabajador, "Numero de trabajador") &&
+                        EsCampoValido(gtbNombreCompleto, "Nombre completo") &&
+                        EsOpcionValidaSeleccionada(gcmbDepartamento, "Departamento") &&
+                        EsOpcionValidaSeleccionada(gcmbArea, "Area") &&
+                        EsOpcionValidaSeleccionada(gcmbPuesto, "Puesto") &&
+                        EsCampoValido(gtbCorreo, "Correo electronico") &&
+                        EsCampoValido(gtbPassword, "Contraseña") &&
+                        EsCampoValido(gtbFoto, "Foto"))
                 {
-                    userCrudTabla.InsertarUsuarios(tbCorreo.Text, tbPass.Text, tbNombres.Text, tbApPaterno.Text, tbApMaterno.Text);
-                    MessageBox.Show("Usuario insertado con éxito");
-                    MostrarUsuariosTabla();
-
-                    // Limpiar campos al ejecutar la acción del botón
+                    userCrudTabla.InsertarUsuarios(gtbNombreCompleto.Text, Convert.ToInt32(gtbNumeroTrabajador.Text), Convert.ToInt32(gcmbDepartamento.SelectedValue),
+                    Convert.ToInt32(gcmbArea.SelectedValue), Convert.ToInt32(gcmbPuesto.SelectedValue), gtbCorreo.Text, gtbPassword.Text, gtbFoto.Text);
+                    MessageBox.Show("Usuario registrado con exito");
                     LimpiarCampos();
+                    MostrarUsuariosTabla();
                 }
             }
             catch (Exception ex)
@@ -105,11 +134,14 @@ namespace Presentation
             {
                 Editar = true;
 
-                tbCorreo.Text = dgvUsuariosTabla.CurrentRow.Cells["Correo"].Value.ToString();
-                tbPass.Text = dgvUsuariosTabla.CurrentRow.Cells["Pass"].Value.ToString();
-                tbNombres.Text = dgvUsuariosTabla.CurrentRow.Cells["Nombres"].Value.ToString();
-                tbApPaterno.Text = dgvUsuariosTabla.CurrentRow.Cells["ApPaterno"].Value.ToString();
-                tbApMaterno.Text = dgvUsuariosTabla.CurrentRow.Cells["ApMaterno"].Value.ToString();
+                gtbNombreCompleto.Text = dgvUsuariosTabla.CurrentRow.Cells["NombreCompleto"].Value.ToString();
+                gtbNumeroTrabajador.Text = dgvUsuariosTabla.CurrentRow.Cells["NumeroEmpleado"].Value.ToString();
+                gcmbDepartamento.Text = dgvUsuariosTabla.CurrentRow.Cells["IdDepartamento"].Value.ToString();
+                gcmbArea.Text = dgvUsuariosTabla.CurrentRow.Cells["IdZonaAcceso"].Value.ToString();
+                gcmbPuesto.Text = dgvUsuariosTabla.CurrentRow.Cells["IdPuesto"].Value.ToString();
+                gtbCorreo.Text = dgvUsuariosTabla.CurrentRow.Cells["Correo"].Value.ToString();
+                gtbPassword.Text = dgvUsuariosTabla.CurrentRow.Cells["Contrasena"].Value.ToString();
+                gtbFoto.Text = dgvUsuariosTabla.CurrentRow.Cells["Foto"].Value.ToString();
                 idUsuario = dgvUsuariosTabla.CurrentRow.Cells["Id"].Value.ToString();
             }
             else
@@ -142,16 +174,16 @@ namespace Presentation
         private void LimpiarCampos()
         {
             //limpiar campos al ejecutar la accion del boton
-            tbNombres.Clear();
-            tbApPaterno.Clear();
-            tbApMaterno.Clear();
-            tbCorreo.Clear();
-            tbPass.Clear();
+            gtbNumeroTrabajador.Clear();
+            gtbNombreCompleto.Clear();
+            gtbCorreo.Clear();
+            gtbPassword.Clear();
+            gtbFoto.Clear();
         }
         //Fin//
 
 
-        //Validacion de campos vacios en el formulario//
+        //Validacion de campos vacios en el formulario y fromato no valido//
         private bool EsCampoValido(Guna.UI.WinForms.GunaTextBox campo, string nombreCampo)
         {
             if (string.IsNullOrWhiteSpace(campo.Text))
@@ -161,7 +193,42 @@ namespace Presentation
             }
             return true;
         }
+        private bool EsOpcionValidaSeleccionada(Guna.UI.WinForms.GunaComboBox campo, string nombreCampo)
+        {
+            if (campo.SelectedIndex == -1)
+            {
+                MessageBox.Show($"Por favor, seleccione el campo {nombreCampo}");
+                return false;
+            }
+            return true;
+        }
+        private void SoloFormatoNumero(object sender, KeyPressEventArgs e)
+        {
+            // Permite solo números y la tecla de retroceso (backspace)
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true; // Ignora la tecla presionada
+            }
+        }
+        private void SoloFormatoLetra(object sender, KeyPressEventArgs e)
+        {
+            // Permite solo números y la tecla de retroceso (backspace)
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true; // Ignora la tecla presionada
+            }
+        }
         //Fin//
+
+
+        //Ejecutar las validaciones//
+        private void ValdiacionesTipoCampo()
+        {
+            gtbNumeroTrabajador.KeyPress += new KeyPressEventHandler(SoloFormatoNumero);
+            gtbNombreCompleto.KeyPress += new KeyPressEventHandler(SoloFormatoLetra);
+        }
+        //Fin//
+
 
     }
 }

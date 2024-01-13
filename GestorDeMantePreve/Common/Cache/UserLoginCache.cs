@@ -11,6 +11,6 @@ namespace Common.Cache
         //Se extraen los datos que se quieren mostrar del usuario
         public static int Id { get; set; }
         public static string Correo { get; set; }
-        public static string Nombres { get; set; }
+        public static string NombreCompleto { get; set; }
     }
 }

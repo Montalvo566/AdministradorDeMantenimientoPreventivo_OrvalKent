@@ -21,7 +21,7 @@ namespace DataAccess
             try
             {
                 command.Connection = conexion.AbrirConexion();
-                command.CommandText = "Sp_ListarAreas";
+                command.CommandText = "Sp_ListarAreasUser";
                 command.CommandType = CommandType.StoredProcedure;
                 leer = command.ExecuteReader();
                 tablaActividades.Load(leer);

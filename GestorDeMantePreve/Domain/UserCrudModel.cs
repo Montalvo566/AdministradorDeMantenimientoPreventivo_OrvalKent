@@ -13,8 +13,29 @@ namespace Domain
     {
         private UserCrud userCrud = new UserCrud();
 
+        //Funciones para listar la informacion de los combobox//
+        public DataTable ListadoDepartamentos()
+        {
+            DataTable tablaUsuarios = new DataTable();
+            tablaUsuarios = userCrud.ListarDepartamentos();
+            return tablaUsuarios;
+        }
+        public DataTable ListadoAreas()
+        {
+            DataTable tablaUsuarios = new DataTable();
+            tablaUsuarios = userCrud.ListarAreas();
+            return tablaUsuarios;
+        }
+        public DataTable ListadoPuestos()
+        {
+            DataTable tablaUsuarios = new DataTable();
+            tablaUsuarios = userCrud.ListarPuestos();
+            return tablaUsuarios;
+        }
+        //Fin//
+
         //Funcion para mostrar los datos de la tabla de Usuarios: GET//
-        public DataTable MostrarUsuarios()
+        public DataTable MostrarTablaUsuarios()
         {
             DataTable tablaUsuarios = new DataTable();
             tablaUsuarios = userCrud.GetUsuarios();
@@ -24,11 +45,11 @@ namespace Domain
 
 
         //Funcion para agregar datos a la tabla de Usuarios: POST//
-        public void InsertarUsuarios(string correo, string pass, string nombres, string apPaterno, string apMaterno)
+        public void InsertarUsuarios(string NombreCompleto, int NumeroTrabajador, int Departamento,
+            int Area, int Puesto, string Correo, string Contrasena, string Foto)
         {
-            userCrud.PostUsuarios(correo, pass, nombres, apPaterno, apMaterno);
-            //Si quieres convertir datos de tipo int a string puedes usar
-            //userCrud.PostUsuarios(Convert.ToDouble(telefono));
+            userCrud.PostUsuarios(NombreCompleto, NumeroTrabajador, Departamento, 
+                Area, Puesto, Correo, Contrasena, Foto);
         }
         //Fin//
 

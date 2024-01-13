@@ -18,7 +18,7 @@ namespace DataAccess
                 using (var connection = AbrirConexion())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select * from Usuarios where Correo=@user and Pass=@pass";
+                    command.CommandText = "select * from Usuarios where Correo=@user and Contrasena=@pass";
                     command.Parameters.AddWithValue("@user", user);
                     command.Parameters.AddWithValue("@pass", pass);
                     command.CommandType = CommandType.Text;
@@ -32,7 +32,7 @@ namespace DataAccess
                         {
                             UserLoginCache.Id = reader.GetInt32(0);
                             UserLoginCache.Correo = reader.GetString(1);
-                            UserLoginCache.Nombres = reader.GetString(3);
+                            UserLoginCache.NombreCompleto = reader.GetString(3);
                         }
                         // Fin
                         return true;

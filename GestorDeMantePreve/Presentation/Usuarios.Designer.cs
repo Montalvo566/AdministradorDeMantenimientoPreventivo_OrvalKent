@@ -29,33 +29,40 @@ namespace Presentation
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelCrudUser = new System.Windows.Forms.Panel();
+            this.gcmbPuesto = new Guna.UI.WinForms.GunaComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.gtbFoto = new Guna.UI.WinForms.GunaTextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.gtbPassword = new Guna.UI.WinForms.GunaTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.gtbCorreo = new Guna.UI.WinForms.GunaTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.gcmbArea = new Guna.UI.WinForms.GunaComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.gcmbDepartamento = new Guna.UI.WinForms.GunaComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.gtbNumeroTrabajador = new Guna.UI.WinForms.GunaTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.gtbNombreCompleto = new Guna.UI.WinForms.GunaTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnEliminar = new Guna.UI.WinForms.GunaButton();
             this.btnEditar = new Guna.UI.WinForms.GunaButton();
             this.btnGuardarCambios = new Guna.UI.WinForms.GunaButton();
             this.btnNuevo = new Guna.UI.WinForms.GunaButton();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.tbPass = new Guna.UI.WinForms.GunaTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tbCorreo = new Guna.UI.WinForms.GunaTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbApMaterno = new Guna.UI.WinForms.GunaTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbApPaterno = new Guna.UI.WinForms.GunaTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tbNombres = new Guna.UI.WinForms.GunaTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvUsuariosTabla = new Guna.UI.WinForms.GunaDataGridView();
             this.panel1.SuspendLayout();
+            this.panelCrudUser.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosTabla)).BeginInit();
             this.SuspendLayout();
@@ -63,13 +70,301 @@ namespace Presentation
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panel1.Controls.Add(this.panelCrudUser);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(825, 296);
             this.panel1.TabIndex = 3;
+            // 
+            // panelCrudUser
+            // 
+            this.panelCrudUser.Controls.Add(this.gcmbPuesto);
+            this.panelCrudUser.Controls.Add(this.label10);
+            this.panelCrudUser.Controls.Add(this.gtbFoto);
+            this.panelCrudUser.Controls.Add(this.label9);
+            this.panelCrudUser.Controls.Add(this.gtbPassword);
+            this.panelCrudUser.Controls.Add(this.label8);
+            this.panelCrudUser.Controls.Add(this.gtbCorreo);
+            this.panelCrudUser.Controls.Add(this.label7);
+            this.panelCrudUser.Controls.Add(this.gcmbArea);
+            this.panelCrudUser.Controls.Add(this.label6);
+            this.panelCrudUser.Controls.Add(this.gcmbDepartamento);
+            this.panelCrudUser.Controls.Add(this.label5);
+            this.panelCrudUser.Controls.Add(this.gtbNumeroTrabajador);
+            this.panelCrudUser.Controls.Add(this.label4);
+            this.panelCrudUser.Controls.Add(this.gtbNombreCompleto);
+            this.panelCrudUser.Controls.Add(this.label3);
+            this.panelCrudUser.Controls.Add(this.label1);
+            this.panelCrudUser.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelCrudUser.Location = new System.Drawing.Point(0, 0);
+            this.panelCrudUser.Name = "panelCrudUser";
+            this.panelCrudUser.Size = new System.Drawing.Size(666, 296);
+            this.panelCrudUser.TabIndex = 20;
+            // 
+            // gcmbPuesto
+            // 
+            this.gcmbPuesto.BackColor = System.Drawing.Color.Transparent;
+            this.gcmbPuesto.BaseColor = System.Drawing.Color.White;
+            this.gcmbPuesto.BorderColor = System.Drawing.Color.Silver;
+            this.gcmbPuesto.BorderSize = 0;
+            this.gcmbPuesto.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.gcmbPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gcmbPuesto.FocusedColor = System.Drawing.Color.Empty;
+            this.gcmbPuesto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gcmbPuesto.ForeColor = System.Drawing.Color.Black;
+            this.gcmbPuesto.FormattingEnabled = true;
+            this.gcmbPuesto.Location = new System.Drawing.Point(243, 165);
+            this.gcmbPuesto.Name = "gcmbPuesto";
+            this.gcmbPuesto.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gcmbPuesto.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.gcmbPuesto.Radius = 5;
+            this.gcmbPuesto.Size = new System.Drawing.Size(195, 27);
+            this.gcmbPuesto.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(239, 142);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 20);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Puesto:";
+            // 
+            // gtbFoto
+            // 
+            this.gtbFoto.BackColor = System.Drawing.Color.Transparent;
+            this.gtbFoto.BaseColor = System.Drawing.Color.White;
+            this.gtbFoto.BorderColor = System.Drawing.Color.Silver;
+            this.gtbFoto.BorderSize = 0;
+            this.gtbFoto.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtbFoto.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtbFoto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gtbFoto.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.gtbFoto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gtbFoto.Location = new System.Drawing.Point(243, 251);
+            this.gtbFoto.Name = "gtbFoto";
+            this.gtbFoto.PasswordChar = '\0';
+            this.gtbFoto.Radius = 5;
+            this.gtbFoto.SelectedText = "";
+            this.gtbFoto.Size = new System.Drawing.Size(195, 30);
+            this.gtbFoto.TabIndex = 17;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(239, 228);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(128, 20);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Foto del usuario:";
+            // 
+            // gtbPassword
+            // 
+            this.gtbPassword.BackColor = System.Drawing.Color.Transparent;
+            this.gtbPassword.BaseColor = System.Drawing.Color.White;
+            this.gtbPassword.BorderColor = System.Drawing.Color.Silver;
+            this.gtbPassword.BorderSize = 0;
+            this.gtbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtbPassword.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtbPassword.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gtbPassword.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.gtbPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gtbPassword.Location = new System.Drawing.Point(16, 251);
+            this.gtbPassword.Name = "gtbPassword";
+            this.gtbPassword.PasswordChar = '\0';
+            this.gtbPassword.Radius = 5;
+            this.gtbPassword.SelectedText = "";
+            this.gtbPassword.Size = new System.Drawing.Size(195, 30);
+            this.gtbPassword.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(12, 228);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(99, 20);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Contraseña:";
+            // 
+            // gtbCorreo
+            // 
+            this.gtbCorreo.BackColor = System.Drawing.Color.Transparent;
+            this.gtbCorreo.BaseColor = System.Drawing.Color.White;
+            this.gtbCorreo.BorderColor = System.Drawing.Color.Silver;
+            this.gtbCorreo.BorderSize = 0;
+            this.gtbCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtbCorreo.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtbCorreo.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gtbCorreo.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.gtbCorreo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gtbCorreo.Location = new System.Drawing.Point(468, 165);
+            this.gtbCorreo.Name = "gtbCorreo";
+            this.gtbCorreo.PasswordChar = '\0';
+            this.gtbCorreo.Radius = 5;
+            this.gtbCorreo.SelectedText = "";
+            this.gtbCorreo.Size = new System.Drawing.Size(195, 30);
+            this.gtbCorreo.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(464, 142);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(154, 20);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Correo electronico:";
+            // 
+            // gcmbArea
+            // 
+            this.gcmbArea.BackColor = System.Drawing.Color.Transparent;
+            this.gcmbArea.BaseColor = System.Drawing.Color.White;
+            this.gcmbArea.BorderColor = System.Drawing.Color.Silver;
+            this.gcmbArea.BorderSize = 0;
+            this.gcmbArea.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.gcmbArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gcmbArea.FocusedColor = System.Drawing.Color.Empty;
+            this.gcmbArea.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gcmbArea.ForeColor = System.Drawing.Color.Black;
+            this.gcmbArea.FormattingEnabled = true;
+            this.gcmbArea.Location = new System.Drawing.Point(16, 165);
+            this.gcmbArea.Name = "gcmbArea";
+            this.gcmbArea.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gcmbArea.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.gcmbArea.Radius = 5;
+            this.gcmbArea.Size = new System.Drawing.Size(195, 27);
+            this.gcmbArea.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(12, 142);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 20);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Area:";
+            // 
+            // gcmbDepartamento
+            // 
+            this.gcmbDepartamento.BackColor = System.Drawing.Color.Transparent;
+            this.gcmbDepartamento.BaseColor = System.Drawing.Color.White;
+            this.gcmbDepartamento.BorderColor = System.Drawing.Color.Silver;
+            this.gcmbDepartamento.BorderSize = 0;
+            this.gcmbDepartamento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.gcmbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gcmbDepartamento.FocusedColor = System.Drawing.Color.Empty;
+            this.gcmbDepartamento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gcmbDepartamento.ForeColor = System.Drawing.Color.Black;
+            this.gcmbDepartamento.FormattingEnabled = true;
+            this.gcmbDepartamento.Location = new System.Drawing.Point(468, 78);
+            this.gcmbDepartamento.Name = "gcmbDepartamento";
+            this.gcmbDepartamento.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gcmbDepartamento.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.gcmbDepartamento.Radius = 5;
+            this.gcmbDepartamento.Size = new System.Drawing.Size(195, 27);
+            this.gcmbDepartamento.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(464, 51);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(121, 20);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Departamento:";
+            // 
+            // gtbNumeroTrabajador
+            // 
+            this.gtbNumeroTrabajador.BackColor = System.Drawing.Color.Transparent;
+            this.gtbNumeroTrabajador.BaseColor = System.Drawing.Color.White;
+            this.gtbNumeroTrabajador.BorderColor = System.Drawing.Color.Silver;
+            this.gtbNumeroTrabajador.BorderSize = 0;
+            this.gtbNumeroTrabajador.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtbNumeroTrabajador.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtbNumeroTrabajador.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gtbNumeroTrabajador.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.gtbNumeroTrabajador.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gtbNumeroTrabajador.Location = new System.Drawing.Point(16, 74);
+            this.gtbNumeroTrabajador.Name = "gtbNumeroTrabajador";
+            this.gtbNumeroTrabajador.PasswordChar = '\0';
+            this.gtbNumeroTrabajador.Radius = 5;
+            this.gtbNumeroTrabajador.SelectedText = "";
+            this.gtbNumeroTrabajador.Size = new System.Drawing.Size(195, 30);
+            this.gtbNumeroTrabajador.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(12, 51);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(153, 20);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Numero trabajador:";
+            // 
+            // gtbNombreCompleto
+            // 
+            this.gtbNombreCompleto.BackColor = System.Drawing.Color.Transparent;
+            this.gtbNombreCompleto.BaseColor = System.Drawing.Color.White;
+            this.gtbNombreCompleto.BorderColor = System.Drawing.Color.Silver;
+            this.gtbNombreCompleto.BorderSize = 0;
+            this.gtbNombreCompleto.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtbNombreCompleto.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtbNombreCompleto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gtbNombreCompleto.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.gtbNombreCompleto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gtbNombreCompleto.Location = new System.Drawing.Point(243, 74);
+            this.gtbNombreCompleto.Name = "gtbNombreCompleto";
+            this.gtbNombreCompleto.PasswordChar = '\0';
+            this.gtbNombreCompleto.Radius = 5;
+            this.gtbNombreCompleto.SelectedText = "";
+            this.gtbNombreCompleto.Size = new System.Drawing.Size(195, 30);
+            this.gtbNombreCompleto.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(239, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(147, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Nombre completo:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 23);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Agregar Usuarios";
             // 
             // panel3
             // 
@@ -195,192 +490,6 @@ namespace Presentation
             this.btnNuevo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.tbPass);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.tbCorreo);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.tbApMaterno);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.tbApPaterno);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.tbNombres);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(669, 296);
-            this.panel4.TabIndex = 25;
-            // 
-            // tbPass
-            // 
-            this.tbPass.BackColor = System.Drawing.Color.Transparent;
-            this.tbPass.BaseColor = System.Drawing.Color.White;
-            this.tbPass.BorderColor = System.Drawing.Color.Silver;
-            this.tbPass.BorderSize = 0;
-            this.tbPass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPass.FocusedBaseColor = System.Drawing.Color.White;
-            this.tbPass.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tbPass.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbPass.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPass.Location = new System.Drawing.Point(14, 221);
-            this.tbPass.Name = "tbPass";
-            this.tbPass.PasswordChar = '\0';
-            this.tbPass.Radius = 5;
-            this.tbPass.SelectedText = "";
-            this.tbPass.Size = new System.Drawing.Size(313, 30);
-            this.tbPass.TabIndex = 24;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Agregar Usuarios";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(14, 197);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 18);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Contraseña:";
-            // 
-            // tbCorreo
-            // 
-            this.tbCorreo.BackColor = System.Drawing.Color.Transparent;
-            this.tbCorreo.BaseColor = System.Drawing.Color.White;
-            this.tbCorreo.BorderColor = System.Drawing.Color.Silver;
-            this.tbCorreo.BorderSize = 0;
-            this.tbCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbCorreo.FocusedBaseColor = System.Drawing.Color.White;
-            this.tbCorreo.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tbCorreo.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbCorreo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCorreo.Location = new System.Drawing.Point(350, 149);
-            this.tbCorreo.Name = "tbCorreo";
-            this.tbCorreo.PasswordChar = '\0';
-            this.tbCorreo.Radius = 5;
-            this.tbCorreo.SelectedText = "";
-            this.tbCorreo.Size = new System.Drawing.Size(313, 30);
-            this.tbCorreo.TabIndex = 23;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(13, 122);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 20);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Apellido materno:";
-            // 
-            // tbApMaterno
-            // 
-            this.tbApMaterno.BackColor = System.Drawing.Color.Transparent;
-            this.tbApMaterno.BaseColor = System.Drawing.Color.White;
-            this.tbApMaterno.BorderColor = System.Drawing.Color.Silver;
-            this.tbApMaterno.BorderSize = 0;
-            this.tbApMaterno.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbApMaterno.FocusedBaseColor = System.Drawing.Color.White;
-            this.tbApMaterno.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tbApMaterno.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbApMaterno.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbApMaterno.Location = new System.Drawing.Point(14, 149);
-            this.tbApMaterno.Name = "tbApMaterno";
-            this.tbApMaterno.PasswordChar = '\0';
-            this.tbApMaterno.Radius = 5;
-            this.tbApMaterno.SelectedText = "";
-            this.tbApMaterno.Size = new System.Drawing.Size(313, 30);
-            this.tbApMaterno.TabIndex = 22;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(346, 122);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 20);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Correo:";
-            // 
-            // tbApPaterno
-            // 
-            this.tbApPaterno.BackColor = System.Drawing.Color.Transparent;
-            this.tbApPaterno.BaseColor = System.Drawing.Color.White;
-            this.tbApPaterno.BorderColor = System.Drawing.Color.Silver;
-            this.tbApPaterno.BorderSize = 0;
-            this.tbApPaterno.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbApPaterno.FocusedBaseColor = System.Drawing.Color.White;
-            this.tbApPaterno.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tbApPaterno.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbApPaterno.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbApPaterno.Location = new System.Drawing.Point(350, 72);
-            this.tbApPaterno.Name = "tbApPaterno";
-            this.tbApPaterno.PasswordChar = '\0';
-            this.tbApPaterno.Radius = 5;
-            this.tbApPaterno.SelectedText = "";
-            this.tbApPaterno.Size = new System.Drawing.Size(313, 30);
-            this.tbApPaterno.TabIndex = 21;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(13, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Nombres:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(347, 49);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 18);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Apellido paterno:";
-            // 
-            // tbNombres
-            // 
-            this.tbNombres.BackColor = System.Drawing.Color.Transparent;
-            this.tbNombres.BaseColor = System.Drawing.Color.White;
-            this.tbNombres.BorderColor = System.Drawing.Color.Silver;
-            this.tbNombres.BorderSize = 0;
-            this.tbNombres.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbNombres.FocusedBaseColor = System.Drawing.Color.White;
-            this.tbNombres.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tbNombres.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbNombres.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNombres.Location = new System.Drawing.Point(14, 74);
-            this.tbNombres.Name = "tbNombres";
-            this.tbNombres.PasswordChar = '\0';
-            this.tbNombres.Radius = 5;
-            this.tbNombres.SelectedText = "";
-            this.tbNombres.Size = new System.Drawing.Size(313, 30);
-            this.tbNombres.TabIndex = 20;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
@@ -407,8 +516,8 @@ namespace Presentation
             // 
             this.dgvUsuariosTabla.AllowUserToAddRows = false;
             this.dgvUsuariosTabla.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvUsuariosTabla.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dgvUsuariosTabla.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvUsuariosTabla.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -417,30 +526,38 @@ namespace Presentation
             this.dgvUsuariosTabla.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUsuariosTabla.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvUsuariosTabla.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuariosTabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUsuariosTabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvUsuariosTabla.ColumnHeadersHeight = 50;
             this.dgvUsuariosTabla.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUsuariosTabla.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUsuariosTabla.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvUsuariosTabla.EnableHeadersVisualStyles = false;
             this.dgvUsuariosTabla.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvUsuariosTabla.Location = new System.Drawing.Point(17, 346);
             this.dgvUsuariosTabla.MultiSelect = false;
             this.dgvUsuariosTabla.Name = "dgvUsuariosTabla";
             this.dgvUsuariosTabla.ReadOnly = true;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUsuariosTabla.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvUsuariosTabla.RowHeadersVisible = false;
             this.dgvUsuariosTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuariosTabla.ShowCellErrors = false;
@@ -486,9 +603,9 @@ namespace Presentation
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Usuarios_Load);
             this.panel1.ResumeLayout(false);
+            this.panelCrudUser.ResumeLayout(false);
+            this.panelCrudUser.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosTabla)).EndInit();
@@ -499,25 +616,31 @@ namespace Presentation
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
-        private Guna.UI.WinForms.GunaTextBox tbApPaterno;
-        private Guna.UI.WinForms.GunaTextBox tbNombres;
-        private Guna.UI.WinForms.GunaTextBox tbPass;
-        private Guna.UI.WinForms.GunaTextBox tbCorreo;
-        private Guna.UI.WinForms.GunaTextBox tbApMaterno;
         private Guna.UI.WinForms.GunaButton btnEliminar;
         private Guna.UI.WinForms.GunaButton btnEditar;
         private Guna.UI.WinForms.GunaButton btnGuardarCambios;
         private Guna.UI.WinForms.GunaButton btnNuevo;
         private Guna.UI.WinForms.GunaDataGridView dgvUsuariosTabla;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panelCrudUser;
+        private Guna.UI.WinForms.GunaComboBox gcmbPuesto;
+        private System.Windows.Forms.Label label10;
+        private Guna.UI.WinForms.GunaTextBox gtbFoto;
+        private System.Windows.Forms.Label label9;
+        private Guna.UI.WinForms.GunaTextBox gtbPassword;
+        private System.Windows.Forms.Label label8;
+        private Guna.UI.WinForms.GunaTextBox gtbCorreo;
+        private System.Windows.Forms.Label label7;
+        private Guna.UI.WinForms.GunaComboBox gcmbArea;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI.WinForms.GunaComboBox gcmbDepartamento;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI.WinForms.GunaTextBox gtbNumeroTrabajador;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI.WinForms.GunaTextBox gtbNombreCompleto;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
     }
 }

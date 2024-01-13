@@ -172,7 +172,7 @@ namespace Presentation
         }
         private void cargarDatosUsuario()
         {
-            lbNombreInicioSesion.Text = UserLoginCache.Nombres;
+            lbNombreInicioSesion.Text = UserLoginCache.NombreCompleto;
             lbCorreoInicioSesion.Text = UserLoginCache.Correo;
         }
         //Fin//

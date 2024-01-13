@@ -11,7 +11,7 @@ namespace DataAccess
     {
 
 
-        private SqlConnection conexion = new SqlConnection("Server=DESKTOP-3FIQUSR; DataBase=SAMP_BasedeDatosTemporal; integrated security=true");
+        private SqlConnection conexion = new SqlConnection("Server=DESKTOP-3FIQUSR; DataBase=SAMP_BDPruebas; integrated security=true");
         public SqlConnection AbrirConexion()
         {
             if (conexion.State == System.Data.ConnectionState.Closed) conexion.Open();
