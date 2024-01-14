@@ -25,6 +25,7 @@ namespace Presentation
             ListarAreas();
             ListarEquipos();
             ListarFrecuencias();
+            ListarUsuarios();
             MostrarTablaActividades();
             ConfigurarDataGridView();
         }
@@ -32,26 +33,22 @@ namespace Presentation
         //Funciones para listar los datos del combobox//
         private void ListarAreas()
         {
-            ActivitiesCrudModel actividad = new ActivitiesCrudModel();
-            cmbAreaEmpresa.DataSource = actividad.ListadoAreas();
-            cmbAreaEmpresa.DisplayMember = "NombreEmpresa";
-            cmbAreaEmpresa.ValueMember = "Id";
+            
         }
 
         private void ListarEquipos()
         {
-            ActivitiesCrudModel actividad = new ActivitiesCrudModel();
-            cmbEquipos.DataSource = actividad.ListadoEquipos();
-            cmbEquipos.DisplayMember = "NombreEquipo";
-            cmbEquipos.ValueMember = "Id";
+            
         }
 
         private void ListarFrecuencias()
         {
-            ActivitiesCrudModel actividad = new ActivitiesCrudModel();
-            cmbFrecuencia.DataSource = actividad.ListadoFrecuencias();
-            cmbFrecuencia.DisplayMember = "Freciencia";
-            cmbFrecuencia.ValueMember = "Id";
+            
+        }
+
+        private void ListarUsuarios()
+        {
+
         }
         //Fin//
 
@@ -72,8 +69,7 @@ namespace Presentation
         //Funcion para agregar datos a la tabla de Actividades//
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            actividad.InsertarActidad(Convert.ToInt32(cmbAreaEmpresa.SelectedValue), Convert.ToInt32(cmbEquipos.SelectedValue),
-            Convert.ToInt32(cmbFrecuencia.SelectedValue), tbFechaMantenimiento.Text, tbActividad.Text, tbFormato.Text);
+            
             MessageBox.Show("Actividad insertada con éxito");
             MostrarTablaActividades();
 
@@ -87,9 +83,7 @@ namespace Presentation
         private void LimpiarCampos()
         {
             //limpiar campos al ejecutar la accion del boton
-            tbFechaMantenimiento.Clear();
-            tbActividad.Clear();
-            tbFormato.Clear();
+            
         }
         //Fin//
 
