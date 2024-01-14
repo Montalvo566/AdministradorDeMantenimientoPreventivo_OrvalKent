@@ -15,6 +15,29 @@ namespace DataAccess
         SqlDataReader leer;
         DataTable tablaUsuarios = new DataTable();
 
+        //Atributos de los datos//
+        private int Id;
+        private string NombreCompleto;
+        private int NumeroTrabajador;
+        private int Departamento;
+        private int Area;
+        private int Puesto;
+        private string Correo;
+        private string Contrasena;
+        private string Foto;
+
+        //Funcion GET, SET
+        public int Id1 { get => Id; set => Id = value; }
+        public string NombreCompleto1 { get => NombreCompleto; set => NombreCompleto = value; }
+        public int NumeroTrabajador1 { get => NumeroTrabajador; set => NumeroTrabajador = value; }
+        public int Departamento1 { get => Departamento; set => Departamento = value; }
+        public int Area1 { get => Area; set => Area = value; }
+        public int Puesto1 { get => Puesto; set => Puesto = value; }
+        public string Correo1 { get => Correo; set => Correo = value; }
+        public string Contrasena1 { get => Contrasena; set => Contrasena = value; }
+        public string Foto1 { get => Foto; set => Foto = value; }
+        //Fin//
+
         //Funciones pra listar las opciones del combobox: Departamento, Area y Puesto//
         public DataTable ListarDepartamentos()
         {
@@ -113,8 +136,7 @@ namespace DataAccess
 
 
         //Funcion para agregar datos a la tabla de usuarios: POST//
-        public void PostUsuarios(string NombreCompleto, int NumeroTrabajador, int Departamento,
-            int Area, int Puesto, string Correo, string Contrasena, string Foto)
+        public void PostUsuarios()
         {
             try
             {
@@ -147,13 +169,26 @@ namespace DataAccess
 
 
         //Funcion para realizar modificaciones a los datos de la tabla de usuarios: PUT//
-        public void PutUsuarios(string correo, string pass, string nombres, string apPaterno, string apMaterno, int id)
+        public void PutUsuarios()
         {
             try
             {
                 command.Connection = conexion.AbrirConexion();
-                command.CommandText = "UPDATE Usuarios SET Correo = '" + correo + "', Pass= '" + pass + "', Nombres = '" + nombres + "', ApPaterno = '" + apPaterno + "', ApMaterno = '" + apMaterno + "' WHERE Id = " + id;
-                command.ExecuteNonQuery();
+                command.CommandText = "Sp_UsuariosPUT";
+                command.CommandType = CommandType.StoredProcedure;
+                //Parametros de entrada//
+                command.Parameters.AddWithValue("@NombreCompleto", NombreCompleto);
+                command.Parameters.AddWithValue("@NumeroEmpleado", NumeroTrabajador);
+                command.Parameters.AddWithValue("@IdDepartamento", Departamento);
+                command.Parameters.AddWithValue("@IdZonaAcceso", Area);
+                command.Parameters.AddWithValue("@IdPuesto", Puesto);
+                command.Parameters.AddWithValue("@Correo ", Correo);
+                command.Parameters.AddWithValue("@Contrasena", Contrasena);
+                command.Parameters.AddWithValue("@Foto", Foto);
+                command.Parameters.AddWithValue("@Id", Id);
+                //Fin//
+                command.ExecuteReader();
+                command.Parameters.Clear();
             }
             catch (Exception ex)
             {
@@ -168,13 +203,14 @@ namespace DataAccess
 
 
         //Funcion para eliminar registro de la tabla de usuarios: DELETE//
-        public void DeleteUsuarios(int id)
+        public void DeleteUsuarios()
         {
             try
             {
                 command.Connection = conexion.AbrirConexion();
-                command.CommandText = "DELETE FROM Usuarios WHERE Id = @Id";
-                command.Parameters.AddWithValue("@Id", id);
+                command.CommandText = "Sp_UsuariosDELETE";
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Id", Id);
                 command.ExecuteNonQuery();
                 command.Parameters.Clear();
             }

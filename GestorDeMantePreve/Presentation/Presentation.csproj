@@ -60,6 +60,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModalesFormulario\EditUsuariosModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalesFormulario\EditUsuariosModal.Designer.cs">
+      <DependentUpon>EditUsuariosModal.cs</DependentUpon>
+    </Compile>
     <Compile Include="TareasAsignadas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ModalesFormulario\EditUsuariosModal.resx">
+      <DependentUpon>EditUsuariosModal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TareasAsignadas.resx">
       <DependentUpon>TareasAsignadas.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +153,10 @@
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{52b5f068-a116-41a8-9694-178dec4f322d}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{82221fd9-c62e-4ba2-97f2-7eabe14ee949}</Project>
+      <Name>DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{974f3d2d-0b91-4e11-ad26-a288979280b1}</Project>

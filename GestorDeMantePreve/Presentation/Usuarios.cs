@@ -8,14 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
+using DataAccess;
 
 namespace Presentation
 {
     public partial class Usuarios : Form
     {
         UserCrudModel userCrudTabla = new UserCrudModel();
-        private string idUsuario = null;//Variable para almacenar el id al editar y eliminar
-        private bool Editar = false;
+        UserCrud crud = new UserCrud();
+
 
         public Usuarios()
         {
@@ -69,35 +70,6 @@ namespace Presentation
         //Fin//
 
 
-        //Boton para guadar los cambios al momento de ejecutar la funcion de PUT//
-        private void btnGuardarCambios_Click(object sender, EventArgs e)
-        {
-            if (Editar == true)
-            {
-                try
-                {
-                    if (EsCampoValido(gtbNumeroTrabajador, "Numero de trabajador") && 
-                        EsCampoValido(gtbNombreCompleto, "Nombre completo") &&
-                        EsOpcionValidaSeleccionada(gcmbDepartamento, "Departamento")&&
-                        EsOpcionValidaSeleccionada(gcmbArea, "Area")&&
-                        EsOpcionValidaSeleccionada(gcmbPuesto, "Puesto")&&
-                        EsCampoValido(gtbCorreo, "Correo electronico")&&
-                        EsCampoValido(gtbPassword, "Contraseña")&&
-                        EsCampoValido(gtbFoto, "Foto"))
-                    {
-
-                        LimpiarCampos();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al editar el registro: " + ex);
-                }
-            }
-        }
-        //FIN//
-
-
         //Funcion para agregar registros a la tabla de usuarios//
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -112,8 +84,19 @@ namespace Presentation
                         EsCampoValido(gtbPassword, "Contraseña") &&
                         EsCampoValido(gtbFoto, "Foto"))
                 {
-                    userCrudTabla.InsertarUsuarios(gtbNombreCompleto.Text, Convert.ToInt32(gtbNumeroTrabajador.Text), Convert.ToInt32(gcmbDepartamento.SelectedValue),
-                    Convert.ToInt32(gcmbArea.SelectedValue), Convert.ToInt32(gcmbPuesto.SelectedValue), gtbCorreo.Text, gtbPassword.Text, gtbFoto.Text);
+                    crud.NombreCompleto1 = gtbNombreCompleto.Text;
+                    crud.NumeroTrabajador1 = Convert.ToInt32(gtbNumeroTrabajador.Text);
+                    crud.Departamento1 = Convert.ToInt32(gcmbDepartamento.SelectedValue);
+                    crud.Area1 = Convert.ToInt32(gcmbArea.SelectedValue);
+                    crud.Puesto1 = Convert.ToInt32(gcmbPuesto.SelectedValue);
+                    crud.Correo1 = gtbCorreo.Text;
+                    crud.Contrasena1 = gtbPassword.Text;
+                    crud.Foto1 = gtbFoto.Text;
+                    crud.PostUsuarios();
+
+                    //userCrudTabla.InsertarUsuarios(gtbNombreCompleto.Text, Convert.ToInt32(gtbNumeroTrabajador.Text), Convert.ToInt32(gcmbDepartamento.SelectedValue),
+                    //Convert.ToInt32(gcmbArea.SelectedValue), Convert.ToInt32(gcmbPuesto.SelectedValue), gtbCorreo.Text, gtbPassword.Text, gtbFoto.Text);
+
                     MessageBox.Show("Usuario registrado con exito");
                     LimpiarCampos();
                     MostrarUsuariosTabla();
@@ -127,22 +110,33 @@ namespace Presentation
         //Fin//
 
 
-        //Funcion para actualizar los registros de la tabla de usuarios//
-        private void btnEditar_Click(object sender, EventArgs e)
+        //Funcion para seleccionar las filas de la tabla y actualizar los registros de la tabla de usuarios//
+        private void btnAbriModalEdit_Click(object sender, EventArgs e)
         {
             if (dgvUsuariosTabla.SelectedRows.Count > 0)
             {
-                Editar = true;
+                ModalesFormulario.EditUsuariosModal modal = new ModalesFormulario.EditUsuariosModal();
+                modal.OperacionEdit = "Editar";
 
-                gtbNombreCompleto.Text = dgvUsuariosTabla.CurrentRow.Cells["NombreCompleto"].Value.ToString();
-                gtbNumeroTrabajador.Text = dgvUsuariosTabla.CurrentRow.Cells["NumeroEmpleado"].Value.ToString();
-                gcmbDepartamento.Text = dgvUsuariosTabla.CurrentRow.Cells["IdDepartamento"].Value.ToString();
-                gcmbArea.Text = dgvUsuariosTabla.CurrentRow.Cells["IdZonaAcceso"].Value.ToString();
-                gcmbPuesto.Text = dgvUsuariosTabla.CurrentRow.Cells["IdPuesto"].Value.ToString();
-                gtbCorreo.Text = dgvUsuariosTabla.CurrentRow.Cells["Correo"].Value.ToString();
-                gtbPassword.Text = dgvUsuariosTabla.CurrentRow.Cells["Contrasena"].Value.ToString();
-                gtbFoto.Text = dgvUsuariosTabla.CurrentRow.Cells["Foto"].Value.ToString();
-                idUsuario = dgvUsuariosTabla.CurrentRow.Cells["Id"].Value.ToString();
+                //Funcion para listar los combobox//
+                modal.ListarDepartamentos();
+                modal.ListarPuestos();
+                modal.ListarAreas();
+                //Fin//
+
+                //Funcion para cargar los datos en los campos//
+                modal.gtbNombreCompleto.Text = dgvUsuariosTabla.CurrentRow.Cells["NombreCompleto"].Value.ToString();
+                modal.gtbNumeroTrabajador.Text = dgvUsuariosTabla.CurrentRow.Cells["NumeroEmpleado"].Value.ToString();
+                modal.gcmbDepartamento.Text = dgvUsuariosTabla.CurrentRow.Cells[3].Value.ToString();
+                modal.gcmbArea.Text = dgvUsuariosTabla.CurrentRow.Cells[4].Value.ToString();
+                modal.gcmbPuesto.Text = dgvUsuariosTabla.CurrentRow.Cells[5].Value.ToString();
+                modal.gtbCorreo.Text = dgvUsuariosTabla.CurrentRow.Cells["Correo"].Value.ToString();
+                modal.gtbPassword.Text = dgvUsuariosTabla.CurrentRow.Cells["Contrasena"].Value.ToString();
+                modal.gtbFoto.Text = dgvUsuariosTabla.CurrentRow.Cells["Foto"].Value.ToString();
+                modal.idUsuario = dgvUsuariosTabla.CurrentRow.Cells["Id"].Value.ToString();
+                modal.ShowDialog();
+                MostrarUsuariosTabla();
+                //Fin//
             }
             else
             {
@@ -157,8 +151,8 @@ namespace Presentation
         {
             if (dgvUsuariosTabla.SelectedRows.Count > 0)
             {
-                idUsuario = dgvUsuariosTabla.CurrentRow.Cells["Id"].Value.ToString();
-                userCrudTabla.EliminarUsuarios(idUsuario);
+                crud.Id1 = Convert.ToInt32(dgvUsuariosTabla.CurrentRow.Cells[0].Value);
+                crud.DeleteUsuarios();
                 MessageBox.Show("Usuario eliminado con exito");
                 LimpiarCampos();
                 MostrarUsuariosTabla();
@@ -212,8 +206,8 @@ namespace Presentation
         }
         private void SoloFormatoLetra(object sender, KeyPressEventArgs e)
         {
-            // Permite solo números y la tecla de retroceso (backspace)
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != 8)
+            // Permite solo letras y espacios
+            if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' '))
             {
                 e.Handled = true; // Ignora la tecla presionada
             }

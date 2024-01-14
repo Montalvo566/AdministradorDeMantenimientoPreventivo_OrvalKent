@@ -43,31 +43,5 @@ namespace Domain
         }
         //Fin//
 
-
-        //Funcion para agregar datos a la tabla de Usuarios: POST//
-        public void InsertarUsuarios(string NombreCompleto, int NumeroTrabajador, int Departamento,
-            int Area, int Puesto, string Correo, string Contrasena, string Foto)
-        {
-            userCrud.PostUsuarios(NombreCompleto, NumeroTrabajador, Departamento, 
-                Area, Puesto, Correo, Contrasena, Foto);
-        }
-        //Fin//
-
-
-        //Funcion para editar los datos a la tabla de Usuarios: PUT//
-        public void ActualizarUsuarios(string correo, string pass, string nombres, string apPaterno, string apMaterno, string id)
-        {
-            userCrud.PutUsuarios(correo, pass, nombres, apPaterno, apMaterno, Convert.ToInt32(id));
-        }
-        //Fin//
-
-
-        //Funcion para eliminar registros de la tabla de usuarios: DELETE//
-        public void EliminarUsuarios(string id)
-        {
-            userCrud.DeleteUsuarios(Convert.ToInt32(id));
-        }
-        //Fin//
-
     }
 }
