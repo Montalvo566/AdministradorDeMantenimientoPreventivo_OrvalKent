@@ -32,23 +32,27 @@ namespace Domain
             tablaActividades = actividad.ListarFrecuencias();
             return tablaActividades;
         }
-        //Fin//
-
-
-        //Funcion para mostrar datos de la tabla de Actividades: GET
-        public DataTable MostrarActividades()
+        public DataTable ListadoUsuarioRegistra()
         {
             DataTable tablaActividades = new DataTable();
-            tablaActividades = actividad.GetActividades();
+            tablaActividades = actividad.ListarUsuariosRegistra();
+            return tablaActividades;
+        }
+        public DataTable ListadoUsuarioAsignado()
+        {
+            DataTable tablaActividades = new DataTable();
+            tablaActividades = actividad.ListarUsuarioAsignado();
             return tablaActividades;
         }
         //Fin//
 
 
-        //Funcion para insertar datos a la tabla de Actividades: POST//
-        public void InsertarActidad(int IdAreaEmpresa, int IdEquipo, int Frecuencia, string FechaMantenimiento, string Actividad, string Formato)
+        //Funcion para mostrar datos de la tabla de Actividades: GET
+        public DataTable MostrarTablaActividades()
         {
-            actividad.PostActividades(IdAreaEmpresa, IdEquipo, Frecuencia, FechaMantenimiento, Actividad, Formato);
+            DataTable tablaActividades = new DataTable();
+            tablaActividades = actividad.GetActividades();
+            return tablaActividades;
         }
         //Fin//
     }

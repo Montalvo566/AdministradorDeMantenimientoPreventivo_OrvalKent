@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
+using DataAccess;
+using System.Globalization;
 
 namespace Presentation
 {
     public partial class Actividades : Form
     {
         ActivitiesCrudModel actividad = new ActivitiesCrudModel();
+        ActivitiesCrud crud = new ActivitiesCrud();
 
         public Actividades()
         {
@@ -25,7 +28,8 @@ namespace Presentation
             ListarAreas();
             ListarEquipos();
             ListarFrecuencias();
-            ListarUsuarios();
+            ListarUsuarioRegistra();
+            ListarUsuarioAsignado();
             MostrarTablaActividades();
             ConfigurarDataGridView();
         }
@@ -33,22 +37,42 @@ namespace Presentation
         //Funciones para listar los datos del combobox//
         private void ListarAreas()
         {
-            
+            ActivitiesCrudModel actividad = new ActivitiesCrudModel();
+            cmbArea.DataSource = actividad.ListadoAreas();
+            cmbArea.DisplayMember = "Zona";
+            cmbArea.ValueMember = "Id";
         }
 
         private void ListarEquipos()
         {
-            
+            ActivitiesCrudModel actividad = new ActivitiesCrudModel();
+            cmbEquipo.DataSource = actividad.ListadoEquipos();
+            cmbEquipo.DisplayMember = "Equipo";
+            cmbEquipo.ValueMember = "Id";
         }
 
         private void ListarFrecuencias()
         {
-            
+            ActivitiesCrudModel actividad = new ActivitiesCrudModel();
+            cmbFrecuencia.DataSource = actividad.ListadoFrecuencias();
+            cmbFrecuencia.DisplayMember = "Frecuencia";
+            cmbFrecuencia.ValueMember = "Id";
         }
 
-        private void ListarUsuarios()
+        private void ListarUsuarioRegistra()
         {
+            ActivitiesCrudModel actividad = new ActivitiesCrudModel();
+            cmbUsuarioRegistra.DataSource = actividad.ListadoUsuarioRegistra();
+            cmbUsuarioRegistra.DisplayMember = "NombreCompleto";
+            cmbUsuarioRegistra.ValueMember = "Id";
+        }
 
+        private void ListarUsuarioAsignado()
+        {
+            ActivitiesCrudModel actividad = new ActivitiesCrudModel();
+            cmbUsuarioAsignado.DataSource = actividad.ListadoUsuarioAsignado();
+            cmbUsuarioAsignado.DisplayMember = "NombreCompleto";
+            cmbUsuarioAsignado.ValueMember = "Id";
         }
         //Fin//
 
@@ -57,7 +81,7 @@ namespace Presentation
         private void MostrarTablaActividades()
         {
             ActivitiesCrudModel actividad = new ActivitiesCrudModel();
-            dgvActividadesTabla.DataSource = actividad.MostrarActividades();
+            dgvActividadesTabla.DataSource = actividad.MostrarTablaActividades();
         }
         private void ConfigurarDataGridView()
         {
@@ -67,14 +91,60 @@ namespace Presentation
 
 
         //Funcion para agregar datos a la tabla de Actividades//
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            
-            MessageBox.Show("Actividad insertada con éxito");
-            MostrarTablaActividades();
 
-            // Limpiar campos al ejecutar la acción del botón
-            LimpiarCampos();
+        private void btnNuevo_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (EsCampoValido(tbActividad, "Actividad") &&
+                        EsCampoValido(tbRegistro, "Registro") &&
+                        EsOpcionValidaSeleccionada(cmbArea, "Area") &&
+                        EsOpcionValidaSeleccionada(cmbEquipo, "Equipo") &&
+                        EsOpcionValidaSeleccionada(cmbFrecuencia, "Frecuencia") &&
+                        EsOpcionValidaSeleccionada(cmbUsuarioRegistra, "Usuario Registra") &&
+                        EsOpcionValidaSeleccionada(cmbUsuarioAsignado, "Usuario Asignado") &&
+                        EsCampoValido(tbFechaAsignacion, "Fecha de asignación") &&
+                        EsCampoValido(tbHoraAsignacion, "Hora de asignación")&&
+                        EsFormatoFechaValido(tbFechaAsignacion.Text))
+                {
+                    crud.IdArea1 = Convert.ToInt32(cmbArea.SelectedValue);
+                    crud.IdEquipo1 = Convert.ToInt32(cmbEquipo.SelectedValue);
+                    crud.IdFrecuencia1 = Convert.ToInt32(cmbFrecuencia.SelectedValue);
+                    crud.Actividad1 = tbActividad.Text;
+                    crud.Registro1 = tbRegistro.Text;
+                    crud.IdUsuarioRegistra1 = Convert.ToInt32(cmbUsuarioRegistra.SelectedValue);
+                    crud.IdUsuarioAsignado1 = Convert.ToInt32(cmbUsuarioAsignado.SelectedValue);
+                    crud.FechaAsignado1 = tbFechaAsignacion.Text;
+                    crud.HoraAsignado1 = tbHoraAsignacion.Text;
+                    crud.PostActividades();
+                    MessageBox.Show("Usuario registrada con exito");
+                    LimpiarCampos();
+                    MostrarTablaActividades();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar datos: " + ex);
+            }
+        }
+        //Fin//
+
+
+        //Funcion para eliminar registros de la tabla de actividades//
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvActividadesTabla.SelectedRows.Count > 0)
+            {
+                crud.Id1 = Convert.ToInt32(dgvActividadesTabla.CurrentRow.Cells[0].Value);
+                crud.DeleteActividades();
+                MessageBox.Show("Actividad eliminada con exito");
+                LimpiarCampos();
+                MostrarTablaActividades();
+            }
+            else
+            {
+                MessageBox.Show("Para poder eliminar, seleccione un regustro");
+            }
         }
         //Fin//
 
@@ -83,9 +153,44 @@ namespace Presentation
         private void LimpiarCampos()
         {
             //limpiar campos al ejecutar la accion del boton
-            
+            tbActividad.Clear();
+            tbRegistro.Clear();
+            tbFechaAsignacion.Clear();
+            tbHoraAsignacion.Clear();
         }
         //Fin//
+
+        //Validacion de campos vacios en el formulario y fromato no valido//
+        private bool EsCampoValido(Guna.UI.WinForms.GunaTextBox campo, string nombreCampo)
+        {
+            if (string.IsNullOrWhiteSpace(campo.Text))
+            {
+                MessageBox.Show($"Por favor, coloque el campo {nombreCampo}");
+                return false;
+            }
+            return true;
+        }
+        private bool EsOpcionValidaSeleccionada(Guna.UI.WinForms.GunaComboBox campo, string nombreCampo)
+        {
+            if (campo.SelectedIndex == -1)
+            {
+                MessageBox.Show($"Por favor, seleccione el campo {nombreCampo}");
+                return false;
+            }
+            return true;
+        }
+        private bool EsFormatoFechaValido(string fecha)
+        {
+            if (!DateTime.TryParseExact(fecha, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out _))
+            {
+                MessageBox.Show("Formato de fecha inválido. Utilizado el formato dd/MM/yyyy");
+                return false;
+            }
+            return true;
+        }
+        //Fin//
+
+
 
     }
 }
