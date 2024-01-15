@@ -30,23 +30,23 @@ namespace Presentation
         private void InitializeComponent()
         {
             this.pMenuLateral = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
-            this.btnSeccionTareas = new FontAwesome.Sharp.IconButton();
-            this.btnTareasAsignadas = new FontAwesome.Sharp.IconButton();
             this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.btnActividades = new FontAwesome.Sharp.IconButton();
+            this.panelSeccionTareas = new System.Windows.Forms.Panel();
+            this.btnSeccionTareas = new FontAwesome.Sharp.IconButton();
+            this.btnTareasAsignadas = new FontAwesome.Sharp.IconButton();
+            this.btnRegistros = new FontAwesome.Sharp.IconButton();
+            this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
             this.btnMenuPrincipal = new FontAwesome.Sharp.IconButton();
             this.pLogo = new System.Windows.Forms.Panel();
             this.lbCorreoInicioSesion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbNombreInicioSesion = new System.Windows.Forms.Label();
             this.panelFormularioHijo = new System.Windows.Forms.Panel();
-            this.btnRegistros = new FontAwesome.Sharp.IconButton();
-            this.panelSeccionTareas = new System.Windows.Forms.Panel();
             this.pMenuLateral.SuspendLayout();
+            this.panelSeccionTareas.SuspendLayout();
             this.pLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelSeccionTareas.SuspendLayout();
             this.SuspendLayout();
             // 
             // pMenuLateral
@@ -66,77 +66,6 @@ namespace Presentation
             this.pMenuLateral.Name = "pMenuLateral";
             this.pMenuLateral.Size = new System.Drawing.Size(255, 613);
             this.pMenuLateral.TabIndex = 0;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            this.btnCerrarSesion.IconColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarSesion.IconSize = 30;
-            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 553);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCerrarSesion.Size = new System.Drawing.Size(255, 60);
-            this.btnCerrarSesion.TabIndex = 4;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // btnSeccionTareas
-            // 
-            this.btnSeccionTareas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.btnSeccionTareas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSeccionTareas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSeccionTareas.FlatAppearance.BorderSize = 0;
-            this.btnSeccionTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeccionTareas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeccionTareas.ForeColor = System.Drawing.Color.White;
-            this.btnSeccionTareas.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnSeccionTareas.IconColor = System.Drawing.Color.Black;
-            this.btnSeccionTareas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSeccionTareas.Location = new System.Drawing.Point(0, 0);
-            this.btnSeccionTareas.Name = "btnSeccionTareas";
-            this.btnSeccionTareas.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnSeccionTareas.Size = new System.Drawing.Size(255, 55);
-            this.btnSeccionTareas.TabIndex = 0;
-            this.btnSeccionTareas.Text = "Seccion";
-            this.btnSeccionTareas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeccionTareas.UseVisualStyleBackColor = false;
-            this.btnSeccionTareas.Click += new System.EventHandler(this.btnSeccionTareas_Click);
-            // 
-            // btnTareasAsignadas
-            // 
-            this.btnTareasAsignadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.btnTareasAsignadas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTareasAsignadas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTareasAsignadas.FlatAppearance.BorderSize = 0;
-            this.btnTareasAsignadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTareasAsignadas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTareasAsignadas.ForeColor = System.Drawing.Color.White;
-            this.btnTareasAsignadas.IconChar = FontAwesome.Sharp.IconChar.Add;
-            this.btnTareasAsignadas.IconColor = System.Drawing.Color.White;
-            this.btnTareasAsignadas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTareasAsignadas.IconSize = 30;
-            this.btnTareasAsignadas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTareasAsignadas.Location = new System.Drawing.Point(0, 267);
-            this.btnTareasAsignadas.Name = "btnTareasAsignadas";
-            this.btnTareasAsignadas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnTareasAsignadas.Size = new System.Drawing.Size(255, 60);
-            this.btnTareasAsignadas.TabIndex = 2;
-            this.btnTareasAsignadas.Text = "Tareas Asignadas";
-            this.btnTareasAsignadas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTareasAsignadas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTareasAsignadas.UseVisualStyleBackColor = false;
-            this.btnTareasAsignadas.Click += new System.EventHandler(this.btnTareasAsignadas_Click);
             // 
             // btnUsuarios
             // 
@@ -187,6 +116,112 @@ namespace Presentation
             this.btnActividades.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnActividades.UseVisualStyleBackColor = false;
             this.btnActividades.Click += new System.EventHandler(this.btnActividades_Click);
+            // 
+            // panelSeccionTareas
+            // 
+            this.panelSeccionTareas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            this.panelSeccionTareas.Controls.Add(this.btnSeccionTareas);
+            this.panelSeccionTareas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSeccionTareas.Location = new System.Drawing.Point(0, 327);
+            this.panelSeccionTareas.Name = "panelSeccionTareas";
+            this.panelSeccionTareas.Size = new System.Drawing.Size(255, 100);
+            this.panelSeccionTareas.TabIndex = 6;
+            // 
+            // btnSeccionTareas
+            // 
+            this.btnSeccionTareas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            this.btnSeccionTareas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeccionTareas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSeccionTareas.FlatAppearance.BorderSize = 0;
+            this.btnSeccionTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeccionTareas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeccionTareas.ForeColor = System.Drawing.Color.White;
+            this.btnSeccionTareas.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnSeccionTareas.IconColor = System.Drawing.Color.Black;
+            this.btnSeccionTareas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSeccionTareas.Location = new System.Drawing.Point(0, 0);
+            this.btnSeccionTareas.Name = "btnSeccionTareas";
+            this.btnSeccionTareas.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnSeccionTareas.Size = new System.Drawing.Size(255, 55);
+            this.btnSeccionTareas.TabIndex = 0;
+            this.btnSeccionTareas.Text = "Seccion";
+            this.btnSeccionTareas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeccionTareas.UseVisualStyleBackColor = false;
+            this.btnSeccionTareas.Click += new System.EventHandler(this.btnSeccionTareas_Click);
+            // 
+            // btnTareasAsignadas
+            // 
+            this.btnTareasAsignadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.btnTareasAsignadas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTareasAsignadas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTareasAsignadas.FlatAppearance.BorderSize = 0;
+            this.btnTareasAsignadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTareasAsignadas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTareasAsignadas.ForeColor = System.Drawing.Color.White;
+            this.btnTareasAsignadas.IconChar = FontAwesome.Sharp.IconChar.Add;
+            this.btnTareasAsignadas.IconColor = System.Drawing.Color.White;
+            this.btnTareasAsignadas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTareasAsignadas.IconSize = 30;
+            this.btnTareasAsignadas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTareasAsignadas.Location = new System.Drawing.Point(0, 267);
+            this.btnTareasAsignadas.Name = "btnTareasAsignadas";
+            this.btnTareasAsignadas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTareasAsignadas.Size = new System.Drawing.Size(255, 60);
+            this.btnTareasAsignadas.TabIndex = 2;
+            this.btnTareasAsignadas.Text = "Tareas Asignadas";
+            this.btnTareasAsignadas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTareasAsignadas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTareasAsignadas.UseVisualStyleBackColor = false;
+            this.btnTareasAsignadas.Click += new System.EventHandler(this.btnTareasAsignadas_Click);
+            // 
+            // btnRegistros
+            // 
+            this.btnRegistros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.btnRegistros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegistros.FlatAppearance.BorderSize = 0;
+            this.btnRegistros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistros.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistros.ForeColor = System.Drawing.Color.White;
+            this.btnRegistros.IconChar = FontAwesome.Sharp.IconChar.BookOpenReader;
+            this.btnRegistros.IconColor = System.Drawing.Color.White;
+            this.btnRegistros.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRegistros.IconSize = 30;
+            this.btnRegistros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistros.Location = new System.Drawing.Point(0, 207);
+            this.btnRegistros.Name = "btnRegistros";
+            this.btnRegistros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnRegistros.Size = new System.Drawing.Size(255, 60);
+            this.btnRegistros.TabIndex = 5;
+            this.btnRegistros.Text = "Registros";
+            this.btnRegistros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegistros.UseVisualStyleBackColor = false;
+            this.btnRegistros.Click += new System.EventHandler(this.btnRegistros_Click);
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            this.btnCerrarSesion.IconColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarSesion.IconSize = 30;
+            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 553);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(255, 60);
+            this.btnCerrarSesion.TabIndex = 4;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // btnMenuPrincipal
             // 
@@ -266,41 +301,6 @@ namespace Presentation
             this.panelFormularioHijo.Size = new System.Drawing.Size(814, 613);
             this.panelFormularioHijo.TabIndex = 2;
             // 
-            // btnRegistros
-            // 
-            this.btnRegistros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.btnRegistros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRegistros.FlatAppearance.BorderSize = 0;
-            this.btnRegistros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistros.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistros.ForeColor = System.Drawing.Color.White;
-            this.btnRegistros.IconChar = FontAwesome.Sharp.IconChar.BookOpenReader;
-            this.btnRegistros.IconColor = System.Drawing.Color.White;
-            this.btnRegistros.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRegistros.IconSize = 30;
-            this.btnRegistros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistros.Location = new System.Drawing.Point(0, 207);
-            this.btnRegistros.Name = "btnRegistros";
-            this.btnRegistros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnRegistros.Size = new System.Drawing.Size(255, 60);
-            this.btnRegistros.TabIndex = 5;
-            this.btnRegistros.Text = "Registros";
-            this.btnRegistros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRegistros.UseVisualStyleBackColor = false;
-            this.btnRegistros.Click += new System.EventHandler(this.btnRegistros_Click);
-            // 
-            // panelSeccionTareas
-            // 
-            this.panelSeccionTareas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.panelSeccionTareas.Controls.Add(this.btnSeccionTareas);
-            this.panelSeccionTareas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSeccionTareas.Location = new System.Drawing.Point(0, 327);
-            this.panelSeccionTareas.Name = "panelSeccionTareas";
-            this.panelSeccionTareas.Size = new System.Drawing.Size(255, 100);
-            this.panelSeccionTareas.TabIndex = 6;
-            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -315,10 +315,10 @@ namespace Presentation
             this.Text = "Menú Principal";
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.pMenuLateral.ResumeLayout(false);
+            this.panelSeccionTareas.ResumeLayout(false);
             this.pLogo.ResumeLayout(false);
             this.pLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelSeccionTareas.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

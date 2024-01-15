@@ -16,6 +16,7 @@ namespace Presentation
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
+        private Form formularioActual = null;
 
         public MenuPrincipal()
         {
@@ -91,12 +92,32 @@ namespace Presentation
 
 
         //Funciones de diseño aplicada a los botones del menu lateral//
+
         //Menu Principal
         private void btnMenuPrincipal_Click(object sender, EventArgs e)
         {
             botonActivado(sender, RGBColors.color1);
-            abrirFormularioHijo(new MenuPrincipal());
             ocultarSubmenus();
+            // Copiamos la colección de formularios abiertos para evitar la excepción de modificación durante la iteración
+            var formulariosAbiertos = Application.OpenForms.Cast<Form>().ToList();
+
+            // Verificamos si hay algún formulario hijo abierto que no sea MenuPrincipal
+            bool hayFormularioAbierto = formulariosAbiertos.Any(form => form != this && form.GetType() != typeof(MenuPrincipal));
+
+            if (hayFormularioAbierto)
+            {
+                // Si hay formularios hijos abiertos, ciérralos
+                foreach (Form form in formulariosAbiertos.Where(form => form != this && form.GetType() != typeof(MenuPrincipal)))
+                {
+                    form.Close();
+                }
+            }
+            else
+            {
+                
+                abrirFormularioHijo(new MenuPrincipal());
+                
+            }
         }
 
         //Registro de actividades
