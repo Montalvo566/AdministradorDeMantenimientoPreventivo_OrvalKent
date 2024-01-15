@@ -16,7 +16,7 @@ namespace Presentation.ModalesFormulario
     {
         UserCrudModel userCrudTabla = new UserCrudModel();
         UserCrud crud = new UserCrud();
-        public string idUsuario = null;//Variable para almacenar el id al editar y eliminar
+        public string idUsuario = null;
         public string OperacionEdit = "Editar";
 
         public EditUsuariosModal()
@@ -91,8 +91,6 @@ namespace Presentation.ModalesFormulario
 
                         crud.PutUsuarios();
 
-                        //userCrudTabla.ActualizarUsuarios(Convert.ToInt32(idUsuario), gtbNombreCompleto.Text, Convert.ToInt32(gtbNumeroTrabajador.Text), Convert.ToInt32(gcmbDepartamento.SelectedValue),
-                        //Convert.ToInt32(gcmbArea.SelectedValue), Convert.ToInt32(gcmbPuesto.SelectedValue), gtbCorreo.Text, gtbPassword.Text, gtbFoto.Text);
                         MessageBox.Show("Usuario actualizado con exito");
                         LimpiarCampos();
                         this.Close();

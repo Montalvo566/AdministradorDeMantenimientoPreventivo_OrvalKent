@@ -44,6 +44,12 @@ namespace Domain
             tablaActividades = actividad.ListarUsuarioAsignado();
             return tablaActividades;
         }
+        public DataTable ListadoEstatus()
+        {
+            DataTable tablaActividades = new DataTable();
+            tablaActividades = actividad.ListarEstatus();
+            return tablaActividades;
+        }
         //Fin//
 
 

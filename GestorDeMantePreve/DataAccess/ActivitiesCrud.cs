@@ -14,7 +14,7 @@ namespace DataAccess
         SqlCommand command = new SqlCommand();
         SqlDataReader leer;
         DataTable tablaActividades = new DataTable();
-
+        
         //Atributos de datos//
         private int Id;
         private int IdArea;
@@ -158,6 +158,29 @@ namespace DataAccess
             }
             return tablaActividades;
         }
+
+        public DataTable ListarEstatus()
+        {
+            try
+            {
+                command.Connection = conexion.AbrirConexion();
+                command.CommandText = "Sp_ListarEstatus";
+                command.CommandType = CommandType.StoredProcedure;
+                leer = command.ExecuteReader();
+                tablaActividades.Load(leer);
+                leer.Close();
+
+            }
+            catch (Exception ex)
+            {
+                string msj = ex.ToString();
+            }
+            finally
+            {
+                command.Connection = conexion.CerrarConexion();
+            }
+            return tablaActividades;
+        }
         //Fin//
 
 
@@ -205,6 +228,42 @@ namespace DataAccess
                 command.Parameters.AddWithValue("@IdUsuarioAsignado", IdUsuarioAsignado);
                 command.Parameters.AddWithValue("@FechaAsignado", FechaAsignado);
                 command.Parameters.AddWithValue("@HoraAsignado", HoraAsignado);
+                //Fin//
+                command.ExecuteNonQuery();
+                command.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+                string msj = ex.ToString();
+            }
+            finally
+            {
+                command.Connection = conexion.CerrarConexion();
+            }
+        }
+        //Fin//
+
+
+        //Funcion para insertar datos a la tabla de Actividades: POST//
+        public void PutActividades()
+        {
+            try
+            {
+                command.Connection = conexion.AbrirConexion();
+                command.CommandText = "Sp_ActividadesPUT";
+                command.CommandType = CommandType.StoredProcedure;
+                //Parametros de entrada//
+                command.Parameters.AddWithValue("@IdArea", IdArea);
+                command.Parameters.AddWithValue("@IdEquipo", IdEquipo);
+                command.Parameters.AddWithValue("@IdFrecuencia", IdFrecuencia);
+                command.Parameters.AddWithValue("@Actividad", Actividad);
+                command.Parameters.AddWithValue("@Registro", Registro);
+                command.Parameters.AddWithValue("@Estatus", Estatus);
+                command.Parameters.AddWithValue("@IdUsuarioRegistra", IdUsuarioRegistra);
+                command.Parameters.AddWithValue("@IdUsuarioAsignado", IdUsuarioAsignado);
+                command.Parameters.AddWithValue("@FechaAsignado", FechaAsignado);
+                command.Parameters.AddWithValue("@HoraAsignado", HoraAsignado);
+                command.Parameters.AddWithValue("@Id", Id);
                 //Fin//
                 command.ExecuteNonQuery();
                 command.Parameters.Clear();

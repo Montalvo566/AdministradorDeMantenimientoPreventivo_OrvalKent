@@ -149,6 +149,47 @@ namespace Presentation
         //Fin//
 
 
+        //Funcion para abri el modal del formulario para poder editar los registros//
+        private void btnAbriModalEdit_Click(object sender, EventArgs e)
+        {
+            if (dgvActividadesTabla.SelectedRows.Count > 0)
+            {
+                ModalesFormulario.EditActividadesModal modal = new ModalesFormulario.EditActividadesModal();
+                modal.OperacionEdit = "Editar";
+
+                //Funcion para listar los combobox//
+                modal.ListarAreas();
+                modal.ListarEquipos();
+                modal.ListarFrecuencias();
+                modal.ListarUsuarioRegistra();
+                modal.ListarUsuarioAsignado();
+                modal.ListarEstatus();
+                //Fin//
+
+                //Funcion para cargar los datos en los campos//
+                modal.cmbArea.Text = dgvActividadesTabla.CurrentRow.Cells[1].Value.ToString();
+                modal.cmbEquipo.Text = dgvActividadesTabla.CurrentRow.Cells[2].Value.ToString();
+                modal.cmbFrecuencia.Text = dgvActividadesTabla.CurrentRow.Cells[3].Value.ToString();
+                modal.tbActividad.Text = dgvActividadesTabla.CurrentRow.Cells["Actividad"].Value.ToString();
+                modal.tbRegistro.Text = dgvActividadesTabla.CurrentRow.Cells["Registro"].Value.ToString();
+                modal.cmbEstatus.Text = dgvActividadesTabla.CurrentRow.Cells[6].Value.ToString();
+                modal.cmbUsuarioRegistra.Text = dgvActividadesTabla.CurrentRow.Cells[7].Value.ToString();
+                modal.cmbUsuarioAsignado.Text = dgvActividadesTabla.CurrentRow.Cells[8].Value.ToString();
+                modal.tbFechaAsignacion.Text = dgvActividadesTabla.CurrentRow.Cells["FechaAsignado"].Value.ToString();
+                modal.tbHoraAsignacion.Text = dgvActividadesTabla.CurrentRow.Cells["HoraAsignado"].Value.ToString();
+                modal.idActividad = dgvActividadesTabla.CurrentRow.Cells["Id"].Value.ToString();
+                modal.ShowDialog();
+                MostrarTablaActividades();
+                //Fin//
+            }
+            else
+            {
+                MessageBox.Show("Para modificar, seleccione un registro");
+            }
+        }
+        //Fin//
+
+
         //Funcion para limpiar los textbox del formulario//
         private void LimpiarCampos()
         {
@@ -189,8 +230,6 @@ namespace Presentation
             return true;
         }
         //Fin//
-
-
 
     }
 }
