@@ -1,7 +1,7 @@
 ﻿
 namespace Presentation
 {
-    partial class FormularioMenu
+    partial class RegistrosActividades
     {
         /// <summary>
         /// Required designer variable.

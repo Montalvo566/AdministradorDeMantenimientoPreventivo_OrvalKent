@@ -17,10 +17,10 @@ C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.MenuPrincipal.resources
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.Actividades.resources
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.Usuarios.resources
-C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.FormularioMenu.resources
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.TareasAsignadas.resources
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\bin\Debug\Common.dll
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\bin\Debug\Common.pdb
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\bin\Debug\Guna.UI.dll
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.ModalesFormulario.EditUsuariosModal.resources
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.ModalesFormulario.EditActividadesModal.resources
+C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.RegistrosActividades.resources

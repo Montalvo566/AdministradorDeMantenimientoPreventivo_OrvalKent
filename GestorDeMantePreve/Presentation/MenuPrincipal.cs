@@ -95,7 +95,15 @@ namespace Presentation
         private void btnMenuPrincipal_Click(object sender, EventArgs e)
         {
             botonActivado(sender, RGBColors.color1);
-            abrirFormularioHijo(new FormularioMenu());
+            abrirFormularioHijo(new MenuPrincipal());
+            ocultarSubmenus();
+        }
+
+        //Registro de actividades
+        private void btnRegistros_Click(object sender, EventArgs e)
+        {
+            botonActivado(sender, RGBColors.color1);
+            abrirFormularioHijo(new RegistrosActividades());
             ocultarSubmenus();
         }
 
