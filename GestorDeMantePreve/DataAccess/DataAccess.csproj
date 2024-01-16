@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActivitiesCrud.cs" />
+    <Compile Include="AreasCrud.cs" />
     <Compile Include="ConnectionToSql.cs" />
     <Compile Include="DepartamentCrud.cs" />
     <Compile Include="EquiposCrud.cs" />

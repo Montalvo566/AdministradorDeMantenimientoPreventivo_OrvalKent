@@ -60,6 +60,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Areas.Designer.cs">
+      <DependentUpon>Areas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Departamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Areas.resx">
+      <DependentUpon>Areas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Departamentos.resx">
       <DependentUpon>Departamentos.cs</DependentUpon>
     </EmbeddedResource>

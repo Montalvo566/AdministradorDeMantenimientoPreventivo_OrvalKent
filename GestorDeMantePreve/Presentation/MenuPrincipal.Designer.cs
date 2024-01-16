@@ -35,6 +35,7 @@ namespace Presentation
             this.lbNombreInicioSesion = new System.Windows.Forms.Label();
             this.panelFormularioHijo = new System.Windows.Forms.Panel();
             this.panelSeccionTareas = new System.Windows.Forms.Panel();
+            this.btnAreas = new FontAwesome.Sharp.IconButton();
             this.btnEquipos = new FontAwesome.Sharp.IconButton();
             this.btnDepartamentos = new FontAwesome.Sharp.IconButton();
             this.btnUsuarios = new FontAwesome.Sharp.IconButton();
@@ -113,6 +114,7 @@ namespace Presentation
             // panelSeccionTareas
             // 
             this.panelSeccionTareas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            this.panelSeccionTareas.Controls.Add(this.btnAreas);
             this.panelSeccionTareas.Controls.Add(this.btnEquipos);
             this.panelSeccionTareas.Controls.Add(this.btnDepartamentos);
             this.panelSeccionTareas.Controls.Add(this.btnUsuarios);
@@ -120,8 +122,33 @@ namespace Presentation
             this.panelSeccionTareas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSeccionTareas.Location = new System.Drawing.Point(0, 387);
             this.panelSeccionTareas.Name = "panelSeccionTareas";
-            this.panelSeccionTareas.Size = new System.Drawing.Size(249, 263);
+            this.panelSeccionTareas.Size = new System.Drawing.Size(249, 309);
             this.panelSeccionTareas.TabIndex = 0;
+            // 
+            // btnAreas
+            // 
+            this.btnAreas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.btnAreas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAreas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAreas.FlatAppearance.BorderSize = 0;
+            this.btnAreas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAreas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAreas.ForeColor = System.Drawing.Color.White;
+            this.btnAreas.IconChar = FontAwesome.Sharp.IconChar.LocationPinLock;
+            this.btnAreas.IconColor = System.Drawing.Color.White;
+            this.btnAreas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAreas.IconSize = 30;
+            this.btnAreas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAreas.Location = new System.Drawing.Point(0, 240);
+            this.btnAreas.Name = "btnAreas";
+            this.btnAreas.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnAreas.Size = new System.Drawing.Size(249, 60);
+            this.btnAreas.TabIndex = 6;
+            this.btnAreas.Text = "Areas";
+            this.btnAreas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAreas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAreas.UseVisualStyleBackColor = false;
+            this.btnAreas.Click += new System.EventHandler(this.btnAreas_Click);
             // 
             // btnEquipos
             // 
@@ -139,7 +166,7 @@ namespace Presentation
             this.btnEquipos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEquipos.Location = new System.Drawing.Point(0, 180);
             this.btnEquipos.Name = "btnEquipos";
-            this.btnEquipos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEquipos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnEquipos.Size = new System.Drawing.Size(249, 60);
             this.btnEquipos.TabIndex = 5;
             this.btnEquipos.Text = "Equipos";
@@ -164,7 +191,7 @@ namespace Presentation
             this.btnDepartamentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDepartamentos.Location = new System.Drawing.Point(0, 120);
             this.btnDepartamentos.Name = "btnDepartamentos";
-            this.btnDepartamentos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnDepartamentos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnDepartamentos.Size = new System.Drawing.Size(249, 60);
             this.btnDepartamentos.TabIndex = 4;
             this.btnDepartamentos.Text = "Departamentos";
@@ -189,7 +216,7 @@ namespace Presentation
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuarios.Location = new System.Drawing.Point(0, 60);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnUsuarios.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnUsuarios.Size = new System.Drawing.Size(249, 60);
             this.btnUsuarios.TabIndex = 3;
             this.btnUsuarios.Text = "Usuarios";
@@ -214,7 +241,7 @@ namespace Presentation
             this.btnActividades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnActividades.Location = new System.Drawing.Point(0, 0);
             this.btnActividades.Name = "btnActividades";
-            this.btnActividades.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnActividades.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnActividades.Size = new System.Drawing.Size(249, 60);
             this.btnActividades.TabIndex = 2;
             this.btnActividades.Text = "Actividades";
@@ -311,7 +338,7 @@ namespace Presentation
             this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarSesion.IconSize = 30;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 650);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 696);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(249, 60);
@@ -398,6 +425,7 @@ namespace Presentation
         private FontAwesome.Sharp.IconButton btnMostrarCruds;
         private FontAwesome.Sharp.IconButton btnDepartamentos;
         private FontAwesome.Sharp.IconButton btnEquipos;
+        private FontAwesome.Sharp.IconButton btnAreas;
     }
 }
 

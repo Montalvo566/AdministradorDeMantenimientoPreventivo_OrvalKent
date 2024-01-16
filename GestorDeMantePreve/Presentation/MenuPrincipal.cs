@@ -149,10 +149,19 @@ namespace Presentation
             botonActivado(sender, RGBColors.color1);
             abrirFormularioHijo(new Departamentos());
         }
+
+        //Equipos
         private void btnEquipos_Click(object sender, EventArgs e)
         {
             botonActivado(sender, RGBColors.color1);
             abrirFormularioHijo(new Equipos());
+        }
+
+        //Areas
+        private void btnAreas_Click(object sender, EventArgs e)
+        {
+            botonActivado(sender, RGBColors.color1);
+            abrirFormularioHijo(new Areas());
         }
 
         //Secciones desplegables
