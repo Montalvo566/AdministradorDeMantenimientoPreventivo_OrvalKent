@@ -50,6 +50,7 @@ namespace Presentation
                 currentBtn.IconColor = color;
             }
         }
+        
         private void botonDesabilitado()
         {
             if (currentBtn != null)
@@ -133,7 +134,6 @@ namespace Presentation
         {
             botonActivado(sender, RGBColors.color1);
             abrirFormularioHijo(new Actividades());
-            ocultarSubmenus();
         }
 
         //Usuarios
@@ -141,19 +141,30 @@ namespace Presentation
         {
             botonActivado(sender, RGBColors.color1);
             abrirFormularioHijo(new Usuarios());
-            ocultarSubmenus();
+        }
+
+        //Departamentos
+        private void btnDepartamentos_Click(object sender, EventArgs e)
+        {
+            botonActivado(sender, RGBColors.color1);
+            abrirFormularioHijo(new Departamentos());
         }
 
         //Secciones desplegables
         private void btnTareasAsignadas_Click(object sender, EventArgs e)
         {
             botonActivado(sender, RGBColors.color1);
-            mostrarSubmenus(panelSeccionTareas);
+            abrirFormularioHijo(new TareasAsignadas());
+            ocultarSubmenus();
         }
         private void btnSeccionTareas_Click(object sender, EventArgs e)
         {
             abrirFormularioHijo(new TareasAsignadas());
-            ocultarSubmenus();
+        }
+        private void btnMostrarCruds_Click(object sender, EventArgs e)
+        {
+            botonActivado(sender, RGBColors.color1);
+            mostrarSubmenus(panelSeccionTareas);
         }
 
         //Boton de cerrar sesión
