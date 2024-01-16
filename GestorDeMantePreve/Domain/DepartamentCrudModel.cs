@@ -12,7 +12,18 @@ namespace Domain
     {
         DepartamentCrud departCrud = new DepartamentCrud();
 
-        //Funcion para mostrar los datos de la tabla de Usuarios: GET//
+
+        //Fuciones encardas de enlistar los datos de las Areas y Equipos//
+        public DataTable ListadoAreas()
+        {
+            DataTable tablaDepartamentos = new DataTable();
+            tablaDepartamentos = departCrud.ListarAreas();
+            return tablaDepartamentos;
+        }
+        //Fin//
+
+
+        //Funcion para mostrar los datos de la tabla de Departamentos: GET//
         public DataTable MostrarTablaDep()
         {
             DataTable tablaDepartamentos = new DataTable();

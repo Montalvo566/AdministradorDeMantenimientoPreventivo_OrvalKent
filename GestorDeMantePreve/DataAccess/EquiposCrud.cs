@@ -8,22 +8,25 @@ using System.Data;
 
 namespace DataAccess
 {
-    public class DepartamentCrud
+    public class EquiposCrud
     {
         ConnectionToSql conexion = new ConnectionToSql();
         SqlCommand command = new SqlCommand();
         SqlDataReader leer;
-        DataTable tablaDepartamentos = new DataTable();
+        DataTable tablaEquipos = new DataTable();
+
 
         //Atributos de los datos//
         private int Id;
-        private string Departamento;
-        private int IdZonaAcceso;
+        private string Equipo;
+        private int NumeroEquipo;
+        private int IdArea;
 
         //Funcion GET, SET//
         public int Id1 { get => Id; set => Id = value; }
-        public string Departamento1 { get => Departamento; set => Departamento = value; }
-        public int IdZonaAcceso1 { get => IdZonaAcceso; set => IdZonaAcceso = value; }
+        public string Equipo1 { get => Equipo; set => Equipo = value; }
+        public int NumeroEquipo1 { get => NumeroEquipo; set => NumeroEquipo = value; }
+        public int IdArea1 { get => IdArea; set => IdArea = value; }
         //Fin//
 
 
@@ -36,7 +39,7 @@ namespace DataAccess
                 command.CommandText = "sp_ListarAreas";
                 command.CommandType = CommandType.StoredProcedure;
                 leer = command.ExecuteReader();
-                tablaDepartamentos.Load(leer);
+                tablaEquipos.Load(leer);
                 leer.Close();
 
             }
@@ -48,21 +51,21 @@ namespace DataAccess
             {
                 command.Connection = conexion.CerrarConexion();
             }
-            return tablaDepartamentos;
+            return tablaEquipos;
         }
         //Fin//
 
 
         //Funcion para mostrar los datos de la tabla de usuarios: GET//
-        public DataTable GetDepartamentos()
+        public DataTable GetEquipos()
         {
             try
             {
                 command.Connection = conexion.AbrirConexion();
-                command.CommandText = "Sp_GetDepartamentosTabla";
+                command.CommandText = "Sp_GetEquiposTabla";
                 command.CommandType = CommandType.StoredProcedure;
                 leer = command.ExecuteReader();
-                tablaDepartamentos.Load(leer);
+                tablaEquipos.Load(leer);
                 leer.Close();
 
             }
@@ -74,9 +77,10 @@ namespace DataAccess
             {
                 command.Connection = conexion.CerrarConexion();
             }
-            return tablaDepartamentos;
+            return tablaEquipos;
         }
         //Fin//
+
 
     }
 }

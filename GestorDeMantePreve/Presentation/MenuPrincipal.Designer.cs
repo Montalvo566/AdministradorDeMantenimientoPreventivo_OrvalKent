@@ -35,6 +35,7 @@ namespace Presentation
             this.lbNombreInicioSesion = new System.Windows.Forms.Label();
             this.panelFormularioHijo = new System.Windows.Forms.Panel();
             this.panelSeccionTareas = new System.Windows.Forms.Panel();
+            this.btnEquipos = new FontAwesome.Sharp.IconButton();
             this.btnDepartamentos = new FontAwesome.Sharp.IconButton();
             this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.btnActividades = new FontAwesome.Sharp.IconButton();
@@ -112,14 +113,40 @@ namespace Presentation
             // panelSeccionTareas
             // 
             this.panelSeccionTareas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            this.panelSeccionTareas.Controls.Add(this.btnEquipos);
             this.panelSeccionTareas.Controls.Add(this.btnDepartamentos);
             this.panelSeccionTareas.Controls.Add(this.btnUsuarios);
             this.panelSeccionTareas.Controls.Add(this.btnActividades);
             this.panelSeccionTareas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSeccionTareas.Location = new System.Drawing.Point(0, 387);
             this.panelSeccionTareas.Name = "panelSeccionTareas";
-            this.panelSeccionTareas.Size = new System.Drawing.Size(249, 230);
+            this.panelSeccionTareas.Size = new System.Drawing.Size(249, 263);
             this.panelSeccionTareas.TabIndex = 0;
+            // 
+            // btnEquipos
+            // 
+            this.btnEquipos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.btnEquipos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEquipos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEquipos.FlatAppearance.BorderSize = 0;
+            this.btnEquipos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEquipos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEquipos.ForeColor = System.Drawing.Color.White;
+            this.btnEquipos.IconChar = FontAwesome.Sharp.IconChar.Tools;
+            this.btnEquipos.IconColor = System.Drawing.Color.White;
+            this.btnEquipos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEquipos.IconSize = 30;
+            this.btnEquipos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEquipos.Location = new System.Drawing.Point(0, 180);
+            this.btnEquipos.Name = "btnEquipos";
+            this.btnEquipos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEquipos.Size = new System.Drawing.Size(249, 60);
+            this.btnEquipos.TabIndex = 5;
+            this.btnEquipos.Text = "Equipos";
+            this.btnEquipos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEquipos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEquipos.UseVisualStyleBackColor = false;
+            this.btnEquipos.Click += new System.EventHandler(this.btnEquipos_Click);
             // 
             // btnDepartamentos
             // 
@@ -284,7 +311,7 @@ namespace Presentation
             this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarSesion.IconSize = 30;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 617);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 650);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(249, 60);
@@ -370,6 +397,7 @@ namespace Presentation
         private System.Windows.Forms.Panel panelSeccionTareas;
         private FontAwesome.Sharp.IconButton btnMostrarCruds;
         private FontAwesome.Sharp.IconButton btnDepartamentos;
+        private FontAwesome.Sharp.IconButton btnEquipos;
     }
 }
 

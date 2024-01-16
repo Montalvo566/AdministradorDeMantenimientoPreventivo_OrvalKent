@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ActivitiesCrudModel.cs" />
     <Compile Include="DepartamentCrudModel.cs" />
+    <Compile Include="EquiposCrudModel.cs" />
     <Compile Include="UserCrudModel.cs" />
     <Compile Include="UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

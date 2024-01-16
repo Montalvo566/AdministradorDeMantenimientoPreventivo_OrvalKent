@@ -7,22 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms;
 using Domain;
 using DataAccess;
 
 namespace Presentation
 {
-    public partial class Departamentos : Form
+    public partial class Equipos : Form
     {
-        DepartamentCrudModel depCrudTabla = new DepartamentCrudModel();
+        EquiposCrudModel equiposCrudTabla = new EquiposCrudModel();
 
-        public Departamentos()
+        public Equipos()
         {
             InitializeComponent();
         }
 
-        private void Departamentos_Load(object sender, EventArgs e)
+        private void Equipos_Load(object sender, EventArgs e)
         {
             ListarAreas();
             MostrarDepartamentosTabla();
@@ -33,12 +32,12 @@ namespace Presentation
         //Funcion para mostrar los datos en la tabla de usuarios//
         private void MostrarDepartamentosTabla()
         {
-            DepartamentCrudModel depCrudTabla = new DepartamentCrudModel();
-            dgvDepartamentosTabla.DataSource = depCrudTabla.MostrarTablaDep();
+            EquiposCrudModel equiposCrudTabla = new EquiposCrudModel();
+            dgvEquiposTabla.DataSource = equiposCrudTabla.MostrarTablaEquipos();
         }
         private void ConfigurarDataGridView()
         {
-            dgvDepartamentosTabla.RowTemplate.Height = 50;
+            dgvEquiposTabla.RowTemplate.Height = 50;
         }
         //Fin//
 
@@ -46,12 +45,13 @@ namespace Presentation
         //Funciones para listar los datos del combobox//
         private void ListarAreas()
         {
-            DepartamentCrudModel depCrudTabla = new DepartamentCrudModel();
-            gcmbArea.DataSource = depCrudTabla.ListadoAreas();
+            EquiposCrudModel equiposCrudTabla = new EquiposCrudModel();
+            gcmbArea.DataSource = equiposCrudTabla.ListadoAreas();
             gcmbArea.DisplayMember = "Zona";
             gcmbArea.ValueMember = "Id";
         }
         //Fin//
+
 
     }
 }
