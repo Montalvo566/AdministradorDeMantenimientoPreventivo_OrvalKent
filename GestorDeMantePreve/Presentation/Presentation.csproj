@@ -84,6 +84,18 @@
     <Compile Include="ModalesFormulario\EditActividadesModal.Designer.cs">
       <DependentUpon>EditActividadesModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModalesFormulario\EditAreasModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalesFormulario\EditAreasModal.Designer.cs">
+      <DependentUpon>EditAreasModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalesFormulario\EditEquiposModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalesFormulario\EditEquiposModal.Designer.cs">
+      <DependentUpon>EditEquiposModal.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModalesFormulario\EditUsuariosModal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +151,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModalesFormulario\EditActividadesModal.resx">
       <DependentUpon>EditActividadesModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalesFormulario\EditAreasModal.resx">
+      <DependentUpon>EditAreasModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalesFormulario\EditEquiposModal.resx">
+      <DependentUpon>EditEquiposModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModalesFormulario\EditUsuariosModal.resx">
       <DependentUpon>EditUsuariosModal.cs</DependentUpon>

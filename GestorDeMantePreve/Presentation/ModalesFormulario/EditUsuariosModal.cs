@@ -24,7 +24,7 @@ namespace Presentation.ModalesFormulario
             InitializeComponent();
         }
 
-        //Funciones del formuario, cerrar y mover//
+        //Funciones del formuario cerrar//
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();

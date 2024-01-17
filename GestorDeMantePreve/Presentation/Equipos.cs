@@ -82,6 +82,34 @@ namespace Presentation
         //Fin//
 
 
+        //Funcion para abrir el formulario para editar los equipos//
+        private void btnAbriModalEdit_Click(object sender, EventArgs e)
+        {
+            if (dgvEquiposTabla.SelectedRows.Count > 0)
+            {
+                ModalesFormulario.EditEquiposModal modal = new ModalesFormulario.EditEquiposModal();
+                modal.OperacionEdit = "Editar";
+
+                //Funcion para listar los combobox//
+                modal.ListarAreas();
+                //Fin//
+
+                //Funcion para cargar los datos en los campos//
+                modal.gtbEquipo.Text = dgvEquiposTabla.CurrentRow.Cells[1].Value.ToString();
+                modal.gtbNumeroEquipo.Text = dgvEquiposTabla.CurrentRow.Cells[2].Value.ToString();
+                modal.gcmbArea.Text = dgvEquiposTabla.CurrentRow.Cells[3].Value.ToString();
+                modal.ShowDialog();
+                MostrarEquiposTabla();
+                //Fin//
+            }
+            else
+            {
+                MessageBox.Show("Para modificar, seleccione un registro");
+            }
+        }
+        //Fin//
+
+
         //Funcion para eliminar registros de la tablas de equipos//
         private void btnEliminar_Click(object sender, EventArgs e)
         {

@@ -1,0 +1,105 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Domain;
+using DataAccess;
+
+namespace Presentation.ModalesFormulario
+{
+    public partial class EditAreasModal : Form
+    {
+        AreasCrudModel areasCrudTabla = new AreasCrudModel();
+        AreasCrud crud = new AreasCrud();
+        public string idArea = null;
+        public string OperacionEdit = "Editar";
+
+        public EditAreasModal()
+        {
+            InitializeComponent();
+        }
+
+
+        private void EditAreasModal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //Funciones para listar los campos del textbox//
+        public void ListarDepartamentos()
+        {
+            AreasCrudModel areasCrudTabla = new AreasCrudModel();
+            gcmbDepartamento.DataSource = areasCrudTabla.ListadoDepartamentos();
+            gcmbDepartamento.DisplayMember = "Departamento";
+            gcmbDepartamento.ValueMember = "Id";
+        }
+        //Fin//
+
+        //Cerrar formulario modal//
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        //Fin//
+
+
+        private void gbtnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //Funcion para limpiar los textbox del formulario//
+        private void LimpiarCampos()
+        {
+            //limpiar campos al ejecutar la accion del boton
+            gtbAreas.Clear();
+        }
+        //Fin//
+
+
+        //Validacion de campos vacios en el formulario y fromato no valido//
+        private bool EsCampoValido(Guna.UI.WinForms.GunaTextBox campo, string nombreCampo)
+        {
+            if (string.IsNullOrWhiteSpace(campo.Text))
+            {
+                MessageBox.Show($"Por favor, coloque el campo {nombreCampo}");
+                return false;
+            }
+            return true;
+        }
+        private bool EsOpcionValidaSeleccionada(Guna.UI.WinForms.GunaComboBox campo, string nombreCampo)
+        {
+            if (campo.SelectedIndex == -1)
+            {
+                MessageBox.Show($"Por favor, seleccione el campo {nombreCampo}");
+                return false;
+            }
+            return true;
+        }
+        private void SoloFormatoLetra(object sender, KeyPressEventArgs e)
+        {
+            // Permite solo letras y espacios
+            if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' '))
+            {
+                e.Handled = true; // Ignora la tecla presionada
+            }
+        }
+        //Fin//
+
+        //Ejecutar las validaciones//
+        private void ValdiacionesTipoCampo()
+        {
+            gtbAreas.KeyPress += new KeyPressEventHandler(SoloFormatoLetra);
+        }
+        //Fin//
+
+
+    }
+}

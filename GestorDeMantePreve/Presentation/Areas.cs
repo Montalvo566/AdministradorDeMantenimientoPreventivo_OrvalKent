@@ -79,6 +79,33 @@ namespace Presentation
         //Fin//
 
 
+        //Abrir formulario para editar los registros//
+        private void btnAbriModalEdit_Click(object sender, EventArgs e)
+        {
+            if (dgvAreasTabla.SelectedRows.Count > 0)
+            {
+                ModalesFormulario.EditAreasModal modal = new ModalesFormulario.EditAreasModal();
+                modal.OperacionEdit = "Editar";
+
+                //Funcion para listar los combobox//
+                modal.ListarDepartamentos();
+                //Fin//
+
+                //Funcion para cargar los datos en los campos//
+                modal.gtbAreas.Text = dgvAreasTabla.CurrentRow.Cells[1].Value.ToString();
+                modal.gcmbDepartamento.Text = dgvAreasTabla.CurrentRow.Cells[2].Value.ToString();
+                modal.ShowDialog();
+                MostrarAreasTabla();
+                //Fin//
+            }
+            else
+            {
+                MessageBox.Show("Para modificar, seleccione un registro");
+            }
+        }
+        //Fin//
+
+
         //Funcion parar eliminar datos de la tabla de areas
         private void btnEliminar_Click(object sender, EventArgs e)
         {
