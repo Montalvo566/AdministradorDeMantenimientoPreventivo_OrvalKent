@@ -78,5 +78,57 @@ namespace DataAccess
         }
         //Fin//
 
+
+        //Funcion para agregar datos a la tabla de usuarios: POST//
+        public void PostDepartamentos()
+        {
+            try
+            {
+                command.Connection = conexion.AbrirConexion();
+                command.CommandText = "Sp_DepartamentosPOST";
+                command.CommandType = CommandType.StoredProcedure;
+                //Parametros de entrada//
+                command.Parameters.AddWithValue("@Departamento", Departamento);
+                command.Parameters.AddWithValue("@IdZonaAcceso", IdZonaAcceso);
+                //Fin//
+                command.ExecuteReader();
+                command.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+                string msj = ex.ToString();
+            }
+            finally
+            {
+                command.Connection = conexion.CerrarConexion();
+            }
+        }
+        //Fin//
+
+
+        //Funcion para eliminar registro de la tabla de departamentos: DELETE//
+        public void DeleteDepartamentos()
+        {
+            try
+            {
+                command.Connection = conexion.AbrirConexion();
+                command.CommandText = "Sp_DepartamentosDELETE";
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Id", Id);
+                command.ExecuteNonQuery();
+                command.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+                string msj = ex.ToString();
+            }
+            finally
+            {
+                command.Connection = conexion.CerrarConexion();
+            }
+        }
+        //Fin//
+
+
     }
 }
