@@ -94,7 +94,7 @@ namespace Presentation
             }
             else
             {
-                MessageBox.Show("Para poder eliminar, seleccione un regustro");
+                MessageBox.Show("Para poder eliminar, seleccione un registro");
             }
         }
         //Fin//

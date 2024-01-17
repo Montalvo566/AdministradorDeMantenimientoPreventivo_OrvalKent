@@ -82,5 +82,57 @@ namespace DataAccess
         //Fin//
 
 
+        //Funcion para agregar datos a la tabla de equipos: POST//
+        public void PostEquipos()
+        {
+            try
+            {
+                command.Connection = conexion.AbrirConexion();
+                command.CommandText = "Sp_EquiposPOST";
+                command.CommandType = CommandType.StoredProcedure;
+                //Parametros de entrada//
+                command.Parameters.AddWithValue("@Equipo", Equipo);
+                command.Parameters.AddWithValue("@NumeroEquipo", NumeroEquipo);
+                command.Parameters.AddWithValue("@IdArea", IdArea);
+                //Fin//
+                command.ExecuteReader();
+                command.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+                string msj = ex.ToString();
+            }
+            finally
+            {
+                command.Connection = conexion.CerrarConexion();
+            }
+        }
+        //Fin//
+
+
+        //Funcion para eliminar registro de la tabla de equipos: DELETE//
+        public void DeleteEquipos()
+        {
+            try
+            {
+                command.Connection = conexion.AbrirConexion();
+                command.CommandText = "Sp_EquiposDELETE";
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Id", Id);
+                command.ExecuteNonQuery();
+                command.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+                string msj = ex.ToString();
+            }
+            finally
+            {
+                command.Connection = conexion.CerrarConexion();
+            }
+        }
+        //Fin//
+
+
     }
 }
