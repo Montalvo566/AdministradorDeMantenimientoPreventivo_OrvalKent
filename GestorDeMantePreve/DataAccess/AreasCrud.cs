@@ -80,5 +80,56 @@ namespace DataAccess
         //Fin//
 
 
+        //Funcion para agregar datos a la tabla de areas: POST//
+        public void PostAreas()
+        {
+            try
+            {
+                command.Connection = conexion.AbrirConexion();
+                command.CommandText = "Sp_AreasPOST";
+                command.CommandType = CommandType.StoredProcedure;
+                //Parametros de entrada//
+                command.Parameters.AddWithValue("@Zona", Zona);
+                command.Parameters.AddWithValue("@IdDepartamento", IdDepartamento);
+                //Fin//
+                command.ExecuteReader();
+                command.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+                string msj = ex.ToString();
+            }
+            finally
+            {
+                command.Connection = conexion.CerrarConexion();
+            }
+        }
+        //Fin//
+
+
+        //Funcion para eliminar registro de la tabla de areas: DELETE//
+        public void DeleteAreas()
+        {
+            try
+            {
+                command.Connection = conexion.AbrirConexion();
+                command.CommandText = "Sp_AreasDELETE";
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Id", Id);
+                command.ExecuteNonQuery();
+                command.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+                string msj = ex.ToString();
+            }
+            finally
+            {
+                command.Connection = conexion.CerrarConexion();
+            }
+        }
+        //Fin//
+
+
     }
 }
