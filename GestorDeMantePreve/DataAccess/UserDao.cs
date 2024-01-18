@@ -54,5 +54,44 @@ namespace DataAccess
                 CerrarConexion();
             }
         }
+
+
+        public DataTable GetActividadesUsuarios(int idUsuario, out string errorMessage)
+        {
+            DataTable tablaActividades = new DataTable();
+            errorMessage = null;
+
+            try
+            {
+                using (var connection = AbrirConexion())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "Sp_GetActividadesUsuarios";
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Agregar el parámetro al stored procedure
+                    command.Parameters.AddWithValue("@IdUsuario", idUsuario);
+
+                    leer = command.ExecuteReader();
+                    tablaActividades.Load(leer);
+                }
+            }
+            catch (SqlException ex)
+            {
+                errorMessage = "Error SQL al obtener actividades: " + ex.Message;
+            }
+            catch (Exception ex)
+            {
+                errorMessage = "Error al obtener actividades: " + ex.Message;
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+
+            return tablaActividades;
+        }
+
+
     }
 }

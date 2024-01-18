@@ -29,12 +29,11 @@ namespace Presentation
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pMenuLateral = new System.Windows.Forms.Panel();
             this.panelSeccionTareas = new System.Windows.Forms.Panel();
-            this.pLogo = new System.Windows.Forms.Panel();
-            this.lbCorreoInicioSesion = new System.Windows.Forms.Label();
-            this.lbNombreInicioSesion = new System.Windows.Forms.Label();
-            this.panelFormularioHijo = new System.Windows.Forms.Panel();
             this.btnAreas = new FontAwesome.Sharp.IconButton();
             this.btnEquipos = new FontAwesome.Sharp.IconButton();
             this.btnDepartamentos = new FontAwesome.Sharp.IconButton();
@@ -45,11 +44,18 @@ namespace Presentation
             this.btnRegistros = new FontAwesome.Sharp.IconButton();
             this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
             this.btnMenuPrincipal = new FontAwesome.Sharp.IconButton();
+            this.pLogo = new System.Windows.Forms.Panel();
+            this.lbCorreoInicioSesion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbNombreInicioSesion = new System.Windows.Forms.Label();
+            this.panelFormularioHijo = new System.Windows.Forms.Panel();
+            this.dgvMostrarActividadesUsuarios = new Guna.UI.WinForms.GunaDataGridView();
             this.pMenuLateral.SuspendLayout();
             this.panelSeccionTareas.SuspendLayout();
             this.pLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelFormularioHijo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarActividadesUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // pMenuLateral
@@ -82,48 +88,6 @@ namespace Presentation
             this.panelSeccionTareas.Name = "panelSeccionTareas";
             this.panelSeccionTareas.Size = new System.Drawing.Size(249, 309);
             this.panelSeccionTareas.TabIndex = 0;
-            // 
-            // pLogo
-            // 
-            this.pLogo.Controls.Add(this.lbCorreoInicioSesion);
-            this.pLogo.Controls.Add(this.pictureBox1);
-            this.pLogo.Controls.Add(this.lbNombreInicioSesion);
-            this.pLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pLogo.Location = new System.Drawing.Point(0, 0);
-            this.pLogo.Name = "pLogo";
-            this.pLogo.Size = new System.Drawing.Size(249, 147);
-            this.pLogo.TabIndex = 0;
-            // 
-            // lbCorreoInicioSesion
-            // 
-            this.lbCorreoInicioSesion.AutoSize = true;
-            this.lbCorreoInicioSesion.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCorreoInicioSesion.ForeColor = System.Drawing.Color.White;
-            this.lbCorreoInicioSesion.Location = new System.Drawing.Point(12, 127);
-            this.lbCorreoInicioSesion.Name = "lbCorreoInicioSesion";
-            this.lbCorreoInicioSesion.Size = new System.Drawing.Size(44, 16);
-            this.lbCorreoInicioSesion.TabIndex = 2;
-            this.lbCorreoInicioSesion.Text = "Correo";
-            // 
-            // lbNombreInicioSesion
-            // 
-            this.lbNombreInicioSesion.AutoSize = true;
-            this.lbNombreInicioSesion.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombreInicioSesion.ForeColor = System.Drawing.Color.White;
-            this.lbNombreInicioSesion.Location = new System.Drawing.Point(12, 107);
-            this.lbNombreInicioSesion.Name = "lbNombreInicioSesion";
-            this.lbNombreInicioSesion.Size = new System.Drawing.Size(51, 16);
-            this.lbNombreInicioSesion.TabIndex = 1;
-            this.lbNombreInicioSesion.Text = "Nombre";
-            // 
-            // panelFormularioHijo
-            // 
-            this.panelFormularioHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.panelFormularioHijo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFormularioHijo.Location = new System.Drawing.Point(266, 0);
-            this.panelFormularioHijo.Name = "panelFormularioHijo";
-            this.panelFormularioHijo.Size = new System.Drawing.Size(803, 613);
-            this.panelFormularioHijo.TabIndex = 2;
             // 
             // btnAreas
             // 
@@ -374,6 +338,28 @@ namespace Presentation
             this.btnMenuPrincipal.UseVisualStyleBackColor = false;
             this.btnMenuPrincipal.Click += new System.EventHandler(this.btnMenuPrincipal_Click);
             // 
+            // pLogo
+            // 
+            this.pLogo.Controls.Add(this.lbCorreoInicioSesion);
+            this.pLogo.Controls.Add(this.pictureBox1);
+            this.pLogo.Controls.Add(this.lbNombreInicioSesion);
+            this.pLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pLogo.Location = new System.Drawing.Point(0, 0);
+            this.pLogo.Name = "pLogo";
+            this.pLogo.Size = new System.Drawing.Size(249, 147);
+            this.pLogo.TabIndex = 0;
+            // 
+            // lbCorreoInicioSesion
+            // 
+            this.lbCorreoInicioSesion.AutoSize = true;
+            this.lbCorreoInicioSesion.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCorreoInicioSesion.ForeColor = System.Drawing.Color.White;
+            this.lbCorreoInicioSesion.Location = new System.Drawing.Point(12, 127);
+            this.lbCorreoInicioSesion.Name = "lbCorreoInicioSesion";
+            this.lbCorreoInicioSesion.Size = new System.Drawing.Size(44, 16);
+            this.lbCorreoInicioSesion.TabIndex = 2;
+            this.lbCorreoInicioSesion.Text = "Correo";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -384,6 +370,87 @@ namespace Presentation
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // lbNombreInicioSesion
+            // 
+            this.lbNombreInicioSesion.AutoSize = true;
+            this.lbNombreInicioSesion.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombreInicioSesion.ForeColor = System.Drawing.Color.White;
+            this.lbNombreInicioSesion.Location = new System.Drawing.Point(12, 107);
+            this.lbNombreInicioSesion.Name = "lbNombreInicioSesion";
+            this.lbNombreInicioSesion.Size = new System.Drawing.Size(51, 16);
+            this.lbNombreInicioSesion.TabIndex = 1;
+            this.lbNombreInicioSesion.Text = "Nombre";
+            // 
+            // panelFormularioHijo
+            // 
+            this.panelFormularioHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            this.panelFormularioHijo.Controls.Add(this.dgvMostrarActividadesUsuarios);
+            this.panelFormularioHijo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFormularioHijo.Location = new System.Drawing.Point(266, 0);
+            this.panelFormularioHijo.Name = "panelFormularioHijo";
+            this.panelFormularioHijo.Size = new System.Drawing.Size(803, 613);
+            this.panelFormularioHijo.TabIndex = 2;
+            // 
+            // dgvMostrarActividadesUsuarios
+            // 
+            this.dgvMostrarActividadesUsuarios.AllowUserToAddRows = false;
+            this.dgvMostrarActividadesUsuarios.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvMostrarActividadesUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMostrarActividadesUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMostrarActividadesUsuarios.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMostrarActividadesUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvMostrarActividadesUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvMostrarActividadesUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMostrarActividadesUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMostrarActividadesUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMostrarActividadesUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvMostrarActividadesUsuarios.EnableHeadersVisualStyles = false;
+            this.dgvMostrarActividadesUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvMostrarActividadesUsuarios.Location = new System.Drawing.Point(3, 164);
+            this.dgvMostrarActividadesUsuarios.Name = "dgvMostrarActividadesUsuarios";
+            this.dgvMostrarActividadesUsuarios.ReadOnly = true;
+            this.dgvMostrarActividadesUsuarios.RowHeadersVisible = false;
+            this.dgvMostrarActividadesUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMostrarActividadesUsuarios.Size = new System.Drawing.Size(785, 199);
+            this.dgvMostrarActividadesUsuarios.TabIndex = 0;
+            this.dgvMostrarActividadesUsuarios.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.ReadOnly = true;
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // MenuPrincipal
             // 
@@ -403,6 +470,8 @@ namespace Presentation
             this.pLogo.ResumeLayout(false);
             this.pLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelFormularioHijo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarActividadesUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -426,6 +495,7 @@ namespace Presentation
         private FontAwesome.Sharp.IconButton btnDepartamentos;
         private FontAwesome.Sharp.IconButton btnEquipos;
         private FontAwesome.Sharp.IconButton btnAreas;
+        private Guna.UI.WinForms.GunaDataGridView dgvMostrarActividadesUsuarios;
     }
 }
 

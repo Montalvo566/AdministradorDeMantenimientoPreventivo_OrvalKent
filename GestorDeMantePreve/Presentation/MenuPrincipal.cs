@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using Common.Cache;
+using Domain;
 
 namespace Presentation
 {
@@ -17,6 +18,7 @@ namespace Presentation
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form formularioActual = null;
+        private UserModel userModel;
 
         public MenuPrincipal()
         {
@@ -27,6 +29,7 @@ namespace Presentation
             leftBorderBtn.Size = new Size(7, 60);
             pMenuLateral.Controls.Add(leftBorderBtn);
 
+            userModel = new UserModel();
         }
 
 
@@ -99,26 +102,10 @@ namespace Presentation
         {
             botonActivado(sender, RGBColors.color1);
             ocultarSubmenus();
-            // Copiamos la colección de formularios abiertos para evitar la excepción de modificación durante la iteración
-            var formulariosAbiertos = Application.OpenForms.Cast<Form>().ToList();
-
-            // Verificamos si hay algún formulario hijo abierto que no sea MenuPrincipal
-            bool hayFormularioAbierto = formulariosAbiertos.Any(form => form != this && form.GetType() != typeof(MenuPrincipal));
-
-            if (hayFormularioAbierto)
-            {
-                // Si hay formularios hijos abiertos, ciérralos
-                foreach (Form form in formulariosAbiertos.Where(form => form != this && form.GetType() != typeof(MenuPrincipal)))
-                {
-                    form.Close();
-                }
-            }
-            else
-            {
+            
                 
                 abrirFormularioHijo(new MenuPrincipal());
-                
-            }
+               
         }
 
         //Registro de actividades
@@ -223,11 +210,41 @@ namespace Presentation
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
             cargarDatosUsuario();
+            mostrarActividadesUsuario();
         }
         private void cargarDatosUsuario()
         {
             lbNombreInicioSesion.Text = UserLoginCache.NombreCompleto;
             lbCorreoInicioSesion.Text = UserLoginCache.Correo;
+        }
+        //Fin//
+
+
+        //Mostrar actividades usuarios//
+        private void mostrarActividadesUsuario()
+        {
+            try
+            {
+                if (userModel != null)
+                {
+                    string errorMessage;
+                    DataTable actividadesUsuario = userModel.MostrarActividadesUsuario(UserLoginCache.Id, out errorMessage);
+
+                    // Verificar si el DataTable contiene datos
+                    if (actividadesUsuario.Rows.Count > 0)
+                    {
+                        dgvMostrarActividadesUsuarios.DataSource = actividadesUsuario;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron actividades asignadas para el usuario actual.", "Información", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener actividades en la presentación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         //Fin//
 

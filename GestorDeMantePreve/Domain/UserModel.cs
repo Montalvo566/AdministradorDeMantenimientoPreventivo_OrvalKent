@@ -18,6 +18,12 @@ namespace Domain
             return userDao.Login(user, pass);
         }
 
-        
+        //Funcion para mostrar las actividades en relacion al usuario que inicio sesion//
+        public DataTable MostrarActividadesUsuario(int idUsuario, out string errorMessage)
+        {
+            return userDao.GetActividadesUsuarios(idUsuario, out errorMessage);
+        }
+        //Fin//
+
     }
 }
