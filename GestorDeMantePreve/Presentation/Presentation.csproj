@@ -90,6 +90,12 @@
     <Compile Include="ModalesFormulario\EditAreasModal.Designer.cs">
       <DependentUpon>EditAreasModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModalesFormulario\EditDepartamentosModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalesFormulario\EditDepartamentosModal.Designer.cs">
+      <DependentUpon>EditDepartamentosModal.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModalesFormulario\EditEquiposModal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModalesFormulario\EditAreasModal.resx">
       <DependentUpon>EditAreasModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalesFormulario\EditDepartamentosModal.resx">
+      <DependentUpon>EditDepartamentosModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModalesFormulario\EditEquiposModal.resx">
       <DependentUpon>EditEquiposModal.cs</DependentUpon>

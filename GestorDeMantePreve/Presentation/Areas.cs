@@ -94,6 +94,7 @@ namespace Presentation
                 //Funcion para cargar los datos en los campos//
                 modal.gtbAreas.Text = dgvAreasTabla.CurrentRow.Cells[1].Value.ToString();
                 modal.gcmbDepartamento.Text = dgvAreasTabla.CurrentRow.Cells[2].Value.ToString();
+                modal.idArea = dgvAreasTabla.CurrentRow.Cells[0].Value.ToString();
                 modal.ShowDialog();
                 MostrarAreasTabla();
                 //Fin//

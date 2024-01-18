@@ -12,24 +12,17 @@ using DataAccess;
 
 namespace Presentation.ModalesFormulario
 {
-    public partial class EditEquiposModal : Form
+    public partial class EditDepartamentosModal : Form
     {
-        EquiposCrudModel areasCrudTabla = new EquiposCrudModel();
-        EquiposCrud crud = new EquiposCrud();
-        public string idEquipo = null;
+        DepartamentCrudModel depCrudTabla = new DepartamentCrudModel();
+        DepartamentCrud crud = new DepartamentCrud();
+        public string idDepartamento = null;
         public string OperacionEdit = "Editar";
 
-        public EditEquiposModal()
+        public EditDepartamentosModal()
         {
             InitializeComponent();
         }
-
-
-        private void EditEquiposModal_Load(object sender, EventArgs e)
-        {
-            ValdiacionesTipoCampo();
-        }
-
 
         private void gbtnEditar_Click(object sender, EventArgs e)
         {
@@ -37,18 +30,16 @@ namespace Presentation.ModalesFormulario
             {
                 try
                 {
-                    if (EsCampoValido(gtbEquipo, "Equipo") &&
-                            EsCampoValido(gtbNumeroEquipo, "Numero de equipo") &&
+                    if (EsCampoValido(gtbDepartamento, "Departamento") &&
                             EsOpcionValidaSeleccionada(gcmbArea, "Area"))
                     {
-                        crud.Equipo1 = gtbEquipo.Text;
-                        crud.NumeroEquipo1 = Convert.ToInt32(gtbNumeroEquipo.Text);
-                        crud.IdArea1 = Convert.ToInt32(gcmbArea.SelectedValue);
-                        crud.Id1 = Convert.ToInt32(idEquipo);
+                        crud.Departamento1 = gtbDepartamento.Text;
+                        crud.IdZonaAcceso1 = Convert.ToInt32(gcmbArea.SelectedValue);
+                        crud.Id1 = Convert.ToInt32(idDepartamento);
 
-                        crud.PutEquipos();
+                        crud.PutDepartamentos();
 
-                        MessageBox.Show("Equipo actualizado con exito");
+                        MessageBox.Show("Departamento actualizado con exito");
                         LimpiarCampos();
                         this.Close();
 
@@ -61,30 +52,35 @@ namespace Presentation.ModalesFormulario
             }
         }
 
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
 
+        private void EditDepartamentosModal_Load(object sender, EventArgs e)
+        {
+            ValdiacionesTipoCampo();
+        }
+
+
         //Funciones para listar los datos del combobox//
         public void ListarAreas()
         {
-            EquiposCrudModel equiposCrudTabla = new EquiposCrudModel();
-            gcmbArea.DataSource = equiposCrudTabla.ListadoAreas();
+            DepartamentCrudModel depCrudTabla = new DepartamentCrudModel();
+            gcmbArea.DataSource = depCrudTabla.ListadoAreas();
             gcmbArea.DisplayMember = "Zona";
             gcmbArea.ValueMember = "Id";
         }
         //Fin//
 
 
+
         //Funcion para limpiar los textbox del formulario//
         private void LimpiarCampos()
         {
             //limpiar campos al ejecutar la accion del boton
-            gtbEquipo.Clear();
-            gtbNumeroEquipo.Clear();
+            gtbDepartamento.Clear();
         }
         //Fin//
 
@@ -108,14 +104,6 @@ namespace Presentation.ModalesFormulario
             }
             return true;
         }
-        private void SoloFormatoNumero(object sender, KeyPressEventArgs e)
-        {
-            // Permite solo números y la tecla de retroceso (backspace)
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
-            {
-                e.Handled = true; // Ignora la tecla presionada
-            }
-        }
         private void SoloFormatoLetra(object sender, KeyPressEventArgs e)
         {
             // Permite solo letras y espacios
@@ -129,8 +117,7 @@ namespace Presentation.ModalesFormulario
         //Ejecutar las validaciones//
         private void ValdiacionesTipoCampo()
         {
-            gtbEquipo.KeyPress += new KeyPressEventHandler(SoloFormatoLetra);
-            gtbNumeroEquipo.KeyPress += new KeyPressEventHandler(SoloFormatoNumero);
+            gtbDepartamento.KeyPress += new KeyPressEventHandler(SoloFormatoLetra);
         }
         //Fin//
 

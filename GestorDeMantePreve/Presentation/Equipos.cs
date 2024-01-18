@@ -98,6 +98,7 @@ namespace Presentation
                 modal.gtbEquipo.Text = dgvEquiposTabla.CurrentRow.Cells[1].Value.ToString();
                 modal.gtbNumeroEquipo.Text = dgvEquiposTabla.CurrentRow.Cells[2].Value.ToString();
                 modal.gcmbArea.Text = dgvEquiposTabla.CurrentRow.Cells[3].Value.ToString();
+                modal.idEquipo = dgvEquiposTabla.CurrentRow.Cells[0].Value.ToString();
                 modal.ShowDialog();
                 MostrarEquiposTabla();
                 //Fin//

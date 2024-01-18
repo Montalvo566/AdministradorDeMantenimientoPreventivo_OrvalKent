@@ -244,7 +244,7 @@ namespace DataAccess
         //Fin//
 
 
-        //Funcion para insertar datos a la tabla de Actividades: POST//
+        //Funcion para insertar datos a la tabla de Actividades: PUT//
         public void PutActividades()
         {
             try

@@ -51,7 +51,30 @@ namespace Presentation.ModalesFormulario
 
         private void gbtnEditar_Click(object sender, EventArgs e)
         {
+            if (OperacionEdit == "Editar")
+            {
+                try
+                {
+                    if (EsCampoValido(gtbAreas, "Area") &&
+                            EsOpcionValidaSeleccionada(gcmbDepartamento, "Departamento"))
+                    {
+                        crud.Zona1 = gtbAreas.Text;
+                        crud.IdDepartamento1 = Convert.ToInt32(gcmbDepartamento.SelectedValue);
+                        crud.Id1 = Convert.ToInt32(idArea);
 
+                        crud.PutAreas();
+
+                        MessageBox.Show("Area actualizada con exito");
+                        LimpiarCampos();
+                        this.Close();
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al registrar datos: " + ex);
+                }
+            }
         }
 
 

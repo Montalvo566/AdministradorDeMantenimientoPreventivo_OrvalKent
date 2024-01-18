@@ -59,8 +59,8 @@ namespace Presentation
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.panel1.Controls.Add(this.panelCrudUser);
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panelCrudUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";

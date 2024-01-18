@@ -79,7 +79,7 @@ namespace DataAccess
         //Fin//
 
 
-        //Funcion para agregar datos a la tabla de usuarios: POST//
+        //Funcion para agregar datos a la tabla de departamentos: POST//
         public void PostDepartamentos()
         {
             try
@@ -92,6 +92,34 @@ namespace DataAccess
                 command.Parameters.AddWithValue("@IdZonaAcceso", IdZonaAcceso);
                 //Fin//
                 command.ExecuteReader();
+                command.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+                string msj = ex.ToString();
+            }
+            finally
+            {
+                command.Connection = conexion.CerrarConexion();
+            }
+        }
+        //Fin//
+
+
+        //Funcion para actualizar datos a la tabla de Departamentos: PUT//
+        public void PutDepartamentos()
+        {
+            try
+            {
+                command.Connection = conexion.AbrirConexion();
+                command.CommandText = "Sp_DepartamentosPUT";
+                command.CommandType = CommandType.StoredProcedure;
+                //Parametros de entrada//
+                command.Parameters.AddWithValue("@Departamento", Departamento);
+                command.Parameters.AddWithValue("@IdZonaAcceso", IdZonaAcceso);
+                command.Parameters.AddWithValue("@Id", Id);
+                //Fin//
+                command.ExecuteNonQuery();
                 command.Parameters.Clear();
             }
             catch (Exception ex)

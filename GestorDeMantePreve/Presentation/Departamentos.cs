@@ -80,6 +80,34 @@ namespace Presentation
         //Fin//
 
 
+        //Abrir formulario para editar los registro de la tabla de Departamentos//
+        private void btnAbriModalEdit_Click(object sender, EventArgs e)
+        {
+            if (dgvDepartamentosTabla.SelectedRows.Count > 0)
+            {
+                ModalesFormulario.EditDepartamentosModal modal = new ModalesFormulario.EditDepartamentosModal();
+                modal.OperacionEdit = "Editar";
+
+                //Funcion para listar los combobox//
+                modal.ListarAreas();
+                //Fin//
+
+                //Funcion para cargar los datos en los campos//
+                modal.gtbDepartamento.Text = dgvDepartamentosTabla.CurrentRow.Cells[1].Value.ToString();
+                modal.gcmbArea.Text = dgvDepartamentosTabla.CurrentRow.Cells[2].Value.ToString();
+                modal.idDepartamento = dgvDepartamentosTabla.CurrentRow.Cells["Id"].Value.ToString();
+                modal.ShowDialog();
+                MostrarDepartamentosTabla();
+                //Fin//
+            }
+            else
+            {
+                MessageBox.Show("Para modificar, seleccione un registro");
+            }
+        }
+        //Fin//
+
+
         //Funcion para eliminar registros de la tabla de departamentos//
         private void btnEliminar_Click(object sender, EventArgs e)
         {

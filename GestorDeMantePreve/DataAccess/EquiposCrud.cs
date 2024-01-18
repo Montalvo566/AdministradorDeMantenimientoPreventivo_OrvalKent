@@ -110,6 +110,35 @@ namespace DataAccess
         //Fin//
 
 
+        //Funcion para actualizar datos a la tabla de equipos: PUT//
+        public void PutEquipos()
+        {
+            try
+            {
+                command.Connection = conexion.AbrirConexion();
+                command.CommandText = "Sp_EquiposPUT";
+                command.CommandType = CommandType.StoredProcedure;
+                //Parametros de entrada//
+                command.Parameters.AddWithValue("@Equipo", Equipo);
+                command.Parameters.AddWithValue("@NumeroEquipo", NumeroEquipo);
+                command.Parameters.AddWithValue("@IdArea", IdArea);
+                command.Parameters.AddWithValue("@Id", Id);
+                //Fin//
+                command.ExecuteNonQuery();
+                command.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+                string msj = ex.ToString();
+            }
+            finally
+            {
+                command.Connection = conexion.CerrarConexion();
+            }
+        }
+        //Fin//
+
+
         //Funcion para eliminar registro de la tabla de equipos: DELETE//
         public void DeleteEquipos()
         {

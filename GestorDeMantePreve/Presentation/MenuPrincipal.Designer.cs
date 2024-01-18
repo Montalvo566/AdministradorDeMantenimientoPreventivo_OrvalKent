@@ -30,11 +30,11 @@ namespace Presentation
         private void InitializeComponent()
         {
             this.pMenuLateral = new System.Windows.Forms.Panel();
+            this.panelSeccionTareas = new System.Windows.Forms.Panel();
             this.pLogo = new System.Windows.Forms.Panel();
             this.lbCorreoInicioSesion = new System.Windows.Forms.Label();
             this.lbNombreInicioSesion = new System.Windows.Forms.Label();
             this.panelFormularioHijo = new System.Windows.Forms.Panel();
-            this.panelSeccionTareas = new System.Windows.Forms.Panel();
             this.btnAreas = new FontAwesome.Sharp.IconButton();
             this.btnEquipos = new FontAwesome.Sharp.IconButton();
             this.btnDepartamentos = new FontAwesome.Sharp.IconButton();
@@ -47,8 +47,8 @@ namespace Presentation
             this.btnMenuPrincipal = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pMenuLateral.SuspendLayout();
-            this.pLogo.SuspendLayout();
             this.panelSeccionTareas.SuspendLayout();
+            this.pLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +69,20 @@ namespace Presentation
             this.pMenuLateral.Size = new System.Drawing.Size(266, 613);
             this.pMenuLateral.TabIndex = 0;
             // 
+            // panelSeccionTareas
+            // 
+            this.panelSeccionTareas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            this.panelSeccionTareas.Controls.Add(this.btnAreas);
+            this.panelSeccionTareas.Controls.Add(this.btnEquipos);
+            this.panelSeccionTareas.Controls.Add(this.btnDepartamentos);
+            this.panelSeccionTareas.Controls.Add(this.btnUsuarios);
+            this.panelSeccionTareas.Controls.Add(this.btnActividades);
+            this.panelSeccionTareas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSeccionTareas.Location = new System.Drawing.Point(0, 387);
+            this.panelSeccionTareas.Name = "panelSeccionTareas";
+            this.panelSeccionTareas.Size = new System.Drawing.Size(249, 309);
+            this.panelSeccionTareas.TabIndex = 0;
+            // 
             // pLogo
             // 
             this.pLogo.Controls.Add(this.lbCorreoInicioSesion);
@@ -85,7 +99,7 @@ namespace Presentation
             this.lbCorreoInicioSesion.AutoSize = true;
             this.lbCorreoInicioSesion.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCorreoInicioSesion.ForeColor = System.Drawing.Color.White;
-            this.lbCorreoInicioSesion.Location = new System.Drawing.Point(128, 115);
+            this.lbCorreoInicioSesion.Location = new System.Drawing.Point(12, 127);
             this.lbCorreoInicioSesion.Name = "lbCorreoInicioSesion";
             this.lbCorreoInicioSesion.Size = new System.Drawing.Size(44, 16);
             this.lbCorreoInicioSesion.TabIndex = 2;
@@ -96,7 +110,7 @@ namespace Presentation
             this.lbNombreInicioSesion.AutoSize = true;
             this.lbNombreInicioSesion.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNombreInicioSesion.ForeColor = System.Drawing.Color.White;
-            this.lbNombreInicioSesion.Location = new System.Drawing.Point(12, 115);
+            this.lbNombreInicioSesion.Location = new System.Drawing.Point(12, 107);
             this.lbNombreInicioSesion.Name = "lbNombreInicioSesion";
             this.lbNombreInicioSesion.Size = new System.Drawing.Size(51, 16);
             this.lbNombreInicioSesion.TabIndex = 1;
@@ -110,20 +124,6 @@ namespace Presentation
             this.panelFormularioHijo.Name = "panelFormularioHijo";
             this.panelFormularioHijo.Size = new System.Drawing.Size(803, 613);
             this.panelFormularioHijo.TabIndex = 2;
-            // 
-            // panelSeccionTareas
-            // 
-            this.panelSeccionTareas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.panelSeccionTareas.Controls.Add(this.btnAreas);
-            this.panelSeccionTareas.Controls.Add(this.btnEquipos);
-            this.panelSeccionTareas.Controls.Add(this.btnDepartamentos);
-            this.panelSeccionTareas.Controls.Add(this.btnUsuarios);
-            this.panelSeccionTareas.Controls.Add(this.btnActividades);
-            this.panelSeccionTareas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSeccionTareas.Location = new System.Drawing.Point(0, 387);
-            this.panelSeccionTareas.Name = "panelSeccionTareas";
-            this.panelSeccionTareas.Size = new System.Drawing.Size(249, 309);
-            this.panelSeccionTareas.TabIndex = 0;
             // 
             // btnAreas
             // 
@@ -399,9 +399,9 @@ namespace Presentation
             this.Text = "Menú Principal";
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.pMenuLateral.ResumeLayout(false);
+            this.panelSeccionTareas.ResumeLayout(false);
             this.pLogo.ResumeLayout(false);
             this.pLogo.PerformLayout();
-            this.panelSeccionTareas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
