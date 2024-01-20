@@ -63,9 +63,29 @@ namespace Presentation.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LogoOrval {
+            get {
+                object obj = ResourceManager.GetObject("LogoOrval", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OrvalKentLogo {
             get {
                 object obj = ResourceManager.GetObject("OrvalKentLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Resers_Logo_Standard {
+            get {
+                object obj = ResourceManager.GetObject("Resers-Logo-Standard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

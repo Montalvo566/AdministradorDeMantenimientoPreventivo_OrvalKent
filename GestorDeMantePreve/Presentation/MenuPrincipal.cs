@@ -233,7 +233,60 @@ namespace Presentation
                     // Verificar si el DataTable contiene datos
                     if (actividadesUsuario.Rows.Count > 0)
                     {
+                        // Configurar el DataGridView
+                        dgvMostrarActividadesUsuarios.AutoGenerateColumns = false;
                         dgvMostrarActividadesUsuarios.DataSource = actividadesUsuario;
+
+                        // Configurar AutoSizeRowsMode para que las filas se ajusten automáticamente al contenido
+                        dgvMostrarActividadesUsuarios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+                        // Establecer la altura mínima de las filas
+                        dgvMostrarActividadesUsuarios.RowTemplate.MinimumHeight = 85;
+                        dgvMostrarActividadesUsuarios.RowTemplate.Height = 85;
+
+                        // Configurar las columnas de información
+                        DataGridViewTextBoxColumn colActividad = new DataGridViewTextBoxColumn();
+                        colActividad.DataPropertyName = "Actividad";
+                        colActividad.HeaderText = "Actividad";
+
+                        // Configurar la columna "Actividad" como multilinea
+                        colActividad.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                        colActividad.DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
+
+                        dgvMostrarActividadesUsuarios.Columns.Add(colActividad);
+
+                        DataGridViewTextBoxColumn colArea = new DataGridViewTextBoxColumn();
+                        colArea.DataPropertyName = "Area";
+                        colArea.HeaderText = "Área";
+                        dgvMostrarActividadesUsuarios.Columns.Add(colArea);
+
+                        DataGridViewTextBoxColumn colEquipo = new DataGridViewTextBoxColumn();
+                        colEquipo.DataPropertyName = "Equipo";
+                        colEquipo.HeaderText = "Equipo";
+                        dgvMostrarActividadesUsuarios.Columns.Add(colEquipo);
+
+                        DataGridViewTextBoxColumn colEstatus = new DataGridViewTextBoxColumn();
+                        colEstatus.DataPropertyName = "Estatus";
+                        colEstatus.HeaderText = "Estatus";
+                        dgvMostrarActividadesUsuarios.Columns.Add(colEstatus);
+
+                        // Crear una columna de botones solo para la eliminación
+                        DataGridViewButtonColumn botonEliminar = new DataGridViewButtonColumn();
+                        botonEliminar.Name = "Acciones";
+                        botonEliminar.Text = "Finalizar Tarea";
+                        botonEliminar.UseColumnTextForButtonValue = true;
+                        dgvMostrarActividadesUsuarios.Columns.Add(botonEliminar);
+
+                        // Personalizar la apariencia del DataGridView
+                        dgvMostrarActividadesUsuarios.BackgroundColor = Color.FromArgb(31, 34, 74);
+                        dgvMostrarActividadesUsuarios.ForeColor = Color.White;
+                        colActividad.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+
+                        // Asociar el evento CellContentClick para el botón Eliminar
+                        dgvMostrarActividadesUsuarios.CellContentClick += dgvMostrarActividadesUsuarios_CellContentClick;
+                        dgvMostrarActividadesUsuarios.CellPainting += dgvMostrarActividadesUsuarios_CellPainting;
+
                     }
                     else
                     {
@@ -247,6 +300,39 @@ namespace Presentation
             }
         }
         //Fin//
+
+
+        //Diseño del datagridview//
+        private void dgvMostrarActividadesUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == dgvMostrarActividadesUsuarios.Columns["Acciones"].Index)
+            {
+                MessageBox.Show("Implementa aquí la lógica para eliminar el registro.");
+            }
+        }
+
+        private void dgvMostrarActividadesUsuarios_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                // Obtener el rectángulo de la celda
+                Rectangle rectCell = dgvMostrarActividadesUsuarios.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false);
+
+                // Dibujar una línea en la parte inferior de la celda
+                using (Pen pen = new Pen(Color.FromArgb(31, 34, 74), 5)) // Color y grosor de la línea
+                {
+                    e.Graphics.DrawLine(pen, rectCell.Left - 1, rectCell.Bottom - 1, rectCell.Right - 1, rectCell.Bottom - 1);
+                }
+
+                e.Handled = true;
+            }
+        }
+
+        //Fin//
+
+
 
     }
 }

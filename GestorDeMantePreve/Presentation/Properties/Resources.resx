@@ -121,4 +121,10 @@
   <data name="OrvalKentLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OrvalKentLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LogoOrval" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoOrval.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Resers-Logo-Standard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Resers-Logo-Standard.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

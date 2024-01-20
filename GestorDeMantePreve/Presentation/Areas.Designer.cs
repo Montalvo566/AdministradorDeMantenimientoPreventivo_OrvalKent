@@ -34,22 +34,22 @@ namespace Presentation
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAbriModalEdit = new Guna.UI.WinForms.GunaButton();
+            this.btnEliminar = new Guna.UI.WinForms.GunaButton();
+            this.btnNuevo = new Guna.UI.WinForms.GunaButton();
             this.panelCrudUser = new System.Windows.Forms.Panel();
             this.gcmbDepartamento = new Guna.UI.WinForms.GunaComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.gtbArea = new Guna.UI.WinForms.GunaTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnAbriModalEdit = new Guna.UI.WinForms.GunaButton();
-            this.btnEliminar = new Guna.UI.WinForms.GunaButton();
-            this.btnNuevo = new Guna.UI.WinForms.GunaButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvAreasTabla = new Guna.UI.WinForms.GunaDataGridView();
             this.panel1.SuspendLayout();
-            this.panelCrudUser.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panelCrudUser.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAreasTabla)).BeginInit();
             this.SuspendLayout();
@@ -64,94 +64,6 @@ namespace Presentation
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(825, 229);
             this.panel1.TabIndex = 5;
-            // 
-            // panelCrudUser
-            // 
-            this.panelCrudUser.Controls.Add(this.gcmbDepartamento);
-            this.panelCrudUser.Controls.Add(this.label6);
-            this.panelCrudUser.Controls.Add(this.gtbArea);
-            this.panelCrudUser.Controls.Add(this.label4);
-            this.panelCrudUser.Controls.Add(this.label1);
-            this.panelCrudUser.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelCrudUser.Location = new System.Drawing.Point(0, 0);
-            this.panelCrudUser.Name = "panelCrudUser";
-            this.panelCrudUser.Size = new System.Drawing.Size(666, 229);
-            this.panelCrudUser.TabIndex = 20;
-            // 
-            // gcmbDepartamento
-            // 
-            this.gcmbDepartamento.BackColor = System.Drawing.Color.Transparent;
-            this.gcmbDepartamento.BaseColor = System.Drawing.Color.White;
-            this.gcmbDepartamento.BorderColor = System.Drawing.Color.Silver;
-            this.gcmbDepartamento.BorderSize = 0;
-            this.gcmbDepartamento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gcmbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gcmbDepartamento.FocusedColor = System.Drawing.Color.Empty;
-            this.gcmbDepartamento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.gcmbDepartamento.ForeColor = System.Drawing.Color.Black;
-            this.gcmbDepartamento.FormattingEnabled = true;
-            this.gcmbDepartamento.Location = new System.Drawing.Point(354, 88);
-            this.gcmbDepartamento.Name = "gcmbDepartamento";
-            this.gcmbDepartamento.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gcmbDepartamento.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gcmbDepartamento.Radius = 5;
-            this.gcmbDepartamento.Size = new System.Drawing.Size(309, 27);
-            this.gcmbDepartamento.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(360, 65);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 20);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Departamento:";
-            // 
-            // gtbArea
-            // 
-            this.gtbArea.BackColor = System.Drawing.Color.Transparent;
-            this.gtbArea.BaseColor = System.Drawing.Color.White;
-            this.gtbArea.BorderColor = System.Drawing.Color.Silver;
-            this.gtbArea.BorderSize = 0;
-            this.gtbArea.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gtbArea.FocusedBaseColor = System.Drawing.Color.White;
-            this.gtbArea.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gtbArea.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gtbArea.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gtbArea.Location = new System.Drawing.Point(17, 88);
-            this.gtbArea.Name = "gtbArea";
-            this.gtbArea.PasswordChar = '\0';
-            this.gtbArea.Radius = 5;
-            this.gtbArea.SelectedText = "";
-            this.gtbArea.Size = new System.Drawing.Size(309, 30);
-            this.gtbArea.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(23, 65);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Area:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 23);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Agregar Areas";
             // 
             // panel3
             // 
@@ -247,6 +159,94 @@ namespace Presentation
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // panelCrudUser
+            // 
+            this.panelCrudUser.Controls.Add(this.gcmbDepartamento);
+            this.panelCrudUser.Controls.Add(this.label6);
+            this.panelCrudUser.Controls.Add(this.gtbArea);
+            this.panelCrudUser.Controls.Add(this.label4);
+            this.panelCrudUser.Controls.Add(this.label1);
+            this.panelCrudUser.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelCrudUser.Location = new System.Drawing.Point(0, 0);
+            this.panelCrudUser.Name = "panelCrudUser";
+            this.panelCrudUser.Size = new System.Drawing.Size(666, 229);
+            this.panelCrudUser.TabIndex = 20;
+            // 
+            // gcmbDepartamento
+            // 
+            this.gcmbDepartamento.BackColor = System.Drawing.Color.Transparent;
+            this.gcmbDepartamento.BaseColor = System.Drawing.Color.White;
+            this.gcmbDepartamento.BorderColor = System.Drawing.Color.Silver;
+            this.gcmbDepartamento.BorderSize = 0;
+            this.gcmbDepartamento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.gcmbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gcmbDepartamento.FocusedColor = System.Drawing.Color.Empty;
+            this.gcmbDepartamento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gcmbDepartamento.ForeColor = System.Drawing.Color.Black;
+            this.gcmbDepartamento.FormattingEnabled = true;
+            this.gcmbDepartamento.Location = new System.Drawing.Point(354, 88);
+            this.gcmbDepartamento.Name = "gcmbDepartamento";
+            this.gcmbDepartamento.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gcmbDepartamento.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.gcmbDepartamento.Radius = 5;
+            this.gcmbDepartamento.Size = new System.Drawing.Size(309, 27);
+            this.gcmbDepartamento.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(360, 65);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(121, 20);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Departamento:";
+            // 
+            // gtbArea
+            // 
+            this.gtbArea.BackColor = System.Drawing.Color.Transparent;
+            this.gtbArea.BaseColor = System.Drawing.Color.White;
+            this.gtbArea.BorderColor = System.Drawing.Color.Silver;
+            this.gtbArea.BorderSize = 0;
+            this.gtbArea.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtbArea.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtbArea.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gtbArea.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.gtbArea.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gtbArea.Location = new System.Drawing.Point(17, 88);
+            this.gtbArea.Name = "gtbArea";
+            this.gtbArea.PasswordChar = '\0';
+            this.gtbArea.Radius = 5;
+            this.gtbArea.SelectedText = "";
+            this.gtbArea.Size = new System.Drawing.Size(309, 30);
+            this.gtbArea.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(23, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 20);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Area:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 23);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Agregar Areas";
             // 
             // panel2
             // 
@@ -351,7 +351,7 @@ namespace Presentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(825, 613);
             this.Controls.Add(this.dgvAreasTabla);
             this.Controls.Add(this.panel2);
@@ -361,9 +361,9 @@ namespace Presentation
             this.Text = "Areas";
             this.Load += new System.EventHandler(this.Areas_Load);
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panelCrudUser.ResumeLayout(false);
             this.panelCrudUser.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAreasTabla)).EndInit();

@@ -31,16 +31,16 @@ namespace Presentation
         {
             this.header1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnMinVentana = new FontAwesome.Sharp.IconButton();
-            this.btnCerrarVentana = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.btnInicioSesion = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbErrorInicioSesion = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnMinVentana = new FontAwesome.Sharp.IconButton();
+            this.btnCerrarVentana = new FontAwesome.Sharp.IconButton();
             this.header1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,46 +72,6 @@ namespace Presentation
             this.label1.Text = "Inicio de Sesion";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
-            // btnMinVentana
-            // 
-            this.btnMinVentana.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinVentana.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnMinVentana.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinVentana.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinVentana.FlatAppearance.BorderSize = 0;
-            this.btnMinVentana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinVentana.ForeColor = System.Drawing.Color.Blue;
-            this.btnMinVentana.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.btnMinVentana.IconColor = System.Drawing.Color.White;
-            this.btnMinVentana.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMinVentana.IconSize = 25;
-            this.btnMinVentana.Location = new System.Drawing.Point(498, 0);
-            this.btnMinVentana.Name = "btnMinVentana";
-            this.btnMinVentana.Size = new System.Drawing.Size(40, 29);
-            this.btnMinVentana.TabIndex = 1;
-            this.btnMinVentana.UseVisualStyleBackColor = false;
-            this.btnMinVentana.Click += new System.EventHandler(this.minVentana_Click);
-            // 
-            // btnCerrarVentana
-            // 
-            this.btnCerrarVentana.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarVentana.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCerrarVentana.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarVentana.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCerrarVentana.FlatAppearance.BorderSize = 0;
-            this.btnCerrarVentana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarVentana.ForeColor = System.Drawing.Color.Blue;
-            this.btnCerrarVentana.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.btnCerrarVentana.IconColor = System.Drawing.Color.White;
-            this.btnCerrarVentana.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarVentana.IconSize = 20;
-            this.btnCerrarVentana.Location = new System.Drawing.Point(538, 0);
-            this.btnCerrarVentana.Name = "btnCerrarVentana";
-            this.btnCerrarVentana.Size = new System.Drawing.Size(40, 29);
-            this.btnCerrarVentana.TabIndex = 0;
-            this.btnCerrarVentana.UseVisualStyleBackColor = false;
-            this.btnCerrarVentana.Click += new System.EventHandler(this.cerrarVentana_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -124,17 +84,6 @@ namespace Presentation
             this.label2.Size = new System.Drawing.Size(231, 30);
             this.label2.TabIndex = 4;
             this.label2.Text = "Colocar el usuario";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentation.Properties.Resources.OrvalKentLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 47);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(494, 220);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // tbUsuario
             // 
@@ -203,6 +152,57 @@ namespace Presentation
             this.lbErrorInicioSesion.TabIndex = 11;
             this.lbErrorInicioSesion.Text = "Error de inicio de sesion";
             this.lbErrorInicioSesion.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentation.Properties.Resources.Resers_Logo_Standard;
+            this.pictureBox1.Location = new System.Drawing.Point(44, 54);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(494, 201);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            // 
+            // btnMinVentana
+            // 
+            this.btnMinVentana.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinVentana.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnMinVentana.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinVentana.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinVentana.FlatAppearance.BorderSize = 0;
+            this.btnMinVentana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinVentana.ForeColor = System.Drawing.Color.Blue;
+            this.btnMinVentana.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.btnMinVentana.IconColor = System.Drawing.Color.White;
+            this.btnMinVentana.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinVentana.IconSize = 25;
+            this.btnMinVentana.Location = new System.Drawing.Point(498, 0);
+            this.btnMinVentana.Name = "btnMinVentana";
+            this.btnMinVentana.Size = new System.Drawing.Size(40, 29);
+            this.btnMinVentana.TabIndex = 1;
+            this.btnMinVentana.UseVisualStyleBackColor = false;
+            this.btnMinVentana.Click += new System.EventHandler(this.minVentana_Click);
+            // 
+            // btnCerrarVentana
+            // 
+            this.btnCerrarVentana.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarVentana.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCerrarVentana.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarVentana.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCerrarVentana.FlatAppearance.BorderSize = 0;
+            this.btnCerrarVentana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarVentana.ForeColor = System.Drawing.Color.Blue;
+            this.btnCerrarVentana.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.btnCerrarVentana.IconColor = System.Drawing.Color.White;
+            this.btnCerrarVentana.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarVentana.IconSize = 20;
+            this.btnCerrarVentana.Location = new System.Drawing.Point(538, 0);
+            this.btnCerrarVentana.Name = "btnCerrarVentana";
+            this.btnCerrarVentana.Size = new System.Drawing.Size(40, 29);
+            this.btnCerrarVentana.TabIndex = 0;
+            this.btnCerrarVentana.UseVisualStyleBackColor = false;
+            this.btnCerrarVentana.Click += new System.EventHandler(this.cerrarVentana_Click);
             // 
             // Login
             // 
