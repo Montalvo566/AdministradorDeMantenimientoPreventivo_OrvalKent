@@ -42,7 +42,7 @@ namespace Presentation
             this.panelRAHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRAHeader.Location = new System.Drawing.Point(0, 0);
             this.panelRAHeader.Name = "panelRAHeader";
-            this.panelRAHeader.Size = new System.Drawing.Size(825, 57);
+            this.panelRAHeader.Size = new System.Drawing.Size(827, 57);
             this.panelRAHeader.TabIndex = 0;
             // 
             // label1
@@ -62,7 +62,7 @@ namespace Presentation
             this.pRegistroActividades.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pRegistroActividades.Location = new System.Drawing.Point(0, 63);
             this.pRegistroActividades.Name = "pRegistroActividades";
-            this.pRegistroActividades.Size = new System.Drawing.Size(825, 550);
+            this.pRegistroActividades.Size = new System.Drawing.Size(827, 550);
             this.pRegistroActividades.TabIndex = 1;
             // 
             // RegistrosActividades
@@ -70,7 +70,7 @@ namespace Presentation
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(825, 613);
+            this.ClientSize = new System.Drawing.Size(827, 613);
             this.Controls.Add(this.pRegistroActividades);
             this.Controls.Add(this.panelRAHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

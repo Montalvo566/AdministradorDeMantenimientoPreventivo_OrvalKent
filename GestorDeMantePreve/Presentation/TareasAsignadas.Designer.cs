@@ -42,7 +42,7 @@ namespace Presentation
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(24, 27);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(614, 552);
+            this.dataGridView1.Size = new System.Drawing.Size(616, 552);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnCerrarFormulario
@@ -51,7 +51,7 @@ namespace Presentation
             this.btnCerrarFormulario.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCerrarFormulario.IconColor = System.Drawing.Color.Black;
             this.btnCerrarFormulario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarFormulario.Location = new System.Drawing.Point(669, 362);
+            this.btnCerrarFormulario.Location = new System.Drawing.Point(671, 362);
             this.btnCerrarFormulario.Name = "btnCerrarFormulario";
             this.btnCerrarFormulario.Size = new System.Drawing.Size(126, 23);
             this.btnCerrarFormulario.TabIndex = 1;
@@ -59,15 +59,15 @@ namespace Presentation
             this.btnCerrarFormulario.UseVisualStyleBackColor = true;
             this.btnCerrarFormulario.Click += new System.EventHandler(this.btnCerrarFormulario_Click);
             // 
-            // Form1
+            // TareasAsignadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(825, 613);
+            this.ClientSize = new System.Drawing.Size(827, 613);
             this.Controls.Add(this.btnCerrarFormulario);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "TareasAsignadas";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -75,7 +75,7 @@ namespace Presentation
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(825, 268);
+            this.panel1.Size = new System.Drawing.Size(827, 268);
             this.panel1.TabIndex = 2;
             // 
             // panel3
@@ -84,7 +84,7 @@ namespace Presentation
             this.panel3.Controls.Add(this.btnEliminar);
             this.panel3.Controls.Add(this.btnNuevo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(672, 0);
+            this.panel3.Location = new System.Drawing.Point(674, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(153, 268);
             this.panel3.TabIndex = 29;
@@ -503,7 +503,7 @@ namespace Presentation
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 268);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(825, 36);
+            this.panel2.Size = new System.Drawing.Size(827, 36);
             this.panel2.TabIndex = 5;
             // 
             // label2
@@ -562,7 +562,7 @@ namespace Presentation
             this.dgvActividadesTabla.ShowCellToolTips = false;
             this.dgvActividadesTabla.ShowEditingIcon = false;
             this.dgvActividadesTabla.ShowRowErrors = false;
-            this.dgvActividadesTabla.Size = new System.Drawing.Size(796, 291);
+            this.dgvActividadesTabla.Size = new System.Drawing.Size(798, 291);
             this.dgvActividadesTabla.TabIndex = 6;
             this.dgvActividadesTabla.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvActividadesTabla.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -592,7 +592,7 @@ namespace Presentation
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(825, 613);
+            this.ClientSize = new System.Drawing.Size(827, 613);
             this.Controls.Add(this.dgvActividadesTabla);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

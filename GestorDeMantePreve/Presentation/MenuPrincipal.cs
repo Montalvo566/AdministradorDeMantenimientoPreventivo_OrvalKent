@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using Common.Cache;
 using Domain;
+using DataAccess;
 
 namespace Presentation
 {
@@ -101,11 +102,8 @@ namespace Presentation
         private void btnMenuPrincipal_Click(object sender, EventArgs e)
         {
             botonActivado(sender, RGBColors.color1);
-            ocultarSubmenus();
-            
-                
-                abrirFormularioHijo(new MenuPrincipal());
-               
+            ocultarSubmenus();   
+            abrirFormularioHijo(new MenuPrincipal());     
         }
 
         //Registro de actividades
@@ -245,6 +243,11 @@ namespace Presentation
                         dgvMostrarActividadesUsuarios.RowTemplate.Height = 85;
 
                         // Configurar las columnas de información
+                        DataGridViewTextBoxColumn colId = new DataGridViewTextBoxColumn();
+                        colId.DataPropertyName = "Id";
+                        colId.HeaderText = "Id";
+                        dgvMostrarActividadesUsuarios.Columns.Add(colId);
+
                         DataGridViewTextBoxColumn colActividad = new DataGridViewTextBoxColumn();
                         colActividad.DataPropertyName = "Actividad";
                         colActividad.HeaderText = "Actividad";
@@ -271,11 +274,11 @@ namespace Presentation
                         dgvMostrarActividadesUsuarios.Columns.Add(colEstatus);
 
                         // Crear una columna de botones solo para la eliminación
-                        DataGridViewButtonColumn botonEliminar = new DataGridViewButtonColumn();
-                        botonEliminar.Name = "Acciones";
-                        botonEliminar.Text = "Finalizar Tarea";
-                        botonEliminar.UseColumnTextForButtonValue = true;
-                        dgvMostrarActividadesUsuarios.Columns.Add(botonEliminar);
+                        DataGridViewButtonColumn botonAcciones = new DataGridViewButtonColumn();
+                        botonAcciones.Name = "Acciones";
+                        botonAcciones.Text = "Finalizar Tarea";
+                        botonAcciones.UseColumnTextForButtonValue = true;
+                        dgvMostrarActividadesUsuarios.Columns.Add(botonAcciones);
 
                         // Personalizar la apariencia del DataGridView
                         dgvMostrarActividadesUsuarios.BackgroundColor = Color.FromArgb(31, 34, 74);
@@ -305,9 +308,23 @@ namespace Presentation
         //Diseño del datagridview//
         private void dgvMostrarActividadesUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            UserDao userDao = new UserDao();
+
             if (e.RowIndex >= 0 && e.ColumnIndex == dgvMostrarActividadesUsuarios.Columns["Acciones"].Index)
             {
-                MessageBox.Show("Implementa aquí la lógica para eliminar el registro.");
+                try
+                {
+                    int idActividad = Convert.ToInt32(dgvMostrarActividadesUsuarios.Rows[e.RowIndex].Cells[0].Value);
+                    userDao.Id1 = idActividad;
+                    userDao.Estatus1 = 1;
+                    userDao.CambiarEstadoActividad();
+                    MessageBox.Show("Estado cambiado exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al cambiar el estado de la actividad en la capa de presentación: " + ex.ToString());
+                    MessageBox.Show("Error al cambiar el estado de la actividad: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

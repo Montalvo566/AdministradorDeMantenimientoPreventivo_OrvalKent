@@ -12,5 +12,6 @@ namespace Common.Cache
         public static int Id { get; set; }
         public static string Correo { get; set; }
         public static string NombreCompleto { get; set; }
+        public static int Puesto { get; set; }
     }
 }

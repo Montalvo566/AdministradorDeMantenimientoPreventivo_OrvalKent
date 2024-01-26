@@ -62,7 +62,7 @@ namespace Presentation
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(825, 229);
+            this.panel1.Size = new System.Drawing.Size(827, 229);
             this.panel1.TabIndex = 5;
             // 
             // panel3
@@ -71,7 +71,7 @@ namespace Presentation
             this.panel3.Controls.Add(this.btnEliminar);
             this.panel3.Controls.Add(this.btnNuevo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(672, 0);
+            this.panel3.Location = new System.Drawing.Point(674, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(153, 229);
             this.panel3.TabIndex = 19;
@@ -255,7 +255,7 @@ namespace Presentation
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 229);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(825, 36);
+            this.panel2.Size = new System.Drawing.Size(827, 36);
             this.panel2.TabIndex = 6;
             // 
             // label2
@@ -322,7 +322,7 @@ namespace Presentation
             this.dgvAreasTabla.ShowCellToolTips = false;
             this.dgvAreasTabla.ShowEditingIcon = false;
             this.dgvAreasTabla.ShowRowErrors = false;
-            this.dgvAreasTabla.Size = new System.Drawing.Size(793, 330);
+            this.dgvAreasTabla.Size = new System.Drawing.Size(795, 330);
             this.dgvAreasTabla.TabIndex = 7;
             this.dgvAreasTabla.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvAreasTabla.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -352,7 +352,7 @@ namespace Presentation
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(825, 613);
+            this.ClientSize = new System.Drawing.Size(827, 613);
             this.Controls.Add(this.dgvAreasTabla);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

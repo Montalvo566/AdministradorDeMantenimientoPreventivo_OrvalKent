@@ -34,6 +34,10 @@ namespace Presentation
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAbriModalEdit = new Guna.UI.WinForms.GunaButton();
+            this.btnEliminar = new Guna.UI.WinForms.GunaButton();
+            this.btnNuevo = new Guna.UI.WinForms.GunaButton();
             this.panelCrudUser = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.gtbNumeroEquipo = new Guna.UI.WinForms.GunaTextBox();
@@ -42,16 +46,12 @@ namespace Presentation
             this.gtbEquipo = new Guna.UI.WinForms.GunaTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnAbriModalEdit = new Guna.UI.WinForms.GunaButton();
-            this.btnEliminar = new Guna.UI.WinForms.GunaButton();
-            this.btnNuevo = new Guna.UI.WinForms.GunaButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvEquiposTabla = new Guna.UI.WinForms.GunaDataGridView();
             this.panel1.SuspendLayout();
-            this.panelCrudUser.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panelCrudUser.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposTabla)).BeginInit();
             this.SuspendLayout();
@@ -64,8 +64,103 @@ namespace Presentation
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(825, 229);
+            this.panel1.Size = new System.Drawing.Size(827, 229);
             this.panel1.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnAbriModalEdit);
+            this.panel3.Controls.Add(this.btnEliminar);
+            this.panel3.Controls.Add(this.btnNuevo);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(674, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(153, 229);
+            this.panel3.TabIndex = 19;
+            // 
+            // btnAbriModalEdit
+            // 
+            this.btnAbriModalEdit.AnimationHoverSpeed = 0.07F;
+            this.btnAbriModalEdit.AnimationSpeed = 0.03F;
+            this.btnAbriModalEdit.BackColor = System.Drawing.Color.Transparent;
+            this.btnAbriModalEdit.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnAbriModalEdit.BorderColor = System.Drawing.Color.Black;
+            this.btnAbriModalEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbriModalEdit.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAbriModalEdit.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAbriModalEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbriModalEdit.ForeColor = System.Drawing.Color.White;
+            this.btnAbriModalEdit.Image = null;
+            this.btnAbriModalEdit.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnAbriModalEdit.Location = new System.Drawing.Point(3, 85);
+            this.btnAbriModalEdit.Name = "btnAbriModalEdit";
+            this.btnAbriModalEdit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnAbriModalEdit.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnAbriModalEdit.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnAbriModalEdit.OnHoverImage = null;
+            this.btnAbriModalEdit.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAbriModalEdit.Radius = 10;
+            this.btnAbriModalEdit.Size = new System.Drawing.Size(138, 62);
+            this.btnAbriModalEdit.TabIndex = 3;
+            this.btnAbriModalEdit.Text = "Editar";
+            this.btnAbriModalEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAbriModalEdit.Click += new System.EventHandler(this.btnAbriModalEdit_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.AnimationHoverSpeed = 0.07F;
+            this.btnEliminar.AnimationSpeed = 0.03F;
+            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnEliminar.BorderColor = System.Drawing.Color.Black;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEliminar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Image = null;
+            this.btnEliminar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnEliminar.Location = new System.Drawing.Point(3, 159);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnEliminar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnEliminar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnEliminar.OnHoverImage = null;
+            this.btnEliminar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnEliminar.Radius = 10;
+            this.btnEliminar.Size = new System.Drawing.Size(138, 62);
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.AnimationHoverSpeed = 0.07F;
+            this.btnNuevo.AnimationSpeed = 0.03F;
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnNuevo.BorderColor = System.Drawing.Color.Black;
+            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevo.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnNuevo.FocusedColor = System.Drawing.Color.Empty;
+            this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Image = null;
+            this.btnNuevo.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnNuevo.Location = new System.Drawing.Point(3, 14);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnNuevo.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnNuevo.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnNuevo.OnHoverImage = null;
+            this.btnNuevo.OnPressedColor = System.Drawing.Color.Black;
+            this.btnNuevo.Radius = 10;
+            this.btnNuevo.Size = new System.Drawing.Size(138, 62);
+            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // panelCrudUser
             // 
@@ -188,101 +283,6 @@ namespace Presentation
             this.label1.TabIndex = 3;
             this.label1.Text = "Agregar Equipos";
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnAbriModalEdit);
-            this.panel3.Controls.Add(this.btnEliminar);
-            this.panel3.Controls.Add(this.btnNuevo);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(672, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(153, 229);
-            this.panel3.TabIndex = 19;
-            // 
-            // btnAbriModalEdit
-            // 
-            this.btnAbriModalEdit.AnimationHoverSpeed = 0.07F;
-            this.btnAbriModalEdit.AnimationSpeed = 0.03F;
-            this.btnAbriModalEdit.BackColor = System.Drawing.Color.Transparent;
-            this.btnAbriModalEdit.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnAbriModalEdit.BorderColor = System.Drawing.Color.Black;
-            this.btnAbriModalEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbriModalEdit.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAbriModalEdit.FocusedColor = System.Drawing.Color.Empty;
-            this.btnAbriModalEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbriModalEdit.ForeColor = System.Drawing.Color.White;
-            this.btnAbriModalEdit.Image = null;
-            this.btnAbriModalEdit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAbriModalEdit.Location = new System.Drawing.Point(3, 85);
-            this.btnAbriModalEdit.Name = "btnAbriModalEdit";
-            this.btnAbriModalEdit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnAbriModalEdit.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnAbriModalEdit.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnAbriModalEdit.OnHoverImage = null;
-            this.btnAbriModalEdit.OnPressedColor = System.Drawing.Color.Black;
-            this.btnAbriModalEdit.Radius = 10;
-            this.btnAbriModalEdit.Size = new System.Drawing.Size(138, 62);
-            this.btnAbriModalEdit.TabIndex = 3;
-            this.btnAbriModalEdit.Text = "Editar";
-            this.btnAbriModalEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnAbriModalEdit.Click += new System.EventHandler(this.btnAbriModalEdit_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.AnimationHoverSpeed = 0.07F;
-            this.btnEliminar.AnimationSpeed = 0.03F;
-            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnEliminar.BorderColor = System.Drawing.Color.Black;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnEliminar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Image = null;
-            this.btnEliminar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEliminar.Location = new System.Drawing.Point(3, 159);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnEliminar.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnEliminar.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnEliminar.OnHoverImage = null;
-            this.btnEliminar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnEliminar.Radius = 10;
-            this.btnEliminar.Size = new System.Drawing.Size(138, 62);
-            this.btnEliminar.TabIndex = 3;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.AnimationHoverSpeed = 0.07F;
-            this.btnNuevo.AnimationSpeed = 0.03F;
-            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevo.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnNuevo.BorderColor = System.Drawing.Color.Black;
-            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevo.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnNuevo.FocusedColor = System.Drawing.Color.Empty;
-            this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Image = null;
-            this.btnNuevo.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnNuevo.Location = new System.Drawing.Point(3, 14);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnNuevo.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnNuevo.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnNuevo.OnHoverImage = null;
-            this.btnNuevo.OnPressedColor = System.Drawing.Color.Black;
-            this.btnNuevo.Radius = 10;
-            this.btnNuevo.Size = new System.Drawing.Size(138, 62);
-            this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
@@ -290,7 +290,7 @@ namespace Presentation
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 229);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(825, 36);
+            this.panel2.Size = new System.Drawing.Size(827, 36);
             this.panel2.TabIndex = 6;
             // 
             // label2
@@ -357,7 +357,7 @@ namespace Presentation
             this.dgvEquiposTabla.ShowCellToolTips = false;
             this.dgvEquiposTabla.ShowEditingIcon = false;
             this.dgvEquiposTabla.ShowRowErrors = false;
-            this.dgvEquiposTabla.Size = new System.Drawing.Size(793, 330);
+            this.dgvEquiposTabla.Size = new System.Drawing.Size(795, 330);
             this.dgvEquiposTabla.TabIndex = 7;
             this.dgvEquiposTabla.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvEquiposTabla.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -387,7 +387,7 @@ namespace Presentation
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(825, 613);
+            this.ClientSize = new System.Drawing.Size(827, 613);
             this.Controls.Add(this.dgvEquiposTabla);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -396,9 +396,9 @@ namespace Presentation
             this.Text = "Equipos";
             this.Load += new System.EventHandler(this.Equipos_Load);
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panelCrudUser.ResumeLayout(false);
             this.panelCrudUser.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposTabla)).EndInit();
