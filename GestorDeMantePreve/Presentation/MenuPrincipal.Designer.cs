@@ -399,9 +399,6 @@ namespace Presentation
             this.dgvMostrarActividadesUsuarios.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvMostrarActividadesUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvMostrarActividadesUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMostrarActividadesUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMostrarActividadesUsuarios.BackgroundColor = System.Drawing.Color.White;
             this.dgvMostrarActividadesUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -424,14 +421,15 @@ namespace Presentation
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMostrarActividadesUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvMostrarActividadesUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMostrarActividadesUsuarios.EnableHeadersVisualStyles = false;
             this.dgvMostrarActividadesUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvMostrarActividadesUsuarios.Location = new System.Drawing.Point(18, 69);
+            this.dgvMostrarActividadesUsuarios.Location = new System.Drawing.Point(0, 0);
             this.dgvMostrarActividadesUsuarios.Name = "dgvMostrarActividadesUsuarios";
             this.dgvMostrarActividadesUsuarios.ReadOnly = true;
             this.dgvMostrarActividadesUsuarios.RowHeadersVisible = false;
             this.dgvMostrarActividadesUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMostrarActividadesUsuarios.Size = new System.Drawing.Size(788, 532);
+            this.dgvMostrarActividadesUsuarios.Size = new System.Drawing.Size(827, 613);
             this.dgvMostrarActividadesUsuarios.TabIndex = 1;
             this.dgvMostrarActividadesUsuarios.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;

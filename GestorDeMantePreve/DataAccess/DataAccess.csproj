@@ -46,6 +46,7 @@
     <Compile Include="ConnectionToSql.cs" />
     <Compile Include="DepartamentCrud.cs" />
     <Compile Include="EquiposCrud.cs" />
+    <Compile Include="HistorialActividadesCrud.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserCrud.cs" />
     <Compile Include="UserDao.cs" />

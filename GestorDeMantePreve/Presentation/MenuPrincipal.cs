@@ -18,7 +18,6 @@ namespace Presentation
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
-        private Form formularioActual = null;
         private UserModel userModel;
 
         public MenuPrincipal()
@@ -110,7 +109,7 @@ namespace Presentation
         private void btnRegistros_Click(object sender, EventArgs e)
         {
             botonActivado(sender, RGBColors.color1);
-            abrirFormularioHijo(new RegistrosActividades());
+            abrirFormularioHijo(new HistorialActividades());
             ocultarSubmenus();
         }
 
@@ -316,14 +315,13 @@ namespace Presentation
                 {
                     int idActividad = Convert.ToInt32(dgvMostrarActividadesUsuarios.Rows[e.RowIndex].Cells[0].Value);
                     userDao.Id1 = idActividad;
-                    userDao.Estatus1 = 1;
+                    userDao.Estatus1 = 3;
                     userDao.CambiarEstadoActividad();
-                    MessageBox.Show("Estado cambiado exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("La actividad paso a revisión.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error al cambiar el estado de la actividad en la capa de presentación: " + ex.ToString());
-                    MessageBox.Show("Error al cambiar el estado de la actividad: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La actividad no se pudo finalizar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

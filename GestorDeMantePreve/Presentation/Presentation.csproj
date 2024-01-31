@@ -126,11 +126,11 @@
     <Compile Include="Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistrosActividades.cs">
+    <Compile Include="HistorialActividades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrosActividades.Designer.cs">
-      <DependentUpon>RegistrosActividades.cs</DependentUpon>
+    <Compile Include="HistorialActividades.Designer.cs">
+      <DependentUpon>HistorialActividades.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -179,8 +179,8 @@
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistrosActividades.resx">
-      <DependentUpon>RegistrosActividades.cs</DependentUpon>
+    <EmbeddedResource Include="HistorialActividades.resx">
+      <DependentUpon>HistorialActividades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
