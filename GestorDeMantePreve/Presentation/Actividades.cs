@@ -91,7 +91,6 @@ namespace Presentation
 
 
         //Funcion para agregar datos a la tabla de Actividades//
-
         private void btnNuevo_Click_1(object sender, EventArgs e)
         {
             try

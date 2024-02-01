@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
 using DataAccess;
+using System.IO;
 
 namespace Presentation
 {
@@ -70,7 +71,25 @@ namespace Presentation
         //Fin//
 
 
-        //Funcion para agregar registros a la tabla de usuarios//
+        //Funcion para seleccionar una archivo//
+        private void gbtnSubirImagen_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif;*.bmp|Todos los archivos|*.*";
+                openFileDialog.Title = "Seleccionar imagen";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Obtén la ruta del archivo seleccionado
+                    string rutaImagen = openFileDialog.FileName;
+
+                    // Muestra la ruta en un TextBox u otro control si es necesario
+                    gtbFoto.Text = rutaImagen;
+                }
+            }
+        }
+        //Funcion paara agregar registros a la tabla de usuarios//
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             try
@@ -91,15 +110,46 @@ namespace Presentation
                     crud.Puesto1 = Convert.ToInt32(gcmbPuesto.SelectedValue);
                     crud.Correo1 = gtbCorreo.Text;
                     crud.Contrasena1 = gtbPassword.Text;
-                    crud.Foto1 = gtbFoto.Text;
-                    crud.PostUsuarios();
 
-                    //userCrudTabla.InsertarUsuarios(gtbNombreCompleto.Text, Convert.ToInt32(gtbNumeroTrabajador.Text), Convert.ToInt32(gcmbDepartamento.SelectedValue),
-                    //Convert.ToInt32(gcmbArea.SelectedValue), Convert.ToInt32(gcmbPuesto.SelectedValue), gtbCorreo.Text, gtbPassword.Text, gtbFoto.Text);
+                    // Validar que se haya seleccionado una imagen
+                    if (!string.IsNullOrEmpty(gtbFoto.Text) && File.Exists(gtbFoto.Text))
+                    {
+                        // Obtener la carpeta de la aplicación
+                        string carpetaApp = AppDomain.CurrentDomain.BaseDirectory;
 
-                    MessageBox.Show("Usuario registrado con exito");
-                    LimpiarCampos();
-                    MostrarUsuariosTabla();
+                        // Unir la carpeta de la aplicación con la carpeta "ImagenesUsuarios"
+                        string carpetaImagenes = Path.Combine(carpetaApp, "ImagenesUsuarios");
+
+                        // Crear la carpeta si no existe
+                        if (!Directory.Exists(carpetaImagenes))
+                        {
+                            Directory.CreateDirectory(carpetaImagenes);
+                        }
+
+                        // Guardar la imagen en la carpeta
+                        string nombreArchivo = $"{Guid.NewGuid()}.jpg";
+                        string rutaImagen = Path.Combine(carpetaImagenes, nombreArchivo);
+
+                        File.Copy(gtbFoto.Text, rutaImagen, true);
+
+                        // Asignar la ruta completa al atributo Foto1
+                        crud.Foto1 = rutaImagen;
+
+                        // Llamar a la función para agregar datos a la tabla de usuarios
+                        crud.PostUsuarios();
+
+                        MessageBox.Show("Usuario registrado con éxito");
+                        LimpiarCampos();
+                        MostrarUsuariosTabla();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Por favor, seleccione una imagen.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return; // No continuar si no hay imagen seleccionada
+                    }
+                    //Fin//
+
+                    
                 }
             }
             catch (Exception ex)

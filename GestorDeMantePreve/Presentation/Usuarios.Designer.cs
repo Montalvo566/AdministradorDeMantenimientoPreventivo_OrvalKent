@@ -59,6 +59,7 @@ namespace Presentation
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvUsuariosTabla = new Guna.UI.WinForms.GunaDataGridView();
+            this.gbtnSubirImagen = new Guna.UI.WinForms.GunaButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelCrudUser.SuspendLayout();
@@ -174,9 +175,10 @@ namespace Presentation
             // 
             // panelCrudUser
             // 
+            this.panelCrudUser.Controls.Add(this.gbtnSubirImagen);
+            this.panelCrudUser.Controls.Add(this.gtbFoto);
             this.panelCrudUser.Controls.Add(this.gcmbPuesto);
             this.panelCrudUser.Controls.Add(this.label10);
-            this.panelCrudUser.Controls.Add(this.gtbFoto);
             this.panelCrudUser.Controls.Add(this.label9);
             this.panelCrudUser.Controls.Add(this.gtbPassword);
             this.panelCrudUser.Controls.Add(this.label8);
@@ -240,7 +242,7 @@ namespace Presentation
             this.gtbFoto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gtbFoto.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gtbFoto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gtbFoto.Location = new System.Drawing.Point(243, 223);
+            this.gtbFoto.Location = new System.Drawing.Point(468, 223);
             this.gtbFoto.Name = "gtbFoto";
             this.gtbFoto.PasswordChar = '\0';
             this.gtbFoto.Radius = 5;
@@ -254,7 +256,7 @@ namespace Presentation
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(239, 200);
+            this.label9.Location = new System.Drawing.Point(464, 200);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(128, 20);
             this.label9.TabIndex = 16;
@@ -559,6 +561,34 @@ namespace Presentation
             this.dgvUsuariosTabla.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvUsuariosTabla.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // gbtnSubirImagen
+            // 
+            this.gbtnSubirImagen.AnimationHoverSpeed = 0.07F;
+            this.gbtnSubirImagen.AnimationSpeed = 0.03F;
+            this.gbtnSubirImagen.BackColor = System.Drawing.Color.Transparent;
+            this.gbtnSubirImagen.BaseColor = System.Drawing.Color.White;
+            this.gbtnSubirImagen.BorderColor = System.Drawing.Color.Black;
+            this.gbtnSubirImagen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gbtnSubirImagen.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gbtnSubirImagen.FocusedColor = System.Drawing.Color.Empty;
+            this.gbtnSubirImagen.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbtnSubirImagen.ForeColor = System.Drawing.Color.Black;
+            this.gbtnSubirImagen.Image = null;
+            this.gbtnSubirImagen.ImageSize = new System.Drawing.Size(20, 20);
+            this.gbtnSubirImagen.Location = new System.Drawing.Point(243, 223);
+            this.gbtnSubirImagen.Name = "gbtnSubirImagen";
+            this.gbtnSubirImagen.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gbtnSubirImagen.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gbtnSubirImagen.OnHoverForeColor = System.Drawing.Color.White;
+            this.gbtnSubirImagen.OnHoverImage = null;
+            this.gbtnSubirImagen.OnPressedColor = System.Drawing.Color.Black;
+            this.gbtnSubirImagen.Radius = 5;
+            this.gbtnSubirImagen.Size = new System.Drawing.Size(195, 30);
+            this.gbtnSubirImagen.TabIndex = 20;
+            this.gbtnSubirImagen.Text = "Subir Imagen";
+            this.gbtnSubirImagen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gbtnSubirImagen.Click += new System.EventHandler(this.gbtnSubirImagen_Click);
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -611,5 +641,6 @@ namespace Presentation
         private Guna.UI.WinForms.GunaButton btnAbriModalEdit;
         private Guna.UI.WinForms.GunaButton btnEliminar;
         private Guna.UI.WinForms.GunaButton btnNuevo;
+        private Guna.UI.WinForms.GunaButton gbtnSubirImagen;
     }
 }

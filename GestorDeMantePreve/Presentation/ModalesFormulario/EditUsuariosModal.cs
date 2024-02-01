@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
 using DataAccess;
+using System.IO;
 
 namespace Presentation.ModalesFormulario
 {
@@ -63,6 +64,24 @@ namespace Presentation.ModalesFormulario
         //Fin//
 
 
+        //Funcion para seleccionar el archivo//
+        private void gbtnSubirImagen_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif;*.bmp|Todos los archivos|*.*";
+                openFileDialog.Title = "Seleccionar imagen";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Obtén la ruta del archivo seleccionado
+                    string rutaImagen = openFileDialog.FileName;
+
+                    // Muestra la ruta en un TextBox u otro control si es necesario
+                    gtbFoto.Text = rutaImagen;
+                }
+            }
+        }
         //Funcion para editar los campos de la tabla de usuarios//
         private void gbtnEditar_Click(object sender, EventArgs e)
         {
@@ -89,11 +108,42 @@ namespace Presentation.ModalesFormulario
                         crud.Foto1 = gtbFoto.Text;
                         crud.Id1 = Convert.ToInt32(idUsuario);
 
-                        crud.PutUsuarios();
+                        // Validar que se haya seleccionado una imagen
+                        if (!string.IsNullOrEmpty(gtbFoto.Text) && File.Exists(gtbFoto.Text))
+                        {
+                            // Obtener la carpeta de la aplicación
+                            string carpetaApp = AppDomain.CurrentDomain.BaseDirectory;
 
-                        MessageBox.Show("Usuario actualizado con exito");
-                        LimpiarCampos();
-                        this.Close();
+                            // Unir la carpeta de la aplicación con la carpeta "ImagenesUsuarios"
+                            string carpetaImagenes = Path.Combine(carpetaApp, "ImagenesUsuarios");
+
+                            // Crear la carpeta si no existe
+                            if (!Directory.Exists(carpetaImagenes))
+                            {
+                                Directory.CreateDirectory(carpetaImagenes);
+                            }
+
+                            // Guardar la imagen en la carpeta
+                            string nombreArchivo = $"{Guid.NewGuid()}.jpg";
+                            string rutaImagen = Path.Combine(carpetaImagenes, nombreArchivo);
+
+                            File.Copy(gtbFoto.Text, rutaImagen, true);
+
+                            // Asignar la ruta completa al atributo Foto1
+                            crud.Foto1 = rutaImagen;
+
+                            // Llamar a la función para agregar datos a la tabla de usuarios
+                            crud.PutUsuarios();
+
+                            MessageBox.Show("Usuario actualizado con exito");
+                            LimpiarCampos();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Por favor, seleccione una imagen.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return; // No continuar si no hay imagen seleccionada
+                        }
                     }
                 }
                 catch (Exception ex)
