@@ -24,6 +24,8 @@ namespace DataAccess
         public int IdUsuario1 { get => IdUsuario; set => IdUsuario = value; }
         //Fin//
 
+
+        //Funcion para iniciar sesion//
         public bool Login(string user, string pass)
         {
             try
@@ -68,8 +70,10 @@ namespace DataAccess
                 CerrarConexion();
             }
         }
+        //Fin//
 
 
+        //Funcion para obtener las actividades asignadas a los usuarios//
         public DataTable GetActividadesUsuarios(int idUsuario, out string errorMessage)
         {
             DataTable tablaActividades = new DataTable();
@@ -105,6 +109,7 @@ namespace DataAccess
 
             return tablaActividades;
         }
+        //Fin//
 
 
         //Funcion para cambiar el estatus de la actividad a termiando//

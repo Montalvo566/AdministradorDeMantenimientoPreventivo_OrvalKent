@@ -30,7 +30,36 @@ namespace Presentation
             pMenuLateral.Controls.Add(leftBorderBtn);
 
             userModel = new UserModel();
+
+            PermisosUsuarios();
         }
+
+
+        //Permisos de usuarios//
+        private void PermisosUsuarios()
+        {
+            if (UserLoginCache.Puesto == UserPermissions.Supervisor)
+            {
+                btnMostrarCruds.Enabled = false;
+                btnActividades.Enabled = false;
+                btnEquipos.Enabled = false;
+                btnUsuarios.Enabled = false;
+                btnDepartamentos.Enabled = false;
+                btnAreas.Enabled = false;
+            }
+
+            if (UserLoginCache.Puesto == UserPermissions.Empleado)
+            {
+                btnRegistros.Enabled = false;
+                btnMostrarCruds.Enabled = false;
+                btnActividades.Enabled = false;
+                btnEquipos.Enabled = false;
+                btnUsuarios.Enabled = false;
+                btnDepartamentos.Enabled = false;
+                btnAreas.Enabled = false;
+            }
+        }
+        //Fin//
 
 
         //Estructura y diseño de los botones del menu lateral//
@@ -212,7 +241,6 @@ namespace Presentation
         private void cargarDatosUsuario()
         {
             lbNombreInicioSesion.Text = UserLoginCache.NombreCompleto;
-            lbCorreoInicioSesion.Text = UserLoginCache.Correo;
         }
         //Fin//
 
@@ -287,18 +315,17 @@ namespace Presentation
 
                         // Asociar el evento CellContentClick para el botón Eliminar
                         dgvMostrarActividadesUsuarios.CellContentClick += dgvMostrarActividadesUsuarios_CellContentClick;
-                        dgvMostrarActividadesUsuarios.CellPainting += dgvMostrarActividadesUsuarios_CellPainting;
 
                     }
                     else
                     {
-                        MessageBox.Show("No se encontraron actividades asignadas para el usuario actual.", "Información", MessageBoxButtons.OK);
+                        Console.WriteLine("No se encontraron actividades asignadas para el usuario actual.");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al obtener actividades en la presentación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine("Error al obtener actividades en la presentación: " + ex.Message);
             }
         }
         //Fin//
@@ -325,26 +352,6 @@ namespace Presentation
                 }
             }
         }
-
-        private void dgvMostrarActividadesUsuarios_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-
-                // Obtener el rectángulo de la celda
-                Rectangle rectCell = dgvMostrarActividadesUsuarios.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false);
-
-                // Dibujar una línea en la parte inferior de la celda
-                using (Pen pen = new Pen(Color.FromArgb(31, 34, 74), 5)) // Color y grosor de la línea
-                {
-                    e.Graphics.DrawLine(pen, rectCell.Left - 1, rectCell.Bottom - 1, rectCell.Right - 1, rectCell.Bottom - 1);
-                }
-
-                e.Handled = true;
-            }
-        }
-
         //Fin//
 
 

@@ -112,11 +112,15 @@ namespace Presentation
         {
             if (dgvAreasTabla.SelectedRows.Count > 0)
             {
-                crud.Id1 = Convert.ToInt32(dgvAreasTabla.CurrentRow.Cells[0].Value);
-                crud.DeleteAreas();
-                MessageBox.Show("Area eliminada con exito");
-                LimpiarCampos();
-                MostrarAreasTabla();
+                if (MessageBox.Show("¿Desea eliminar el area?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    crud.Id1 = Convert.ToInt32(dgvAreasTabla.CurrentRow.Cells[0].Value);
+                    crud.DeleteAreas();
+                    MessageBox.Show("Area eliminada con exito");
+                    LimpiarCampos();
+                    MostrarAreasTabla();
+                }  
             }
             else
             {

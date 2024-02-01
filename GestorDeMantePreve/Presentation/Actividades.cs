@@ -135,11 +135,15 @@ namespace Presentation
         {
             if (dgvActividadesTabla.SelectedRows.Count > 0)
             {
-                crud.Id1 = Convert.ToInt32(dgvActividadesTabla.CurrentRow.Cells[0].Value);
-                crud.DeleteActividades();
-                MessageBox.Show("Actividad eliminada con exito");
-                LimpiarCampos();
-                MostrarTablaActividades();
+                if (MessageBox.Show("¿Desea eliminar la actividad?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    crud.Id1 = Convert.ToInt32(dgvActividadesTabla.CurrentRow.Cells[0].Value);
+                    crud.DeleteActividades();
+                    MessageBox.Show("Actividad eliminada con exito");
+                    LimpiarCampos();
+                    MostrarTablaActividades();
+                } 
             }
             else
             {

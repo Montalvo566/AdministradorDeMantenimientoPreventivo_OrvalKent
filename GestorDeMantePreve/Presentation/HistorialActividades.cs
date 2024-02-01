@@ -27,6 +27,10 @@ namespace Presentation
         {
             HistorialActividadesModal historial = new HistorialActividadesModal();
             gdgvHistorialActividades.DataSource = historial.MostrarHistorialActividades();
+            // Establecer la altura mínima de las filas
+            gdgvHistorialActividades.RowTemplate.MinimumHeight = 50;
+            gdgvHistorialActividades.RowTemplate.Height = 50;
+            gdgvHistorialActividades.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
     }
 }

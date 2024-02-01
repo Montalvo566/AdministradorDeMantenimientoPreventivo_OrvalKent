@@ -116,11 +116,15 @@ namespace Presentation
         {
             if (dgvEquiposTabla.SelectedRows.Count > 0)
             {
-                crud.Id1 = Convert.ToInt32(dgvEquiposTabla.CurrentRow.Cells[0].Value);
-                crud.DeleteEquipos();
-                MessageBox.Show("Equipo eliminado con exito");
-                LimpiarCampos();
-                MostrarEquiposTabla();
+                if (MessageBox.Show("¿Desea eliminar el equipo?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    crud.Id1 = Convert.ToInt32(dgvEquiposTabla.CurrentRow.Cells[0].Value);
+                    crud.DeleteEquipos();
+                    MessageBox.Show("Equipo eliminado con exito");
+                    LimpiarCampos();
+                    MostrarEquiposTabla();
+                }  
             }
             else
             {

@@ -46,7 +46,6 @@ namespace Presentation
             this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
             this.btnMenuPrincipal = new FontAwesome.Sharp.IconButton();
             this.pLogo = new System.Windows.Forms.Panel();
-            this.lbCorreoInicioSesion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbNombreInicioSesion = new System.Windows.Forms.Label();
             this.panelFormularioHijo = new System.Windows.Forms.Panel();
@@ -85,7 +84,7 @@ namespace Presentation
             this.panelSeccionTareas.Controls.Add(this.btnUsuarios);
             this.panelSeccionTareas.Controls.Add(this.btnActividades);
             this.panelSeccionTareas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSeccionTareas.Location = new System.Drawing.Point(0, 387);
+            this.panelSeccionTareas.Location = new System.Drawing.Point(0, 380);
             this.panelSeccionTareas.Name = "panelSeccionTareas";
             this.panelSeccionTareas.Size = new System.Drawing.Size(225, 315);
             this.panelSeccionTareas.TabIndex = 0;
@@ -229,7 +228,7 @@ namespace Presentation
             this.btnMostrarCruds.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMostrarCruds.IconSize = 30;
             this.btnMostrarCruds.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMostrarCruds.Location = new System.Drawing.Point(0, 327);
+            this.btnMostrarCruds.Location = new System.Drawing.Point(0, 320);
             this.btnMostrarCruds.Name = "btnMostrarCruds";
             this.btnMostrarCruds.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMostrarCruds.Size = new System.Drawing.Size(225, 60);
@@ -249,17 +248,17 @@ namespace Presentation
             this.btnTareasAsignadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTareasAsignadas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTareasAsignadas.ForeColor = System.Drawing.Color.White;
-            this.btnTareasAsignadas.IconChar = FontAwesome.Sharp.IconChar.Bell;
+            this.btnTareasAsignadas.IconChar = FontAwesome.Sharp.IconChar.BookOpenReader;
             this.btnTareasAsignadas.IconColor = System.Drawing.Color.White;
             this.btnTareasAsignadas.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnTareasAsignadas.IconSize = 30;
             this.btnTareasAsignadas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTareasAsignadas.Location = new System.Drawing.Point(0, 267);
+            this.btnTareasAsignadas.Location = new System.Drawing.Point(0, 260);
             this.btnTareasAsignadas.Name = "btnTareasAsignadas";
             this.btnTareasAsignadas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnTareasAsignadas.Size = new System.Drawing.Size(225, 60);
             this.btnTareasAsignadas.TabIndex = 2;
-            this.btnTareasAsignadas.Text = "Tareas Asignadas";
+            this.btnTareasAsignadas.Text = "Filtro Actividades";
             this.btnTareasAsignadas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTareasAsignadas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTareasAsignadas.UseVisualStyleBackColor = false;
@@ -274,17 +273,17 @@ namespace Presentation
             this.btnRegistros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistros.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistros.ForeColor = System.Drawing.Color.White;
-            this.btnRegistros.IconChar = FontAwesome.Sharp.IconChar.BookOpenReader;
+            this.btnRegistros.IconChar = FontAwesome.Sharp.IconChar.ClipboardCheck;
             this.btnRegistros.IconColor = System.Drawing.Color.White;
             this.btnRegistros.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRegistros.IconSize = 30;
             this.btnRegistros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistros.Location = new System.Drawing.Point(0, 207);
+            this.btnRegistros.Location = new System.Drawing.Point(0, 200);
             this.btnRegistros.Name = "btnRegistros";
             this.btnRegistros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnRegistros.Size = new System.Drawing.Size(225, 60);
             this.btnRegistros.TabIndex = 5;
-            this.btnRegistros.Text = "Registros";
+            this.btnRegistros.Text = "Historial Activdades";
             this.btnRegistros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistros.UseVisualStyleBackColor = false;
@@ -303,7 +302,7 @@ namespace Presentation
             this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarSesion.IconSize = 30;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 702);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 695);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(225, 60);
@@ -328,7 +327,7 @@ namespace Presentation
             this.btnMenuPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMenuPrincipal.IconSize = 30;
             this.btnMenuPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuPrincipal.Location = new System.Drawing.Point(0, 147);
+            this.btnMenuPrincipal.Location = new System.Drawing.Point(0, 140);
             this.btnMenuPrincipal.Name = "btnMenuPrincipal";
             this.btnMenuPrincipal.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMenuPrincipal.Size = new System.Drawing.Size(225, 60);
@@ -341,25 +340,13 @@ namespace Presentation
             // 
             // pLogo
             // 
-            this.pLogo.Controls.Add(this.lbCorreoInicioSesion);
             this.pLogo.Controls.Add(this.pictureBox1);
             this.pLogo.Controls.Add(this.lbNombreInicioSesion);
             this.pLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pLogo.Location = new System.Drawing.Point(0, 0);
             this.pLogo.Name = "pLogo";
-            this.pLogo.Size = new System.Drawing.Size(225, 147);
+            this.pLogo.Size = new System.Drawing.Size(225, 140);
             this.pLogo.TabIndex = 0;
-            // 
-            // lbCorreoInicioSesion
-            // 
-            this.lbCorreoInicioSesion.AutoSize = true;
-            this.lbCorreoInicioSesion.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCorreoInicioSesion.ForeColor = System.Drawing.Color.White;
-            this.lbCorreoInicioSesion.Location = new System.Drawing.Point(57, 128);
-            this.lbCorreoInicioSesion.Name = "lbCorreoInicioSesion";
-            this.lbCorreoInicioSesion.Size = new System.Drawing.Size(108, 16);
-            this.lbCorreoInicioSesion.TabIndex = 2;
-            this.lbCorreoInicioSesion.Text = "Puesto de trabajo:";
             // 
             // pictureBox1
             // 
@@ -375,11 +362,11 @@ namespace Presentation
             // lbNombreInicioSesion
             // 
             this.lbNombreInicioSesion.AutoSize = true;
-            this.lbNombreInicioSesion.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombreInicioSesion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNombreInicioSesion.ForeColor = System.Drawing.Color.White;
-            this.lbNombreInicioSesion.Location = new System.Drawing.Point(57, 107);
+            this.lbNombreInicioSesion.Location = new System.Drawing.Point(7, 112);
             this.lbNombreInicioSesion.Name = "lbNombreInicioSesion";
-            this.lbNombreInicioSesion.Size = new System.Drawing.Size(112, 16);
+            this.lbNombreInicioSesion.Size = new System.Drawing.Size(135, 17);
             this.lbNombreInicioSesion.TabIndex = 1;
             this.lbNombreInicioSesion.Text = "Nombre del usuario";
             // 
@@ -400,12 +387,12 @@ namespace Presentation
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvMostrarActividadesUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMostrarActividadesUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMostrarActividadesUsuarios.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMostrarActividadesUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.dgvMostrarActividadesUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMostrarActividadesUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvMostrarActividadesUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -423,7 +410,7 @@ namespace Presentation
             this.dgvMostrarActividadesUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMostrarActividadesUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMostrarActividadesUsuarios.EnableHeadersVisualStyles = false;
-            this.dgvMostrarActividadesUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvMostrarActividadesUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.dgvMostrarActividadesUsuarios.Location = new System.Drawing.Point(0, 0);
             this.dgvMostrarActividadesUsuarios.Name = "dgvMostrarActividadesUsuarios";
             this.dgvMostrarActividadesUsuarios.ReadOnly = true;
@@ -437,9 +424,9 @@ namespace Presentation
             this.dgvMostrarActividadesUsuarios.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvMostrarActividadesUsuarios.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvMostrarActividadesUsuarios.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
@@ -490,7 +477,6 @@ namespace Presentation
         private FontAwesome.Sharp.IconButton btnTareasAsignadas;
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton btnCerrarSesion;
-        private System.Windows.Forms.Label lbCorreoInicioSesion;
         private System.Windows.Forms.Label lbNombreInicioSesion;
         private FontAwesome.Sharp.IconButton btnRegistros;
         private System.Windows.Forms.Panel panelSeccionTareas;

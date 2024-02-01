@@ -113,11 +113,15 @@ namespace Presentation
         {
             if (dgvDepartamentosTabla.SelectedRows.Count > 0)
             {
-                crud.Id1 = Convert.ToInt32(dgvDepartamentosTabla.CurrentRow.Cells[0].Value);
-                crud.DeleteDepartamentos();
-                MessageBox.Show("Departamento eliminado con exito");
-                LimpiarCampos();
-                MostrarDepartamentosTabla();
+                if (MessageBox.Show("¿Desea eliminar el departamento?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    crud.Id1 = Convert.ToInt32(dgvDepartamentosTabla.CurrentRow.Cells[0].Value);
+                    crud.DeleteDepartamentos();
+                    MessageBox.Show("Departamento eliminado con exito");
+                    LimpiarCampos();
+                    MostrarDepartamentosTabla();
+                }  
             }
             else
             {

@@ -151,11 +151,16 @@ namespace Presentation
         {
             if (dgvUsuariosTabla.SelectedRows.Count > 0)
             {
-                crud.Id1 = Convert.ToInt32(dgvUsuariosTabla.CurrentRow.Cells[0].Value);
-                crud.DeleteUsuarios();
-                MessageBox.Show("Usuario eliminado con exito");
-                LimpiarCampos();
-                MostrarUsuariosTabla();
+                if (MessageBox.Show("¿Desea eliminar el usuario?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    crud.Id1 = Convert.ToInt32(dgvUsuariosTabla.CurrentRow.Cells[0].Value);
+                    crud.DeleteUsuarios();
+                    MessageBox.Show("Usuario eliminado con exito");
+                    LimpiarCampos();
+                    MostrarUsuariosTabla();
+                }
+                
             }
             else
             {
@@ -163,6 +168,7 @@ namespace Presentation
             }
         }
         //Fin//
+
 
         //Funcion para limpiar los textbox del formulario//
         private void LimpiarCampos()

@@ -14,4 +14,5 @@ namespace Common.Cache
         public static string NombreCompleto { get; set; }
         public static int Puesto { get; set; }
     }
+
 }

@@ -13,10 +13,12 @@ namespace Domain
     {
         UserDao userDao = new UserDao();
 
+        //Funcion para iniciar sesion//
         public bool LoginUser(string user, string pass)
         {
             return userDao.Login(user, pass);
         }
+        //Fin//
 
         //Funcion para mostrar las actividades en relacion al usuario que inicio sesion//
         public DataTable MostrarActividadesUsuario(int idUsuario, out string errorMessage)
