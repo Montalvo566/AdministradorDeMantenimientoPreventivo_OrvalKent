@@ -13,6 +13,7 @@ namespace Common.Cache
         public static string Correo { get; set; }
         public static string NombreCompleto { get; set; }
         public static int Puesto { get; set; }
+        public static string Foto { get; set; }
     }
 
 }

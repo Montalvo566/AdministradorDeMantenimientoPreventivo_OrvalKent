@@ -46,14 +46,14 @@ namespace Presentation
             this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
             this.btnMenuPrincipal = new FontAwesome.Sharp.IconButton();
             this.pLogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.lbNombreInicioSesion = new System.Windows.Forms.Label();
             this.panelFormularioHijo = new System.Windows.Forms.Panel();
             this.dgvMostrarActividadesUsuarios = new Guna.UI.WinForms.GunaDataGridView();
             this.pMenuLateral.SuspendLayout();
             this.panelSeccionTareas.SuspendLayout();
             this.pLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
             this.panelFormularioHijo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarActividadesUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -340,7 +340,7 @@ namespace Presentation
             // 
             // pLogo
             // 
-            this.pLogo.Controls.Add(this.pictureBox1);
+            this.pLogo.Controls.Add(this.pbUsuario);
             this.pLogo.Controls.Add(this.lbNombreInicioSesion);
             this.pLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pLogo.Location = new System.Drawing.Point(0, 0);
@@ -348,23 +348,23 @@ namespace Presentation
             this.pLogo.Size = new System.Drawing.Size(225, 140);
             this.pLogo.TabIndex = 0;
             // 
-            // pictureBox1
+            // pbUsuario
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = global::Presentation.Properties.Resources.OrvalKentLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 101);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbUsuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pbUsuario.Image = global::Presentation.Properties.Resources.Resers_Logo_Standard;
+            this.pbUsuario.Location = new System.Drawing.Point(0, 0);
+            this.pbUsuario.Name = "pbUsuario";
+            this.pbUsuario.Size = new System.Drawing.Size(225, 112);
+            this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbUsuario.TabIndex = 0;
+            this.pbUsuario.TabStop = false;
             // 
             // lbNombreInicioSesion
             // 
             this.lbNombreInicioSesion.AutoSize = true;
             this.lbNombreInicioSesion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNombreInicioSesion.ForeColor = System.Drawing.Color.White;
-            this.lbNombreInicioSesion.Location = new System.Drawing.Point(7, 112);
+            this.lbNombreInicioSesion.Location = new System.Drawing.Point(7, 117);
             this.lbNombreInicioSesion.Name = "lbNombreInicioSesion";
             this.lbNombreInicioSesion.Size = new System.Drawing.Size(135, 17);
             this.lbNombreInicioSesion.TabIndex = 1;
@@ -459,7 +459,7 @@ namespace Presentation
             this.panelSeccionTareas.ResumeLayout(false);
             this.pLogo.ResumeLayout(false);
             this.pLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
             this.panelFormularioHijo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarActividadesUsuarios)).EndInit();
             this.ResumeLayout(false);
@@ -475,7 +475,7 @@ namespace Presentation
         private FontAwesome.Sharp.IconButton btnUsuarios;
         private System.Windows.Forms.Panel panelFormularioHijo;
         private FontAwesome.Sharp.IconButton btnTareasAsignadas;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbUsuario;
         private FontAwesome.Sharp.IconButton btnCerrarSesion;
         private System.Windows.Forms.Label lbNombreInicioSesion;
         private FontAwesome.Sharp.IconButton btnRegistros;

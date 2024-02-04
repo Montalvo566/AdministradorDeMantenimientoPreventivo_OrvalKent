@@ -49,6 +49,7 @@ namespace DataAccess
                             UserLoginCache.Correo = reader.GetString(6);
                             UserLoginCache.NombreCompleto = reader.GetString(1);
                             UserLoginCache.Puesto = reader.GetInt32(5);
+                            UserLoginCache.Foto = reader.GetString(8);
                         }
                         // Fin
                         return true;
