@@ -32,8 +32,6 @@ namespace Presentation.ModalesFormulario
             this.panelCrudUser = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gcmbArea = new Guna.UI.WinForms.GunaComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.gtbDepartamento = new Guna.UI.WinForms.GunaTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -48,8 +46,6 @@ namespace Presentation.ModalesFormulario
             this.panelCrudUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.panelCrudUser.Controls.Add(this.label2);
             this.panelCrudUser.Controls.Add(this.label1);
-            this.panelCrudUser.Controls.Add(this.gcmbArea);
-            this.panelCrudUser.Controls.Add(this.label5);
             this.panelCrudUser.Controls.Add(this.gtbDepartamento);
             this.panelCrudUser.Controls.Add(this.label4);
             this.panelCrudUser.Dock = System.Windows.Forms.DockStyle.Top;
@@ -81,38 +77,6 @@ namespace Presentation.ModalesFormulario
             this.label1.Size = new System.Drawing.Size(139, 23);
             this.label1.TabIndex = 20;
             this.label1.Text = "EditarUsuarios";
-            // 
-            // gcmbArea
-            // 
-            this.gcmbArea.BackColor = System.Drawing.Color.Transparent;
-            this.gcmbArea.BaseColor = System.Drawing.Color.White;
-            this.gcmbArea.BorderColor = System.Drawing.Color.Silver;
-            this.gcmbArea.BorderSize = 0;
-            this.gcmbArea.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gcmbArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gcmbArea.FocusedColor = System.Drawing.Color.Empty;
-            this.gcmbArea.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gcmbArea.ForeColor = System.Drawing.Color.Black;
-            this.gcmbArea.FormattingEnabled = true;
-            this.gcmbArea.Location = new System.Drawing.Point(16, 173);
-            this.gcmbArea.Name = "gcmbArea";
-            this.gcmbArea.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gcmbArea.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gcmbArea.Radius = 5;
-            this.gcmbArea.Size = new System.Drawing.Size(523, 27);
-            this.gcmbArea.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(12, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 21);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Area:";
             // 
             // gtbDepartamento
             // 
@@ -236,8 +200,6 @@ namespace Presentation.ModalesFormulario
         private System.Windows.Forms.Panel panelCrudUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        public Guna.UI.WinForms.GunaComboBox gcmbArea;
-        private System.Windows.Forms.Label label5;
         public Guna.UI.WinForms.GunaTextBox gtbDepartamento;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;

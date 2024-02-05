@@ -18,38 +18,10 @@ namespace DataAccess
         //Atributos de los datos//
         private int Id;
         private string Departamento;
-        private int IdZonaAcceso;
 
         //Funcion GET, SET//
         public int Id1 { get => Id; set => Id = value; }
         public string Departamento1 { get => Departamento; set => Departamento = value; }
-        public int IdZonaAcceso1 { get => IdZonaAcceso; set => IdZonaAcceso = value; }
-        //Fin//
-
-
-        //Funciones pra listar datos en el combobox/
-        public DataTable ListarAreas()
-        {
-            try
-            {
-                command.Connection = conexion.AbrirConexion();
-                command.CommandText = "sp_ListarAreas";
-                command.CommandType = CommandType.StoredProcedure;
-                leer = command.ExecuteReader();
-                tablaDepartamentos.Load(leer);
-                leer.Close();
-
-            }
-            catch (Exception ex)
-            {
-                string msj = ex.ToString();
-            }
-            finally
-            {
-                command.Connection = conexion.CerrarConexion();
-            }
-            return tablaDepartamentos;
-        }
         //Fin//
 
 
@@ -89,7 +61,6 @@ namespace DataAccess
                 command.CommandType = CommandType.StoredProcedure;
                 //Parametros de entrada//
                 command.Parameters.AddWithValue("@Departamento", Departamento);
-                command.Parameters.AddWithValue("@IdZonaAcceso", IdZonaAcceso);
                 //Fin//
                 command.ExecuteReader();
                 command.Parameters.Clear();
@@ -116,7 +87,6 @@ namespace DataAccess
                 command.CommandType = CommandType.StoredProcedure;
                 //Parametros de entrada//
                 command.Parameters.AddWithValue("@Departamento", Departamento);
-                command.Parameters.AddWithValue("@IdZonaAcceso", IdZonaAcceso);
                 command.Parameters.AddWithValue("@Id", Id);
                 //Fin//
                 command.ExecuteNonQuery();

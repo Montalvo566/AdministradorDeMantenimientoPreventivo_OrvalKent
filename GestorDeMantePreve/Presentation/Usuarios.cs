@@ -81,10 +81,7 @@ namespace Presentation
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    // Obtén la ruta del archivo seleccionado
                     string rutaImagen = openFileDialog.FileName;
-
-                    // Muestra la ruta en un TextBox u otro control si es necesario
                     gtbFoto.Text = rutaImagen;
                 }
             }
@@ -114,28 +111,17 @@ namespace Presentation
                     // Validar que se haya seleccionado una imagen
                     if (!string.IsNullOrEmpty(gtbFoto.Text) && File.Exists(gtbFoto.Text))
                     {
-                        // Obtener la carpeta de la aplicación
                         string carpetaApp = AppDomain.CurrentDomain.BaseDirectory;
-
-                        // Unir la carpeta de la aplicación con la carpeta "ImagenesUsuarios"
                         string carpetaImagenes = Path.Combine(carpetaApp, "ImagenesUsuarios");
-
-                        // Crear la carpeta si no existe
                         if (!Directory.Exists(carpetaImagenes))
                         {
                             Directory.CreateDirectory(carpetaImagenes);
                         }
-
-                        // Guardar la imagen en la carpeta
                         string nombreArchivo = $"{Guid.NewGuid()}.jpg";
                         string rutaImagen = Path.Combine(carpetaImagenes, nombreArchivo);
-
                         File.Copy(gtbFoto.Text, rutaImagen, true);
-
-                        // Asignar la ruta completa al atributo Foto1
                         crud.Foto1 = rutaImagen;
 
-                        // Llamar a la función para agregar datos a la tabla de usuarios
                         crud.PostUsuarios();
 
                         MessageBox.Show("Usuario registrado con éxito");
@@ -145,11 +131,11 @@ namespace Presentation
                     else
                     {
                         MessageBox.Show("Por favor, seleccione una imagen.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return; // No continuar si no hay imagen seleccionada
+                        return;
                     }
-                    //Fin//
+                    // Fin //
 
-                    
+
                 }
             }
             catch (Exception ex)

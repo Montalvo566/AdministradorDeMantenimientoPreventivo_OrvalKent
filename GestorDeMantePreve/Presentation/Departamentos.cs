@@ -24,7 +24,6 @@ namespace Presentation
 
         private void Departamentos_Load(object sender, EventArgs e)
         {
-            ListarAreas();
             MostrarDepartamentosTabla();
             ConfigurarDataGridView();
             ValdiacionesTipoCampo();
@@ -44,27 +43,14 @@ namespace Presentation
         //Fin//
 
 
-        //Funciones para listar los datos del combobox//
-        private void ListarAreas()
-        {
-            DepartamentCrudModel depCrudTabla = new DepartamentCrudModel();
-            gcmbArea.DataSource = depCrudTabla.ListadoAreas();
-            gcmbArea.DisplayMember = "Zona";
-            gcmbArea.ValueMember = "Id";
-        }
-        //Fin//
-
-
         //Funcion agregar registros a la tablas de departamentos//
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             try
             {
-                if (EsCampoValido(gtbDepartamento, "Departamento") &&
-                        EsOpcionValidaSeleccionada(gcmbArea, "Area"))
+                if (EsCampoValido(gtbDepartamento, "Departamento"))
                 {
                     crud.Departamento1 = gtbDepartamento.Text;
-                    crud.IdZonaAcceso1 = Convert.ToInt32(gcmbArea.SelectedValue);
                     crud.PostDepartamentos();
 
                     MessageBox.Show("Departamento registrado con exito");
@@ -88,13 +74,8 @@ namespace Presentation
                 ModalesFormulario.EditDepartamentosModal modal = new ModalesFormulario.EditDepartamentosModal();
                 modal.OperacionEdit = "Editar";
 
-                //Funcion para listar los combobox//
-                modal.ListarAreas();
-                //Fin//
-
                 //Funcion para cargar los datos en los campos//
                 modal.gtbDepartamento.Text = dgvDepartamentosTabla.CurrentRow.Cells[1].Value.ToString();
-                modal.gcmbArea.Text = dgvDepartamentosTabla.CurrentRow.Cells[2].Value.ToString();
                 modal.idDepartamento = dgvDepartamentosTabla.CurrentRow.Cells["Id"].Value.ToString();
                 modal.ShowDialog();
                 MostrarDepartamentosTabla();
@@ -146,15 +127,6 @@ namespace Presentation
             if (string.IsNullOrWhiteSpace(campo.Text))
             {
                 MessageBox.Show($"Por favor, coloque el campo {nombreCampo}");
-                return false;
-            }
-            return true;
-        }
-        private bool EsOpcionValidaSeleccionada(Guna.UI.WinForms.GunaComboBox campo, string nombreCampo)
-        {
-            if (campo.SelectedIndex == -1)
-            {
-                MessageBox.Show($"Por favor, seleccione el campo {nombreCampo}");
                 return false;
             }
             return true;

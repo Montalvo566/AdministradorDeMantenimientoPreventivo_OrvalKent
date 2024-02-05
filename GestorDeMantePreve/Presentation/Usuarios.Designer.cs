@@ -29,19 +29,20 @@ namespace Presentation
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAbriModalEdit = new Guna.UI.WinForms.GunaButton();
             this.btnEliminar = new Guna.UI.WinForms.GunaButton();
             this.btnNuevo = new Guna.UI.WinForms.GunaButton();
             this.panelCrudUser = new System.Windows.Forms.Panel();
+            this.gbtnSubirImagen = new Guna.UI.WinForms.GunaButton();
+            this.gtbFoto = new Guna.UI.WinForms.GunaTextBox();
             this.gcmbPuesto = new Guna.UI.WinForms.GunaComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.gtbFoto = new Guna.UI.WinForms.GunaTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.gtbPassword = new Guna.UI.WinForms.GunaTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -59,7 +60,7 @@ namespace Presentation
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvUsuariosTabla = new Guna.UI.WinForms.GunaDataGridView();
-            this.gbtnSubirImagen = new Guna.UI.WinForms.GunaButton();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelCrudUser.SuspendLayout();
@@ -175,6 +176,7 @@ namespace Presentation
             // 
             // panelCrudUser
             // 
+            this.panelCrudUser.Controls.Add(this.label11);
             this.panelCrudUser.Controls.Add(this.gbtnSubirImagen);
             this.panelCrudUser.Controls.Add(this.gtbFoto);
             this.panelCrudUser.Controls.Add(this.gcmbPuesto);
@@ -198,6 +200,54 @@ namespace Presentation
             this.panelCrudUser.Name = "panelCrudUser";
             this.panelCrudUser.Size = new System.Drawing.Size(666, 265);
             this.panelCrudUser.TabIndex = 20;
+            // 
+            // gbtnSubirImagen
+            // 
+            this.gbtnSubirImagen.AnimationHoverSpeed = 0.07F;
+            this.gbtnSubirImagen.AnimationSpeed = 0.03F;
+            this.gbtnSubirImagen.BackColor = System.Drawing.Color.Transparent;
+            this.gbtnSubirImagen.BaseColor = System.Drawing.Color.White;
+            this.gbtnSubirImagen.BorderColor = System.Drawing.Color.Black;
+            this.gbtnSubirImagen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gbtnSubirImagen.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gbtnSubirImagen.FocusedColor = System.Drawing.Color.Empty;
+            this.gbtnSubirImagen.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbtnSubirImagen.ForeColor = System.Drawing.Color.Black;
+            this.gbtnSubirImagen.Image = null;
+            this.gbtnSubirImagen.ImageSize = new System.Drawing.Size(20, 20);
+            this.gbtnSubirImagen.Location = new System.Drawing.Point(243, 223);
+            this.gbtnSubirImagen.Name = "gbtnSubirImagen";
+            this.gbtnSubirImagen.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gbtnSubirImagen.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gbtnSubirImagen.OnHoverForeColor = System.Drawing.Color.White;
+            this.gbtnSubirImagen.OnHoverImage = null;
+            this.gbtnSubirImagen.OnPressedColor = System.Drawing.Color.Black;
+            this.gbtnSubirImagen.Radius = 5;
+            this.gbtnSubirImagen.Size = new System.Drawing.Size(195, 30);
+            this.gbtnSubirImagen.TabIndex = 20;
+            this.gbtnSubirImagen.Text = "Subir Imagen";
+            this.gbtnSubirImagen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gbtnSubirImagen.Click += new System.EventHandler(this.gbtnSubirImagen_Click);
+            // 
+            // gtbFoto
+            // 
+            this.gtbFoto.BackColor = System.Drawing.Color.Transparent;
+            this.gtbFoto.BaseColor = System.Drawing.Color.White;
+            this.gtbFoto.BorderColor = System.Drawing.Color.Silver;
+            this.gtbFoto.BorderSize = 0;
+            this.gtbFoto.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtbFoto.Enabled = false;
+            this.gtbFoto.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtbFoto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gtbFoto.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.gtbFoto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gtbFoto.Location = new System.Drawing.Point(468, 223);
+            this.gtbFoto.Name = "gtbFoto";
+            this.gtbFoto.PasswordChar = '\0';
+            this.gtbFoto.Radius = 5;
+            this.gtbFoto.SelectedText = "";
+            this.gtbFoto.Size = new System.Drawing.Size(195, 30);
+            this.gtbFoto.TabIndex = 17;
             // 
             // gcmbPuesto
             // 
@@ -231,32 +281,13 @@ namespace Presentation
             this.label10.TabIndex = 18;
             this.label10.Text = "Puesto:";
             // 
-            // gtbFoto
-            // 
-            this.gtbFoto.BackColor = System.Drawing.Color.Transparent;
-            this.gtbFoto.BaseColor = System.Drawing.Color.White;
-            this.gtbFoto.BorderColor = System.Drawing.Color.Silver;
-            this.gtbFoto.BorderSize = 0;
-            this.gtbFoto.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gtbFoto.FocusedBaseColor = System.Drawing.Color.White;
-            this.gtbFoto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gtbFoto.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gtbFoto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gtbFoto.Location = new System.Drawing.Point(468, 223);
-            this.gtbFoto.Name = "gtbFoto";
-            this.gtbFoto.PasswordChar = '\0';
-            this.gtbFoto.Radius = 5;
-            this.gtbFoto.SelectedText = "";
-            this.gtbFoto.Size = new System.Drawing.Size(195, 30);
-            this.gtbFoto.TabIndex = 17;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(464, 200);
+            this.label9.Location = new System.Drawing.Point(239, 200);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(128, 20);
             this.label9.TabIndex = 16;
@@ -488,8 +519,8 @@ namespace Presentation
             // 
             this.dgvUsuariosTabla.AllowUserToAddRows = false;
             this.dgvUsuariosTabla.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvUsuariosTabla.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            this.dgvUsuariosTabla.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvUsuariosTabla.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -498,38 +529,38 @@ namespace Presentation
             this.dgvUsuariosTabla.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUsuariosTabla.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvUsuariosTabla.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUsuariosTabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUsuariosTabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvUsuariosTabla.ColumnHeadersHeight = 50;
             this.dgvUsuariosTabla.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUsuariosTabla.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUsuariosTabla.DefaultCellStyle = dataGridViewCellStyle19;
             this.dgvUsuariosTabla.EnableHeadersVisualStyles = false;
             this.dgvUsuariosTabla.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvUsuariosTabla.Location = new System.Drawing.Point(17, 307);
             this.dgvUsuariosTabla.MultiSelect = false;
             this.dgvUsuariosTabla.Name = "dgvUsuariosTabla";
             this.dgvUsuariosTabla.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUsuariosTabla.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUsuariosTabla.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dgvUsuariosTabla.RowHeadersVisible = false;
             this.dgvUsuariosTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuariosTabla.ShowCellErrors = false;
@@ -561,33 +592,17 @@ namespace Presentation
             this.dgvUsuariosTabla.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvUsuariosTabla.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // gbtnSubirImagen
+            // label11
             // 
-            this.gbtnSubirImagen.AnimationHoverSpeed = 0.07F;
-            this.gbtnSubirImagen.AnimationSpeed = 0.03F;
-            this.gbtnSubirImagen.BackColor = System.Drawing.Color.Transparent;
-            this.gbtnSubirImagen.BaseColor = System.Drawing.Color.White;
-            this.gbtnSubirImagen.BorderColor = System.Drawing.Color.Black;
-            this.gbtnSubirImagen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gbtnSubirImagen.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gbtnSubirImagen.FocusedColor = System.Drawing.Color.Empty;
-            this.gbtnSubirImagen.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbtnSubirImagen.ForeColor = System.Drawing.Color.Black;
-            this.gbtnSubirImagen.Image = null;
-            this.gbtnSubirImagen.ImageSize = new System.Drawing.Size(20, 20);
-            this.gbtnSubirImagen.Location = new System.Drawing.Point(243, 223);
-            this.gbtnSubirImagen.Name = "gbtnSubirImagen";
-            this.gbtnSubirImagen.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gbtnSubirImagen.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gbtnSubirImagen.OnHoverForeColor = System.Drawing.Color.White;
-            this.gbtnSubirImagen.OnHoverImage = null;
-            this.gbtnSubirImagen.OnPressedColor = System.Drawing.Color.Black;
-            this.gbtnSubirImagen.Radius = 5;
-            this.gbtnSubirImagen.Size = new System.Drawing.Size(195, 30);
-            this.gbtnSubirImagen.TabIndex = 20;
-            this.gbtnSubirImagen.Text = "Subir Imagen";
-            this.gbtnSubirImagen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gbtnSubirImagen.Click += new System.EventHandler(this.gbtnSubirImagen_Click);
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(464, 200);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(140, 20);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "URL de la imagen:";
             // 
             // Usuarios
             // 
@@ -642,5 +657,6 @@ namespace Presentation
         private Guna.UI.WinForms.GunaButton btnEliminar;
         private Guna.UI.WinForms.GunaButton btnNuevo;
         private Guna.UI.WinForms.GunaButton gbtnSubirImagen;
+        private System.Windows.Forms.Label label11;
     }
 }

@@ -13,6 +13,8 @@ namespace Presentation
 {
     public partial class TareasAsignadas : Form
     {
+        private DataTable tablaOriginal;
+
         public TareasAsignadas()
         {
             InitializeComponent();
@@ -29,6 +31,7 @@ namespace Presentation
             ConfigurarDataGridView();
             ListarUsuarios();
             CargarOpcionesCantidadRegistros();
+            tablaOriginal = (DataTable)gdgvTablaActividades.DataSource;
         }
 
 
@@ -40,8 +43,8 @@ namespace Presentation
         }
         private void ConfigurarDataGridView()
         {
-            gdgvTablaActividades.RowTemplate.Height = 30;
-            gdgvTablaActividades.ColumnHeadersHeight = 30;
+            gdgvTablaActividades.RowTemplate.Height = 40;
+            gdgvTablaActividades.ColumnHeadersHeight = 40;
         }
         //Fin//
 
@@ -77,15 +80,21 @@ namespace Presentation
                 {
                     int cantidadRegistros = ObtenerCantidadRegistrosSeleccionados();
 
-                    // Obtener solo la cantidad especificada de registros
-                    DataTable resultTable = actividades.Clone(); // Crear una tabla con la misma estructura
-
-                    for (int i = 0; i < Math.Min(cantidadRegistros, actividades.Rows.Count); i++)
+                    if (cantidadRegistros > 0)
                     {
-                        resultTable.ImportRow(actividades.Rows[i]);
-                    }
+                        DataTable resultTable = actividades.Clone();
 
-                    gdgvTablaActividades.DataSource = resultTable;
+                        for (int i = 0; i < Math.Min(cantidadRegistros, actividades.Rows.Count); i++)
+                        {
+                            resultTable.ImportRow(actividades.Rows[i]);
+                        }
+
+                        gdgvTablaActividades.DataSource = resultTable;
+                    }
+                    else
+                    {
+                        gdgvTablaActividades.DataSource = actividades;
+                    }
                 }
                 else
                 {
@@ -98,9 +107,13 @@ namespace Presentation
         //Opciones del combobox//
         private void CargarOpcionesCantidadRegistros()
         {
+            cmbCantidadRegistros.Items.Add("Seleccionar cantidad de registros");
             cmbCantidadRegistros.Items.Add("5 registros");
             cmbCantidadRegistros.Items.Add("10 registros");
+            cmbCantidadRegistros.Items.Add("15 registros");
             cmbCantidadRegistros.Items.Add("20 registros");
+            cmbCantidadRegistros.Items.Add("25 registros");
+            cmbCantidadRegistros.Items.Add("30 registros");
             cmbCantidadRegistros.SelectedIndex = 0;
         }
         private int ObtenerCantidadRegistrosSeleccionados()
@@ -112,6 +125,16 @@ namespace Presentation
                 return cantidadRegistros;
             }
             return int.MaxValue;
+        }
+        //Fin//
+
+
+        //Funcion para reestablecer los campos de los filtros//
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            gdgvTablaActividades.DataSource = tablaOriginal;
+            cmbUsuario.SelectedIndex = -1;
+            cmbCantidadRegistros.SelectedIndex = 0;
         }
         //Fin//
 

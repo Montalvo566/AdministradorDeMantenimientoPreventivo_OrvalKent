@@ -30,11 +30,9 @@ namespace Presentation.ModalesFormulario
             {
                 try
                 {
-                    if (EsCampoValido(gtbDepartamento, "Departamento") &&
-                            EsOpcionValidaSeleccionada(gcmbArea, "Area"))
+                    if (EsCampoValido(gtbDepartamento, "Departamento"))
                     {
                         crud.Departamento1 = gtbDepartamento.Text;
-                        crud.IdZonaAcceso1 = Convert.ToInt32(gcmbArea.SelectedValue);
                         crud.Id1 = Convert.ToInt32(idDepartamento);
 
                         crud.PutDepartamentos();
@@ -64,18 +62,6 @@ namespace Presentation.ModalesFormulario
         }
 
 
-        //Funciones para listar los datos del combobox//
-        public void ListarAreas()
-        {
-            DepartamentCrudModel depCrudTabla = new DepartamentCrudModel();
-            gcmbArea.DataSource = depCrudTabla.ListadoAreas();
-            gcmbArea.DisplayMember = "Zona";
-            gcmbArea.ValueMember = "Id";
-        }
-        //Fin//
-
-
-
         //Funcion para limpiar los textbox del formulario//
         private void LimpiarCampos()
         {
@@ -91,15 +77,6 @@ namespace Presentation.ModalesFormulario
             if (string.IsNullOrWhiteSpace(campo.Text))
             {
                 MessageBox.Show($"Por favor, coloque el campo {nombreCampo}");
-                return false;
-            }
-            return true;
-        }
-        private bool EsOpcionValidaSeleccionada(Guna.UI.WinForms.GunaComboBox campo, string nombreCampo)
-        {
-            if (campo.SelectedIndex == -1)
-            {
-                MessageBox.Show($"Por favor, seleccione el campo {nombreCampo}");
                 return false;
             }
             return true;

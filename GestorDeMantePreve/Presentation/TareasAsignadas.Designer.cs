@@ -29,20 +29,20 @@ namespace Presentation
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelRAHeader = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gdgvTablaActividades = new Guna.UI.WinForms.GunaDataGridView();
             this.panelFiltro = new System.Windows.Forms.Panel();
+            this.btnCancelar = new Guna.UI.WinForms.GunaButton();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbCantidadRegistros = new Guna.UI.WinForms.GunaComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.cmbUsuario = new Guna.UI.WinForms.GunaComboBox();
             this.btnFiltrar = new Guna.UI.WinForms.GunaButton();
-            this.btnCancelar = new Guna.UI.WinForms.GunaButton();
+            this.cmbUsuario = new Guna.UI.WinForms.GunaComboBox();
             this.panelRAHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdgvTablaActividades)).BeginInit();
             this.panelFiltro.SuspendLayout();
@@ -83,8 +83,8 @@ namespace Presentation
             // 
             this.gdgvTablaActividades.AllowUserToAddRows = false;
             this.gdgvTablaActividades.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.gdgvTablaActividades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.gdgvTablaActividades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gdgvTablaActividades.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -93,23 +93,23 @@ namespace Presentation
             this.gdgvTablaActividades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gdgvTablaActividades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gdgvTablaActividades.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdgvTablaActividades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdgvTablaActividades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gdgvTablaActividades.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gdgvTablaActividades.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gdgvTablaActividades.DefaultCellStyle = dataGridViewCellStyle3;
             this.gdgvTablaActividades.EnableHeadersVisualStyles = false;
             this.gdgvTablaActividades.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gdgvTablaActividades.Location = new System.Drawing.Point(12, 114);
@@ -156,6 +156,36 @@ namespace Presentation
             this.panelFiltro.Size = new System.Drawing.Size(827, 67);
             this.panelFiltro.TabIndex = 4;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.AnimationHoverSpeed = 0.07F;
+            this.btnCancelar.AnimationSpeed = 0.03F;
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.BaseColor = System.Drawing.Color.Red;
+            this.btnCancelar.BorderColor = System.Drawing.Color.Black;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCancelar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Image = null;
+            this.btnCancelar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnCancelar.Location = new System.Drawing.Point(762, 39);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancelar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCancelar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCancelar.OnHoverImage = null;
+            this.btnCancelar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCancelar.Radius = 10;
+            this.btnCancelar.Size = new System.Drawing.Size(62, 25);
+            this.btnCancelar.TabIndex = 29;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -200,26 +230,6 @@ namespace Presentation
             this.label8.TabIndex = 23;
             this.label8.Text = "Usuarios:";
             // 
-            // cmbUsuario
-            // 
-            this.cmbUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.cmbUsuario.BaseColor = System.Drawing.Color.White;
-            this.cmbUsuario.BorderColor = System.Drawing.Color.Silver;
-            this.cmbUsuario.BorderSize = 0;
-            this.cmbUsuario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUsuario.FocusedColor = System.Drawing.Color.Empty;
-            this.cmbUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.cmbUsuario.ForeColor = System.Drawing.Color.Black;
-            this.cmbUsuario.FormattingEnabled = true;
-            this.cmbUsuario.Location = new System.Drawing.Point(12, 31);
-            this.cmbUsuario.Name = "cmbUsuario";
-            this.cmbUsuario.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cmbUsuario.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbUsuario.Radius = 5;
-            this.cmbUsuario.Size = new System.Drawing.Size(369, 27);
-            this.cmbUsuario.TabIndex = 22;
-            // 
             // btnFiltrar
             // 
             this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -250,34 +260,25 @@ namespace Presentation
             this.btnFiltrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
-            // btnCancelar
+            // cmbUsuario
             // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.AnimationHoverSpeed = 0.07F;
-            this.btnCancelar.AnimationSpeed = 0.03F;
-            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.BaseColor = System.Drawing.Color.Red;
-            this.btnCancelar.BorderColor = System.Drawing.Color.Black;
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnCancelar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Image = null;
-            this.btnCancelar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnCancelar.Location = new System.Drawing.Point(762, 39);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancelar.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnCancelar.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnCancelar.OnHoverImage = null;
-            this.btnCancelar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnCancelar.Radius = 10;
-            this.btnCancelar.Size = new System.Drawing.Size(62, 25);
-            this.btnCancelar.TabIndex = 29;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cmbUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.cmbUsuario.BaseColor = System.Drawing.Color.White;
+            this.cmbUsuario.BorderColor = System.Drawing.Color.Silver;
+            this.cmbUsuario.BorderSize = 0;
+            this.cmbUsuario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUsuario.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.cmbUsuario.ForeColor = System.Drawing.Color.Black;
+            this.cmbUsuario.FormattingEnabled = true;
+            this.cmbUsuario.Location = new System.Drawing.Point(12, 31);
+            this.cmbUsuario.Name = "cmbUsuario";
+            this.cmbUsuario.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmbUsuario.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cmbUsuario.Radius = 5;
+            this.cmbUsuario.Size = new System.Drawing.Size(369, 27);
+            this.cmbUsuario.TabIndex = 22;
             // 
             // TareasAsignadas
             // 
