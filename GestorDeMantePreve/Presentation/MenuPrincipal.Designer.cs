@@ -50,6 +50,9 @@ namespace Presentation
             this.lbNombreInicioSesion = new System.Windows.Forms.Label();
             this.panelFormularioHijo = new System.Windows.Forms.Panel();
             this.dgvMostrarActividadesUsuarios = new Guna.UI.WinForms.GunaDataGridView();
+            this.tbCodigoBarras = new Guna.UI.WinForms.GunaTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnNumeroEmpleado = new Guna.UI.WinForms.GunaButton();
             this.pMenuLateral.SuspendLayout();
             this.panelSeccionTareas.SuspendLayout();
             this.pLogo.SuspendLayout();
@@ -373,6 +376,9 @@ namespace Presentation
             // panelFormularioHijo
             // 
             this.panelFormularioHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            this.panelFormularioHijo.Controls.Add(this.btnNumeroEmpleado);
+            this.panelFormularioHijo.Controls.Add(this.label1);
+            this.panelFormularioHijo.Controls.Add(this.tbCodigoBarras);
             this.panelFormularioHijo.Controls.Add(this.dgvMostrarActividadesUsuarios);
             this.panelFormularioHijo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormularioHijo.Location = new System.Drawing.Point(242, 0);
@@ -386,8 +392,11 @@ namespace Presentation
             this.dgvMostrarActividadesUsuarios.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvMostrarActividadesUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMostrarActividadesUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMostrarActividadesUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMostrarActividadesUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            this.dgvMostrarActividadesUsuarios.BackgroundColor = System.Drawing.Color.White;
             this.dgvMostrarActividadesUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMostrarActividadesUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvMostrarActividadesUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -408,15 +417,14 @@ namespace Presentation
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMostrarActividadesUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvMostrarActividadesUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMostrarActividadesUsuarios.EnableHeadersVisualStyles = false;
             this.dgvMostrarActividadesUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.dgvMostrarActividadesUsuarios.Location = new System.Drawing.Point(0, 0);
+            this.dgvMostrarActividadesUsuarios.Location = new System.Drawing.Point(6, 61);
             this.dgvMostrarActividadesUsuarios.Name = "dgvMostrarActividadesUsuarios";
             this.dgvMostrarActividadesUsuarios.ReadOnly = true;
             this.dgvMostrarActividadesUsuarios.RowHeadersVisible = false;
             this.dgvMostrarActividadesUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMostrarActividadesUsuarios.Size = new System.Drawing.Size(827, 613);
+            this.dgvMostrarActividadesUsuarios.Size = new System.Drawing.Size(818, 549);
             this.dgvMostrarActividadesUsuarios.TabIndex = 1;
             this.dgvMostrarActividadesUsuarios.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -424,7 +432,7 @@ namespace Presentation
             this.dgvMostrarActividadesUsuarios.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvMostrarActividadesUsuarios.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -440,6 +448,67 @@ namespace Presentation
             this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.Height = 22;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // tbCodigoBarras
+            // 
+            this.tbCodigoBarras.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbCodigoBarras.BackColor = System.Drawing.Color.Transparent;
+            this.tbCodigoBarras.BaseColor = System.Drawing.Color.White;
+            this.tbCodigoBarras.BorderColor = System.Drawing.Color.Silver;
+            this.tbCodigoBarras.BorderSize = 0;
+            this.tbCodigoBarras.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCodigoBarras.FocusedBaseColor = System.Drawing.Color.White;
+            this.tbCodigoBarras.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tbCodigoBarras.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tbCodigoBarras.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCodigoBarras.Location = new System.Drawing.Point(209, 15);
+            this.tbCodigoBarras.Name = "tbCodigoBarras";
+            this.tbCodigoBarras.PasswordChar = '\0';
+            this.tbCodigoBarras.Radius = 5;
+            this.tbCodigoBarras.SelectedText = "";
+            this.tbCodigoBarras.Size = new System.Drawing.Size(419, 30);
+            this.tbCodigoBarras.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(15, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(188, 19);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Numero de empleado:";
+            // 
+            // btnNumeroEmpleado
+            // 
+            this.btnNumeroEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNumeroEmpleado.AnimationHoverSpeed = 0.07F;
+            this.btnNumeroEmpleado.AnimationSpeed = 0.03F;
+            this.btnNumeroEmpleado.BackColor = System.Drawing.Color.Transparent;
+            this.btnNumeroEmpleado.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnNumeroEmpleado.BorderColor = System.Drawing.Color.Black;
+            this.btnNumeroEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNumeroEmpleado.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnNumeroEmpleado.FocusedColor = System.Drawing.Color.Empty;
+            this.btnNumeroEmpleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNumeroEmpleado.ForeColor = System.Drawing.Color.White;
+            this.btnNumeroEmpleado.Image = null;
+            this.btnNumeroEmpleado.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnNumeroEmpleado.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnNumeroEmpleado.Location = new System.Drawing.Point(634, 15);
+            this.btnNumeroEmpleado.Name = "btnNumeroEmpleado";
+            this.btnNumeroEmpleado.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnNumeroEmpleado.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnNumeroEmpleado.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnNumeroEmpleado.OnHoverImage = null;
+            this.btnNumeroEmpleado.OnPressedColor = System.Drawing.Color.Black;
+            this.btnNumeroEmpleado.Radius = 5;
+            this.btnNumeroEmpleado.Size = new System.Drawing.Size(181, 30);
+            this.btnNumeroEmpleado.TabIndex = 4;
+            this.btnNumeroEmpleado.Text = "Buscar";
+            this.btnNumeroEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MenuPrincipal
             // 
@@ -461,6 +530,7 @@ namespace Presentation
             this.pLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
             this.panelFormularioHijo.ResumeLayout(false);
+            this.panelFormularioHijo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarActividadesUsuarios)).EndInit();
             this.ResumeLayout(false);
 
@@ -485,6 +555,9 @@ namespace Presentation
         private FontAwesome.Sharp.IconButton btnEquipos;
         private FontAwesome.Sharp.IconButton btnAreas;
         private Guna.UI.WinForms.GunaDataGridView dgvMostrarActividadesUsuarios;
+        private Guna.UI.WinForms.GunaButton btnNumeroEmpleado;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI.WinForms.GunaTextBox tbCodigoBarras;
     }
 }
 

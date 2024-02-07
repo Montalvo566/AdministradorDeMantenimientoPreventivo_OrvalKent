@@ -131,10 +131,25 @@ namespace Presentation
         //Menu Principal
         private void btnMenuPrincipal_Click(object sender, EventArgs e)
         {
+            if (activeForm != null && activeForm.GetType() == typeof(MenuPrincipal))
+            {
+                return;
+            }
+
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
             botonActivado(sender, RGBColors.color1);
-            ocultarSubmenus();   
-            abrirFormularioHijo(new MenuPrincipal());     
+            ocultarSubmenus();
+            MostrarPantallaPrincipal();     
         }
+        private void MostrarPantallaPrincipal()
+        {
+            activeForm = null;
+        }
+
 
         //Registro de actividades
         private void btnRegistros_Click(object sender, EventArgs e)
@@ -239,6 +254,7 @@ namespace Presentation
         {
             cargarDatosUsuario();
             mostrarActividadesUsuario();
+            ValdiacionesTipoCampo();
         }
         //Fin//
 
@@ -406,6 +422,21 @@ namespace Presentation
         }
         //Fin//
 
+
+        //Validaciones de campos//
+        private void SoloFormatoNumero(object sender, KeyPressEventArgs e)
+        {
+            // Permite solo números y la tecla de retroceso (backspace)
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true; // Ignora la tecla presionada
+            }
+        }
+        private void ValdiacionesTipoCampo()
+        {
+            tbCodigoBarras.KeyPress += new KeyPressEventHandler(SoloFormatoNumero);
+        }
+        //Fin//
 
 
 
