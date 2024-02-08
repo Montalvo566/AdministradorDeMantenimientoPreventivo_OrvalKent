@@ -49,10 +49,10 @@ namespace Presentation
             this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.lbNombreInicioSesion = new System.Windows.Forms.Label();
             this.panelFormularioHijo = new System.Windows.Forms.Panel();
-            this.dgvMostrarActividadesUsuarios = new Guna.UI.WinForms.GunaDataGridView();
-            this.tbCodigoBarras = new Guna.UI.WinForms.GunaTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnNumeroEmpleado = new Guna.UI.WinForms.GunaButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbCodigoBarras = new Guna.UI.WinForms.GunaTextBox();
+            this.dgvMostrarActividadesUsuarios = new Guna.UI.WinForms.GunaDataGridView();
             this.pMenuLateral.SuspendLayout();
             this.panelSeccionTareas.SuspendLayout();
             this.pLogo.SuspendLayout();
@@ -386,6 +386,68 @@ namespace Presentation
             this.panelFormularioHijo.Size = new System.Drawing.Size(827, 613);
             this.panelFormularioHijo.TabIndex = 2;
             // 
+            // btnNumeroEmpleado
+            // 
+            this.btnNumeroEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNumeroEmpleado.AnimationHoverSpeed = 0.07F;
+            this.btnNumeroEmpleado.AnimationSpeed = 0.03F;
+            this.btnNumeroEmpleado.BackColor = System.Drawing.Color.Transparent;
+            this.btnNumeroEmpleado.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnNumeroEmpleado.BorderColor = System.Drawing.Color.Black;
+            this.btnNumeroEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNumeroEmpleado.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnNumeroEmpleado.FocusedColor = System.Drawing.Color.Empty;
+            this.btnNumeroEmpleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNumeroEmpleado.ForeColor = System.Drawing.Color.White;
+            this.btnNumeroEmpleado.Image = null;
+            this.btnNumeroEmpleado.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnNumeroEmpleado.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnNumeroEmpleado.Location = new System.Drawing.Point(634, 15);
+            this.btnNumeroEmpleado.Name = "btnNumeroEmpleado";
+            this.btnNumeroEmpleado.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnNumeroEmpleado.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnNumeroEmpleado.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnNumeroEmpleado.OnHoverImage = null;
+            this.btnNumeroEmpleado.OnPressedColor = System.Drawing.Color.Black;
+            this.btnNumeroEmpleado.Radius = 5;
+            this.btnNumeroEmpleado.Size = new System.Drawing.Size(181, 30);
+            this.btnNumeroEmpleado.TabIndex = 4;
+            this.btnNumeroEmpleado.Text = "Buscar";
+            this.btnNumeroEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnNumeroEmpleado.Click += new System.EventHandler(this.btnNumeroEmpleado_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(15, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(188, 19);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Numero de empleado:";
+            // 
+            // tbCodigoBarras
+            // 
+            this.tbCodigoBarras.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbCodigoBarras.BackColor = System.Drawing.Color.Transparent;
+            this.tbCodigoBarras.BaseColor = System.Drawing.Color.White;
+            this.tbCodigoBarras.BorderColor = System.Drawing.Color.Silver;
+            this.tbCodigoBarras.BorderSize = 0;
+            this.tbCodigoBarras.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCodigoBarras.FocusedBaseColor = System.Drawing.Color.White;
+            this.tbCodigoBarras.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tbCodigoBarras.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tbCodigoBarras.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCodigoBarras.Location = new System.Drawing.Point(209, 15);
+            this.tbCodigoBarras.Name = "tbCodigoBarras";
+            this.tbCodigoBarras.PasswordChar = '\0';
+            this.tbCodigoBarras.Radius = 5;
+            this.tbCodigoBarras.SelectedText = "";
+            this.tbCodigoBarras.Size = new System.Drawing.Size(419, 30);
+            this.tbCodigoBarras.TabIndex = 2;
+            // 
             // dgvMostrarActividadesUsuarios
             // 
             this.dgvMostrarActividadesUsuarios.AllowUserToAddRows = false;
@@ -448,67 +510,6 @@ namespace Presentation
             this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.Height = 22;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // tbCodigoBarras
-            // 
-            this.tbCodigoBarras.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbCodigoBarras.BackColor = System.Drawing.Color.Transparent;
-            this.tbCodigoBarras.BaseColor = System.Drawing.Color.White;
-            this.tbCodigoBarras.BorderColor = System.Drawing.Color.Silver;
-            this.tbCodigoBarras.BorderSize = 0;
-            this.tbCodigoBarras.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbCodigoBarras.FocusedBaseColor = System.Drawing.Color.White;
-            this.tbCodigoBarras.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tbCodigoBarras.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbCodigoBarras.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCodigoBarras.Location = new System.Drawing.Point(209, 15);
-            this.tbCodigoBarras.Name = "tbCodigoBarras";
-            this.tbCodigoBarras.PasswordChar = '\0';
-            this.tbCodigoBarras.Radius = 5;
-            this.tbCodigoBarras.SelectedText = "";
-            this.tbCodigoBarras.Size = new System.Drawing.Size(419, 30);
-            this.tbCodigoBarras.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(15, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 19);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Numero de empleado:";
-            // 
-            // btnNumeroEmpleado
-            // 
-            this.btnNumeroEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNumeroEmpleado.AnimationHoverSpeed = 0.07F;
-            this.btnNumeroEmpleado.AnimationSpeed = 0.03F;
-            this.btnNumeroEmpleado.BackColor = System.Drawing.Color.Transparent;
-            this.btnNumeroEmpleado.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnNumeroEmpleado.BorderColor = System.Drawing.Color.Black;
-            this.btnNumeroEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNumeroEmpleado.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnNumeroEmpleado.FocusedColor = System.Drawing.Color.Empty;
-            this.btnNumeroEmpleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNumeroEmpleado.ForeColor = System.Drawing.Color.White;
-            this.btnNumeroEmpleado.Image = null;
-            this.btnNumeroEmpleado.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnNumeroEmpleado.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnNumeroEmpleado.Location = new System.Drawing.Point(634, 15);
-            this.btnNumeroEmpleado.Name = "btnNumeroEmpleado";
-            this.btnNumeroEmpleado.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnNumeroEmpleado.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnNumeroEmpleado.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnNumeroEmpleado.OnHoverImage = null;
-            this.btnNumeroEmpleado.OnPressedColor = System.Drawing.Color.Black;
-            this.btnNumeroEmpleado.Radius = 5;
-            this.btnNumeroEmpleado.Size = new System.Drawing.Size(181, 30);
-            this.btnNumeroEmpleado.TabIndex = 4;
-            this.btnNumeroEmpleado.Text = "Buscar";
-            this.btnNumeroEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MenuPrincipal
             // 

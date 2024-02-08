@@ -75,7 +75,7 @@ namespace DataAccess
 
 
         //Funcion para obtener las actividades asignadas a los usuarios//
-        public DataTable GetActividadesUsuarios(int idUsuario, out string errorMessage)
+        public DataTable MostrarActividadesPorCodigoBarras(int numeroEmpleado, out string errorMessage)
         {
             DataTable tablaActividades = new DataTable();
             errorMessage = null;
@@ -85,11 +85,11 @@ namespace DataAccess
                 using (var connection = AbrirConexion())
                 {
                     command.Connection = connection;
-                    command.CommandText = "Sp_GetActividadesUsuarios";
+                    command.CommandText = "Sp_GetActividadesUsuariosCodigoBarras";
                     command.CommandType = CommandType.StoredProcedure;
 
                     // Agregar el parámetro al stored procedure
-                    command.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                    command.Parameters.AddWithValue("@NumeroEmpleado", numeroEmpleado);
 
                     leer = command.ExecuteReader();
                     tablaActividades.Load(leer);

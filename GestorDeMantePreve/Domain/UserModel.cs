@@ -21,9 +21,9 @@ namespace Domain
         //Fin//
 
         //Funcion para mostrar las actividades en relacion al usuario que inicio sesion//
-        public DataTable MostrarActividadesUsuario(int idUsuario, out string errorMessage)
+        public DataTable MostrarActividadesPorCodigoBarras(int numeroEmpleado, out string errorMessage)
         {
-            return userDao.GetActividadesUsuarios(idUsuario, out errorMessage);
+            return userDao.MostrarActividadesPorCodigoBarras(numeroEmpleado, out errorMessage);
         }
         //Fin//
 

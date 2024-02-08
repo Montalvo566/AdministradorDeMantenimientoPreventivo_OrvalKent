@@ -30,10 +30,9 @@ namespace Presentation
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             pMenuLateral.Controls.Add(leftBorderBtn);
-
             userModel = new UserModel();
-
             PermisosUsuarios();
+            this.KeyPress += MenuPrincipal_KeyPress;
         }
 
 
@@ -253,7 +252,14 @@ namespace Presentation
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
             cargarDatosUsuario();
-            mostrarActividadesUsuario();
+            if (Int32.TryParse(tbCodigoBarras.Text, out int numeroEmpleado))
+            {
+                MostrarActividadesUsuario(numeroEmpleado);
+            }
+            else
+            {
+                Console.WriteLine("Error al obtener el número de empleado desde el código de barras.");
+            }
             ValdiacionesTipoCampo();
         }
         //Fin//
@@ -313,15 +319,54 @@ namespace Presentation
         //Fin//
 
 
+        // Evento KeyPress para manejar el escaneo del código de barras//
+        private StringBuilder codigoBarrasBuffer = new StringBuilder();
+        private void MenuPrincipal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                codigoBarrasBuffer.Append(e.KeyChar);
+            }
+            else if (e.KeyChar == (char)Keys.Enter)
+            {
+                string codigoBarras = codigoBarrasBuffer.ToString();
+                ProcesarCodigoBarras(codigoBarras);
+                codigoBarrasBuffer.Clear();
+            }
+        }
+        //Fin//
+
+
+        // Función para procesar el código de barras y mostrar actividades
+        private void ProcesarCodigoBarras(string codigoBarras)
+        {
+            // Verifica que el código de barras no esté vacío
+            if (!string.IsNullOrEmpty(codigoBarras))
+            {
+                // Convierte el código de barras a entero (asumiendo que es el número de empleado)
+                if (int.TryParse(codigoBarras, out int numeroEmpleado))
+                {
+                    // Llama a la función para mostrar actividades
+                    MostrarActividadesUsuario(numeroEmpleado);
+                }
+                else
+                {
+                    MessageBox.Show("El código de barras no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        //Fin//
+
+
         //Mostrar actividades usuarios//
-        private void mostrarActividadesUsuario()
+        private void MostrarActividadesUsuario(int numeroEmpleado)
         {
             try
             {
                 if (userModel != null)
                 {
                     string errorMessage;
-                    DataTable actividadesUsuario = userModel.MostrarActividadesUsuario(UserLoginCache.Id, out errorMessage);
+                    DataTable actividadesUsuario = userModel.MostrarActividadesPorCodigoBarras(numeroEmpleado, out errorMessage);
 
                     // Verificar si el DataTable contiene datos
                     if (actividadesUsuario.Rows.Count > 0)
@@ -395,6 +440,18 @@ namespace Presentation
             {
                 Console.WriteLine("Error al obtener actividades en la presentación: " + ex.Message);
             }
+        }
+        //Fin//
+
+
+        //Texbox donde se mostrar el numero del codigo de barras//
+        private void btnNumeroEmpleado_Click(object sender, EventArgs e)
+        {
+            // Obtener el número de empleado desde el TextBox
+            string codigoBarras = tbCodigoBarras.Text.Trim();
+
+            // Llama a la función para mostrar actividades
+            ProcesarCodigoBarras(codigoBarras);
         }
         //Fin//
 
