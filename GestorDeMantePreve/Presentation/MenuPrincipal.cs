@@ -32,7 +32,7 @@ namespace Presentation
             pMenuLateral.Controls.Add(leftBorderBtn);
             userModel = new UserModel();
             PermisosUsuarios();
-            this.KeyPress += MenuPrincipal_KeyPress;
+            this.KeyPress += tbCodigoBarras_KeyPress;
         }
 
 
@@ -321,7 +321,7 @@ namespace Presentation
 
         // Evento KeyPress para manejar el escaneo del código de barras//
         private StringBuilder codigoBarrasBuffer = new StringBuilder();
-        private void MenuPrincipal_KeyPress(object sender, KeyPressEventArgs e)
+        private void tbCodigoBarras_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsDigit(e.KeyChar))
             {
@@ -340,13 +340,10 @@ namespace Presentation
         // Función para procesar el código de barras y mostrar actividades
         private void ProcesarCodigoBarras(string codigoBarras)
         {
-            // Verifica que el código de barras no esté vacío
             if (!string.IsNullOrEmpty(codigoBarras))
             {
-                // Convierte el código de barras a entero (asumiendo que es el número de empleado)
                 if (int.TryParse(codigoBarras, out int numeroEmpleado))
                 {
-                    // Llama a la función para mostrar actividades
                     MostrarActividadesUsuario(numeroEmpleado);
                 }
                 else
@@ -358,104 +355,45 @@ namespace Presentation
         //Fin//
 
 
-        //Mostrar actividades usuarios//
-        private void MostrarActividadesUsuario(int numeroEmpleado)
-        {
-            try
-            {
-                if (userModel != null)
-                {
-                    string errorMessage;
-                    DataTable actividadesUsuario = userModel.MostrarActividadesPorCodigoBarras(numeroEmpleado, out errorMessage);
-
-                    // Verificar si el DataTable contiene datos
-                    if (actividadesUsuario.Rows.Count > 0)
-                    {
-                        // Configurar el DataGridView
-                        dgvMostrarActividadesUsuarios.AutoGenerateColumns = false;
-                        dgvMostrarActividadesUsuarios.DataSource = actividadesUsuario;
-
-                        // Configurar AutoSizeRowsMode para que las filas se ajusten automáticamente al contenido
-                        dgvMostrarActividadesUsuarios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-
-                        // Establecer la altura mínima de las filas
-                        dgvMostrarActividadesUsuarios.RowTemplate.MinimumHeight = 85;
-                        dgvMostrarActividadesUsuarios.RowTemplate.Height = 85;
-
-                        // Configurar las columnas de información
-                        DataGridViewTextBoxColumn colId = new DataGridViewTextBoxColumn();
-                        colId.DataPropertyName = "Id";
-                        colId.HeaderText = "Id";
-                        dgvMostrarActividadesUsuarios.Columns.Add(colId);
-
-                        DataGridViewTextBoxColumn colActividad = new DataGridViewTextBoxColumn();
-                        colActividad.DataPropertyName = "Actividad";
-                        colActividad.HeaderText = "Actividad";
-
-                        // Configurar la columna "Actividad" como multilinea
-                        colActividad.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-                        colActividad.DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
-
-                        dgvMostrarActividadesUsuarios.Columns.Add(colActividad);
-
-                        DataGridViewTextBoxColumn colArea = new DataGridViewTextBoxColumn();
-                        colArea.DataPropertyName = "Area";
-                        colArea.HeaderText = "Área";
-                        dgvMostrarActividadesUsuarios.Columns.Add(colArea);
-
-                        DataGridViewTextBoxColumn colEquipo = new DataGridViewTextBoxColumn();
-                        colEquipo.DataPropertyName = "Equipo";
-                        colEquipo.HeaderText = "Equipo";
-                        dgvMostrarActividadesUsuarios.Columns.Add(colEquipo);
-
-                        DataGridViewTextBoxColumn colEstatus = new DataGridViewTextBoxColumn();
-                        colEstatus.DataPropertyName = "Estatus";
-                        colEstatus.HeaderText = "Estatus";
-                        dgvMostrarActividadesUsuarios.Columns.Add(colEstatus);
-
-                        // Crear una columna de botones solo para la eliminación
-                        DataGridViewButtonColumn botonAcciones = new DataGridViewButtonColumn();
-                        botonAcciones.Name = "Acciones";
-                        botonAcciones.Text = "Finalizar Tarea";
-                        botonAcciones.UseColumnTextForButtonValue = true;
-                        dgvMostrarActividadesUsuarios.Columns.Add(botonAcciones);
-
-                        // Personalizar la apariencia del DataGridView
-                        dgvMostrarActividadesUsuarios.BackgroundColor = Color.FromArgb(31, 34, 74);
-                        dgvMostrarActividadesUsuarios.ForeColor = Color.White;
-                        colActividad.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-
-                        // Asociar el evento CellContentClick para el botón Eliminar
-                        dgvMostrarActividadesUsuarios.CellContentClick += dgvMostrarActividadesUsuarios_CellContentClick;
-
-                    }
-                    else
-                    {
-                        Console.WriteLine("No se encontraron actividades asignadas para el usuario actual.");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al obtener actividades en la presentación: " + ex.Message);
-            }
-        }
-        //Fin//
-
-
         //Texbox donde se mostrar el numero del codigo de barras//
         private void btnNumeroEmpleado_Click(object sender, EventArgs e)
         {
-            // Obtener el número de empleado desde el TextBox
             string codigoBarras = tbCodigoBarras.Text.Trim();
-
-            // Llama a la función para mostrar actividades
             ProcesarCodigoBarras(codigoBarras);
         }
         //Fin//
 
 
+        //Mostrar actividades usuarios//
+        private void MostrarActividadesUsuario(int numeroEmpleado)
+        {
+            UserModel actividad = new UserModel();
+            DataTable tablaActividades = actividad.MostrarTablaActividades(numeroEmpleado);
+
+            dgvMostrarActividadesUsuarios.Columns.Clear();
+            dgvMostrarActividadesUsuarios.RowTemplate.MinimumHeight = 85;
+            dgvMostrarActividadesUsuarios.RowTemplate.Height = 85;
+            dgvMostrarActividadesUsuarios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvMostrarActividadesUsuarios.BackgroundColor = Color.FromArgb(31, 34, 74);
+            dgvMostrarActividadesUsuarios.ForeColor = Color.White;
+
+            dgvMostrarActividadesUsuarios.DataSource = tablaActividades;
+
+            // Crear columna de botones
+            DataGridViewButtonColumn botonAcciones = new DataGridViewButtonColumn();
+            botonAcciones.Name = "Acciones";
+            botonAcciones.Text = "Realizar Acción";
+            botonAcciones.UseColumnTextForButtonValue = true;
+            dgvMostrarActividadesUsuarios.Columns.Add(botonAcciones);
+            dgvMostrarActividadesUsuarios.CellContentClick += (sender, e) =>
+            {
+                if (e.RowIndex >= 0 && e.ColumnIndex == dgvMostrarActividadesUsuarios.Columns["Acciones"].Index)
+                {
+                    int idActividad = Convert.ToInt32(dgvMostrarActividadesUsuarios.Rows[e.RowIndex].Cells["Id"].Value);
+                    MessageBox.Show("La actividad paso a revisión.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            };
+        }
         //Diseño del datagridview//
         private void dgvMostrarActividadesUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -477,7 +415,7 @@ namespace Presentation
                 }
             }
         }
-        //Fin//
+        //Fin//*/
 
 
         //Validaciones de campos//

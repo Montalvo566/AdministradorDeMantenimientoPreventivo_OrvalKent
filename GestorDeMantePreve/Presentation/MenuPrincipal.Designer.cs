@@ -447,6 +447,7 @@ namespace Presentation
             this.tbCodigoBarras.SelectedText = "";
             this.tbCodigoBarras.Size = new System.Drawing.Size(419, 30);
             this.tbCodigoBarras.TabIndex = 2;
+            this.tbCodigoBarras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCodigoBarras_KeyPress);
             // 
             // dgvMostrarActividadesUsuarios
             // 
@@ -454,9 +455,6 @@ namespace Presentation
             this.dgvMostrarActividadesUsuarios.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvMostrarActividadesUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvMostrarActividadesUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMostrarActividadesUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMostrarActividadesUsuarios.BackgroundColor = System.Drawing.Color.White;
             this.dgvMostrarActividadesUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;

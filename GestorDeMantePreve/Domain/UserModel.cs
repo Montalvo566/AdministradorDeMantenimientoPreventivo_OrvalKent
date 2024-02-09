@@ -20,12 +20,14 @@ namespace Domain
         }
         //Fin//
 
-        //Funcion para mostrar las actividades en relacion al usuario que inicio sesion//
-        public DataTable MostrarActividadesPorCodigoBarras(int numeroEmpleado, out string errorMessage)
+
+        //Funcion para mostrar las actividades asignadas a cada usuario//
+        public DataTable MostrarTablaActividades(int numeroEmpleado)
         {
-            return userDao.MostrarActividadesPorCodigoBarras(numeroEmpleado, out errorMessage);
+            DataTable tablaUsuarios = new DataTable();
+            tablaUsuarios = userDao.GetActividades(numeroEmpleado);
+            return tablaUsuarios;
         }
         //Fin//
-
     }
 }
