@@ -103,7 +103,6 @@ namespace Presentation
                         EsOpcionValidaSeleccionada(cmbUsuarioRegistra, "Usuario Registra") &&
                         EsOpcionValidaSeleccionada(cmbUsuarioAsignado, "Usuario Asignado") &&
                         EsCampoValido(tbFechaAsignacion, "Fecha de asignación") &&
-                        EsCampoValido(tbHoraAsignacion, "Hora de asignación")&&
                         EsFormatoFechaValido(tbFechaAsignacion.Text))
                 {
                     crud.IdArea1 = Convert.ToInt32(cmbArea.SelectedValue);
@@ -114,7 +113,6 @@ namespace Presentation
                     crud.IdUsuarioRegistra1 = Convert.ToInt32(cmbUsuarioRegistra.SelectedValue);
                     crud.IdUsuarioAsignado1 = Convert.ToInt32(cmbUsuarioAsignado.SelectedValue);
                     crud.FechaAsignado1 = tbFechaAsignacion.Text;
-                    crud.HoraAsignado1 = tbHoraAsignacion.Text;
                     crud.PostActividades();
                     MessageBox.Show("Usuario registrada con exito");
                     LimpiarCampos();
@@ -178,9 +176,9 @@ namespace Presentation
                 modal.cmbEstatus.Text = dgvActividadesTabla.CurrentRow.Cells[6].Value.ToString();
                 modal.cmbUsuarioRegistra.Text = dgvActividadesTabla.CurrentRow.Cells[7].Value.ToString();
                 modal.cmbUsuarioAsignado.Text = dgvActividadesTabla.CurrentRow.Cells[8].Value.ToString();
-                modal.tbFechaAsignacion.Text = dgvActividadesTabla.CurrentRow.Cells["FechaAsignado"].Value.ToString();
-                modal.tbHoraAsignacion.Text = dgvActividadesTabla.CurrentRow.Cells["HoraAsignado"].Value.ToString();
                 modal.idActividad = dgvActividadesTabla.CurrentRow.Cells["Id"].Value.ToString();
+                DateTime fechaAsignado = Convert.ToDateTime(dgvActividadesTabla.CurrentRow.Cells["FechaAsignado"].Value);
+                modal.tbFechaAsignacion.Text = fechaAsignado.ToString("dd/MM/yyyy");
                 modal.ShowDialog();
                 MostrarTablaActividades();
                 //Fin//
@@ -200,7 +198,6 @@ namespace Presentation
             tbActividad.Clear();
             tbRegistro.Clear();
             tbFechaAsignacion.Clear();
-            tbHoraAsignacion.Clear();
         }
         //Fin//
 

@@ -98,7 +98,6 @@ namespace Presentation.ModalesFormulario
                             EsOpcionValidaSeleccionada(cmbUsuarioRegistra, "Usuario Registra") &&
                             EsOpcionValidaSeleccionada(cmbUsuarioAsignado, "Usuario Asignado") &&
                             EsCampoValido(tbFechaAsignacion, "Fecha de asignación") &&
-                            EsCampoValido(tbHoraAsignacion, "Hora de asignación") &&
                             EsOpcionValidaSeleccionada(cmbEstatus, "Estatus")&&
                             EsFormatoFechaValido(tbFechaAsignacion.Text))
                     {
@@ -111,7 +110,6 @@ namespace Presentation.ModalesFormulario
                         crud.IdUsuarioRegistra1 = Convert.ToInt32(cmbUsuarioRegistra.SelectedValue);
                         crud.IdUsuarioAsignado1 = Convert.ToInt32(cmbUsuarioAsignado.SelectedValue);
                         crud.FechaAsignado1 = tbFechaAsignacion.Text;
-                        crud.HoraAsignado1 = tbHoraAsignacion.Text;
                         crud.Id1 = Convert.ToInt32(idActividad);
 
                         crud.PutActividades();
@@ -138,7 +136,6 @@ namespace Presentation.ModalesFormulario
             tbActividad.Clear();
             tbRegistro.Clear();
             tbFechaAsignacion.Clear();
-            tbHoraAsignacion.Clear();
         }
         //Fin//
 

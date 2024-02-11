@@ -75,7 +75,7 @@ namespace DataAccess
 
 
         //Funcion para obtener las actividades asignadas a los usuarios//
-        public DataTable GetActividades(int numeroEmpleado)
+        public DataTable GetActividadesCodigoBarras(int numeroEmpleado)
         {
             try
             {

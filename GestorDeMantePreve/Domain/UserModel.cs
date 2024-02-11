@@ -22,10 +22,10 @@ namespace Domain
 
 
         //Funcion para mostrar las actividades asignadas a cada usuario//
-        public DataTable MostrarTablaActividades(int numeroEmpleado)
+        public DataTable MostrarActividadesCodigoBarras(int numeroEmpleado)
         {
             DataTable tablaUsuarios = new DataTable();
-            tablaUsuarios = userDao.GetActividades(numeroEmpleado);
+            tablaUsuarios = userDao.GetActividadesCodigoBarras(numeroEmpleado);
             return tablaUsuarios;
         }
         //Fin//

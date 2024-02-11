@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
+using DataAccess;
 
 namespace Presentation
 {
@@ -60,11 +61,18 @@ namespace Presentation
         //Fin//
 
 
-        //Funcion para filtrar los registro en base a el usuario//
+        //Botones para ejecutar la funcion y cancelarla//
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             FiltrarActividadesPorUsuario();
         }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            gdgvTablaActividades.DataSource = tablaOriginal;
+            cmbUsuario.SelectedIndex = -1;
+            cmbCantidadRegistros.SelectedIndex = 0;
+        }
+        //Funcion para filtrar los registros//
         private void FiltrarActividadesPorUsuario()
         {
             if (cmbUsuario.SelectedValue != null)
@@ -130,14 +138,28 @@ namespace Presentation
 
 
         //Funcion para reestablecer los campos de los filtros//
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnMostrarTareas_Click(object sender, EventArgs e)
         {
-            gdgvTablaActividades.DataSource = tablaOriginal;
-            cmbUsuario.SelectedIndex = -1;
-            cmbCantidadRegistros.SelectedIndex = 0;
+            if (gdgvTablaActividades.SelectedRows.Count > 0)
+            {
+                ModalesFormulario.MostrarActividadesModal modal = new ModalesFormulario.MostrarActividadesModal();
+                modal.tbId.Text = gdgvTablaActividades.CurrentRow.Cells[0].Value.ToString();
+                modal.tbArea.Text = gdgvTablaActividades.CurrentRow.Cells[1].Value.ToString();
+                modal.tbEquipo.Text = gdgvTablaActividades.CurrentRow.Cells[2].Value.ToString();
+                modal.tbFrecuencia.Text = gdgvTablaActividades.CurrentRow.Cells[3].Value.ToString();
+                modal.tbActividad.Text = gdgvTablaActividades.CurrentRow.Cells[4].Value.ToString();
+                modal.tbRegistro.Text = gdgvTablaActividades.CurrentRow.Cells[5].Value.ToString();
+                modal.tbEstatus.Text = gdgvTablaActividades.CurrentRow.Cells[6].Value.ToString();
+                modal.tbUsuarioAsignado.Text = gdgvTablaActividades.CurrentRow.Cells[8].Value.ToString();
+                DateTime fechaAsignado = Convert.ToDateTime(gdgvTablaActividades.CurrentRow.Cells[9].Value);
+                modal.tbFechaAsignado.Text = fechaAsignado.ToString("dd/MM/yyyy");
+                modal.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el registro para visualizarlo");
+            }
         }
         //Fin//
-
-
     }
 }

@@ -26,7 +26,6 @@ namespace DataAccess
         private int IdUsuarioRegistra;
         private int IdUsuarioAsignado;
         private string FechaAsignado;
-        private string HoraAsignado;
 
         //Funcion GET, SET
         public int IdArea1 { get => IdArea; set => IdArea = value; }
@@ -38,9 +37,7 @@ namespace DataAccess
         public int IdUsuarioRegistra1 { get => IdUsuarioRegistra; set => IdUsuarioRegistra = value; }
         public int IdUsuarioAsignado1 { get => IdUsuarioAsignado; set => IdUsuarioAsignado = value; }
         public string FechaAsignado1 { get => FechaAsignado; set => FechaAsignado = value; }
-        public string HoraAsignado1 { get => HoraAsignado; set => HoraAsignado = value; }
         public int Id1 { get => Id; set => Id = value; }
-
         //Fin//
 
         //Funciones pra listar datos en el combobox/
@@ -227,7 +224,6 @@ namespace DataAccess
                 command.Parameters.AddWithValue("@IdUsuarioRegistra", IdUsuarioRegistra);
                 command.Parameters.AddWithValue("@IdUsuarioAsignado", IdUsuarioAsignado);
                 command.Parameters.AddWithValue("@FechaAsignado", FechaAsignado);
-                command.Parameters.AddWithValue("@HoraAsignado", HoraAsignado);
                 //Fin//
                 command.ExecuteNonQuery();
                 command.Parameters.Clear();
@@ -262,7 +258,6 @@ namespace DataAccess
                 command.Parameters.AddWithValue("@IdUsuarioRegistra", IdUsuarioRegistra);
                 command.Parameters.AddWithValue("@IdUsuarioAsignado", IdUsuarioAsignado);
                 command.Parameters.AddWithValue("@FechaAsignado", FechaAsignado);
-                command.Parameters.AddWithValue("@HoraAsignado", HoraAsignado);
                 command.Parameters.AddWithValue("@Id", Id);
                 //Fin//
                 command.ExecuteNonQuery();

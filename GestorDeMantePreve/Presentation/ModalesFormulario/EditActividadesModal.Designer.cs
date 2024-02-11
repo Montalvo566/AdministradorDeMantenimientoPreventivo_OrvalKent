@@ -30,6 +30,10 @@ namespace Presentation.ModalesFormulario
         private void InitializeComponent()
         {
             this.panelCrudUser = new System.Windows.Forms.Panel();
+            this.cmbEstatus = new Guna.UI.WinForms.GunaComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cmbUsuarioAsignado = new Guna.UI.WinForms.GunaComboBox();
+            this.cmbUsuarioRegistra = new Guna.UI.WinForms.GunaComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbFrecuencia = new Guna.UI.WinForms.GunaComboBox();
@@ -49,12 +53,6 @@ namespace Presentation.ModalesFormulario
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCancelar = new Guna.UI.WinForms.GunaButton();
             this.gbtnEditar = new Guna.UI.WinForms.GunaButton();
-            this.cmbUsuarioRegistra = new Guna.UI.WinForms.GunaComboBox();
-            this.cmbUsuarioAsignado = new Guna.UI.WinForms.GunaComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tbHoraAsignacion = new Guna.UI.WinForms.GunaTextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cmbEstatus = new Guna.UI.WinForms.GunaComboBox();
             this.panelCrudUser.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -64,8 +62,6 @@ namespace Presentation.ModalesFormulario
             this.panelCrudUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.panelCrudUser.Controls.Add(this.cmbEstatus);
             this.panelCrudUser.Controls.Add(this.label12);
-            this.panelCrudUser.Controls.Add(this.tbHoraAsignacion);
-            this.panelCrudUser.Controls.Add(this.label11);
             this.panelCrudUser.Controls.Add(this.cmbUsuarioAsignado);
             this.panelCrudUser.Controls.Add(this.cmbUsuarioRegistra);
             this.panelCrudUser.Controls.Add(this.label2);
@@ -89,6 +85,78 @@ namespace Presentation.ModalesFormulario
             this.panelCrudUser.Name = "panelCrudUser";
             this.panelCrudUser.Size = new System.Drawing.Size(686, 430);
             this.panelCrudUser.TabIndex = 22;
+            // 
+            // cmbEstatus
+            // 
+            this.cmbEstatus.BackColor = System.Drawing.Color.Transparent;
+            this.cmbEstatus.BaseColor = System.Drawing.Color.White;
+            this.cmbEstatus.BorderColor = System.Drawing.Color.Silver;
+            this.cmbEstatus.BorderSize = 0;
+            this.cmbEstatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbEstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstatus.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbEstatus.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.cmbEstatus.ForeColor = System.Drawing.Color.Black;
+            this.cmbEstatus.FormattingEnabled = true;
+            this.cmbEstatus.Location = new System.Drawing.Point(16, 383);
+            this.cmbEstatus.Name = "cmbEstatus";
+            this.cmbEstatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmbEstatus.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cmbEstatus.Radius = 5;
+            this.cmbEstatus.Size = new System.Drawing.Size(313, 27);
+            this.cmbEstatus.TabIndex = 26;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(12, 360);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(62, 20);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Estatus:";
+            // 
+            // cmbUsuarioAsignado
+            // 
+            this.cmbUsuarioAsignado.BackColor = System.Drawing.Color.Transparent;
+            this.cmbUsuarioAsignado.BaseColor = System.Drawing.Color.White;
+            this.cmbUsuarioAsignado.BorderColor = System.Drawing.Color.Silver;
+            this.cmbUsuarioAsignado.BorderSize = 0;
+            this.cmbUsuarioAsignado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbUsuarioAsignado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUsuarioAsignado.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbUsuarioAsignado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.cmbUsuarioAsignado.ForeColor = System.Drawing.Color.Black;
+            this.cmbUsuarioAsignado.FormattingEnabled = true;
+            this.cmbUsuarioAsignado.Location = new System.Drawing.Point(16, 312);
+            this.cmbUsuarioAsignado.Name = "cmbUsuarioAsignado";
+            this.cmbUsuarioAsignado.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmbUsuarioAsignado.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cmbUsuarioAsignado.Radius = 5;
+            this.cmbUsuarioAsignado.Size = new System.Drawing.Size(313, 27);
+            this.cmbUsuarioAsignado.TabIndex = 23;
+            // 
+            // cmbUsuarioRegistra
+            // 
+            this.cmbUsuarioRegistra.BackColor = System.Drawing.Color.Transparent;
+            this.cmbUsuarioRegistra.BaseColor = System.Drawing.Color.White;
+            this.cmbUsuarioRegistra.BorderColor = System.Drawing.Color.Silver;
+            this.cmbUsuarioRegistra.BorderSize = 0;
+            this.cmbUsuarioRegistra.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbUsuarioRegistra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUsuarioRegistra.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbUsuarioRegistra.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.cmbUsuarioRegistra.ForeColor = System.Drawing.Color.Black;
+            this.cmbUsuarioRegistra.FormattingEnabled = true;
+            this.cmbUsuarioRegistra.Location = new System.Drawing.Point(361, 233);
+            this.cmbUsuarioRegistra.Name = "cmbUsuarioRegistra";
+            this.cmbUsuarioRegistra.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmbUsuarioRegistra.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cmbUsuarioRegistra.Radius = 5;
+            this.cmbUsuarioRegistra.Size = new System.Drawing.Size(313, 27);
+            this.cmbUsuarioRegistra.TabIndex = 22;
             // 
             // label2
             // 
@@ -393,109 +461,6 @@ namespace Presentation.ModalesFormulario
             this.gbtnEditar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gbtnEditar.Click += new System.EventHandler(this.gbtnEditar_Click);
             // 
-            // cmbUsuarioRegistra
-            // 
-            this.cmbUsuarioRegistra.BackColor = System.Drawing.Color.Transparent;
-            this.cmbUsuarioRegistra.BaseColor = System.Drawing.Color.White;
-            this.cmbUsuarioRegistra.BorderColor = System.Drawing.Color.Silver;
-            this.cmbUsuarioRegistra.BorderSize = 0;
-            this.cmbUsuarioRegistra.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbUsuarioRegistra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUsuarioRegistra.FocusedColor = System.Drawing.Color.Empty;
-            this.cmbUsuarioRegistra.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.cmbUsuarioRegistra.ForeColor = System.Drawing.Color.Black;
-            this.cmbUsuarioRegistra.FormattingEnabled = true;
-            this.cmbUsuarioRegistra.Location = new System.Drawing.Point(361, 233);
-            this.cmbUsuarioRegistra.Name = "cmbUsuarioRegistra";
-            this.cmbUsuarioRegistra.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cmbUsuarioRegistra.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbUsuarioRegistra.Radius = 5;
-            this.cmbUsuarioRegistra.Size = new System.Drawing.Size(313, 27);
-            this.cmbUsuarioRegistra.TabIndex = 22;
-            // 
-            // cmbUsuarioAsignado
-            // 
-            this.cmbUsuarioAsignado.BackColor = System.Drawing.Color.Transparent;
-            this.cmbUsuarioAsignado.BaseColor = System.Drawing.Color.White;
-            this.cmbUsuarioAsignado.BorderColor = System.Drawing.Color.Silver;
-            this.cmbUsuarioAsignado.BorderSize = 0;
-            this.cmbUsuarioAsignado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbUsuarioAsignado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUsuarioAsignado.FocusedColor = System.Drawing.Color.Empty;
-            this.cmbUsuarioAsignado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.cmbUsuarioAsignado.ForeColor = System.Drawing.Color.Black;
-            this.cmbUsuarioAsignado.FormattingEnabled = true;
-            this.cmbUsuarioAsignado.Location = new System.Drawing.Point(16, 312);
-            this.cmbUsuarioAsignado.Name = "cmbUsuarioAsignado";
-            this.cmbUsuarioAsignado.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cmbUsuarioAsignado.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbUsuarioAsignado.Radius = 5;
-            this.cmbUsuarioAsignado.Size = new System.Drawing.Size(313, 27);
-            this.cmbUsuarioAsignado.TabIndex = 23;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(12, 361);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(156, 20);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Hora de asignación:";
-            // 
-            // tbHoraAsignacion
-            // 
-            this.tbHoraAsignacion.BackColor = System.Drawing.Color.Transparent;
-            this.tbHoraAsignacion.BaseColor = System.Drawing.Color.White;
-            this.tbHoraAsignacion.BorderColor = System.Drawing.Color.Silver;
-            this.tbHoraAsignacion.BorderSize = 0;
-            this.tbHoraAsignacion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbHoraAsignacion.FocusedBaseColor = System.Drawing.Color.White;
-            this.tbHoraAsignacion.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tbHoraAsignacion.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbHoraAsignacion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbHoraAsignacion.Location = new System.Drawing.Point(16, 384);
-            this.tbHoraAsignacion.Name = "tbHoraAsignacion";
-            this.tbHoraAsignacion.PasswordChar = '\0';
-            this.tbHoraAsignacion.Radius = 5;
-            this.tbHoraAsignacion.SelectedText = "";
-            this.tbHoraAsignacion.Size = new System.Drawing.Size(313, 30);
-            this.tbHoraAsignacion.TabIndex = 24;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(360, 361);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 20);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Estatus:";
-            // 
-            // cmbEstatus
-            // 
-            this.cmbEstatus.BackColor = System.Drawing.Color.Transparent;
-            this.cmbEstatus.BaseColor = System.Drawing.Color.White;
-            this.cmbEstatus.BorderColor = System.Drawing.Color.Silver;
-            this.cmbEstatus.BorderSize = 0;
-            this.cmbEstatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbEstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEstatus.FocusedColor = System.Drawing.Color.Empty;
-            this.cmbEstatus.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.cmbEstatus.ForeColor = System.Drawing.Color.Black;
-            this.cmbEstatus.FormattingEnabled = true;
-            this.cmbEstatus.Location = new System.Drawing.Point(361, 384);
-            this.cmbEstatus.Name = "cmbEstatus";
-            this.cmbEstatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cmbEstatus.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbEstatus.Radius = 5;
-            this.cmbEstatus.Size = new System.Drawing.Size(313, 27);
-            this.cmbEstatus.TabIndex = 26;
-            // 
             // EditActividadesModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -539,8 +504,6 @@ namespace Presentation.ModalesFormulario
         private Guna.UI.WinForms.GunaButton gbtnEditar;
         public Guna.UI.WinForms.GunaComboBox cmbUsuarioAsignado;
         public Guna.UI.WinForms.GunaComboBox cmbUsuarioRegistra;
-        public Guna.UI.WinForms.GunaTextBox tbHoraAsignacion;
-        private System.Windows.Forms.Label label11;
         public Guna.UI.WinForms.GunaComboBox cmbEstatus;
         private System.Windows.Forms.Label label12;
     }

@@ -252,6 +252,7 @@ namespace Presentation
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
             cargarDatosUsuario();
+            ValdiacionesTipoCampo();
             if (Int32.TryParse(tbCodigoBarras.Text, out int numeroEmpleado))
             {
                 MostrarActividadesUsuario(numeroEmpleado);
@@ -260,7 +261,6 @@ namespace Presentation
             {
                 Console.WriteLine("Error al obtener el número de empleado desde el código de barras.");
             }
-            ValdiacionesTipoCampo();
         }
         //Fin//
 
@@ -368,54 +368,56 @@ namespace Presentation
         private void MostrarActividadesUsuario(int numeroEmpleado)
         {
             UserModel actividad = new UserModel();
-            DataTable tablaActividades = actividad.MostrarTablaActividades(numeroEmpleado);
+            DataTable tablaActividades = actividad.MostrarActividadesCodigoBarras(numeroEmpleado);
 
             dgvMostrarActividadesUsuarios.Columns.Clear();
             dgvMostrarActividadesUsuarios.RowTemplate.MinimumHeight = 85;
             dgvMostrarActividadesUsuarios.RowTemplate.Height = 85;
             dgvMostrarActividadesUsuarios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvMostrarActividadesUsuarios.BackgroundColor = Color.FromArgb(31, 34, 74);
             dgvMostrarActividadesUsuarios.ForeColor = Color.White;
 
             dgvMostrarActividadesUsuarios.DataSource = tablaActividades;
 
+            //Establecer la multilinea
+            int columnaMultilinea = 1;
+            dgvMostrarActividadesUsuarios.Columns[columnaMultilinea].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvMostrarActividadesUsuarios.Columns[columnaMultilinea].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvMostrarActividadesUsuarios.Columns[columnaMultilinea].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
             // Crear columna de botones
             DataGridViewButtonColumn botonAcciones = new DataGridViewButtonColumn();
             botonAcciones.Name = "Acciones";
-            botonAcciones.Text = "Realizar Acción";
+            botonAcciones.Text = "Completar tarea";
             botonAcciones.UseColumnTextForButtonValue = true;
             dgvMostrarActividadesUsuarios.Columns.Add(botonAcciones);
             dgvMostrarActividadesUsuarios.CellContentClick += (sender, e) =>
             {
                 if (e.RowIndex >= 0 && e.ColumnIndex == dgvMostrarActividadesUsuarios.Columns["Acciones"].Index)
                 {
-                    int idActividad = Convert.ToInt32(dgvMostrarActividadesUsuarios.Rows[e.RowIndex].Cells["Id"].Value);
-                    MessageBox.Show("La actividad paso a revisión.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    try
+                    {
+                        int idActividad = Convert.ToInt32(dgvMostrarActividadesUsuarios.Rows[e.RowIndex].Cells[0].Value);
+                        CambiarEstadoActividad(idActividad);
+                        MessageBox.Show("La actividad paso a revisión", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MostrarActividadesUsuario(numeroEmpleado);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al realizar la acción: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             };
         }
-        //Diseño del datagridview//
-        private void dgvMostrarActividadesUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        // Función para cambiar el estado de la actividad
+        private void CambiarEstadoActividad(int idActividad)
         {
             UserDao userDao = new UserDao();
-
-            if (e.RowIndex >= 0 && e.ColumnIndex == dgvMostrarActividadesUsuarios.Columns["Acciones"].Index)
-            {
-                try
-                {
-                    int idActividad = Convert.ToInt32(dgvMostrarActividadesUsuarios.Rows[e.RowIndex].Cells[0].Value);
-                    userDao.Id1 = idActividad;
-                    userDao.Estatus1 = 3;
-                    userDao.CambiarEstadoActividad();
-                    MessageBox.Show("La actividad paso a revisión.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("La actividad no se pudo finalizar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            userDao.Id1 = idActividad;
+            userDao.Estatus1 = 3;
+            userDao.CambiarEstadoActividad();
         }
-        //Fin//*/
+        //Fin//
 
 
         //Validaciones de campos//
@@ -432,9 +434,5 @@ namespace Presentation
             tbCodigoBarras.KeyPress += new KeyPressEventHandler(SoloFormatoNumero);
         }
         //Fin//
-
-
-
-
     }
 }

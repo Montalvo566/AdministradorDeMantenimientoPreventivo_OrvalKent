@@ -38,9 +38,7 @@ namespace Presentation
             this.btnEliminar = new Guna.UI.WinForms.GunaButton();
             this.btnNuevo = new Guna.UI.WinForms.GunaButton();
             this.panelCrudActividad = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbHoraAsignacion = new Guna.UI.WinForms.GunaTextBox();
             this.cmbUsuarioAsignado = new Guna.UI.WinForms.GunaComboBox();
             this.cmbUsuarioRegistra = new Guna.UI.WinForms.GunaComboBox();
             this.cmbFrecuencia = new Guna.UI.WinForms.GunaComboBox();
@@ -175,9 +173,7 @@ namespace Presentation
             // 
             // panelCrudActividad
             // 
-            this.panelCrudActividad.Controls.Add(this.label11);
             this.panelCrudActividad.Controls.Add(this.label1);
-            this.panelCrudActividad.Controls.Add(this.tbHoraAsignacion);
             this.panelCrudActividad.Controls.Add(this.cmbUsuarioAsignado);
             this.panelCrudActividad.Controls.Add(this.cmbUsuarioRegistra);
             this.panelCrudActividad.Controls.Add(this.cmbFrecuencia);
@@ -200,18 +196,6 @@ namespace Presentation
             this.panelCrudActividad.Size = new System.Drawing.Size(666, 268);
             this.panelCrudActividad.TabIndex = 28;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(473, 200);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(156, 20);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "Hora de asignación:";
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -223,25 +207,6 @@ namespace Presentation
             this.label1.Size = new System.Drawing.Size(184, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "Agregar Actividad";
-            // 
-            // tbHoraAsignacion
-            // 
-            this.tbHoraAsignacion.BackColor = System.Drawing.Color.Transparent;
-            this.tbHoraAsignacion.BaseColor = System.Drawing.Color.White;
-            this.tbHoraAsignacion.BorderColor = System.Drawing.Color.Silver;
-            this.tbHoraAsignacion.BorderSize = 0;
-            this.tbHoraAsignacion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbHoraAsignacion.FocusedBaseColor = System.Drawing.Color.White;
-            this.tbHoraAsignacion.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tbHoraAsignacion.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbHoraAsignacion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbHoraAsignacion.Location = new System.Drawing.Point(468, 223);
-            this.tbHoraAsignacion.Name = "tbHoraAsignacion";
-            this.tbHoraAsignacion.PasswordChar = '\0';
-            this.tbHoraAsignacion.Radius = 5;
-            this.tbHoraAsignacion.SelectedText = "";
-            this.tbHoraAsignacion.Size = new System.Drawing.Size(195, 30);
-            this.tbHoraAsignacion.TabIndex = 22;
             // 
             // cmbUsuarioAsignado
             // 
@@ -638,7 +603,5 @@ namespace Presentation
         private Guna.UI.WinForms.GunaTextBox tbActividad;
         private Guna.UI.WinForms.GunaComboBox cmbUsuarioAsignado;
         private Guna.UI.WinForms.GunaComboBox cmbUsuarioRegistra;
-        private System.Windows.Forms.Label label11;
-        private Guna.UI.WinForms.GunaTextBox tbHoraAsignacion;
     }
 }

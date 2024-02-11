@@ -108,6 +108,12 @@
     <Compile Include="ModalesFormulario\EditUsuariosModal.Designer.cs">
       <DependentUpon>EditUsuariosModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModalesFormulario\MostrarActividadesModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalesFormulario\MostrarActividadesModal.Designer.cs">
+      <DependentUpon>MostrarActividadesModal.cs</DependentUpon>
+    </Compile>
     <Compile Include="TareasAsignadas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModalesFormulario\EditUsuariosModal.resx">
       <DependentUpon>EditUsuariosModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalesFormulario\MostrarActividadesModal.resx">
+      <DependentUpon>MostrarActividadesModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TareasAsignadas.resx">
       <DependentUpon>TareasAsignadas.cs</DependentUpon>
