@@ -30,6 +30,7 @@ namespace Presentation.ModalesFormulario
         private void InitializeComponent()
         {
             this.panelCrudUser = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.gbtnSubirImagen = new Guna.UI.WinForms.GunaButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@ namespace Presentation.ModalesFormulario
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCancelar = new Guna.UI.WinForms.GunaButton();
             this.gbtnEditar = new Guna.UI.WinForms.GunaButton();
-            this.label11 = new System.Windows.Forms.Label();
             this.panelCrudUser.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +85,18 @@ namespace Presentation.ModalesFormulario
             this.panelCrudUser.Name = "panelCrudUser";
             this.panelCrudUser.Size = new System.Drawing.Size(686, 421);
             this.panelCrudUser.TabIndex = 21;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(215, 390);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(140, 20);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "URL de la imagen:";
             // 
             // gbtnSubirImagen
             // 
@@ -405,22 +417,22 @@ namespace Presentation.ModalesFormulario
             this.btnCancelar.AnimationHoverSpeed = 0.07F;
             this.btnCancelar.AnimationSpeed = 0.03F;
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnCancelar.BaseColor = System.Drawing.Color.Red;
             this.btnCancelar.BorderColor = System.Drawing.Color.Black;
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCancelar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Image = null;
             this.btnCancelar.ImageSize = new System.Drawing.Size(20, 20);
             this.btnCancelar.Location = new System.Drawing.Point(364, 24);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnCancelar.OnHoverBaseColor = System.Drawing.Color.Red;
             this.btnCancelar.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnCancelar.OnHoverForeColor = System.Drawing.Color.White;
             this.btnCancelar.OnHoverImage = null;
-            this.btnCancelar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCancelar.OnPressedColor = System.Drawing.Color.Transparent;
             this.btnCancelar.Radius = 10;
             this.btnCancelar.Size = new System.Drawing.Size(310, 62);
             this.btnCancelar.TabIndex = 3;
@@ -433,40 +445,28 @@ namespace Presentation.ModalesFormulario
             this.gbtnEditar.AnimationHoverSpeed = 0.07F;
             this.gbtnEditar.AnimationSpeed = 0.03F;
             this.gbtnEditar.BackColor = System.Drawing.Color.Transparent;
-            this.gbtnEditar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gbtnEditar.BaseColor = System.Drawing.Color.Blue;
             this.gbtnEditar.BorderColor = System.Drawing.Color.Black;
             this.gbtnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gbtnEditar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gbtnEditar.FocusedColor = System.Drawing.Color.Empty;
-            this.gbtnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbtnEditar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbtnEditar.ForeColor = System.Drawing.Color.White;
             this.gbtnEditar.Image = null;
             this.gbtnEditar.ImageSize = new System.Drawing.Size(20, 20);
             this.gbtnEditar.Location = new System.Drawing.Point(16, 24);
             this.gbtnEditar.Name = "gbtnEditar";
-            this.gbtnEditar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gbtnEditar.OnHoverBaseColor = System.Drawing.Color.Blue;
             this.gbtnEditar.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gbtnEditar.OnHoverForeColor = System.Drawing.Color.White;
             this.gbtnEditar.OnHoverImage = null;
-            this.gbtnEditar.OnPressedColor = System.Drawing.Color.Black;
+            this.gbtnEditar.OnPressedColor = System.Drawing.Color.Transparent;
             this.gbtnEditar.Radius = 10;
             this.gbtnEditar.Size = new System.Drawing.Size(313, 62);
             this.gbtnEditar.TabIndex = 2;
             this.gbtnEditar.Text = "Editar";
             this.gbtnEditar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gbtnEditar.Click += new System.EventHandler(this.gbtnEditar_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(215, 390);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(140, 20);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "URL de la imagen:";
             // 
             // EditUsuariosModal
             // 

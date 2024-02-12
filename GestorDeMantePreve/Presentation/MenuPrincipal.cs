@@ -33,7 +33,15 @@ namespace Presentation
             userModel = new UserModel();
             PermisosUsuarios();
             this.KeyPress += tbCodigoBarras_KeyPress;
+            this.Shown += MenuPrincipal_Shown;
         }
+
+        //Funcion para realizar un focus al campo del textbox para escanear el codigo de barras//
+        private void MenuPrincipal_Shown(object sender, EventArgs e)
+        {
+            tbCodigoBarras.Focus();
+        }
+        //Fin//
 
 
         //Permisos de usuarios//
@@ -142,7 +150,7 @@ namespace Presentation
 
             botonActivado(sender, RGBColors.color1);
             ocultarSubmenus();
-            MostrarPantallaPrincipal();     
+            MostrarPantallaPrincipal();  
         }
         private void MostrarPantallaPrincipal()
         {
@@ -325,6 +333,7 @@ namespace Presentation
         {
             if (char.IsDigit(e.KeyChar))
             {
+                tbCodigoBarras.Text = codigoBarrasBuffer.ToString();
                 codigoBarrasBuffer.Append(e.KeyChar);
             }
             else if (e.KeyChar == (char)Keys.Enter)
@@ -351,15 +360,6 @@ namespace Presentation
                     MessageBox.Show("El código de barras no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-        //Fin//
-
-
-        //Texbox donde se mostrar el numero del codigo de barras//
-        private void btnNumeroEmpleado_Click(object sender, EventArgs e)
-        {
-            string codigoBarras = tbCodigoBarras.Text.Trim();
-            ProcesarCodigoBarras(codigoBarras);
         }
         //Fin//
 
@@ -416,6 +416,25 @@ namespace Presentation
             userDao.Id1 = idActividad;
             userDao.Estatus1 = 3;
             userDao.CambiarEstadoActividad();
+        }
+        //Fin//
+
+
+        //Funcion para abrir el modal en el cual se finalizara las tareas//
+        private void btnFinalizarTareas_Click(object sender, EventArgs e)
+        {
+            if (Int32.TryParse(tbCodigoBarras.Text, out int numeroEmpleado))
+            {
+                UserModel user = new UserModel();
+                string nombreUsuario = user.ObtenerNombreUsuarioPorNumeroEmpleado(numeroEmpleado);
+                ModalesFormulario.FinalizarTareasModal modal = new ModalesFormulario.FinalizarTareasModal(nombreUsuario);
+                modal.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("El usuario no ha realizado ninguna actividad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
         //Fin//
 

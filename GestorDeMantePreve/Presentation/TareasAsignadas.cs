@@ -44,8 +44,8 @@ namespace Presentation
         }
         private void ConfigurarDataGridView()
         {
-            gdgvTablaActividades.RowTemplate.Height = 40;
-            gdgvTablaActividades.ColumnHeadersHeight = 40;
+            gdgvTablaActividades.RowTemplate.Height = 50;
+            gdgvTablaActividades.ColumnHeadersHeight = 50;
         }
         //Fin//
 

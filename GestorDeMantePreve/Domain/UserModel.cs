@@ -29,5 +29,11 @@ namespace Domain
             return tablaUsuarios;
         }
         //Fin//
+
+
+        public string ObtenerNombreUsuarioPorNumeroEmpleado(int numeroEmpleado)
+        {
+            return userDao.ObtenerNombreUsuarioPorNumeroEmpleado(numeroEmpleado);
+        }
     }
 }

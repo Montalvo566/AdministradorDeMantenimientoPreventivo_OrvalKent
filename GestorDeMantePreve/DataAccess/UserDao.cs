@@ -131,5 +131,33 @@ namespace DataAccess
             }
         }
         //Fin//
+
+
+        public string ObtenerNombreUsuarioPorNumeroEmpleado(int numeroEmpleado)
+        {
+            try
+            {
+                using (var connection = AbrirConexion())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT NombreCompleto FROM Usuarios WHERE NumeroEmpleado = @NumeroEmpleado";
+                    command.Parameters.AddWithValue("@NumeroEmpleado", numeroEmpleado);
+                    command.CommandType = CommandType.Text;
+
+                    string nombreUsuario = command.ExecuteScalar()?.ToString();
+
+                    return nombreUsuario;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener el nombre del usuario: " + ex.Message);
+                return string.Empty; // O manejar la excepción según tus necesidades
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+        }
     }
 }

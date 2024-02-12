@@ -49,7 +49,7 @@ namespace Presentation
             this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.lbNombreInicioSesion = new System.Windows.Forms.Label();
             this.panelFormularioHijo = new System.Windows.Forms.Panel();
-            this.btnNumeroEmpleado = new Guna.UI.WinForms.GunaButton();
+            this.btnFinalizarTareas = new Guna.UI.WinForms.GunaButton();
             this.label1 = new System.Windows.Forms.Label();
             this.tbCodigoBarras = new Guna.UI.WinForms.GunaTextBox();
             this.dgvMostrarActividadesUsuarios = new Guna.UI.WinForms.GunaDataGridView();
@@ -376,7 +376,7 @@ namespace Presentation
             // panelFormularioHijo
             // 
             this.panelFormularioHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.panelFormularioHijo.Controls.Add(this.btnNumeroEmpleado);
+            this.panelFormularioHijo.Controls.Add(this.btnFinalizarTareas);
             this.panelFormularioHijo.Controls.Add(this.label1);
             this.panelFormularioHijo.Controls.Add(this.tbCodigoBarras);
             this.panelFormularioHijo.Controls.Add(this.dgvMostrarActividadesUsuarios);
@@ -386,35 +386,35 @@ namespace Presentation
             this.panelFormularioHijo.Size = new System.Drawing.Size(827, 613);
             this.panelFormularioHijo.TabIndex = 2;
             // 
-            // btnNumeroEmpleado
+            // btnFinalizarTareas
             // 
-            this.btnNumeroEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNumeroEmpleado.AnimationHoverSpeed = 0.07F;
-            this.btnNumeroEmpleado.AnimationSpeed = 0.03F;
-            this.btnNumeroEmpleado.BackColor = System.Drawing.Color.Transparent;
-            this.btnNumeroEmpleado.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnNumeroEmpleado.BorderColor = System.Drawing.Color.Black;
-            this.btnNumeroEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNumeroEmpleado.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnNumeroEmpleado.FocusedColor = System.Drawing.Color.Empty;
-            this.btnNumeroEmpleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNumeroEmpleado.ForeColor = System.Drawing.Color.White;
-            this.btnNumeroEmpleado.Image = null;
-            this.btnNumeroEmpleado.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnNumeroEmpleado.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnNumeroEmpleado.Location = new System.Drawing.Point(634, 15);
-            this.btnNumeroEmpleado.Name = "btnNumeroEmpleado";
-            this.btnNumeroEmpleado.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnNumeroEmpleado.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnNumeroEmpleado.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnNumeroEmpleado.OnHoverImage = null;
-            this.btnNumeroEmpleado.OnPressedColor = System.Drawing.Color.Black;
-            this.btnNumeroEmpleado.Radius = 5;
-            this.btnNumeroEmpleado.Size = new System.Drawing.Size(181, 30);
-            this.btnNumeroEmpleado.TabIndex = 4;
-            this.btnNumeroEmpleado.Text = "Buscar";
-            this.btnNumeroEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnNumeroEmpleado.Click += new System.EventHandler(this.btnNumeroEmpleado_Click);
+            this.btnFinalizarTareas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFinalizarTareas.AnimationHoverSpeed = 0.07F;
+            this.btnFinalizarTareas.AnimationSpeed = 0.03F;
+            this.btnFinalizarTareas.BackColor = System.Drawing.Color.Transparent;
+            this.btnFinalizarTareas.BaseColor = System.Drawing.Color.Blue;
+            this.btnFinalizarTareas.BorderColor = System.Drawing.Color.Black;
+            this.btnFinalizarTareas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFinalizarTareas.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnFinalizarTareas.FocusedColor = System.Drawing.Color.Empty;
+            this.btnFinalizarTareas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizarTareas.ForeColor = System.Drawing.Color.White;
+            this.btnFinalizarTareas.Image = null;
+            this.btnFinalizarTareas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnFinalizarTareas.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnFinalizarTareas.Location = new System.Drawing.Point(598, 15);
+            this.btnFinalizarTareas.Name = "btnFinalizarTareas";
+            this.btnFinalizarTareas.OnHoverBaseColor = System.Drawing.Color.Blue;
+            this.btnFinalizarTareas.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnFinalizarTareas.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnFinalizarTareas.OnHoverImage = null;
+            this.btnFinalizarTareas.OnPressedColor = System.Drawing.Color.Transparent;
+            this.btnFinalizarTareas.Radius = 5;
+            this.btnFinalizarTareas.Size = new System.Drawing.Size(217, 30);
+            this.btnFinalizarTareas.TabIndex = 4;
+            this.btnFinalizarTareas.Text = "Finalizar las tareas";
+            this.btnFinalizarTareas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnFinalizarTareas.Click += new System.EventHandler(this.btnFinalizarTareas_Click);
             // 
             // label1
             // 
@@ -445,7 +445,7 @@ namespace Presentation
             this.tbCodigoBarras.PasswordChar = '\0';
             this.tbCodigoBarras.Radius = 5;
             this.tbCodigoBarras.SelectedText = "";
-            this.tbCodigoBarras.Size = new System.Drawing.Size(419, 30);
+            this.tbCodigoBarras.Size = new System.Drawing.Size(383, 30);
             this.tbCodigoBarras.TabIndex = 2;
             this.tbCodigoBarras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCodigoBarras_KeyPress);
             // 
@@ -558,9 +558,9 @@ namespace Presentation
         private FontAwesome.Sharp.IconButton btnEquipos;
         private FontAwesome.Sharp.IconButton btnAreas;
         private Guna.UI.WinForms.GunaDataGridView dgvMostrarActividadesUsuarios;
-        private Guna.UI.WinForms.GunaButton btnNumeroEmpleado;
+        private Guna.UI.WinForms.GunaButton btnFinalizarTareas;
         private System.Windows.Forms.Label label1;
-        private Guna.UI.WinForms.GunaTextBox tbCodigoBarras;
+        public Guna.UI.WinForms.GunaTextBox tbCodigoBarras;
     }
 }
 
