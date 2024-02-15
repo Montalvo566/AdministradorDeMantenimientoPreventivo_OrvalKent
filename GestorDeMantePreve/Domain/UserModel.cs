@@ -31,9 +31,11 @@ namespace Domain
         //Fin//
 
 
+        //Esta funcion obtiene el nombre del usuario y lo muestra en el modal//
         public string ObtenerNombreUsuarioPorNumeroEmpleado(int numeroEmpleado)
         {
             return userDao.ObtenerNombreUsuarioPorNumeroEmpleado(numeroEmpleado);
         }
+        //Fin
     }
 }

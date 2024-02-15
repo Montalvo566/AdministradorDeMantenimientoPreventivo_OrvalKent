@@ -133,6 +133,7 @@ namespace DataAccess
         //Fin//
 
 
+        //Esta funcion obtiene el nombre del usuario y lo muestra en el modal//
         public string ObtenerNombreUsuarioPorNumeroEmpleado(int numeroEmpleado)
         {
             try
@@ -159,5 +160,7 @@ namespace DataAccess
                 CerrarConexion();
             }
         }
+        //Fin//
+
     }
 }

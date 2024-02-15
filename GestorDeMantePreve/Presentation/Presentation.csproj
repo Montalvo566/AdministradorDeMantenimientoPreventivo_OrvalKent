@@ -78,6 +78,7 @@
     <Compile Include="Equipos.Designer.cs">
       <DependentUpon>Equipos.cs</DependentUpon>
     </Compile>
+    <Compile Include="KeyMessageFilter.cs" />
     <Compile Include="ModalesFormulario\EditActividadesModal.cs">
       <SubType>Form</SubType>
     </Compile>

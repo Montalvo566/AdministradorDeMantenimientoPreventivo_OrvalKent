@@ -447,7 +447,6 @@ namespace Presentation
             this.tbCodigoBarras.SelectedText = "";
             this.tbCodigoBarras.Size = new System.Drawing.Size(383, 30);
             this.tbCodigoBarras.TabIndex = 2;
-            this.tbCodigoBarras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCodigoBarras_KeyPress);
             // 
             // dgvMostrarActividadesUsuarios
             // 

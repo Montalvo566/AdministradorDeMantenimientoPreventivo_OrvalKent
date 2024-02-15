@@ -21,6 +21,8 @@ namespace Presentation
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private UserModel userModel;
+        private KeyMessageFilter keyMessageFilter;
+        private int numeroEmpleado;
 
         public MenuPrincipal()
         {
@@ -32,16 +34,11 @@ namespace Presentation
             pMenuLateral.Controls.Add(leftBorderBtn);
             userModel = new UserModel();
             PermisosUsuarios();
-            this.KeyPress += tbCodigoBarras_KeyPress;
-            this.Shown += MenuPrincipal_Shown;
+            // Inicializa el filtro de mensajes
+            keyMessageFilter = new KeyMessageFilter();
+            keyMessageFilter.KeyPressed += KeyMessageFilter_KeyPressed;
+            Application.AddMessageFilter(keyMessageFilter);
         }
-
-        //Funcion para realizar un focus al campo del textbox para escanear el codigo de barras//
-        private void MenuPrincipal_Shown(object sender, EventArgs e)
-        {
-            tbCodigoBarras.Focus();
-        }
-        //Fin//
 
 
         //Permisos de usuarios//
@@ -66,6 +63,7 @@ namespace Presentation
                 btnUsuarios.Enabled = false;
                 btnDepartamentos.Enabled = false;
                 btnAreas.Enabled = false;
+                btnTareasAsignadas.Enabled = false;
             }
         }
         //Fin//
@@ -261,14 +259,7 @@ namespace Presentation
         {
             cargarDatosUsuario();
             ValdiacionesTipoCampo();
-            if (Int32.TryParse(tbCodigoBarras.Text, out int numeroEmpleado))
-            {
-                MostrarActividadesUsuario(numeroEmpleado);
-            }
-            else
-            {
-                Console.WriteLine("Error al obtener el número de empleado desde el código de barras.");
-            }
+            MostrarActividadesUsuario();
         }
         //Fin//
 
@@ -329,18 +320,34 @@ namespace Presentation
 
         // Evento KeyPress para manejar el escaneo del código de barras//
         private StringBuilder codigoBarrasBuffer = new StringBuilder();
-        private void tbCodigoBarras_KeyPress(object sender, KeyPressEventArgs e)
+        private void KeyMessageFilter_KeyPressed(object sender, KeyPressedEventArgs e)
         {
             if (char.IsDigit(e.KeyChar))
             {
-                tbCodigoBarras.Text = codigoBarrasBuffer.ToString();
                 codigoBarrasBuffer.Append(e.KeyChar);
+                tbCodigoBarras.Text = codigoBarrasBuffer.ToString();
             }
             else if (e.KeyChar == (char)Keys.Enter)
             {
                 string codigoBarras = codigoBarrasBuffer.ToString();
                 ProcesarCodigoBarras(codigoBarras);
                 codigoBarrasBuffer.Clear();
+            }
+        }
+
+        private void MenuPrincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (char.IsDigit((char)e.KeyCode))
+            {
+                codigoBarrasBuffer.Append((char)e.KeyCode);
+                tbCodigoBarras.Text = codigoBarrasBuffer.ToString();
+            }
+            else if (e.KeyCode == Keys.Enter)
+            {
+                string codigoBarras = codigoBarrasBuffer.ToString();
+                ProcesarCodigoBarras(codigoBarras);
+                codigoBarrasBuffer.Clear();
+                e.SuppressKeyPress = true;
             }
         }
         //Fin//
@@ -351,9 +358,9 @@ namespace Presentation
         {
             if (!string.IsNullOrEmpty(codigoBarras))
             {
-                if (int.TryParse(codigoBarras, out int numeroEmpleado))
+                if (int.TryParse(codigoBarras, out numeroEmpleado))
                 {
-                    MostrarActividadesUsuario(numeroEmpleado);
+                    MostrarActividadesUsuario();
                 }
                 else
                 {
@@ -365,7 +372,7 @@ namespace Presentation
 
 
         //Mostrar actividades usuarios//
-        private void MostrarActividadesUsuario(int numeroEmpleado)
+        private void MostrarActividadesUsuario()
         {
             UserModel actividad = new UserModel();
             DataTable tablaActividades = actividad.MostrarActividadesCodigoBarras(numeroEmpleado);
@@ -390,25 +397,31 @@ namespace Presentation
             botonAcciones.Text = "Completar tarea";
             botonAcciones.UseColumnTextForButtonValue = true;
             dgvMostrarActividadesUsuarios.Columns.Add(botonAcciones);
-            dgvMostrarActividadesUsuarios.CellContentClick += (sender, e) =>
-            {
-                if (e.RowIndex >= 0 && e.ColumnIndex == dgvMostrarActividadesUsuarios.Columns["Acciones"].Index)
-                {
 
-                    try
-                    {
-                        int idActividad = Convert.ToInt32(dgvMostrarActividadesUsuarios.Rows[e.RowIndex].Cells[0].Value);
-                        CambiarEstadoActividad(idActividad);
-                        MessageBox.Show("La actividad paso a revisión", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        MostrarActividadesUsuario(numeroEmpleado);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error al realizar la acción: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            };
+            dgvMostrarActividadesUsuarios.CellContentClick -= dgvMostrarActividadesUsuarios_CellContentClick;
+            dgvMostrarActividadesUsuarios.CellContentClick += dgvMostrarActividadesUsuarios_CellContentClick;
         }
+        //Funcion que asignar la funcion de cambiar el estado de la aplicacion sin que se repita la funcion//
+        private void dgvMostrarActividadesUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == dgvMostrarActividadesUsuarios.Columns["Acciones"].Index)
+            {
+                try
+                {
+                    int idActividad = Convert.ToInt32(dgvMostrarActividadesUsuarios.Rows[e.RowIndex].Cells[0].Value);
+                    CambiarEstadoActividad(idActividad);
+                    MessageBox.Show("La actividad pasó a revisión", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MostrarActividadesUsuario();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al realizar la acción: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        //Fin//
+
+
         // Función para cambiar el estado de la actividad
         private void CambiarEstadoActividad(int idActividad)
         {
@@ -452,6 +465,8 @@ namespace Presentation
         {
             tbCodigoBarras.KeyPress += new KeyPressEventHandler(SoloFormatoNumero);
         }
+
+        
         //Fin//
     }
 }
