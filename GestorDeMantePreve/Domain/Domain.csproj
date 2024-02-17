@@ -45,7 +45,7 @@
     <Compile Include="AreasCrudModel.cs" />
     <Compile Include="DepartamentCrudModel.cs" />
     <Compile Include="EquiposCrudModel.cs" />
-    <Compile Include="HistorialActividadesModal.cs" />
+    <Compile Include="HistorialDomain.cs" />
     <Compile Include="TareasAsignadasModel.cs" />
     <Compile Include="UserCrudModel.cs" />
     <Compile Include="UserModel.cs" />

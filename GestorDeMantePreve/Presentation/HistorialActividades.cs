@@ -25,7 +25,7 @@ namespace Presentation
 
         private void HistorialActividades_Load(object sender, EventArgs e)
         {
-            HistorialActividadesModal historial = new HistorialActividadesModal();
+            HistorialDomain historial = new HistorialDomain();
             gdgvHistorialActividades.DataSource = historial.MostrarHistorialActividades();
             // Establecer la altura mínima de las filas
             gdgvHistorialActividades.RowTemplate.MinimumHeight = 50;

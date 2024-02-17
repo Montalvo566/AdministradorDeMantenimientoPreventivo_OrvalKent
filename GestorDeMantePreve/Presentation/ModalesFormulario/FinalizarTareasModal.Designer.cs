@@ -34,7 +34,6 @@ namespace Presentation.ModalesFormulario
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbNombreUsuarioActividades = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@ namespace Presentation.ModalesFormulario
             this.label6 = new System.Windows.Forms.Label();
             btnCerrarModal = new FontAwesome.Sharp.IconButton();
             this.panelRAHeader.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCerrarModal
@@ -58,10 +58,10 @@ namespace Presentation.ModalesFormulario
             btnCerrarModal.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             btnCerrarModal.IconColor = System.Drawing.Color.White;
             btnCerrarModal.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            btnCerrarModal.IconSize = 45;
-            btnCerrarModal.Location = new System.Drawing.Point(563, 0);
+            btnCerrarModal.IconSize = 55;
+            btnCerrarModal.Location = new System.Drawing.Point(812, 0);
             btnCerrarModal.Name = "btnCerrarModal";
-            btnCerrarModal.Size = new System.Drawing.Size(73, 41);
+            btnCerrarModal.Size = new System.Drawing.Size(73, 60);
             btnCerrarModal.TabIndex = 5;
             btnCerrarModal.UseVisualStyleBackColor = false;
             btnCerrarModal.Click += new System.EventHandler(this.btnCerrarModal_Click);
@@ -74,28 +74,30 @@ namespace Presentation.ModalesFormulario
             this.panelRAHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRAHeader.Location = new System.Drawing.Point(0, 0);
             this.panelRAHeader.Name = "panelRAHeader";
-            this.panelRAHeader.Size = new System.Drawing.Size(636, 41);
+            this.panelRAHeader.Size = new System.Drawing.Size(885, 60);
             this.panelRAHeader.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 8);
+            this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 25);
+            this.label1.Size = new System.Drawing.Size(336, 28);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Tareas en revisión";
+            this.label1.Text = "¿Desea terminar las tareas?";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.tbCodigoSupervisor);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 384);
+            this.panel1.Location = new System.Drawing.Point(0, 369);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(636, 16);
+            this.panel1.Size = new System.Drawing.Size(885, 146);
             this.panel1.TabIndex = 3;
             // 
             // label2
@@ -103,55 +105,44 @@ namespace Presentation.ModalesFormulario
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 63);
+            this.label2.Location = new System.Drawing.Point(12, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(573, 32);
+            this.label2.Size = new System.Drawing.Size(799, 32);
             this.label2.TabIndex = 5;
-            this.label2.Text = "¿Es un usted un supervisor de actividades?";
-            // 
-            // lbNombreUsuarioActividades
-            // 
-            this.lbNombreUsuarioActividades.AutoSize = true;
-            this.lbNombreUsuarioActividades.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombreUsuarioActividades.ForeColor = System.Drawing.Color.White;
-            this.lbNombreUsuarioActividades.Location = new System.Drawing.Point(11, 283);
-            this.lbNombreUsuarioActividades.Name = "lbNombreUsuarioActividades";
-            this.lbNombreUsuarioActividades.Size = new System.Drawing.Size(320, 38);
-            this.lbNombreUsuarioActividades.TabIndex = 6;
-            this.lbNombreUsuarioActividades.Text = "Nombre del usuario";
+            this.label2.Text = "Si usted es un supervisor de area y quiere finalizar las tareas";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 116);
+            this.label3.Location = new System.Drawing.Point(12, 150);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(606, 32);
+            this.label3.Size = new System.Drawing.Size(851, 32);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Si es asi, debe escanear su codigo de barras";
+            this.label3.Text = "seleccione el cuadro de texto y despues escanee su codigo de";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(12, 167);
+            this.label4.Location = new System.Drawing.Point(12, 208);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(582, 32);
+            this.label4.Size = new System.Drawing.Size(824, 32);
             this.label4.TabIndex = 8;
-            this.label4.Text = "para realizar el registro del historial y poder";
+            this.label4.Text = "barras, se validara si usted tiene los permisos necesarios para";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(11, 221);
+            this.label5.Location = new System.Drawing.Point(11, 263);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(478, 32);
+            this.label5.Size = new System.Drawing.Size(762, 32);
             this.label5.TabIndex = 9;
-            this.label5.Text = "finalizar las actividades del usuario:";
+            this.label5.Text = "finalizar las actividades y asi hacer el registro del historial";
             // 
             // tbCodigoSupervisor
             // 
@@ -165,24 +156,24 @@ namespace Presentation.ModalesFormulario
             this.tbCodigoSupervisor.FocusedBaseColor = System.Drawing.Color.White;
             this.tbCodigoSupervisor.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tbCodigoSupervisor.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbCodigoSupervisor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCodigoSupervisor.Location = new System.Drawing.Point(235, 347);
+            this.tbCodigoSupervisor.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCodigoSupervisor.Location = new System.Drawing.Point(18, 75);
             this.tbCodigoSupervisor.Name = "tbCodigoSupervisor";
             this.tbCodigoSupervisor.PasswordChar = '\0';
             this.tbCodigoSupervisor.Radius = 5;
             this.tbCodigoSupervisor.SelectedText = "";
-            this.tbCodigoSupervisor.Size = new System.Drawing.Size(383, 30);
+            this.tbCodigoSupervisor.Size = new System.Drawing.Size(842, 36);
             this.tbCodigoSupervisor.TabIndex = 10;
             this.tbCodigoSupervisor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCodigoSupervisor_KeyPress);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(15, 352);
+            this.label6.Location = new System.Drawing.Point(13, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(214, 19);
+            this.label6.Size = new System.Drawing.Size(322, 28);
             this.label6.TabIndex = 11;
             this.label6.Text = "Supervisor de la actividad:";
             // 
@@ -191,13 +182,10 @@ namespace Presentation.ModalesFormulario
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(636, 400);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.tbCodigoSupervisor);
+            this.ClientSize = new System.Drawing.Size(885, 515);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lbNombreUsuarioActividades);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelRAHeader);
@@ -207,6 +195,8 @@ namespace Presentation.ModalesFormulario
             this.Text = "FinalizarTareasModal";
             this.panelRAHeader.ResumeLayout(false);
             this.panelRAHeader.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,7 +208,6 @@ namespace Presentation.ModalesFormulario
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbNombreUsuarioActividades;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

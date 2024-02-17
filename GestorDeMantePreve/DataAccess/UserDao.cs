@@ -2,7 +2,6 @@
 using System.Data;
 using System.Data.SqlClient;
 using Common.Cache;
-using System.Data;
 
 namespace DataAccess
 {
@@ -17,7 +16,6 @@ namespace DataAccess
         private int Id;
         private int Estatus;
         private int IdUsuario;
-
         //Funcion GET, SET
         public int Estatus1 { get => Estatus; set => Estatus = value; }
         public int Id1 { get => Id; set => Id = value; }
@@ -131,36 +129,5 @@ namespace DataAccess
             }
         }
         //Fin//
-
-
-        //Esta funcion obtiene el nombre del usuario y lo muestra en el modal//
-        public string ObtenerNombreUsuarioPorNumeroEmpleado(int numeroEmpleado)
-        {
-            try
-            {
-                using (var connection = AbrirConexion())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "SELECT NombreCompleto FROM Usuarios WHERE NumeroEmpleado = @NumeroEmpleado";
-                    command.Parameters.AddWithValue("@NumeroEmpleado", numeroEmpleado);
-                    command.CommandType = CommandType.Text;
-
-                    string nombreUsuario = command.ExecuteScalar()?.ToString();
-
-                    return nombreUsuario;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al obtener el nombre del usuario: " + ex.Message);
-                return string.Empty; // O manejar la excepción según tus necesidades
-            }
-            finally
-            {
-                CerrarConexion();
-            }
-        }
-        //Fin//
-
     }
 }

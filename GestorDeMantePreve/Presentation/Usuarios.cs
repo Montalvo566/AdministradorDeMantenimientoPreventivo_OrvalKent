@@ -18,12 +18,12 @@ namespace Presentation
         UserCrudModel userCrudTabla = new UserCrudModel();
         UserCrud crud = new UserCrud();
 
-
         public Usuarios()
         {
             InitializeComponent();
         }
         
+
         //Funcion para mostrar los datos de la tabla de usuarios//
         private void Usuarios_Load(object sender, EventArgs e)
         {
@@ -86,6 +86,9 @@ namespace Presentation
                 }
             }
         }
+        //Fin//
+
+
         //Funcion paara agregar registros a la tabla de usuarios//
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -264,7 +267,5 @@ namespace Presentation
             gtbNombreCompleto.KeyPress += new KeyPressEventHandler(SoloFormatoLetra);
         }
         //Fin//
-
-
     }
 }

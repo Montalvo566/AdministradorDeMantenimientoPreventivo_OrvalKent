@@ -13,6 +13,7 @@ using Domain;
 using DataAccess;
 using System.IO;
 using System.Drawing.Drawing2D;
+using Guna.UI.WinForms;
 
 namespace Presentation
 {
@@ -23,6 +24,11 @@ namespace Presentation
         private UserModel userModel;
         private KeyMessageFilter keyMessageFilter;
         private int numeroEmpleado;
+        public GunaTextBox CodigoBarrasTextBox
+        {
+            get { return tbCodigoBarras; }
+        }
+
 
         public MenuPrincipal()
         {
@@ -132,7 +138,6 @@ namespace Presentation
 
 
         //Funciones de diseño aplicada a los botones del menu lateral//
-
         //Menu Principal
         private void btnMenuPrincipal_Click(object sender, EventArgs e)
         {
@@ -334,7 +339,6 @@ namespace Presentation
                 codigoBarrasBuffer.Clear();
             }
         }
-
         private void MenuPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
             if (char.IsDigit((char)e.KeyCode))
@@ -419,9 +423,6 @@ namespace Presentation
                 }
             }
         }
-        //Fin//
-
-
         // Función para cambiar el estado de la actividad
         private void CambiarEstadoActividad(int idActividad)
         {
@@ -436,18 +437,8 @@ namespace Presentation
         //Funcion para abrir el modal en el cual se finalizara las tareas//
         private void btnFinalizarTareas_Click(object sender, EventArgs e)
         {
-            if (Int32.TryParse(tbCodigoBarras.Text, out int numeroEmpleado))
-            {
-                UserModel user = new UserModel();
-                string nombreUsuario = user.ObtenerNombreUsuarioPorNumeroEmpleado(numeroEmpleado);
-                ModalesFormulario.FinalizarTareasModal modal = new ModalesFormulario.FinalizarTareasModal(nombreUsuario);
-                modal.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("El usuario no ha realizado ninguna actividad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+            ModalesFormulario.FinalizarTareasModal modal = new ModalesFormulario.FinalizarTareasModal();
+            modal.ShowDialog();
         }
         //Fin//
 
@@ -465,8 +456,6 @@ namespace Presentation
         {
             tbCodigoBarras.KeyPress += new KeyPressEventHandler(SoloFormatoNumero);
         }
-
-        
         //Fin//
     }
 }

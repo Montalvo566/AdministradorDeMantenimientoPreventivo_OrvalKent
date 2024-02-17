@@ -436,6 +436,7 @@ namespace Presentation
             this.tbCodigoBarras.BorderColor = System.Drawing.Color.Silver;
             this.tbCodigoBarras.BorderSize = 0;
             this.tbCodigoBarras.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCodigoBarras.Enabled = false;
             this.tbCodigoBarras.FocusedBaseColor = System.Drawing.Color.White;
             this.tbCodigoBarras.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tbCodigoBarras.FocusedForeColor = System.Drawing.SystemColors.ControlText;
