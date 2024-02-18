@@ -47,19 +47,13 @@ namespace DataAccess
         {
             try
             {
-                using (var connection = conexion.AbrirConexion())
-                {
-                    command.Connection = connection;
+                    command.Connection = conexion.AbrirConexion();
                     command.CommandText = "SELECT IdPuesto FROM Usuarios WHERE NumeroEmpleado = @NumeroEmpleado";
                     command.Parameters.AddWithValue("@NumeroEmpleado", numeroEmpleado);
                     command.CommandType = CommandType.Text;
-
                     int puesto = Convert.ToInt32(command.ExecuteScalar());
-
                     Console.WriteLine("Puesto obtenido en UserDao: " + puesto);
-
                     return puesto;
-                }
             }
             catch (Exception ex)
             {
@@ -68,33 +62,58 @@ namespace DataAccess
             }
             finally
             {
-                conexion.CerrarConexion();
+                command.Connection = conexion.CerrarConexion();
             }
         }
         //Fin//
 
 
         //Funcion para hacer el regsitro del historial//
-        public void RegistrarEnHistorialEnRevision()
+        public void RegistrarEnHistorialEnRevision(int idUsuario)
         {
             try
             {
-                using (var connection = conexion.AbrirConexion())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "Sp_RegistrarHistorialActividades";
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.ExecuteNonQuery();
-                }
+                command.Connection = conexion.AbrirConexion();
+                command.CommandText = "Sp_RegistrarHistorialActividades";
+                command.CommandType = CommandType.StoredProcedure;
+
+                // Agregar el parámetro @IdUsuario
+                command.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                command.ExecuteNonQuery();
+                command.Parameters.Clear();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error al invocar el procedimiento almacenado para registrar en historial: " + ex.Message);
-                throw; // Lanza la excepción para que sea manejada en capas superiores
+                throw;
             }
             finally
             {
-                conexion.CerrarConexion();
+                command.Connection = conexion.CerrarConexion();
+            }
+        }
+        //Fin//
+
+
+        //Funcion para validar si hay actividades con el estado de "En revisión"//
+        public bool ActividadesEnRevision()
+        {
+            try
+            {
+                command.Connection = conexion.AbrirConexion();
+                command.CommandText = "SELECT COUNT(*) FROM Actividades WHERE Estatus = 3";
+                command.CommandType = CommandType.Text;
+                int cantidadActividadesEnRevision = Convert.ToInt32(command.ExecuteScalar());
+                return cantidadActividadesEnRevision > 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al verificar actividades en revisión: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                command.Connection = conexion.CerrarConexion();
             }
         }
         //Fin//

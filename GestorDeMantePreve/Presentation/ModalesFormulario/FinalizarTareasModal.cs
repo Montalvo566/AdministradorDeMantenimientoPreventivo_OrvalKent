@@ -41,20 +41,33 @@ namespace Presentation.ModalesFormulario
                     int puesto = historial.ObtenerPuestoPorNumeroEmpleado(numeroEmpleado);
                     if (puesto == UserPermissions.Supervisor)
                     {
-                        try
+                        // Verificar si hay actividades en revisión
+                        if (historial.ValidacionActividadesEnRevision())
                         {
-                            historial.RegistrarEnHistorialEnRevision();
+                            try
+                            {
+                                // Obtener el Id del usuario actual
+                                int idUsuario = UserLoginCache.Id;
 
-                            MessageBox.Show("Tareas finalizadas con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                // Llamar a la función de la capa de dominio pasando el Id del usuario
+                                historial.RegistrarEnHistorialEnRevision(idUsuario);
+
+                                MessageBox.Show("Tareas finalizadas con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error al intentar registrar en historial: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show("Error al intentar registrar en historial: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("No hay actividades en revisión", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("El usuario no tiene los permisos necesarios para realizar esta acción.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Usted no tiene los permisos necesarios para realizar esta acción.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                     tbCodigoSupervisor.Text = "";

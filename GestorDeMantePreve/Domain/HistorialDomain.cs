@@ -31,9 +31,7 @@ namespace Domain
             {
                 HistorialDataAccess userDao = new HistorialDataAccess();
                 int puesto = userDao.ObtenerPuestoPorNumeroEmpleado(numeroEmpleado);
-
                 Console.WriteLine("Puesto obtenido en HistorialDomain: " + puesto);
-
                 return puesto;
             }
             catch (Exception ex)
@@ -46,9 +44,27 @@ namespace Domain
 
 
         //Funcion para registrar el historial y cambiar el estado a terminado
-        public void RegistrarEnHistorialEnRevision()
+        public void RegistrarEnHistorialEnRevision(int idUsuario)
         {
-            userDao.RegistrarEnHistorialEnRevision();
+            userDao.RegistrarEnHistorialEnRevision(idUsuario);
+        }
+        //Fin//
+
+
+        //Funcion para validar si hay actividades en estado de "En revision"//
+        public bool ValidacionActividadesEnRevision()
+        {
+            HistorialDataAccess vaidacion = new HistorialDataAccess();
+            try
+            {
+                bool hayActividadesEnRevision = vaidacion.ActividadesEnRevision();
+                return hayActividadesEnRevision;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al verificar actividades en revisión: " + ex.Message);
+                return false;
+            }
         }
         //Fin//
     }
