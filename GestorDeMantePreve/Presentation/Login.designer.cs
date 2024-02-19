@@ -42,6 +42,7 @@ namespace Presentation
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbErrorInicioSesion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnMostrarContrasena = new FontAwesome.Sharp.IconButton();
             this.header1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +56,7 @@ namespace Presentation
             this.header1.Dock = System.Windows.Forms.DockStyle.Top;
             this.header1.Location = new System.Drawing.Point(0, 0);
             this.header1.Name = "header1";
-            this.header1.Size = new System.Drawing.Size(578, 29);
+            this.header1.Size = new System.Drawing.Size(578, 31);
             this.header1.TabIndex = 0;
             this.header1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.header1_MouseDown);
             // 
@@ -63,12 +64,12 @@ namespace Presentation
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 3);
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 24);
+            this.label1.Size = new System.Drawing.Size(170, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Inicio de Sesion";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
@@ -88,7 +89,7 @@ namespace Presentation
             this.btnMinVentana.IconSize = 25;
             this.btnMinVentana.Location = new System.Drawing.Point(498, 0);
             this.btnMinVentana.Name = "btnMinVentana";
-            this.btnMinVentana.Size = new System.Drawing.Size(40, 29);
+            this.btnMinVentana.Size = new System.Drawing.Size(40, 31);
             this.btnMinVentana.TabIndex = 1;
             this.btnMinVentana.UseVisualStyleBackColor = false;
             this.btnMinVentana.Click += new System.EventHandler(this.minVentana_Click);
@@ -100,6 +101,8 @@ namespace Presentation
             this.btnCerrarVentana.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrarVentana.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCerrarVentana.FlatAppearance.BorderSize = 0;
+            this.btnCerrarVentana.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnCerrarVentana.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCerrarVentana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarVentana.ForeColor = System.Drawing.Color.Blue;
             this.btnCerrarVentana.IconChar = FontAwesome.Sharp.IconChar.X;
@@ -108,7 +111,7 @@ namespace Presentation
             this.btnCerrarVentana.IconSize = 20;
             this.btnCerrarVentana.Location = new System.Drawing.Point(538, 0);
             this.btnCerrarVentana.Name = "btnCerrarVentana";
-            this.btnCerrarVentana.Size = new System.Drawing.Size(40, 29);
+            this.btnCerrarVentana.Size = new System.Drawing.Size(40, 31);
             this.btnCerrarVentana.TabIndex = 0;
             this.btnCerrarVentana.UseVisualStyleBackColor = false;
             this.btnCerrarVentana.Click += new System.EventHandler(this.cerrarVentana_Click);
@@ -163,7 +166,7 @@ namespace Presentation
             this.btnInicioSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicioSesion.FlatAppearance.BorderSize = 0;
             this.btnInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicioSesion.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicioSesion.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicioSesion.ForeColor = System.Drawing.Color.White;
             this.btnInicioSesion.Location = new System.Drawing.Point(43, 558);
             this.btnInicioSesion.Name = "btnInicioSesion";
@@ -187,11 +190,11 @@ namespace Presentation
             // 
             this.lbErrorInicioSesion.AutoSize = true;
             this.lbErrorInicioSesion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbErrorInicioSesion.Location = new System.Drawing.Point(192, 518);
+            this.lbErrorInicioSesion.Location = new System.Drawing.Point(134, 514);
             this.lbErrorInicioSesion.Name = "lbErrorInicioSesion";
-            this.lbErrorInicioSesion.Size = new System.Drawing.Size(186, 21);
+            this.lbErrorInicioSesion.Size = new System.Drawing.Size(291, 21);
             this.lbErrorInicioSesion.TabIndex = 11;
-            this.lbErrorInicioSesion.Text = "Error de inicio de sesion";
+            this.lbErrorInicioSesion.Text = "Datos incorrectos, ingreselos otraves";
             this.lbErrorInicioSesion.Visible = false;
             // 
             // pictureBox1
@@ -205,12 +208,30 @@ namespace Presentation
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
+            // btnMostrarContrasena
+            // 
+            this.btnMostrarContrasena.BackColor = System.Drawing.Color.White;
+            this.btnMostrarContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMostrarContrasena.FlatAppearance.BorderSize = 0;
+            this.btnMostrarContrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarContrasena.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.btnMostrarContrasena.IconColor = System.Drawing.Color.Black;
+            this.btnMostrarContrasena.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMostrarContrasena.IconSize = 35;
+            this.btnMostrarContrasena.Location = new System.Drawing.Point(498, 447);
+            this.btnMostrarContrasena.Name = "btnMostrarContrasena";
+            this.btnMostrarContrasena.Size = new System.Drawing.Size(35, 28);
+            this.btnMostrarContrasena.TabIndex = 12;
+            this.btnMostrarContrasena.UseVisualStyleBackColor = false;
+            this.btnMostrarContrasena.Click += new System.EventHandler(this.btnMostrarContrasena_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(578, 649);
+            this.Controls.Add(this.btnMostrarContrasena);
             this.Controls.Add(this.lbErrorInicioSesion);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnInicioSesion);
@@ -226,6 +247,7 @@ namespace Presentation
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de Sesión";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             this.header1.ResumeLayout(false);
             this.header1.PerformLayout();
@@ -249,6 +271,7 @@ namespace Presentation
         private System.Windows.Forms.Button btnInicioSesion;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbErrorInicioSesion;
+        private FontAwesome.Sharp.IconButton btnMostrarContrasena;
     }
 }
 

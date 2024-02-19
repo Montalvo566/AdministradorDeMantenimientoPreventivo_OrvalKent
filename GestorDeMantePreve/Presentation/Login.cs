@@ -73,12 +73,11 @@ namespace Presentation
                     UserModel user = new UserModel();
                     var loginValido = user.LoginUser(tbUsuario.Text, tbPassword.Text);
 
-                    //Validacion para abrir el menu principal y cerrar el login
                     if (loginValido == true)
                     {
                         MenuPrincipal menuPrincipal = new MenuPrincipal();
                         menuPrincipal.Show();
-                        menuPrincipal.FormClosed += cerrarSesion;//Sobrecargar el evento con la funcion de cerrar sesion
+                        menuPrincipal.FormClosed += cerrarSesion;
                         this.Hide();
                     }
                     else
@@ -98,7 +97,11 @@ namespace Presentation
                 errorMensajeLogin("Ingresa el correo electronico");
             }
         }
-        private void errorMensajeLogin(string mensaje)//Mensaje de campos vacios
+        //Fin//
+
+
+        //Mensajes de errores en los datos de entrada//
+        private void errorMensajeLogin(string mensaje)
         {
             lbErrorInicioSesion.Text = mensaje;
             lbErrorInicioSesion.Visible = true;
@@ -115,6 +118,18 @@ namespace Presentation
             this.Show();
         }
         //Fin//
-        
+
+
+        //Funcion para ocultar la contraseña y despues presionar un boton para mostrarla y volverla a ocultar//
+        private void btnMostrarContrasena_Click(object sender, EventArgs e)
+        {
+            tbPassword.UseSystemPasswordChar = !tbPassword.UseSystemPasswordChar;
+        }
+        private void Login_Load(object sender, EventArgs e)
+        {
+            tbPassword.PasswordChar = '*';
+        }
+        //Fin//
+
     }
 }
