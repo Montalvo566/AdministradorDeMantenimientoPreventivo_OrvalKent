@@ -28,6 +28,8 @@ namespace Presentation
         {
             get { return tbCodigoBarras; }
         }
+        private StringBuilder codigoBarrasBuffer = new StringBuilder();
+        private bool capturaCodigoBarrasHabilitada = true;
 
 
         public MenuPrincipal()
@@ -152,6 +154,7 @@ namespace Presentation
             }
 
             botonActivado(sender, RGBColors.color1);
+            capturaCodigoBarrasHabilitada = true;
             ocultarSubmenus();
             MostrarPantallaPrincipal();  
         }
@@ -165,6 +168,7 @@ namespace Presentation
         private void btnRegistros_Click(object sender, EventArgs e)
         {
             botonActivado(sender, RGBColors.color1);
+            capturaCodigoBarrasHabilitada = false;
             abrirFormularioHijo(new HistorialActividades());
             ocultarSubmenus();
         }
@@ -173,6 +177,7 @@ namespace Presentation
         private void btnActividades_Click(object sender, EventArgs e)
         {
             botonActivado(sender, RGBColors.color1);
+            capturaCodigoBarrasHabilitada = false;
             abrirFormularioHijo(new Actividades());
         }
 
@@ -180,6 +185,7 @@ namespace Presentation
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             botonActivado(sender, RGBColors.color1);
+            capturaCodigoBarrasHabilitada = false;
             abrirFormularioHijo(new Usuarios());
         }
 
@@ -187,6 +193,7 @@ namespace Presentation
         private void btnDepartamentos_Click(object sender, EventArgs e)
         {
             botonActivado(sender, RGBColors.color1);
+            capturaCodigoBarrasHabilitada = false;
             abrirFormularioHijo(new Departamentos());
         }
 
@@ -194,6 +201,7 @@ namespace Presentation
         private void btnEquipos_Click(object sender, EventArgs e)
         {
             botonActivado(sender, RGBColors.color1);
+            capturaCodigoBarrasHabilitada = false;
             abrirFormularioHijo(new Equipos());
         }
 
@@ -201,6 +209,7 @@ namespace Presentation
         private void btnAreas_Click(object sender, EventArgs e)
         {
             botonActivado(sender, RGBColors.color1);
+            capturaCodigoBarrasHabilitada = false;
             abrirFormularioHijo(new Areas());
         }
 
@@ -208,6 +217,7 @@ namespace Presentation
         private void btnTareasAsignadas_Click(object sender, EventArgs e)
         {
             botonActivado(sender, RGBColors.color1);
+            capturaCodigoBarrasHabilitada = false;
             abrirFormularioHijo(new TareasAsignadas());
             ocultarSubmenus();
         }
@@ -218,6 +228,7 @@ namespace Presentation
         private void btnMostrarCruds_Click(object sender, EventArgs e)
         {
             botonActivado(sender, RGBColors.color1);
+            capturaCodigoBarrasHabilitada = false;
             mostrarSubmenus(panelSeccionTareas);
         }
 
@@ -324,19 +335,22 @@ namespace Presentation
 
 
         // Evento KeyPress para manejar el escaneo del código de barras//
-        private StringBuilder codigoBarrasBuffer = new StringBuilder();
+        
         private void KeyMessageFilter_KeyPressed(object sender, KeyPressedEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar))
+            if (capturaCodigoBarrasHabilitada)
             {
-                codigoBarrasBuffer.Append(e.KeyChar);
-                tbCodigoBarras.Text = codigoBarrasBuffer.ToString();
-            }
-            else if (e.KeyChar == (char)Keys.Enter)
-            {
-                string codigoBarras = codigoBarrasBuffer.ToString();
-                ProcesarCodigoBarras(codigoBarras);
-                codigoBarrasBuffer.Clear();
+                if (char.IsDigit(e.KeyChar))
+                {
+                    codigoBarrasBuffer.Append(e.KeyChar);
+                    tbCodigoBarras.Text = codigoBarrasBuffer.ToString();
+                }
+                else if (e.KeyChar == (char)Keys.Enter)
+                {
+                    string codigoBarras = codigoBarrasBuffer.ToString();
+                    ProcesarCodigoBarras(codigoBarras);
+                    codigoBarrasBuffer.Clear();
+                }
             }
         }
         private void MenuPrincipal_KeyDown(object sender, KeyEventArgs e)
@@ -438,9 +452,20 @@ namespace Presentation
         private void btnFinalizarTareas_Click(object sender, EventArgs e)
         {
             ModalesFormulario.FinalizarTareasModal modal = new ModalesFormulario.FinalizarTareasModal();
+            modal.Owner = this;
+            capturaCodigoBarrasHabilitada = false;
             modal.ShowDialog();
         }
+        public void HabilitarCapturaCodigoBarras(bool habilitado)
+        {
+            capturaCodigoBarrasHabilitada = habilitado;
+        }
         //Fin//
+        public void RestaurarEnfoqueDespuesModal()
+        {
+            this.Activate();
+            this.Focus();
+        }
 
 
         //Validaciones de campos//

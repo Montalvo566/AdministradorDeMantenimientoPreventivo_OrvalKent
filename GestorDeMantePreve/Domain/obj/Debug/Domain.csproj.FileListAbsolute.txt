@@ -9,3 +9,14 @@ C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Domain\obj\Debug\Domain.pdb
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Domain\bin\Debug\Common.dll
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Domain\bin\Debug\Common.pdb
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Domain\bin\Debug\Domain.dll
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Domain\bin\Debug\Domain.pdb
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Domain\bin\Debug\Common.dll
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Domain\bin\Debug\DataAccess.dll
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Domain\bin\Debug\Common.pdb
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Domain\bin\Debug\DataAccess.pdb
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Domain\obj\Debug\Domain.csproj.AssemblyReference.cache
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Domain\obj\Debug\Domain.csproj.Up2Date
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Domain\obj\Debug\Domain.dll
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Domain\obj\Debug\Domain.pdb

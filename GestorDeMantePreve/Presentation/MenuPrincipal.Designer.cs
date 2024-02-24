@@ -87,9 +87,9 @@ namespace Presentation
             this.panelSeccionTareas.Controls.Add(this.btnUsuarios);
             this.panelSeccionTareas.Controls.Add(this.btnActividades);
             this.panelSeccionTareas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSeccionTareas.Location = new System.Drawing.Point(0, 380);
+            this.panelSeccionTareas.Location = new System.Drawing.Point(0, 395);
             this.panelSeccionTareas.Name = "panelSeccionTareas";
-            this.panelSeccionTareas.Size = new System.Drawing.Size(225, 315);
+            this.panelSeccionTareas.Size = new System.Drawing.Size(221, 315);
             this.panelSeccionTareas.TabIndex = 0;
             // 
             // btnAreas
@@ -109,7 +109,7 @@ namespace Presentation
             this.btnAreas.Location = new System.Drawing.Point(0, 240);
             this.btnAreas.Name = "btnAreas";
             this.btnAreas.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnAreas.Size = new System.Drawing.Size(225, 60);
+            this.btnAreas.Size = new System.Drawing.Size(221, 60);
             this.btnAreas.TabIndex = 6;
             this.btnAreas.Text = "Areas";
             this.btnAreas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -134,7 +134,7 @@ namespace Presentation
             this.btnEquipos.Location = new System.Drawing.Point(0, 180);
             this.btnEquipos.Name = "btnEquipos";
             this.btnEquipos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnEquipos.Size = new System.Drawing.Size(225, 60);
+            this.btnEquipos.Size = new System.Drawing.Size(221, 60);
             this.btnEquipos.TabIndex = 5;
             this.btnEquipos.Text = "Equipos";
             this.btnEquipos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,7 +159,7 @@ namespace Presentation
             this.btnDepartamentos.Location = new System.Drawing.Point(0, 120);
             this.btnDepartamentos.Name = "btnDepartamentos";
             this.btnDepartamentos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnDepartamentos.Size = new System.Drawing.Size(225, 60);
+            this.btnDepartamentos.Size = new System.Drawing.Size(221, 60);
             this.btnDepartamentos.TabIndex = 4;
             this.btnDepartamentos.Text = "Departamentos";
             this.btnDepartamentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -184,7 +184,7 @@ namespace Presentation
             this.btnUsuarios.Location = new System.Drawing.Point(0, 60);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnUsuarios.Size = new System.Drawing.Size(225, 60);
+            this.btnUsuarios.Size = new System.Drawing.Size(221, 60);
             this.btnUsuarios.TabIndex = 3;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -209,7 +209,7 @@ namespace Presentation
             this.btnActividades.Location = new System.Drawing.Point(0, 0);
             this.btnActividades.Name = "btnActividades";
             this.btnActividades.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnActividades.Size = new System.Drawing.Size(225, 60);
+            this.btnActividades.Size = new System.Drawing.Size(221, 60);
             this.btnActividades.TabIndex = 2;
             this.btnActividades.Text = "Actividades";
             this.btnActividades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,10 +231,10 @@ namespace Presentation
             this.btnMostrarCruds.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMostrarCruds.IconSize = 30;
             this.btnMostrarCruds.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMostrarCruds.Location = new System.Drawing.Point(0, 320);
+            this.btnMostrarCruds.Location = new System.Drawing.Point(0, 335);
             this.btnMostrarCruds.Name = "btnMostrarCruds";
             this.btnMostrarCruds.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMostrarCruds.Size = new System.Drawing.Size(225, 60);
+            this.btnMostrarCruds.Size = new System.Drawing.Size(221, 60);
             this.btnMostrarCruds.TabIndex = 6;
             this.btnMostrarCruds.Text = "Seccion de modulos";
             this.btnMostrarCruds.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -256,10 +256,10 @@ namespace Presentation
             this.btnTareasAsignadas.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnTareasAsignadas.IconSize = 30;
             this.btnTareasAsignadas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTareasAsignadas.Location = new System.Drawing.Point(0, 260);
+            this.btnTareasAsignadas.Location = new System.Drawing.Point(0, 275);
             this.btnTareasAsignadas.Name = "btnTareasAsignadas";
             this.btnTareasAsignadas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnTareasAsignadas.Size = new System.Drawing.Size(225, 60);
+            this.btnTareasAsignadas.Size = new System.Drawing.Size(221, 60);
             this.btnTareasAsignadas.TabIndex = 2;
             this.btnTareasAsignadas.Text = "Filtro Actividades";
             this.btnTareasAsignadas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -281,10 +281,10 @@ namespace Presentation
             this.btnRegistros.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRegistros.IconSize = 30;
             this.btnRegistros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistros.Location = new System.Drawing.Point(0, 200);
+            this.btnRegistros.Location = new System.Drawing.Point(0, 215);
             this.btnRegistros.Name = "btnRegistros";
             this.btnRegistros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnRegistros.Size = new System.Drawing.Size(225, 60);
+            this.btnRegistros.Size = new System.Drawing.Size(221, 60);
             this.btnRegistros.TabIndex = 5;
             this.btnRegistros.Text = "Historial Activdades";
             this.btnRegistros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -305,10 +305,10 @@ namespace Presentation
             this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarSesion.IconSize = 30;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 695);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 710);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCerrarSesion.Size = new System.Drawing.Size(225, 60);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(221, 60);
             this.btnCerrarSesion.TabIndex = 4;
             this.btnCerrarSesion.Text = "Cerrar Sesión";
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -330,10 +330,10 @@ namespace Presentation
             this.btnMenuPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMenuPrincipal.IconSize = 30;
             this.btnMenuPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuPrincipal.Location = new System.Drawing.Point(0, 140);
+            this.btnMenuPrincipal.Location = new System.Drawing.Point(0, 155);
             this.btnMenuPrincipal.Name = "btnMenuPrincipal";
             this.btnMenuPrincipal.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMenuPrincipal.Size = new System.Drawing.Size(225, 60);
+            this.btnMenuPrincipal.Size = new System.Drawing.Size(221, 60);
             this.btnMenuPrincipal.TabIndex = 1;
             this.btnMenuPrincipal.Text = "Menú Principal";
             this.btnMenuPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -348,7 +348,7 @@ namespace Presentation
             this.pLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pLogo.Location = new System.Drawing.Point(0, 0);
             this.pLogo.Name = "pLogo";
-            this.pLogo.Size = new System.Drawing.Size(225, 140);
+            this.pLogo.Size = new System.Drawing.Size(221, 155);
             this.pLogo.TabIndex = 0;
             // 
             // pbUsuario
@@ -357,7 +357,7 @@ namespace Presentation
             this.pbUsuario.Image = global::Presentation.Properties.Resources.Resers_Logo_Standard;
             this.pbUsuario.Location = new System.Drawing.Point(0, 0);
             this.pbUsuario.Name = "pbUsuario";
-            this.pbUsuario.Size = new System.Drawing.Size(225, 112);
+            this.pbUsuario.Size = new System.Drawing.Size(221, 124);
             this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbUsuario.TabIndex = 0;
             this.pbUsuario.TabStop = false;
@@ -365,11 +365,11 @@ namespace Presentation
             // lbNombreInicioSesion
             // 
             this.lbNombreInicioSesion.AutoSize = true;
-            this.lbNombreInicioSesion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombreInicioSesion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNombreInicioSesion.ForeColor = System.Drawing.Color.White;
-            this.lbNombreInicioSesion.Location = new System.Drawing.Point(7, 117);
+            this.lbNombreInicioSesion.Location = new System.Drawing.Point(7, 127);
             this.lbNombreInicioSesion.Name = "lbNombreInicioSesion";
-            this.lbNombreInicioSesion.Size = new System.Drawing.Size(135, 17);
+            this.lbNombreInicioSesion.Size = new System.Drawing.Size(151, 20);
             this.lbNombreInicioSesion.TabIndex = 1;
             this.lbNombreInicioSesion.Text = "Nombre del usuario";
             // 
@@ -410,7 +410,7 @@ namespace Presentation
             this.btnFinalizarTareas.OnHoverImage = null;
             this.btnFinalizarTareas.OnPressedColor = System.Drawing.Color.Transparent;
             this.btnFinalizarTareas.Radius = 5;
-            this.btnFinalizarTareas.Size = new System.Drawing.Size(217, 30);
+            this.btnFinalizarTareas.Size = new System.Drawing.Size(217, 35);
             this.btnFinalizarTareas.TabIndex = 4;
             this.btnFinalizarTareas.Text = "Finalizar las tareas";
             this.btnFinalizarTareas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -419,11 +419,12 @@ namespace Presentation
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(15, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 19);
+            this.label1.Size = new System.Drawing.Size(213, 22);
             this.label1.TabIndex = 3;
             this.label1.Text = "Numero de empleado:";
             // 
@@ -441,12 +442,12 @@ namespace Presentation
             this.tbCodigoBarras.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tbCodigoBarras.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tbCodigoBarras.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCodigoBarras.Location = new System.Drawing.Point(209, 15);
+            this.tbCodigoBarras.Location = new System.Drawing.Point(246, 15);
             this.tbCodigoBarras.Name = "tbCodigoBarras";
             this.tbCodigoBarras.PasswordChar = '\0';
             this.tbCodigoBarras.Radius = 5;
             this.tbCodigoBarras.SelectedText = "";
-            this.tbCodigoBarras.Size = new System.Drawing.Size(383, 30);
+            this.tbCodigoBarras.Size = new System.Drawing.Size(346, 35);
             this.tbCodigoBarras.TabIndex = 2;
             // 
             // dgvMostrarActividadesUsuarios
@@ -487,6 +488,7 @@ namespace Presentation
             this.dgvMostrarActividadesUsuarios.Name = "dgvMostrarActividadesUsuarios";
             this.dgvMostrarActividadesUsuarios.ReadOnly = true;
             this.dgvMostrarActividadesUsuarios.RowHeadersVisible = false;
+            this.dgvMostrarActividadesUsuarios.RowHeadersWidth = 51;
             this.dgvMostrarActividadesUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMostrarActividadesUsuarios.Size = new System.Drawing.Size(818, 549);
             this.dgvMostrarActividadesUsuarios.TabIndex = 1;
@@ -515,7 +517,7 @@ namespace Presentation
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1069, 613);
             this.Controls.Add(this.panelFormularioHijo);

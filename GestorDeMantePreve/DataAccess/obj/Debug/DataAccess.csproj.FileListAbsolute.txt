@@ -7,3 +7,12 @@ C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\DataAccess\bin\Debug\Common.dll
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\DataAccess\bin\Debug\Common.pdb
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\DataAccess\bin\Debug\Common.dll
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\DataAccess\bin\Debug\Common.pdb
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\DataAccess\obj\Debug\DataAccess.csproj.Up2Date
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\DataAccess\obj\Debug\DataAccess.pdb

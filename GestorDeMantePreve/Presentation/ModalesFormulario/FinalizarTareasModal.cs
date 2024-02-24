@@ -25,7 +25,13 @@ namespace Presentation.ModalesFormulario
         //Funcion para cerrar la ventana//
         private void btnCerrarModal_Click(object sender, EventArgs e)
         {
+            MenuPrincipal formularioPrincipal = this.Owner as MenuPrincipal;
+            if (formularioPrincipal != null)
+            {
+                formularioPrincipal.HabilitarCapturaCodigoBarras(true);
+            }
             this.Close();
+
         }
         //Fin//
 
@@ -41,18 +47,19 @@ namespace Presentation.ModalesFormulario
                     int puesto = historial.ObtenerPuestoPorNumeroEmpleado(numeroEmpleado);
                     if (puesto == UserPermissions.Supervisor)
                     {
-                        // Verificar si hay actividades en revisión
                         if (historial.ValidacionActividadesEnRevision())
                         {
                             try
                             {
-                                // Obtener el Id del usuario actual
                                 int idUsuario = UserLoginCache.Id;
-
-                                // Llamar a la función de la capa de dominio pasando el Id del usuario
                                 historial.RegistrarEnHistorialEnRevision(idUsuario);
-
                                 MessageBox.Show("Tareas finalizadas con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                                MenuPrincipal formularioPrincipal = this.Owner as MenuPrincipal;
+                                if (formularioPrincipal != null)
+                                {
+                                    formularioPrincipal.HabilitarCapturaCodigoBarras(true);
+                                }
                                 this.Close();
                             }
                             catch (Exception ex)
