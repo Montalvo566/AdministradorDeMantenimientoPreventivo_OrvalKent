@@ -33,6 +33,7 @@ namespace Presentation
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Equipos));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAbriModalEdit = new Guna.UI.WinForms.GunaButton();
@@ -63,8 +64,9 @@ namespace Presentation
             this.panel1.Controls.Add(this.panelCrudUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(827, 229);
+            this.panel1.Size = new System.Drawing.Size(1103, 282);
             this.panel1.TabIndex = 5;
             // 
             // panel3
@@ -73,9 +75,10 @@ namespace Presentation
             this.panel3.Controls.Add(this.btnEliminar);
             this.panel3.Controls.Add(this.btnNuevo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(674, 0);
+            this.panel3.Location = new System.Drawing.Point(899, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(153, 229);
+            this.panel3.Size = new System.Drawing.Size(204, 282);
             this.panel3.TabIndex = 19;
             // 
             // btnAbriModalEdit
@@ -92,7 +95,8 @@ namespace Presentation
             this.btnAbriModalEdit.ForeColor = System.Drawing.Color.White;
             this.btnAbriModalEdit.Image = null;
             this.btnAbriModalEdit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAbriModalEdit.Location = new System.Drawing.Point(3, 85);
+            this.btnAbriModalEdit.Location = new System.Drawing.Point(4, 105);
+            this.btnAbriModalEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAbriModalEdit.Name = "btnAbriModalEdit";
             this.btnAbriModalEdit.OnHoverBaseColor = System.Drawing.Color.Blue;
             this.btnAbriModalEdit.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -100,7 +104,7 @@ namespace Presentation
             this.btnAbriModalEdit.OnHoverImage = null;
             this.btnAbriModalEdit.OnPressedColor = System.Drawing.Color.Transparent;
             this.btnAbriModalEdit.Radius = 10;
-            this.btnAbriModalEdit.Size = new System.Drawing.Size(138, 62);
+            this.btnAbriModalEdit.Size = new System.Drawing.Size(184, 76);
             this.btnAbriModalEdit.TabIndex = 3;
             this.btnAbriModalEdit.Text = "Editar";
             this.btnAbriModalEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -120,7 +124,8 @@ namespace Presentation
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = null;
             this.btnEliminar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEliminar.Location = new System.Drawing.Point(3, 159);
+            this.btnEliminar.Location = new System.Drawing.Point(4, 196);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.OnHoverBaseColor = System.Drawing.Color.Red;
             this.btnEliminar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -128,7 +133,7 @@ namespace Presentation
             this.btnEliminar.OnHoverImage = null;
             this.btnEliminar.OnPressedColor = System.Drawing.Color.Transparent;
             this.btnEliminar.Radius = 10;
-            this.btnEliminar.Size = new System.Drawing.Size(138, 62);
+            this.btnEliminar.Size = new System.Drawing.Size(184, 76);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -148,7 +153,8 @@ namespace Presentation
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
             this.btnNuevo.Image = null;
             this.btnNuevo.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnNuevo.Location = new System.Drawing.Point(3, 14);
+            this.btnNuevo.Location = new System.Drawing.Point(4, 17);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnNuevo.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -156,7 +162,7 @@ namespace Presentation
             this.btnNuevo.OnHoverImage = null;
             this.btnNuevo.OnPressedColor = System.Drawing.Color.Transparent;
             this.btnNuevo.Radius = 10;
-            this.btnNuevo.Size = new System.Drawing.Size(138, 62);
+            this.btnNuevo.Size = new System.Drawing.Size(184, 76);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -173,8 +179,9 @@ namespace Presentation
             this.panelCrudUser.Controls.Add(this.label1);
             this.panelCrudUser.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelCrudUser.Location = new System.Drawing.Point(0, 0);
+            this.panelCrudUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelCrudUser.Name = "panelCrudUser";
-            this.panelCrudUser.Size = new System.Drawing.Size(666, 229);
+            this.panelCrudUser.Size = new System.Drawing.Size(888, 282);
             this.panelCrudUser.TabIndex = 20;
             // 
             // label3
@@ -183,9 +190,10 @@ namespace Presentation
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(361, 65);
+            this.label3.Location = new System.Drawing.Point(481, 80);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 20);
+            this.label3.Size = new System.Drawing.Size(188, 22);
             this.label3.TabIndex = 13;
             this.label3.Text = "Numero de equipo:";
             // 
@@ -200,12 +208,13 @@ namespace Presentation
             this.gtbNumeroEquipo.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gtbNumeroEquipo.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gtbNumeroEquipo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gtbNumeroEquipo.Location = new System.Drawing.Point(354, 88);
+            this.gtbNumeroEquipo.Location = new System.Drawing.Point(472, 108);
+            this.gtbNumeroEquipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gtbNumeroEquipo.Name = "gtbNumeroEquipo";
             this.gtbNumeroEquipo.PasswordChar = '\0';
             this.gtbNumeroEquipo.Radius = 5;
             this.gtbNumeroEquipo.SelectedText = "";
-            this.gtbNumeroEquipo.Size = new System.Drawing.Size(309, 30);
+            this.gtbNumeroEquipo.Size = new System.Drawing.Size(412, 41);
             this.gtbNumeroEquipo.TabIndex = 12;
             // 
             // gcmbArea
@@ -220,12 +229,13 @@ namespace Presentation
             this.gcmbArea.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.gcmbArea.ForeColor = System.Drawing.Color.Black;
             this.gcmbArea.FormattingEnabled = true;
-            this.gcmbArea.Location = new System.Drawing.Point(17, 168);
+            this.gcmbArea.Location = new System.Drawing.Point(23, 207);
+            this.gcmbArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gcmbArea.Name = "gcmbArea";
             this.gcmbArea.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gcmbArea.OnHoverItemForeColor = System.Drawing.Color.White;
             this.gcmbArea.Radius = 5;
-            this.gcmbArea.Size = new System.Drawing.Size(309, 27);
+            this.gcmbArea.Size = new System.Drawing.Size(411, 31);
             this.gcmbArea.TabIndex = 11;
             // 
             // label6
@@ -234,9 +244,10 @@ namespace Presentation
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(23, 145);
+            this.label6.Location = new System.Drawing.Point(31, 178);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 20);
+            this.label6.Size = new System.Drawing.Size(61, 22);
             this.label6.TabIndex = 10;
             this.label6.Text = "Area:";
             // 
@@ -251,12 +262,13 @@ namespace Presentation
             this.gtbEquipo.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gtbEquipo.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gtbEquipo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gtbEquipo.Location = new System.Drawing.Point(17, 88);
+            this.gtbEquipo.Location = new System.Drawing.Point(23, 108);
+            this.gtbEquipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gtbEquipo.Name = "gtbEquipo";
             this.gtbEquipo.PasswordChar = '\0';
             this.gtbEquipo.Radius = 5;
             this.gtbEquipo.SelectedText = "";
-            this.gtbEquipo.Size = new System.Drawing.Size(309, 30);
+            this.gtbEquipo.Size = new System.Drawing.Size(412, 41);
             this.gtbEquipo.TabIndex = 7;
             // 
             // label4
@@ -265,9 +277,10 @@ namespace Presentation
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(23, 65);
+            this.label4.Location = new System.Drawing.Point(31, 80);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 20);
+            this.label4.Size = new System.Drawing.Size(78, 22);
             this.label4.TabIndex = 6;
             this.label4.Text = "Equipo:";
             // 
@@ -277,9 +290,10 @@ namespace Presentation
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(16, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 23);
+            this.label1.Size = new System.Drawing.Size(206, 28);
             this.label1.TabIndex = 3;
             this.label1.Text = "Agregar Equipos";
             // 
@@ -288,9 +302,10 @@ namespace Presentation
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 229);
+            this.panel2.Location = new System.Drawing.Point(0, 282);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(827, 36);
+            this.panel2.Size = new System.Drawing.Size(1103, 44);
             this.panel2.TabIndex = 6;
             // 
             // label2
@@ -299,9 +314,10 @@ namespace Presentation
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 6);
+            this.label2.Location = new System.Drawing.Point(17, 7);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 23);
+            this.label2.Size = new System.Drawing.Size(214, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tabla de equipos";
             // 
@@ -339,7 +355,8 @@ namespace Presentation
             this.dgvEquiposTabla.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEquiposTabla.EnableHeadersVisualStyles = false;
             this.dgvEquiposTabla.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvEquiposTabla.Location = new System.Drawing.Point(16, 271);
+            this.dgvEquiposTabla.Location = new System.Drawing.Point(21, 334);
+            this.dgvEquiposTabla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvEquiposTabla.MultiSelect = false;
             this.dgvEquiposTabla.Name = "dgvEquiposTabla";
             this.dgvEquiposTabla.ReadOnly = true;
@@ -352,12 +369,13 @@ namespace Presentation
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEquiposTabla.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvEquiposTabla.RowHeadersVisible = false;
+            this.dgvEquiposTabla.RowHeadersWidth = 51;
             this.dgvEquiposTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEquiposTabla.ShowCellErrors = false;
             this.dgvEquiposTabla.ShowCellToolTips = false;
             this.dgvEquiposTabla.ShowEditingIcon = false;
             this.dgvEquiposTabla.ShowRowErrors = false;
-            this.dgvEquiposTabla.Size = new System.Drawing.Size(795, 330);
+            this.dgvEquiposTabla.Size = new System.Drawing.Size(1060, 406);
             this.dgvEquiposTabla.TabIndex = 7;
             this.dgvEquiposTabla.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvEquiposTabla.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -384,14 +402,16 @@ namespace Presentation
             // 
             // Equipos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(827, 613);
+            this.ClientSize = new System.Drawing.Size(1103, 754);
             this.Controls.Add(this.dgvEquiposTabla);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Equipos";
             this.Text = "Equipos";
             this.Load += new System.EventHandler(this.Equipos_Load);

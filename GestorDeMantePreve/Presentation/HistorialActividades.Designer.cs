@@ -32,6 +32,7 @@ namespace Presentation
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistorialActividades));
             this.panelRAHeader = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.gdgvHistorialActividades = new Guna.UI.WinForms.GunaDataGridView();
@@ -46,8 +47,9 @@ namespace Presentation
             this.panelRAHeader.Controls.Add(this.label1);
             this.panelRAHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRAHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelRAHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelRAHeader.Name = "panelRAHeader";
-            this.panelRAHeader.Size = new System.Drawing.Size(827, 54);
+            this.panelRAHeader.Size = new System.Drawing.Size(1103, 66);
             this.panelRAHeader.TabIndex = 0;
             // 
             // label1
@@ -56,9 +58,10 @@ namespace Presentation
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 14);
+            this.label1.Location = new System.Drawing.Point(16, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(369, 25);
+            this.label1.Size = new System.Drawing.Size(473, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "Historial de actividades terminadas";
             // 
@@ -66,7 +69,7 @@ namespace Presentation
             // 
             this.gdgvHistorialActividades.AllowUserToAddRows = false;
             this.gdgvHistorialActividades.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.gdgvHistorialActividades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gdgvHistorialActividades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gdgvHistorialActividades.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
@@ -83,7 +86,7 @@ namespace Presentation
             this.gdgvHistorialActividades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gdgvHistorialActividades.ColumnHeadersHeight = 4;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -93,12 +96,14 @@ namespace Presentation
             this.gdgvHistorialActividades.Dock = System.Windows.Forms.DockStyle.Top;
             this.gdgvHistorialActividades.EnableHeadersVisualStyles = false;
             this.gdgvHistorialActividades.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.gdgvHistorialActividades.Location = new System.Drawing.Point(0, 54);
+            this.gdgvHistorialActividades.Location = new System.Drawing.Point(0, 66);
+            this.gdgvHistorialActividades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gdgvHistorialActividades.Name = "gdgvHistorialActividades";
             this.gdgvHistorialActividades.ReadOnly = true;
             this.gdgvHistorialActividades.RowHeadersVisible = false;
+            this.gdgvHistorialActividades.RowHeadersWidth = 51;
             this.gdgvHistorialActividades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gdgvHistorialActividades.Size = new System.Drawing.Size(827, 535);
+            this.gdgvHistorialActividades.Size = new System.Drawing.Size(1103, 658);
             this.gdgvHistorialActividades.TabIndex = 0;
             this.gdgvHistorialActividades.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.gdgvHistorialActividades.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -127,21 +132,24 @@ namespace Presentation
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 595);
+            this.panel1.Location = new System.Drawing.Point(0, 732);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(827, 18);
+            this.panel1.Size = new System.Drawing.Size(1103, 22);
             this.panel1.TabIndex = 1;
             // 
             // HistorialActividades
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(827, 613);
+            this.ClientSize = new System.Drawing.Size(1103, 754);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gdgvHistorialActividades);
             this.Controls.Add(this.panelRAHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HistorialActividades";
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.HistorialActividades_Load);

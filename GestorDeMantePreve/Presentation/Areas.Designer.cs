@@ -33,6 +33,7 @@ namespace Presentation
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Areas));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAbriModalEdit = new Guna.UI.WinForms.GunaButton();
@@ -61,8 +62,9 @@ namespace Presentation
             this.panel1.Controls.Add(this.panelCrudUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(827, 229);
+            this.panel1.Size = new System.Drawing.Size(1103, 282);
             this.panel1.TabIndex = 5;
             // 
             // panel3
@@ -71,9 +73,10 @@ namespace Presentation
             this.panel3.Controls.Add(this.btnEliminar);
             this.panel3.Controls.Add(this.btnNuevo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(674, 0);
+            this.panel3.Location = new System.Drawing.Point(899, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(153, 229);
+            this.panel3.Size = new System.Drawing.Size(204, 282);
             this.panel3.TabIndex = 19;
             // 
             // btnAbriModalEdit
@@ -90,7 +93,8 @@ namespace Presentation
             this.btnAbriModalEdit.ForeColor = System.Drawing.Color.White;
             this.btnAbriModalEdit.Image = null;
             this.btnAbriModalEdit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAbriModalEdit.Location = new System.Drawing.Point(3, 85);
+            this.btnAbriModalEdit.Location = new System.Drawing.Point(4, 105);
+            this.btnAbriModalEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAbriModalEdit.Name = "btnAbriModalEdit";
             this.btnAbriModalEdit.OnHoverBaseColor = System.Drawing.Color.Blue;
             this.btnAbriModalEdit.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -98,7 +102,7 @@ namespace Presentation
             this.btnAbriModalEdit.OnHoverImage = null;
             this.btnAbriModalEdit.OnPressedColor = System.Drawing.Color.Transparent;
             this.btnAbriModalEdit.Radius = 10;
-            this.btnAbriModalEdit.Size = new System.Drawing.Size(138, 62);
+            this.btnAbriModalEdit.Size = new System.Drawing.Size(184, 76);
             this.btnAbriModalEdit.TabIndex = 3;
             this.btnAbriModalEdit.Text = "Editar";
             this.btnAbriModalEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -118,7 +122,8 @@ namespace Presentation
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = null;
             this.btnEliminar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEliminar.Location = new System.Drawing.Point(3, 159);
+            this.btnEliminar.Location = new System.Drawing.Point(4, 196);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.OnHoverBaseColor = System.Drawing.Color.Red;
             this.btnEliminar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -126,7 +131,7 @@ namespace Presentation
             this.btnEliminar.OnHoverImage = null;
             this.btnEliminar.OnPressedColor = System.Drawing.Color.Transparent;
             this.btnEliminar.Radius = 10;
-            this.btnEliminar.Size = new System.Drawing.Size(138, 62);
+            this.btnEliminar.Size = new System.Drawing.Size(184, 76);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -146,7 +151,8 @@ namespace Presentation
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
             this.btnNuevo.Image = null;
             this.btnNuevo.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnNuevo.Location = new System.Drawing.Point(3, 14);
+            this.btnNuevo.Location = new System.Drawing.Point(4, 17);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnNuevo.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -154,7 +160,7 @@ namespace Presentation
             this.btnNuevo.OnHoverImage = null;
             this.btnNuevo.OnPressedColor = System.Drawing.Color.Transparent;
             this.btnNuevo.Radius = 10;
-            this.btnNuevo.Size = new System.Drawing.Size(138, 62);
+            this.btnNuevo.Size = new System.Drawing.Size(184, 76);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -169,8 +175,9 @@ namespace Presentation
             this.panelCrudUser.Controls.Add(this.label1);
             this.panelCrudUser.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelCrudUser.Location = new System.Drawing.Point(0, 0);
+            this.panelCrudUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelCrudUser.Name = "panelCrudUser";
-            this.panelCrudUser.Size = new System.Drawing.Size(666, 229);
+            this.panelCrudUser.Size = new System.Drawing.Size(888, 282);
             this.panelCrudUser.TabIndex = 20;
             // 
             // gcmbDepartamento
@@ -185,12 +192,13 @@ namespace Presentation
             this.gcmbDepartamento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.gcmbDepartamento.ForeColor = System.Drawing.Color.Black;
             this.gcmbDepartamento.FormattingEnabled = true;
-            this.gcmbDepartamento.Location = new System.Drawing.Point(354, 88);
+            this.gcmbDepartamento.Location = new System.Drawing.Point(472, 108);
+            this.gcmbDepartamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gcmbDepartamento.Name = "gcmbDepartamento";
             this.gcmbDepartamento.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gcmbDepartamento.OnHoverItemForeColor = System.Drawing.Color.White;
             this.gcmbDepartamento.Radius = 5;
-            this.gcmbDepartamento.Size = new System.Drawing.Size(309, 27);
+            this.gcmbDepartamento.Size = new System.Drawing.Size(411, 31);
             this.gcmbDepartamento.TabIndex = 11;
             // 
             // label6
@@ -199,9 +207,10 @@ namespace Presentation
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(360, 65);
+            this.label6.Location = new System.Drawing.Point(480, 80);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 20);
+            this.label6.Size = new System.Drawing.Size(153, 22);
             this.label6.TabIndex = 10;
             this.label6.Text = "Departamento:";
             // 
@@ -216,12 +225,13 @@ namespace Presentation
             this.gtbArea.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gtbArea.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gtbArea.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gtbArea.Location = new System.Drawing.Point(17, 88);
+            this.gtbArea.Location = new System.Drawing.Point(23, 108);
+            this.gtbArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gtbArea.Name = "gtbArea";
             this.gtbArea.PasswordChar = '\0';
             this.gtbArea.Radius = 5;
             this.gtbArea.SelectedText = "";
-            this.gtbArea.Size = new System.Drawing.Size(309, 30);
+            this.gtbArea.Size = new System.Drawing.Size(412, 41);
             this.gtbArea.TabIndex = 7;
             // 
             // label4
@@ -230,9 +240,10 @@ namespace Presentation
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(23, 65);
+            this.label4.Location = new System.Drawing.Point(31, 80);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 20);
+            this.label4.Size = new System.Drawing.Size(61, 22);
             this.label4.TabIndex = 6;
             this.label4.Text = "Area:";
             // 
@@ -242,9 +253,10 @@ namespace Presentation
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(16, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 23);
+            this.label1.Size = new System.Drawing.Size(184, 28);
             this.label1.TabIndex = 3;
             this.label1.Text = "Agregar Areas";
             // 
@@ -253,9 +265,10 @@ namespace Presentation
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 229);
+            this.panel2.Location = new System.Drawing.Point(0, 282);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(827, 36);
+            this.panel2.Size = new System.Drawing.Size(1103, 44);
             this.panel2.TabIndex = 6;
             // 
             // label2
@@ -264,9 +277,10 @@ namespace Presentation
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 6);
+            this.label2.Location = new System.Drawing.Point(17, 7);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 23);
+            this.label2.Size = new System.Drawing.Size(187, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tabla de areas";
             // 
@@ -304,7 +318,8 @@ namespace Presentation
             this.dgvAreasTabla.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAreasTabla.EnableHeadersVisualStyles = false;
             this.dgvAreasTabla.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAreasTabla.Location = new System.Drawing.Point(17, 271);
+            this.dgvAreasTabla.Location = new System.Drawing.Point(23, 334);
+            this.dgvAreasTabla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvAreasTabla.MultiSelect = false;
             this.dgvAreasTabla.Name = "dgvAreasTabla";
             this.dgvAreasTabla.ReadOnly = true;
@@ -317,12 +332,13 @@ namespace Presentation
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAreasTabla.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAreasTabla.RowHeadersVisible = false;
+            this.dgvAreasTabla.RowHeadersWidth = 51;
             this.dgvAreasTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAreasTabla.ShowCellErrors = false;
             this.dgvAreasTabla.ShowCellToolTips = false;
             this.dgvAreasTabla.ShowEditingIcon = false;
             this.dgvAreasTabla.ShowRowErrors = false;
-            this.dgvAreasTabla.Size = new System.Drawing.Size(795, 330);
+            this.dgvAreasTabla.Size = new System.Drawing.Size(1060, 406);
             this.dgvAreasTabla.TabIndex = 7;
             this.dgvAreasTabla.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvAreasTabla.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -349,14 +365,16 @@ namespace Presentation
             // 
             // Areas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(827, 613);
+            this.ClientSize = new System.Drawing.Size(1103, 754);
             this.Controls.Add(this.dgvAreasTabla);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Areas";
             this.Text = "Areas";
             this.Load += new System.EventHandler(this.Areas_Load);

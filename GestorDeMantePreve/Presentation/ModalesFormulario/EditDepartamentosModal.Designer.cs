@@ -29,6 +29,7 @@ namespace Presentation.ModalesFormulario
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditDepartamentosModal));
             this.panelCrudUser = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,8 +51,9 @@ namespace Presentation.ModalesFormulario
             this.panelCrudUser.Controls.Add(this.label4);
             this.panelCrudUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCrudUser.Location = new System.Drawing.Point(0, 0);
+            this.panelCrudUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelCrudUser.Name = "panelCrudUser";
-            this.panelCrudUser.Size = new System.Drawing.Size(554, 249);
+            this.panelCrudUser.Size = new System.Drawing.Size(739, 306);
             this.panelCrudUser.TabIndex = 24;
             // 
             // label2
@@ -60,9 +62,10 @@ namespace Presentation.ModalesFormulario
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Location = new System.Drawing.Point(16, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(211, 23);
+            this.label2.Size = new System.Drawing.Size(264, 28);
             this.label2.TabIndex = 21;
             this.label2.Text = "Editar Departamentos";
             // 
@@ -72,9 +75,10 @@ namespace Presentation.ModalesFormulario
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, -316);
+            this.label1.Location = new System.Drawing.Point(16, -389);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 23);
+            this.label1.Size = new System.Drawing.Size(173, 28);
             this.label1.TabIndex = 20;
             this.label1.Text = "EditarUsuarios";
             // 
@@ -89,12 +93,13 @@ namespace Presentation.ModalesFormulario
             this.gtbDepartamento.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gtbDepartamento.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gtbDepartamento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gtbDepartamento.Location = new System.Drawing.Point(16, 87);
+            this.gtbDepartamento.Location = new System.Drawing.Point(21, 107);
+            this.gtbDepartamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gtbDepartamento.Name = "gtbDepartamento";
             this.gtbDepartamento.PasswordChar = '\0';
             this.gtbDepartamento.Radius = 5;
             this.gtbDepartamento.SelectedText = "";
-            this.gtbDepartamento.Size = new System.Drawing.Size(523, 30);
+            this.gtbDepartamento.Size = new System.Drawing.Size(697, 41);
             this.gtbDepartamento.TabIndex = 7;
             // 
             // label4
@@ -103,9 +108,10 @@ namespace Presentation.ModalesFormulario
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(12, 63);
+            this.label4.Location = new System.Drawing.Point(16, 78);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 21);
+            this.label4.Size = new System.Drawing.Size(162, 23);
             this.label4.TabIndex = 6;
             this.label4.Text = "Departamento:";
             // 
@@ -114,9 +120,10 @@ namespace Presentation.ModalesFormulario
             this.panel3.Controls.Add(this.btnCancelar);
             this.panel3.Controls.Add(this.gbtnEditar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 249);
+            this.panel3.Location = new System.Drawing.Point(0, 306);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(554, 97);
+            this.panel3.Size = new System.Drawing.Size(739, 119);
             this.panel3.TabIndex = 26;
             // 
             // btnCancelar
@@ -133,7 +140,8 @@ namespace Presentation.ModalesFormulario
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Image = null;
             this.btnCancelar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnCancelar.Location = new System.Drawing.Point(294, 24);
+            this.btnCancelar.Location = new System.Drawing.Point(392, 30);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.OnHoverBaseColor = System.Drawing.Color.Red;
             this.btnCancelar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -141,7 +149,7 @@ namespace Presentation.ModalesFormulario
             this.btnCancelar.OnHoverImage = null;
             this.btnCancelar.OnPressedColor = System.Drawing.Color.Transparent;
             this.btnCancelar.Radius = 10;
-            this.btnCancelar.Size = new System.Drawing.Size(245, 62);
+            this.btnCancelar.Size = new System.Drawing.Size(327, 76);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -161,7 +169,8 @@ namespace Presentation.ModalesFormulario
             this.gbtnEditar.ForeColor = System.Drawing.Color.White;
             this.gbtnEditar.Image = null;
             this.gbtnEditar.ImageSize = new System.Drawing.Size(20, 20);
-            this.gbtnEditar.Location = new System.Drawing.Point(16, 24);
+            this.gbtnEditar.Location = new System.Drawing.Point(21, 30);
+            this.gbtnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbtnEditar.Name = "gbtnEditar";
             this.gbtnEditar.OnHoverBaseColor = System.Drawing.Color.Blue;
             this.gbtnEditar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -169,7 +178,7 @@ namespace Presentation.ModalesFormulario
             this.gbtnEditar.OnHoverImage = null;
             this.gbtnEditar.OnPressedColor = System.Drawing.Color.Transparent;
             this.gbtnEditar.Radius = 10;
-            this.gbtnEditar.Size = new System.Drawing.Size(245, 62);
+            this.gbtnEditar.Size = new System.Drawing.Size(327, 76);
             this.gbtnEditar.TabIndex = 2;
             this.gbtnEditar.Text = "Editar";
             this.gbtnEditar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -177,13 +186,15 @@ namespace Presentation.ModalesFormulario
             // 
             // EditDepartamentosModal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(554, 356);
+            this.ClientSize = new System.Drawing.Size(739, 438);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelCrudUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EditDepartamentosModal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditDepartamentosModal";

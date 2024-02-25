@@ -354,7 +354,7 @@ namespace Presentation
             // pbUsuario
             // 
             this.pbUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pbUsuario.Image = global::Presentation.Properties.Resources.Resers_Logo_Standard;
+            this.pbUsuario.Image = global::Presentation.Properties.Resources.UserDeafault;
             this.pbUsuario.Location = new System.Drawing.Point(0, 0);
             this.pbUsuario.Name = "pbUsuario";
             this.pbUsuario.Size = new System.Drawing.Size(221, 124);

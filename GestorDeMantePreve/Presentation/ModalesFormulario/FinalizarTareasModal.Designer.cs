@@ -30,15 +30,16 @@ namespace Presentation.ModalesFormulario
         private void InitializeComponent()
         {
             FontAwesome.Sharp.IconButton btnCerrarModal;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinalizarTareasModal));
             this.panelRAHeader = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbCodigoSupervisor = new Guna.UI.WinForms.GunaTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.tbCodigoSupervisor = new Guna.UI.WinForms.GunaTextBox();
-            this.label6 = new System.Windows.Forms.Label();
             btnCerrarModal = new FontAwesome.Sharp.IconButton();
             this.panelRAHeader.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -59,9 +60,10 @@ namespace Presentation.ModalesFormulario
             btnCerrarModal.IconColor = System.Drawing.Color.White;
             btnCerrarModal.IconFont = FontAwesome.Sharp.IconFont.Solid;
             btnCerrarModal.IconSize = 55;
-            btnCerrarModal.Location = new System.Drawing.Point(812, 0);
+            btnCerrarModal.Location = new System.Drawing.Point(1083, 0);
+            btnCerrarModal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btnCerrarModal.Name = "btnCerrarModal";
-            btnCerrarModal.Size = new System.Drawing.Size(73, 60);
+            btnCerrarModal.Size = new System.Drawing.Size(97, 74);
             btnCerrarModal.TabIndex = 5;
             btnCerrarModal.UseVisualStyleBackColor = false;
             btnCerrarModal.Click += new System.EventHandler(this.btnCerrarModal_Click);
@@ -73,8 +75,9 @@ namespace Presentation.ModalesFormulario
             this.panelRAHeader.Controls.Add(this.label1);
             this.panelRAHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRAHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelRAHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelRAHeader.Name = "panelRAHeader";
-            this.panelRAHeader.Size = new System.Drawing.Size(885, 60);
+            this.panelRAHeader.Size = new System.Drawing.Size(1180, 74);
             this.panelRAHeader.TabIndex = 2;
             // 
             // label1
@@ -83,9 +86,10 @@ namespace Presentation.ModalesFormulario
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(16, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 28);
+            this.label1.Size = new System.Drawing.Size(419, 37);
             this.label1.TabIndex = 4;
             this.label1.Text = "¿Desea terminar las tareas?";
             // 
@@ -95,54 +99,23 @@ namespace Presentation.ModalesFormulario
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tbCodigoSupervisor);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 369);
+            this.panel1.Location = new System.Drawing.Point(0, 454);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(885, 146);
+            this.panel1.Size = new System.Drawing.Size(1180, 180);
             this.panel1.TabIndex = 3;
             // 
-            // label2
+            // label6
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(799, 32);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Si usted es un supervisor de area y quiere finalizar las tareas";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(851, 32);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "seleccione el cuadro de texto y despues escanee su codigo de";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(12, 208);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(824, 32);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "barras, se validara si usted tiene los permisos necesarios para";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(11, 263);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(762, 32);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "finalizar las actividades y asi hacer el registro del historial";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(17, 26);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(403, 37);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Supervisor de la actividad:";
             // 
             // tbCodigoSupervisor
             // 
@@ -157,32 +130,70 @@ namespace Presentation.ModalesFormulario
             this.tbCodigoSupervisor.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tbCodigoSupervisor.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tbCodigoSupervisor.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCodigoSupervisor.Location = new System.Drawing.Point(18, 75);
+            this.tbCodigoSupervisor.Location = new System.Drawing.Point(24, 92);
+            this.tbCodigoSupervisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbCodigoSupervisor.Name = "tbCodigoSupervisor";
             this.tbCodigoSupervisor.PasswordChar = '\0';
             this.tbCodigoSupervisor.Radius = 5;
             this.tbCodigoSupervisor.SelectedText = "";
-            this.tbCodigoSupervisor.Size = new System.Drawing.Size(842, 36);
+            this.tbCodigoSupervisor.Size = new System.Drawing.Size(1123, 53);
             this.tbCodigoSupervisor.TabIndex = 10;
             this.tbCodigoSupervisor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCodigoSupervisor_KeyPress);
             // 
-            // label6
+            // label2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(13, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(322, 28);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Supervisor de la actividad:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(16, 108);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1002, 40);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Si usted es un supervisor de area y quiere finalizar las tareas";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(16, 185);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(1076, 40);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "seleccione el cuadro de texto y despues escanee su codigo de";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(16, 256);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(1033, 40);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "barras, se validara si usted tiene los permisos necesarios para";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(15, 324);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(958, 40);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "finalizar las actividades y asi hacer el registro del historial";
             // 
             // FinalizarTareasModal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(885, 515);
+            this.ClientSize = new System.Drawing.Size(1180, 634);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -190,6 +201,8 @@ namespace Presentation.ModalesFormulario
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelRAHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FinalizarTareasModal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FinalizarTareasModal";

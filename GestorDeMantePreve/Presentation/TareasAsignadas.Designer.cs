@@ -29,12 +29,13 @@ namespace Presentation
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TareasAsignadas));
             this.panelRAHeader = new System.Windows.Forms.Panel();
-            this.btnMostrarTareas = new Guna.UI.WinForms.GunaButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnMostrarTareas = new Guna.UI.WinForms.GunaButton();
             this.gdgvTablaActividades = new Guna.UI.WinForms.GunaDataGridView();
             this.panelFiltro = new System.Windows.Forms.Panel();
             this.btnCancelar = new Guna.UI.WinForms.GunaButton();
@@ -54,9 +55,23 @@ namespace Presentation
             this.panelRAHeader.Controls.Add(this.label1);
             this.panelRAHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRAHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelRAHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelRAHeader.Name = "panelRAHeader";
-            this.panelRAHeader.Size = new System.Drawing.Size(827, 41);
+            this.panelRAHeader.Size = new System.Drawing.Size(1103, 50);
             this.panelRAHeader.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(16, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(326, 32);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Actividades de usuarios";
             // 
             // btnMostrarTareas
             // 
@@ -74,7 +89,8 @@ namespace Presentation
             this.btnMostrarTareas.ForeColor = System.Drawing.Color.White;
             this.btnMostrarTareas.Image = null;
             this.btnMostrarTareas.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnMostrarTareas.Location = new System.Drawing.Point(760, 3);
+            this.btnMostrarTareas.Location = new System.Drawing.Point(1013, 4);
+            this.btnMostrarTareas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMostrarTareas.Name = "btnMostrarTareas";
             this.btnMostrarTareas.OnHoverBaseColor = System.Drawing.Color.DarkGreen;
             this.btnMostrarTareas.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -82,30 +98,18 @@ namespace Presentation
             this.btnMostrarTareas.OnHoverImage = null;
             this.btnMostrarTareas.OnPressedColor = System.Drawing.Color.Black;
             this.btnMostrarTareas.Radius = 10;
-            this.btnMostrarTareas.Size = new System.Drawing.Size(64, 25);
+            this.btnMostrarTareas.Size = new System.Drawing.Size(85, 31);
             this.btnMostrarTareas.TabIndex = 29;
             this.btnMostrarTareas.Text = "Mostrar tarea";
             this.btnMostrarTareas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnMostrarTareas.Click += new System.EventHandler(this.btnMostrarTareas_Click);
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(255, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Actividades de usuarios";
-            // 
             // gdgvTablaActividades
             // 
             this.gdgvTablaActividades.AllowUserToAddRows = false;
             this.gdgvTablaActividades.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
-            this.gdgvTablaActividades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.gdgvTablaActividades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gdgvTablaActividades.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -114,32 +118,34 @@ namespace Presentation
             this.gdgvTablaActividades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gdgvTablaActividades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gdgvTablaActividades.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdgvTablaActividades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdgvTablaActividades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gdgvTablaActividades.ColumnHeadersHeight = 4;
             this.gdgvTablaActividades.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gdgvTablaActividades.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gdgvTablaActividades.DefaultCellStyle = dataGridViewCellStyle3;
             this.gdgvTablaActividades.EnableHeadersVisualStyles = false;
             this.gdgvTablaActividades.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gdgvTablaActividades.Location = new System.Drawing.Point(12, 141);
+            this.gdgvTablaActividades.Location = new System.Drawing.Point(16, 174);
+            this.gdgvTablaActividades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gdgvTablaActividades.Name = "gdgvTablaActividades";
             this.gdgvTablaActividades.ReadOnly = true;
             this.gdgvTablaActividades.RowHeadersVisible = false;
+            this.gdgvTablaActividades.RowHeadersWidth = 51;
             this.gdgvTablaActividades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gdgvTablaActividades.Size = new System.Drawing.Size(803, 467);
+            this.gdgvTablaActividades.Size = new System.Drawing.Size(1071, 575);
             this.gdgvTablaActividades.TabIndex = 3;
             this.gdgvTablaActividades.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.gdgvTablaActividades.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -174,9 +180,10 @@ namespace Presentation
             this.panelFiltro.Controls.Add(this.btnFiltrar);
             this.panelFiltro.Controls.Add(this.cmbUsuario);
             this.panelFiltro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFiltro.Location = new System.Drawing.Point(0, 41);
+            this.panelFiltro.Location = new System.Drawing.Point(0, 50);
+            this.panelFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFiltro.Name = "panelFiltro";
-            this.panelFiltro.Size = new System.Drawing.Size(827, 94);
+            this.panelFiltro.Size = new System.Drawing.Size(1103, 116);
             this.panelFiltro.TabIndex = 4;
             // 
             // btnCancelar
@@ -195,7 +202,8 @@ namespace Presentation
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Image = null;
             this.btnCancelar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnCancelar.Location = new System.Drawing.Point(760, 63);
+            this.btnCancelar.Location = new System.Drawing.Point(1013, 78);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCancelar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -203,7 +211,7 @@ namespace Presentation
             this.btnCancelar.OnHoverImage = null;
             this.btnCancelar.OnPressedColor = System.Drawing.Color.Black;
             this.btnCancelar.Radius = 10;
-            this.btnCancelar.Size = new System.Drawing.Size(64, 25);
+            this.btnCancelar.Size = new System.Drawing.Size(85, 31);
             this.btnCancelar.TabIndex = 29;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -215,9 +223,10 @@ namespace Presentation
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(383, 8);
+            this.label2.Location = new System.Drawing.Point(511, 10);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 20);
+            this.label2.Size = new System.Drawing.Size(212, 22);
             this.label2.TabIndex = 29;
             this.label2.Text = "Cantidad de registros:";
             // 
@@ -233,12 +242,13 @@ namespace Presentation
             this.cmbCantidadRegistros.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.cmbCantidadRegistros.ForeColor = System.Drawing.Color.Black;
             this.cmbCantidadRegistros.FormattingEnabled = true;
-            this.cmbCantidadRegistros.Location = new System.Drawing.Point(387, 31);
+            this.cmbCantidadRegistros.Location = new System.Drawing.Point(516, 38);
+            this.cmbCantidadRegistros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCantidadRegistros.Name = "cmbCantidadRegistros";
             this.cmbCantidadRegistros.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbCantidadRegistros.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cmbCantidadRegistros.Radius = 5;
-            this.cmbCantidadRegistros.Size = new System.Drawing.Size(369, 27);
+            this.cmbCantidadRegistros.Size = new System.Drawing.Size(491, 31);
             this.cmbCantidadRegistros.TabIndex = 23;
             // 
             // label8
@@ -247,9 +257,10 @@ namespace Presentation
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(8, 8);
+            this.label8.Location = new System.Drawing.Point(11, 10);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 20);
+            this.label8.Size = new System.Drawing.Size(87, 22);
             this.label8.TabIndex = 23;
             this.label8.Text = "Usuarios:";
             // 
@@ -269,7 +280,8 @@ namespace Presentation
             this.btnFiltrar.ForeColor = System.Drawing.Color.White;
             this.btnFiltrar.Image = null;
             this.btnFiltrar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnFiltrar.Location = new System.Drawing.Point(760, 33);
+            this.btnFiltrar.Location = new System.Drawing.Point(1013, 41);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnFiltrar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -277,7 +289,7 @@ namespace Presentation
             this.btnFiltrar.OnHoverImage = null;
             this.btnFiltrar.OnPressedColor = System.Drawing.Color.Transparent;
             this.btnFiltrar.Radius = 10;
-            this.btnFiltrar.Size = new System.Drawing.Size(64, 25);
+            this.btnFiltrar.Size = new System.Drawing.Size(85, 31);
             this.btnFiltrar.TabIndex = 28;
             this.btnFiltrar.Text = "Filtrar tareas";
             this.btnFiltrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -295,24 +307,27 @@ namespace Presentation
             this.cmbUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.cmbUsuario.ForeColor = System.Drawing.Color.Black;
             this.cmbUsuario.FormattingEnabled = true;
-            this.cmbUsuario.Location = new System.Drawing.Point(12, 31);
+            this.cmbUsuario.Location = new System.Drawing.Point(16, 38);
+            this.cmbUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbUsuario.Name = "cmbUsuario";
             this.cmbUsuario.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbUsuario.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cmbUsuario.Radius = 5;
-            this.cmbUsuario.Size = new System.Drawing.Size(369, 27);
+            this.cmbUsuario.Size = new System.Drawing.Size(491, 31);
             this.cmbUsuario.TabIndex = 22;
             // 
             // TareasAsignadas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(827, 613);
+            this.ClientSize = new System.Drawing.Size(1103, 754);
             this.Controls.Add(this.panelFiltro);
             this.Controls.Add(this.gdgvTablaActividades);
             this.Controls.Add(this.panelRAHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TareasAsignadas";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.TareasAsignadas_Load);

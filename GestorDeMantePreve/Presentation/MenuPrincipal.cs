@@ -335,7 +335,6 @@ namespace Presentation
 
 
         // Evento KeyPress para manejar el escaneo del código de barras//
-        
         private void KeyMessageFilter_KeyPressed(object sender, KeyPressedEventArgs e)
         {
             if (capturaCodigoBarrasHabilitada)
@@ -461,11 +460,6 @@ namespace Presentation
             capturaCodigoBarrasHabilitada = habilitado;
         }
         //Fin//
-        public void RestaurarEnfoqueDespuesModal()
-        {
-            this.Activate();
-            this.Focus();
-        }
 
 
         //Validaciones de campos//

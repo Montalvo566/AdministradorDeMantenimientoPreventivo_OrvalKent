@@ -124,6 +124,11 @@
     <Compile Include="ModalesFormulario\MostrarActividadesModal.Designer.cs">
       <DependentUpon>MostrarActividadesModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="TareasAsignadas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,14 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -249,18 +249,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\OrvalKentLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LogoOrval.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Resers-Logo-Standard.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\descarga.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\UserDeafault1.png" />
     <Content Include="web-maintenance.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

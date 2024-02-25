@@ -64,11 +64,11 @@ namespace Presentation
 
 
         //Validación del Inicio de Sesión//
-        private void btnInicioSesion_Click(object sender, EventArgs e)
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             if (tbUsuario.Text != "")
             {
-                if(tbPassword.Text != "")
+                if (tbPassword.Text != "")
                 {
                     UserModel user = new UserModel();
                     var loginValido = user.LoginUser(tbUsuario.Text, tbPassword.Text);
@@ -89,12 +89,12 @@ namespace Presentation
                 }
                 else
                 {
-                    errorMensajeLogin("Ingresa la contraseña");
+                    errorMensajeLogin("Ingresa la contraseña del usuario");
                 }
             }
             else
             {
-                errorMensajeLogin("Ingresa el correo electronico");
+                errorMensajeLogin("Ingresa el correo del usuario");
             }
         }
         //Fin//
