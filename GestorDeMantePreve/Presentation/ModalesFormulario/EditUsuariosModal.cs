@@ -181,7 +181,7 @@ namespace Presentation.ModalesFormulario
             // Permite solo números y la tecla de retroceso (backspace)
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
             {
-                e.Handled = true; // Ignora la tecla presionada
+                e.Handled = true;
             }
         }
         private void SoloFormatoLetra(object sender, KeyPressEventArgs e)
@@ -189,10 +189,12 @@ namespace Presentation.ModalesFormulario
             // Permite solo letras y espacios
             if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' '))
             {
-                e.Handled = true; // Ignora la tecla presionada
+                e.Handled = true;
             }
         }
         //Fin//
+
+
         //Ejecutar las validaciones//
         private void ValdiacionesTipoCampo()
         {
@@ -200,7 +202,5 @@ namespace Presentation.ModalesFormulario
             gtbNombreCompleto.KeyPress += new KeyPressEventHandler(SoloFormatoLetra);
         }
         //Fin//
-
-
     }
 }

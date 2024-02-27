@@ -42,6 +42,5 @@ namespace Domain
             return tablaUsuarios;
         }
         //Fin//
-
     }
 }

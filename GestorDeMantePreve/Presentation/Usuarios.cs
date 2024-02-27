@@ -194,7 +194,8 @@ namespace Presentation
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     crud.Id1 = Convert.ToInt32(dgvUsuariosTabla.CurrentRow.Cells[0].Value);
-                    crud.DeleteUsuarios();
+                    string fotoPath = dgvUsuariosTabla.CurrentRow.Cells["Foto"].Value.ToString();
+                    crud.DeleteUsuarios(fotoPath);
                     MessageBox.Show("Usuario eliminado con exito");
                     LimpiarCampos();
                     MostrarUsuariosTabla();

@@ -204,7 +204,7 @@ namespace DataAccess
 
 
         //Funcion para eliminar registro de la tabla de usuarios: DELETE//
-        public void DeleteUsuarios()
+        public void DeleteUsuarios(string fotoPath)
         {
             try
             {
@@ -214,6 +214,10 @@ namespace DataAccess
                 command.Parameters.AddWithValue("@Id", Id);
                 command.ExecuteNonQuery();
                 command.Parameters.Clear();
+                if (File.Exists(fotoPath))
+                {
+                    File.Delete(fotoPath);
+                }
             }
             catch (Exception ex)
             {
@@ -225,8 +229,5 @@ namespace DataAccess
             }
         }
         //Fin//
-        
-
-
     }
 }
