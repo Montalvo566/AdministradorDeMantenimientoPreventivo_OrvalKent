@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{82221FD9-C62E-4BA2-97F2-7EABE14EE949}|DataAccess\\DataAccess.csproj|c:\\users\\montalvo\\documents\\github\\administradordemantenimientopreventivo_orvalkent\\gestordemantepreve\\dataaccess\\usercrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82221FD9-C62E-4BA2-97F2-7EABE14EE949}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\usercrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDF55692-33E0-4F77-8641-6350D0E6E5F4}|Presentation\\Presentation.csproj|C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\presentation\\modalesformulario\\editusuariosmodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDF55692-33E0-4F77-8641-6350D0E6E5F4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\modalesformulario\\editusuariosmodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDF55692-33E0-4F77-8641-6350D0E6E5F4}|Presentation\\Presentation.csproj|C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\presentation\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDF55692-33E0-4F77-8641-6350D0E6E5F4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{974F3D2D-0B91-4E11-AD26-A288979280B1}|Domain\\Domain.csproj|C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\domain\\usercrudmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{974F3D2D-0B91-4E11-AD26-A288979280B1}|Domain\\Domain.csproj|solutionrelative:domain\\usercrudmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDF55692-33E0-4F77-8641-6350D0E6E5F4}|Presentation\\Presentation.csproj|C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\presentation\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BDF55692-33E0-4F77-8641-6350D0E6E5F4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDF55692-33E0-4F77-8641-6350D0E6E5F4}|Presentation\\Presentation.csproj|C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\presentation\\modalesformulario\\editusuariosmodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BDF55692-33E0-4F77-8641-6350D0E6E5F4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\modalesformulario\\editusuariosmodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BDF55692-33E0-4F77-8641-6350D0E6E5F4}|Presentation\\Presentation.csproj|c:\\users\\montalvo\\documents\\github\\administradordemantenimientopreventivo_orvalkent\\gestordemantepreve\\presentation\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BDF55692-33E0-4F77-8641-6350D0E6E5F4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,82 +14,18 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditUsuariosModal.cs",
-              "DocumentMoniker": "C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\Presentation\\ModalesFormulario\\EditUsuariosModal.cs",
-              "RelativeDocumentMoniker": "Presentation\\ModalesFormulario\\EditUsuariosModal.cs",
-              "ToolTip": "C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\Presentation\\ModalesFormulario\\EditUsuariosModal.cs",
-              "RelativeToolTip": "Presentation\\ModalesFormulario\\EditUsuariosModal.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAAAHwAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T19:58:31.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserCrud.cs",
-              "DocumentMoniker": "C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\DataAccess\\UserCrud.cs",
-              "RelativeDocumentMoniker": "DataAccess\\UserCrud.cs",
-              "ToolTip": "C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\DataAccess\\UserCrud.cs",
-              "RelativeToolTip": "DataAccess\\UserCrud.cs",
-              "ViewState": "AQIAAL8AAAAAAAAAAAAiwL8AAAArAAAA",
+              "Title": "MenuPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\Presentation\\MenuPrincipal.cs",
+              "RelativeDocumentMoniker": "Presentation\\MenuPrincipal.cs",
+              "ToolTip": "C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\Presentation\\MenuPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentation\\MenuPrincipal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T20:03:06.504Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Usuarios.cs",
-              "DocumentMoniker": "C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\Presentation\\Usuarios.cs",
-              "RelativeDocumentMoniker": "Presentation\\Usuarios.cs",
-              "ToolTip": "C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\Presentation\\Usuarios.cs",
-              "RelativeToolTip": "Presentation\\Usuarios.cs",
-              "ViewState": "AQIAAJEAAAAAAAAAAAAiwK8AAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T20:01:23.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserCrudModel.cs",
-              "DocumentMoniker": "C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\Domain\\UserCrudModel.cs",
-              "RelativeDocumentMoniker": "Domain\\UserCrudModel.cs",
-              "ToolTip": "C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\Domain\\UserCrudModel.cs",
-              "RelativeToolTip": "Domain\\UserCrudModel.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T20:04:01.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Usuarios.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\Presentation\\Usuarios.cs",
-              "RelativeDocumentMoniker": "Presentation\\Usuarios.cs",
-              "ToolTip": "C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\Presentation\\Usuarios.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Presentation\\Usuarios.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T20:01:27.934Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EditUsuariosModal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\Presentation\\ModalesFormulario\\EditUsuariosModal.cs",
-              "RelativeDocumentMoniker": "Presentation\\ModalesFormulario\\EditUsuariosModal.cs",
-              "ToolTip": "C:\\Users\\Montalvo\\Documents\\GitHub\\AdministradorDeMantenimientoPreventivo_OrvalKent\\GestorDeMantePreve\\Presentation\\ModalesFormulario\\EditUsuariosModal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Presentation\\ModalesFormulario\\EditUsuariosModal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T19:59:39.154Z",
+              "WhenOpened": "2024-02-29T07:40:20.016Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

@@ -19,6 +19,7 @@ namespace Presentation.ModalesFormulario
         UserCrud crud = new UserCrud();
         public string idUsuario = null;
         public string OperacionEdit = "Editar";
+        public DataGridView DgvUsuariosTabla { get; set; }
 
         public EditUsuariosModal()
         {
@@ -121,9 +122,8 @@ namespace Presentation.ModalesFormulario
                             string rutaImagen = Path.Combine(carpetaImagenes, nombreArchivo);
                             File.Copy(gtbFoto.Text, rutaImagen, true);
                             crud.Foto1 = rutaImagen;
-
-                            crud.PutUsuarios();
-
+                            string fotoPath = DgvUsuariosTabla.CurrentRow.Cells["Foto"].Value.ToString();
+                            crud.PutUsuarios(fotoPath);
                             MessageBox.Show("Usuario actualizado con exito");
                             LimpiarCampos();
                             this.Close();

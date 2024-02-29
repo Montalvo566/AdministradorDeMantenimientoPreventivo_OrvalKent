@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Domain;
 using DataAccess;
 using System.IO;
+using Presentation.ModalesFormulario;
 
 namespace Presentation
 {
@@ -156,6 +157,7 @@ namespace Presentation
             {
                 ModalesFormulario.EditUsuariosModal modal = new ModalesFormulario.EditUsuariosModal();
                 modal.OperacionEdit = "Editar";
+                modal.DgvUsuariosTabla = dgvUsuariosTabla;
 
                 //Funcion para listar los combobox//
                 modal.ListarDepartamentos();

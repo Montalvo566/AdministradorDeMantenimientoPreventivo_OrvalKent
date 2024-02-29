@@ -170,7 +170,7 @@ namespace DataAccess
 
 
         //Funcion para realizar modificaciones a los datos de la tabla de usuarios: PUT//
-        public void PutUsuarios()
+        public void PutUsuarios(string fotoPath)
         {
             try
             {
@@ -190,6 +190,10 @@ namespace DataAccess
                 //Fin//
                 command.ExecuteReader();
                 command.Parameters.Clear();
+                if (File.Exists(fotoPath))
+                {
+                    File.Delete(fotoPath);
+                }
             }
             catch (Exception ex)
             {
