@@ -52,16 +52,6 @@ namespace Presentation
         //Permisos de usuarios//
         private void PermisosUsuarios()
         {
-            if (UserLoginCache.Puesto == UserPermissions.Supervisor)
-            {
-                btnMostrarCruds.Enabled = false;
-                btnActividades.Enabled = false;
-                btnEquipos.Enabled = false;
-                btnUsuarios.Enabled = false;
-                btnDepartamentos.Enabled = false;
-                btnAreas.Enabled = false;
-            }
-
             if (UserLoginCache.Puesto == UserPermissions.Empleado)
             {
                 btnRegistros.Enabled = false;

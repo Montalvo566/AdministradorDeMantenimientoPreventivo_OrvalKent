@@ -97,9 +97,7 @@ namespace Presentation.ModalesFormulario
                             EsOpcionValidaSeleccionada(cmbFrecuencia, "Frecuencia") &&
                             EsOpcionValidaSeleccionada(cmbUsuarioRegistra, "Usuario Registra") &&
                             EsOpcionValidaSeleccionada(cmbUsuarioAsignado, "Usuario Asignado") &&
-                            EsCampoValido(tbFechaAsignacion, "Fecha de asignación") &&
-                            EsOpcionValidaSeleccionada(cmbEstatus, "Estatus")&&
-                            EsFormatoFechaValido(tbFechaAsignacion.Text))
+                            EsOpcionValidaSeleccionada(cmbEstatus, "Estatus"))
                     {
                         crud.IdArea1 = Convert.ToInt32(cmbArea.SelectedValue);
                         crud.IdEquipo1 = Convert.ToInt32(cmbEquipo.SelectedValue);
@@ -109,7 +107,7 @@ namespace Presentation.ModalesFormulario
                         crud.Estatus1 = Convert.ToInt32(cmbEstatus.SelectedValue);
                         crud.IdUsuarioRegistra1 = Convert.ToInt32(cmbUsuarioRegistra.SelectedValue);
                         crud.IdUsuarioAsignado1 = Convert.ToInt32(cmbUsuarioAsignado.SelectedValue);
-                        crud.FechaAsignado1 = tbFechaAsignacion.Text;
+                        crud.FechaAsignado1 = dtpFechaAsignacion.Value.ToString("yyyy-MM-dd");
                         crud.Id1 = Convert.ToInt32(idActividad);
 
                         crud.PutActividades();
@@ -135,7 +133,6 @@ namespace Presentation.ModalesFormulario
             //limpiar campos al ejecutar la accion del boton
             tbActividad.Clear();
             tbRegistro.Clear();
-            tbFechaAsignacion.Clear();
         }
         //Fin//
 
@@ -154,15 +151,6 @@ namespace Presentation.ModalesFormulario
             if (campo.SelectedIndex == -1)
             {
                 MessageBox.Show($"Por favor, seleccione el campo {nombreCampo}");
-                return false;
-            }
-            return true;
-        }
-        private bool EsFormatoFechaValido(string fecha)
-        {
-            if (!DateTime.TryParseExact(fecha, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out _))
-            {
-                MessageBox.Show("Formato de fecha inválido. Utilizado el formato dd/MM/yyyy");
                 return false;
             }
             return true;

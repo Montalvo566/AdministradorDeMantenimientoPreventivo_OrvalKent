@@ -44,7 +44,6 @@ namespace Presentation
             this.cmbUsuarioRegistra = new Guna.UI.WinForms.GunaComboBox();
             this.cmbFrecuencia = new Guna.UI.WinForms.GunaComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.tbFechaAsignacion = new Guna.UI.WinForms.GunaTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@ namespace Presentation
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvActividadesTabla = new Guna.UI.WinForms.GunaDataGridView();
+            this.dtpFechaAsignacion = new Guna.UI.WinForms.GunaDateTimePicker();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelCrudActividad.SuspendLayout();
@@ -73,7 +73,7 @@ namespace Presentation
             this.panel1.Controls.Add(this.panelCrudActividad);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1103, 330);
             this.panel1.TabIndex = 2;
@@ -85,7 +85,7 @@ namespace Presentation
             this.panel3.Controls.Add(this.btnNuevo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(899, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(204, 330);
             this.panel3.TabIndex = 29;
@@ -105,7 +105,7 @@ namespace Presentation
             this.btnAbriModalEdit.Image = null;
             this.btnAbriModalEdit.ImageSize = new System.Drawing.Size(20, 20);
             this.btnAbriModalEdit.Location = new System.Drawing.Point(4, 124);
-            this.btnAbriModalEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAbriModalEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnAbriModalEdit.Name = "btnAbriModalEdit";
             this.btnAbriModalEdit.OnHoverBaseColor = System.Drawing.Color.Blue;
             this.btnAbriModalEdit.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -134,7 +134,7 @@ namespace Presentation
             this.btnEliminar.Image = null;
             this.btnEliminar.ImageSize = new System.Drawing.Size(20, 20);
             this.btnEliminar.Location = new System.Drawing.Point(4, 235);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.OnHoverBaseColor = System.Drawing.Color.Red;
             this.btnEliminar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -163,7 +163,7 @@ namespace Presentation
             this.btnNuevo.Image = null;
             this.btnNuevo.ImageSize = new System.Drawing.Size(20, 20);
             this.btnNuevo.Location = new System.Drawing.Point(4, 20);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnNuevo.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -179,12 +179,12 @@ namespace Presentation
             // 
             // panelCrudActividad
             // 
+            this.panelCrudActividad.Controls.Add(this.dtpFechaAsignacion);
             this.panelCrudActividad.Controls.Add(this.label1);
             this.panelCrudActividad.Controls.Add(this.cmbUsuarioAsignado);
             this.panelCrudActividad.Controls.Add(this.cmbUsuarioRegistra);
             this.panelCrudActividad.Controls.Add(this.cmbFrecuencia);
             this.panelCrudActividad.Controls.Add(this.label10);
-            this.panelCrudActividad.Controls.Add(this.tbFechaAsignacion);
             this.panelCrudActividad.Controls.Add(this.label9);
             this.panelCrudActividad.Controls.Add(this.label8);
             this.panelCrudActividad.Controls.Add(this.label7);
@@ -198,7 +198,7 @@ namespace Presentation
             this.panelCrudActividad.Controls.Add(this.label3);
             this.panelCrudActividad.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelCrudActividad.Location = new System.Drawing.Point(0, 0);
-            this.panelCrudActividad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelCrudActividad.Margin = new System.Windows.Forms.Padding(4);
             this.panelCrudActividad.Name = "panelCrudActividad";
             this.panelCrudActividad.Size = new System.Drawing.Size(888, 330);
             this.panelCrudActividad.TabIndex = 28;
@@ -229,7 +229,7 @@ namespace Presentation
             this.cmbUsuarioAsignado.ForeColor = System.Drawing.Color.Black;
             this.cmbUsuarioAsignado.FormattingEnabled = true;
             this.cmbUsuarioAsignado.Location = new System.Drawing.Point(21, 274);
-            this.cmbUsuarioAsignado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbUsuarioAsignado.Margin = new System.Windows.Forms.Padding(4);
             this.cmbUsuarioAsignado.Name = "cmbUsuarioAsignado";
             this.cmbUsuarioAsignado.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbUsuarioAsignado.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -250,7 +250,7 @@ namespace Presentation
             this.cmbUsuarioRegistra.ForeColor = System.Drawing.Color.Black;
             this.cmbUsuarioRegistra.FormattingEnabled = true;
             this.cmbUsuarioRegistra.Location = new System.Drawing.Point(624, 186);
-            this.cmbUsuarioRegistra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbUsuarioRegistra.Margin = new System.Windows.Forms.Padding(4);
             this.cmbUsuarioRegistra.Name = "cmbUsuarioRegistra";
             this.cmbUsuarioRegistra.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbUsuarioRegistra.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -271,7 +271,7 @@ namespace Presentation
             this.cmbFrecuencia.ForeColor = System.Drawing.Color.Black;
             this.cmbFrecuencia.FormattingEnabled = true;
             this.cmbFrecuencia.Location = new System.Drawing.Point(324, 186);
-            this.cmbFrecuencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbFrecuencia.Margin = new System.Windows.Forms.Padding(4);
             this.cmbFrecuencia.Name = "cmbFrecuencia";
             this.cmbFrecuencia.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbFrecuencia.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -285,32 +285,12 @@ namespace Presentation
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(333, 158);
+            this.label10.Location = new System.Drawing.Point(320, 158);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(118, 22);
             this.label10.TabIndex = 18;
             this.label10.Text = "Frecuencia:";
-            // 
-            // tbFechaAsignacion
-            // 
-            this.tbFechaAsignacion.BackColor = System.Drawing.Color.Transparent;
-            this.tbFechaAsignacion.BaseColor = System.Drawing.Color.White;
-            this.tbFechaAsignacion.BorderColor = System.Drawing.Color.Silver;
-            this.tbFechaAsignacion.BorderSize = 0;
-            this.tbFechaAsignacion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbFechaAsignacion.FocusedBaseColor = System.Drawing.Color.White;
-            this.tbFechaAsignacion.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tbFechaAsignacion.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbFechaAsignacion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFechaAsignacion.Location = new System.Drawing.Point(324, 274);
-            this.tbFechaAsignacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbFechaAsignacion.Name = "tbFechaAsignacion";
-            this.tbFechaAsignacion.PasswordChar = '\0';
-            this.tbFechaAsignacion.Radius = 5;
-            this.tbFechaAsignacion.SelectedText = "";
-            this.tbFechaAsignacion.Size = new System.Drawing.Size(260, 41);
-            this.tbFechaAsignacion.TabIndex = 17;
             // 
             // label9
             // 
@@ -318,7 +298,7 @@ namespace Presentation
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(333, 246);
+            this.label9.Location = new System.Drawing.Point(320, 246);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(208, 22);
@@ -344,7 +324,7 @@ namespace Presentation
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(631, 158);
+            this.label7.Location = new System.Drawing.Point(620, 158);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(158, 22);
@@ -364,7 +344,7 @@ namespace Presentation
             this.cmbEquipo.ForeColor = System.Drawing.Color.Black;
             this.cmbEquipo.FormattingEnabled = true;
             this.cmbEquipo.Location = new System.Drawing.Point(21, 186);
-            this.cmbEquipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEquipo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEquipo.Name = "cmbEquipo";
             this.cmbEquipo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbEquipo.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -398,7 +378,7 @@ namespace Presentation
             this.cmbArea.ForeColor = System.Drawing.Color.Black;
             this.cmbArea.FormattingEnabled = true;
             this.cmbArea.Location = new System.Drawing.Point(624, 96);
-            this.cmbArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbArea.Margin = new System.Windows.Forms.Padding(4);
             this.cmbArea.Name = "cmbArea";
             this.cmbArea.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbArea.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -412,7 +392,7 @@ namespace Presentation
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(631, 63);
+            this.label5.Location = new System.Drawing.Point(620, 63);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 22);
@@ -431,7 +411,7 @@ namespace Presentation
             this.tbActividad.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tbActividad.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbActividad.Location = new System.Drawing.Point(21, 91);
-            this.tbActividad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbActividad.Margin = new System.Windows.Forms.Padding(4);
             this.tbActividad.Name = "tbActividad";
             this.tbActividad.PasswordChar = '\0';
             this.tbActividad.Radius = 5;
@@ -464,7 +444,7 @@ namespace Presentation
             this.tbRegistro.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tbRegistro.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRegistro.Location = new System.Drawing.Point(324, 91);
-            this.tbRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbRegistro.Margin = new System.Windows.Forms.Padding(4);
             this.tbRegistro.Name = "tbRegistro";
             this.tbRegistro.PasswordChar = '\0';
             this.tbRegistro.Radius = 5;
@@ -478,7 +458,7 @@ namespace Presentation
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(333, 63);
+            this.label3.Location = new System.Drawing.Point(320, 63);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 22);
@@ -491,7 +471,7 @@ namespace Presentation
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 330);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1103, 44);
             this.panel2.TabIndex = 5;
@@ -544,7 +524,7 @@ namespace Presentation
             this.dgvActividadesTabla.EnableHeadersVisualStyles = false;
             this.dgvActividadesTabla.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvActividadesTabla.Location = new System.Drawing.Point(23, 382);
-            this.dgvActividadesTabla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvActividadesTabla.Margin = new System.Windows.Forms.Padding(4);
             this.dgvActividadesTabla.MultiSelect = false;
             this.dgvActividadesTabla.Name = "dgvActividadesTabla";
             this.dgvActividadesTabla.ReadOnly = true;
@@ -580,6 +560,32 @@ namespace Presentation
             this.dgvActividadesTabla.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvActividadesTabla.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // dtpFechaAsignacion
+            // 
+            this.dtpFechaAsignacion.BackColor = System.Drawing.Color.Transparent;
+            this.dtpFechaAsignacion.BaseColor = System.Drawing.Color.White;
+            this.dtpFechaAsignacion.BorderColor = System.Drawing.Color.Black;
+            this.dtpFechaAsignacion.BorderSize = 0;
+            this.dtpFechaAsignacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpFechaAsignacion.CustomFormat = null;
+            this.dtpFechaAsignacion.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpFechaAsignacion.FocusedColor = System.Drawing.Color.White;
+            this.dtpFechaAsignacion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaAsignacion.ForeColor = System.Drawing.Color.Black;
+            this.dtpFechaAsignacion.Location = new System.Drawing.Point(324, 274);
+            this.dtpFechaAsignacion.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpFechaAsignacion.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpFechaAsignacion.Name = "dtpFechaAsignacion";
+            this.dtpFechaAsignacion.OnHoverBaseColor = System.Drawing.Color.White;
+            this.dtpFechaAsignacion.OnHoverBorderColor = System.Drawing.Color.Blue;
+            this.dtpFechaAsignacion.OnHoverForeColor = System.Drawing.Color.Blue;
+            this.dtpFechaAsignacion.OnPressedColor = System.Drawing.Color.Black;
+            this.dtpFechaAsignacion.Radius = 5;
+            this.dtpFechaAsignacion.Size = new System.Drawing.Size(559, 31);
+            this.dtpFechaAsignacion.TabIndex = 22;
+            this.dtpFechaAsignacion.Text = "jueves, 29 de febrero de 2024";
+            this.dtpFechaAsignacion.Value = new System.DateTime(2024, 2, 29, 23, 37, 17, 999);
+            // 
             // Actividades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -591,7 +597,7 @@ namespace Presentation
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Actividades";
             this.Text = "Actividades";
             this.Load += new System.EventHandler(this.Actividades_Load);
@@ -614,7 +620,6 @@ namespace Presentation
         private System.Windows.Forms.Panel panelCrudActividad;
         private Guna.UI.WinForms.GunaComboBox cmbFrecuencia;
         private System.Windows.Forms.Label label10;
-        private Guna.UI.WinForms.GunaTextBox tbFechaAsignacion;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -633,5 +638,6 @@ namespace Presentation
         private Guna.UI.WinForms.GunaTextBox tbActividad;
         private Guna.UI.WinForms.GunaComboBox cmbUsuarioAsignado;
         private Guna.UI.WinForms.GunaComboBox cmbUsuarioRegistra;
+        private Guna.UI.WinForms.GunaDateTimePicker dtpFechaAsignacion;
     }
 }

@@ -101,9 +101,7 @@ namespace Presentation
                         EsOpcionValidaSeleccionada(cmbEquipo, "Equipo") &&
                         EsOpcionValidaSeleccionada(cmbFrecuencia, "Frecuencia") &&
                         EsOpcionValidaSeleccionada(cmbUsuarioRegistra, "Usuario Registra") &&
-                        EsOpcionValidaSeleccionada(cmbUsuarioAsignado, "Usuario Asignado") &&
-                        EsCampoValido(tbFechaAsignacion, "Fecha de asignación") &&
-                        EsFormatoFechaValido(tbFechaAsignacion.Text))
+                        EsOpcionValidaSeleccionada(cmbUsuarioAsignado, "Usuario Asignado"))
                 {
                     crud.IdArea1 = Convert.ToInt32(cmbArea.SelectedValue);
                     crud.IdEquipo1 = Convert.ToInt32(cmbEquipo.SelectedValue);
@@ -112,7 +110,7 @@ namespace Presentation
                     crud.Registro1 = tbRegistro.Text;
                     crud.IdUsuarioRegistra1 = Convert.ToInt32(cmbUsuarioRegistra.SelectedValue);
                     crud.IdUsuarioAsignado1 = Convert.ToInt32(cmbUsuarioAsignado.SelectedValue);
-                    crud.FechaAsignado1 = tbFechaAsignacion.Text;
+                    crud.FechaAsignado1 = dtpFechaAsignacion.Value.ToString("yyyy-MM-dd");
                     crud.PostActividades();
                     MessageBox.Show("Usuario registrada con exito");
                     LimpiarCampos();
@@ -178,7 +176,7 @@ namespace Presentation
                 modal.cmbUsuarioAsignado.Text = dgvActividadesTabla.CurrentRow.Cells[8].Value.ToString();
                 modal.idActividad = dgvActividadesTabla.CurrentRow.Cells["Id"].Value.ToString();
                 DateTime fechaAsignado = Convert.ToDateTime(dgvActividadesTabla.CurrentRow.Cells["FechaAsignado"].Value);
-                modal.tbFechaAsignacion.Text = fechaAsignado.ToString("dd/MM/yyyy");
+                modal.dtpFechaAsignacion.Value = fechaAsignado;
                 modal.ShowDialog();
                 MostrarTablaActividades();
                 //Fin//
@@ -197,7 +195,6 @@ namespace Presentation
             //limpiar campos al ejecutar la accion del boton
             tbActividad.Clear();
             tbRegistro.Clear();
-            tbFechaAsignacion.Clear();
         }
         //Fin//
 
@@ -216,15 +213,6 @@ namespace Presentation
             if (campo.SelectedIndex == -1)
             {
                 MessageBox.Show($"Por favor, seleccione el campo {nombreCampo}");
-                return false;
-            }
-            return true;
-        }
-        private bool EsFormatoFechaValido(string fecha)
-        {
-            if (!DateTime.TryParseExact(fecha, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out _))
-            {
-                MessageBox.Show("Formato de fecha inválido. Utilizado el formato dd/MM/yyyy");
                 return false;
             }
             return true;
