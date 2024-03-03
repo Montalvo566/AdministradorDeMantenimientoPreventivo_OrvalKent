@@ -14,6 +14,7 @@ using DataAccess;
 using System.IO;
 using System.Drawing.Drawing2D;
 using Guna.UI.WinForms;
+using System.Globalization;
 
 namespace Presentation
 {
@@ -381,32 +382,63 @@ namespace Presentation
         //Mostrar actividades usuarios//
         private void MostrarActividadesUsuario()
         {
-            UserModel actividad = new UserModel();
-            DataTable tablaActividades = actividad.MostrarActividadesCodigoBarras(numeroEmpleado);
+            try
+            {
+                UserModel actividad = new UserModel();
+                DataTable tablaActividades = actividad.MostrarActividadesCodigoBarras(numeroEmpleado);
 
-            dgvMostrarActividadesUsuarios.Columns.Clear();
-            dgvMostrarActividadesUsuarios.RowTemplate.MinimumHeight = 85;
-            dgvMostrarActividadesUsuarios.RowTemplate.Height = 85;
-            dgvMostrarActividadesUsuarios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvMostrarActividadesUsuarios.ForeColor = Color.White;
+                // Filtra las actividades según la frecuencia
+                DataView view = new DataView(tablaActividades);
+                view.Table.Columns.Add("FechaFiltrada", typeof(DateTime));
 
-            dgvMostrarActividadesUsuarios.DataSource = tablaActividades;
+                foreach (DataRow row in view.Table.Rows)
+                {
+                    try
+                    {
+                        DateTime fechaAsignado = Convert.ToDateTime(row["FechaAsignado"], CultureInfo.InvariantCulture);
+                        int idFrecuencia = Convert.ToInt32(row["Frecuencia"]);
+                        DateTime fechaFiltrada = CalcularFechaFiltrada(fechaAsignado, idFrecuencia);
+                        if (fechaFiltrada != DateTime.MinValue)
+                        {
+                            row["FechaFiltrada"] = fechaFiltrada;
+                        }
+                    }
+                    catch (FormatException ex)
+                    {
+                        Console.WriteLine($"Error de formato en la conversión de fecha o frecuencia: {ex.Message}");
+                    }
+                }
+                view.RowFilter = "FechaFiltrada is not null";
+                //Fin//
 
-            //Establecer la multilinea
-            int columnaMultilinea = 1;
-            dgvMostrarActividadesUsuarios.Columns[columnaMultilinea].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            dgvMostrarActividadesUsuarios.Columns[columnaMultilinea].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvMostrarActividadesUsuarios.Columns[columnaMultilinea].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvMostrarActividadesUsuarios.Columns.Clear();
+                dgvMostrarActividadesUsuarios.RowTemplate.MinimumHeight = 85;
+                dgvMostrarActividadesUsuarios.RowTemplate.Height = 85;
+                dgvMostrarActividadesUsuarios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                dgvMostrarActividadesUsuarios.ForeColor = Color.White;
 
-            // Crear columna de botones
-            DataGridViewButtonColumn botonAcciones = new DataGridViewButtonColumn();
-            botonAcciones.Name = "Acciones";
-            botonAcciones.Text = "Completar tarea";
-            botonAcciones.UseColumnTextForButtonValue = true;
-            dgvMostrarActividadesUsuarios.Columns.Add(botonAcciones);
+                dgvMostrarActividadesUsuarios.DataSource = tablaActividades;
 
-            dgvMostrarActividadesUsuarios.CellContentClick -= dgvMostrarActividadesUsuarios_CellContentClick;
-            dgvMostrarActividadesUsuarios.CellContentClick += dgvMostrarActividadesUsuarios_CellContentClick;
+                //Establecer la multilinea
+                int columnaMultilinea = 1;
+                dgvMostrarActividadesUsuarios.Columns[columnaMultilinea].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                dgvMostrarActividadesUsuarios.Columns[columnaMultilinea].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvMostrarActividadesUsuarios.Columns[columnaMultilinea].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                // Crear columna de botones
+                DataGridViewButtonColumn botonAcciones = new DataGridViewButtonColumn();
+                botonAcciones.Name = "Acciones";
+                botonAcciones.Text = "Completar tarea";
+                botonAcciones.UseColumnTextForButtonValue = true;
+                dgvMostrarActividadesUsuarios.Columns.Add(botonAcciones);
+
+                dgvMostrarActividadesUsuarios.CellContentClick -= dgvMostrarActividadesUsuarios_CellContentClick;
+                dgvMostrarActividadesUsuarios.CellContentClick += dgvMostrarActividadesUsuarios_CellContentClick;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al mostrar actividades de usuario: " + ex.Message);
+            }
         }
         //Funcion que asignar la funcion de cambiar el estado de la aplicacion sin que se repita la funcion//
         private void dgvMostrarActividadesUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -426,6 +458,52 @@ namespace Presentation
                 }
             }
         }
+        //Funcion para filtrar las actividades por la frecuencia//
+        private DateTime CalcularFechaFiltrada(DateTime fechaAsignado, int idFrecuencia)
+        {
+            DateTime fechaActual = DateTime.Now.Date;
+
+            try
+            {
+                switch (idFrecuencia)
+                {
+                    case 1: // Diaria
+                        return fechaActual;
+
+                    case 2: // Semanal
+                        CultureInfo ci = CultureInfo.CurrentCulture;
+                        int currentWeek = ci.Calendar.GetWeekOfYear(fechaActual, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
+                        int assignedWeek = ci.Calendar.GetWeekOfYear(fechaAsignado, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
+
+                        if (currentWeek == assignedWeek)
+                        {
+                            return fechaActual;
+                        }
+                        break;
+
+                    case 3: // Mensual
+                            // Si el año y mes de la fecha de asignación son iguales al año y mes actual
+                        if (fechaAsignado.Year == fechaActual.Year && fechaAsignado.Month == fechaActual.Month)
+                        {
+                            return fechaActual;
+                        }
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine("Error de formato en la conversión de fecha: " + ex.Message);
+                return DateTime.MinValue;
+            }
+
+            return DateTime.MinValue;
+        }
+        //Fin//
+
+
         // Función para cambiar el estado de la actividad
         private void CambiarEstadoActividad(int idActividad)
         {

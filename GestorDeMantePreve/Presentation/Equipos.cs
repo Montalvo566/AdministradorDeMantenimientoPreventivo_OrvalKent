@@ -171,20 +171,11 @@ namespace Presentation
                 e.Handled = true; // Ignora la tecla presionada
             }
         }
-        private void SoloFormatoLetra(object sender, KeyPressEventArgs e)
-        {
-            // Permite solo letras y espacios
-            if ((!char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ' '))
-            {
-                e.Handled = true; // Ignora la tecla presionada
-            }
-        }
         //Fin//
 
         //Ejecutar las validaciones//
         private void ValdiacionesTipoCampo()
         {
-            gtbEquipo.KeyPress += new KeyPressEventHandler(SoloFormatoLetra);
             gtbNumeroEquipo.KeyPress += new KeyPressEventHandler(SoloFormatoNumero);
         }
         //Fin//
