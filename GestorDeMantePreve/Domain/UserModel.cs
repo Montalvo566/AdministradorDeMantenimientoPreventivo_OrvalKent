@@ -29,5 +29,14 @@ namespace Domain
             return tablaUsuarios;
         }
         //Fin//
+
+
+        //Funcion para resetear el estado de las actividades//
+        public void ResetearEstadoActividades()
+        {
+            UserDao userDao = new UserDao();
+            userDao.ResetearEstadoActividades();
+        }
+        //Fin//
     }
 }

@@ -76,7 +76,7 @@ namespace Presentation
             this.panel1.Controls.Add(this.panelCrudUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1103, 326);
             this.panel1.TabIndex = 3;
@@ -88,7 +88,7 @@ namespace Presentation
             this.panel3.Controls.Add(this.btnNuevo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(899, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(204, 326);
             this.panel3.TabIndex = 19;
@@ -108,7 +108,7 @@ namespace Presentation
             this.btnAbriModalEdit.Image = null;
             this.btnAbriModalEdit.ImageSize = new System.Drawing.Size(20, 20);
             this.btnAbriModalEdit.Location = new System.Drawing.Point(4, 121);
-            this.btnAbriModalEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAbriModalEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnAbriModalEdit.Name = "btnAbriModalEdit";
             this.btnAbriModalEdit.OnHoverBaseColor = System.Drawing.Color.Blue;
             this.btnAbriModalEdit.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -137,7 +137,7 @@ namespace Presentation
             this.btnEliminar.Image = null;
             this.btnEliminar.ImageSize = new System.Drawing.Size(20, 20);
             this.btnEliminar.Location = new System.Drawing.Point(4, 235);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.OnHoverBaseColor = System.Drawing.Color.Red;
             this.btnEliminar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -166,7 +166,7 @@ namespace Presentation
             this.btnNuevo.Image = null;
             this.btnNuevo.ImageSize = new System.Drawing.Size(20, 20);
             this.btnNuevo.Location = new System.Drawing.Point(4, 17);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnNuevo.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -203,7 +203,7 @@ namespace Presentation
             this.panelCrudUser.Controls.Add(this.label1);
             this.panelCrudUser.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelCrudUser.Location = new System.Drawing.Point(0, 0);
-            this.panelCrudUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelCrudUser.Margin = new System.Windows.Forms.Padding(4);
             this.panelCrudUser.Name = "panelCrudUser";
             this.panelCrudUser.Size = new System.Drawing.Size(888, 326);
             this.panelCrudUser.TabIndex = 20;
@@ -236,7 +236,7 @@ namespace Presentation
             this.gbtnSubirImagen.Image = null;
             this.gbtnSubirImagen.ImageSize = new System.Drawing.Size(20, 20);
             this.gbtnSubirImagen.Location = new System.Drawing.Point(324, 274);
-            this.gbtnSubirImagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbtnSubirImagen.Margin = new System.Windows.Forms.Padding(4);
             this.gbtnSubirImagen.Name = "gbtnSubirImagen";
             this.gbtnSubirImagen.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gbtnSubirImagen.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -263,7 +263,7 @@ namespace Presentation
             this.gtbFoto.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gtbFoto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gtbFoto.Location = new System.Drawing.Point(624, 274);
-            this.gtbFoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gtbFoto.Margin = new System.Windows.Forms.Padding(4);
             this.gtbFoto.Name = "gtbFoto";
             this.gtbFoto.PasswordChar = '\0';
             this.gtbFoto.Radius = 5;
@@ -284,7 +284,7 @@ namespace Presentation
             this.gcmbPuesto.ForeColor = System.Drawing.Color.Black;
             this.gcmbPuesto.FormattingEnabled = true;
             this.gcmbPuesto.Location = new System.Drawing.Point(324, 186);
-            this.gcmbPuesto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcmbPuesto.Margin = new System.Windows.Forms.Padding(4);
             this.gcmbPuesto.Name = "gcmbPuesto";
             this.gcmbPuesto.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gcmbPuesto.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -330,7 +330,7 @@ namespace Presentation
             this.gtbPassword.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gtbPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gtbPassword.Location = new System.Drawing.Point(21, 274);
-            this.gtbPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gtbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.gtbPassword.Name = "gtbPassword";
             this.gtbPassword.PasswordChar = '\0';
             this.gtbPassword.Radius = 5;
@@ -363,7 +363,7 @@ namespace Presentation
             this.gtbCorreo.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gtbCorreo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gtbCorreo.Location = new System.Drawing.Point(624, 186);
-            this.gtbCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gtbCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.gtbCorreo.Name = "gtbCorreo";
             this.gtbCorreo.PasswordChar = '\0';
             this.gtbCorreo.Radius = 5;
@@ -397,7 +397,7 @@ namespace Presentation
             this.gcmbArea.ForeColor = System.Drawing.Color.Black;
             this.gcmbArea.FormattingEnabled = true;
             this.gcmbArea.Location = new System.Drawing.Point(21, 186);
-            this.gcmbArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcmbArea.Margin = new System.Windows.Forms.Padding(4);
             this.gcmbArea.Name = "gcmbArea";
             this.gcmbArea.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gcmbArea.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -431,7 +431,7 @@ namespace Presentation
             this.gcmbDepartamento.ForeColor = System.Drawing.Color.Black;
             this.gcmbDepartamento.FormattingEnabled = true;
             this.gcmbDepartamento.Location = new System.Drawing.Point(624, 96);
-            this.gcmbDepartamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcmbDepartamento.Margin = new System.Windows.Forms.Padding(4);
             this.gcmbDepartamento.Name = "gcmbDepartamento";
             this.gcmbDepartamento.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gcmbDepartamento.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -464,7 +464,7 @@ namespace Presentation
             this.gtbNumeroTrabajador.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gtbNumeroTrabajador.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gtbNumeroTrabajador.Location = new System.Drawing.Point(21, 91);
-            this.gtbNumeroTrabajador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gtbNumeroTrabajador.Margin = new System.Windows.Forms.Padding(4);
             this.gtbNumeroTrabajador.Name = "gtbNumeroTrabajador";
             this.gtbNumeroTrabajador.PasswordChar = '\0';
             this.gtbNumeroTrabajador.Radius = 5;
@@ -497,7 +497,7 @@ namespace Presentation
             this.gtbNombreCompleto.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gtbNombreCompleto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gtbNombreCompleto.Location = new System.Drawing.Point(324, 91);
-            this.gtbNombreCompleto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gtbNombreCompleto.Margin = new System.Windows.Forms.Padding(4);
             this.gtbNombreCompleto.Name = "gtbNombreCompleto";
             this.gtbNombreCompleto.PasswordChar = '\0';
             this.gtbNombreCompleto.Radius = 5;
@@ -537,7 +537,7 @@ namespace Presentation
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 326);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1103, 44);
             this.panel2.TabIndex = 4;
@@ -583,14 +583,14 @@ namespace Presentation
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUsuariosTabla.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUsuariosTabla.EnableHeadersVisualStyles = false;
             this.dgvUsuariosTabla.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvUsuariosTabla.Location = new System.Drawing.Point(23, 378);
-            this.dgvUsuariosTabla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvUsuariosTabla.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUsuariosTabla.MultiSelect = false;
             this.dgvUsuariosTabla.Name = "dgvUsuariosTabla";
             this.dgvUsuariosTabla.ReadOnly = true;
@@ -631,8 +631,8 @@ namespace Presentation
             this.dgvUsuariosTabla.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvUsuariosTabla.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvUsuariosTabla.ThemeStyle.RowsStyle.Height = 22;
-            this.dgvUsuariosTabla.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvUsuariosTabla.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvUsuariosTabla.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvUsuariosTabla.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
             // Usuarios
             // 
@@ -645,7 +645,7 @@ namespace Presentation
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Usuarios";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Usuarios_Load);

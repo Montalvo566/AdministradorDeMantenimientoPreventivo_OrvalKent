@@ -61,7 +61,6 @@ namespace DataAccess
             catch (Exception ex)
             {
                 string msj = ex.ToString();
-                // Puedes manejar la excepción según tus necesidades
                 return false;
             }
             finally
@@ -83,7 +82,6 @@ namespace DataAccess
                     command.CommandText = "Sp_GetActividadesUsuariosCodigoBarras";
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@NumeroEmpleado", numeroEmpleado);
-
                     leer = command.ExecuteReader();
                     tablaUsuarios.Load(leer);
                 }
@@ -114,7 +112,6 @@ namespace DataAccess
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@Id", Id);
                     command.Parameters.AddWithValue("@Estatus", Estatus);
-
                     command.ExecuteNonQuery();
                 }
             }
@@ -126,6 +123,32 @@ namespace DataAccess
             finally
             {
                 conexion.CerrarConexion();
+            }
+        }
+        //Fin//
+
+
+        //Resetear el estado de las actividades cada dia//
+        public void ResetearEstadoActividades()
+        {
+            try
+            {
+                using (var connection = AbrirConexion())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "Sp_ResetearEstadoActividades";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al resetear el estado de las actividades: " + ex.ToString());
+                throw; // Lanza la excepción para que sea manejada en la capa de presentación
+            }
+            finally
+            {
+                CerrarConexion();
             }
         }
         //Fin//

@@ -31,6 +31,7 @@ namespace Presentation
         }
         private StringBuilder codigoBarrasBuffer = new StringBuilder();
         private bool capturaCodigoBarrasHabilitada = true;
+        private Timer dailyTimer;
 
 
         public MenuPrincipal()
@@ -43,11 +44,35 @@ namespace Presentation
             pMenuLateral.Controls.Add(leftBorderBtn);
             userModel = new UserModel();
             PermisosUsuarios();
+
             // Inicializa el filtro de mensajes
             keyMessageFilter = new KeyMessageFilter();
             keyMessageFilter.KeyPressed += KeyMessageFilter_KeyPressed;
             Application.AddMessageFilter(keyMessageFilter);
+
+            // Configurar el temporizador para que se ejecute diariamente a medianoche
+            dailyTimer = new Timer();
+            dailyTimer.Interval = (int)(DateTime.Now.Date.AddDays(1) - DateTime.Now).TotalMilliseconds;
+            dailyTimer.Tick += (s, e) => ResetearEstadoActividades();
+            dailyTimer.Start();
         }
+
+
+        //Funcion para resetear el estado de las actividades//
+        private void ResetearEstadoActividades()
+        {
+            try
+            {
+                UserModel userModel = new UserModel();
+                userModel.ResetearEstadoActividades();
+                MostrarActividadesUsuario();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al resetear el estado de las actividades: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Fin//
 
 
         //Permisos de usuarios//
@@ -387,30 +412,6 @@ namespace Presentation
                 UserModel actividad = new UserModel();
                 DataTable tablaActividades = actividad.MostrarActividadesCodigoBarras(numeroEmpleado);
 
-                // Filtra las actividades según la frecuencia
-                DataView view = new DataView(tablaActividades);
-                view.Table.Columns.Add("FechaFiltrada", typeof(DateTime));
-
-                foreach (DataRow row in view.Table.Rows)
-                {
-                    try
-                    {
-                        DateTime fechaAsignado = Convert.ToDateTime(row["FechaAsignado"], CultureInfo.InvariantCulture);
-                        int idFrecuencia = Convert.ToInt32(row["Frecuencia"]);
-                        DateTime fechaFiltrada = CalcularFechaFiltrada(fechaAsignado, idFrecuencia);
-                        if (fechaFiltrada != DateTime.MinValue)
-                        {
-                            row["FechaFiltrada"] = fechaFiltrada;
-                        }
-                    }
-                    catch (FormatException ex)
-                    {
-                        Console.WriteLine($"Error de formato en la conversión de fecha o frecuencia: {ex.Message}");
-                    }
-                }
-                view.RowFilter = "FechaFiltrada is not null";
-                //Fin//
-
                 dgvMostrarActividadesUsuarios.Columns.Clear();
                 dgvMostrarActividadesUsuarios.RowTemplate.MinimumHeight = 85;
                 dgvMostrarActividadesUsuarios.RowTemplate.Height = 85;
@@ -440,6 +441,7 @@ namespace Presentation
                 Console.WriteLine("Error al mostrar actividades de usuario: " + ex.Message);
             }
         }
+        
         //Funcion que asignar la funcion de cambiar el estado de la aplicacion sin que se repita la funcion//
         private void dgvMostrarActividadesUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -457,49 +459,6 @@ namespace Presentation
                     MessageBox.Show("Error al realizar la acción: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-        //Funcion para filtrar las actividades por la frecuencia//
-        private DateTime CalcularFechaFiltrada(DateTime fechaAsignado, int idFrecuencia)
-        {
-            DateTime fechaActual = DateTime.Now.Date;
-
-            try
-            {
-                switch (idFrecuencia)
-                {
-                    case 1: // Diaria
-                        return fechaActual;
-
-                    case 2: // Semanal
-                        CultureInfo ci = CultureInfo.CurrentCulture;
-                        int currentWeek = ci.Calendar.GetWeekOfYear(fechaActual, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
-                        int assignedWeek = ci.Calendar.GetWeekOfYear(fechaAsignado, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
-
-                        if (currentWeek == assignedWeek)
-                        {
-                            return fechaActual;
-                        }
-                        break;
-
-                    case 3: // Mensual
-                            // Si el año y mes de la fecha de asignación son iguales al año y mes actual
-                        if (fechaAsignado.Year == fechaActual.Year && fechaAsignado.Month == fechaActual.Month)
-                        {
-                            return fechaActual;
-                        }
-                        break;
-
-                    default:
-                        break;
-                }
-            }
-            catch (FormatException ex)
-            {
-                Console.WriteLine("Error de formato en la conversión de fecha: " + ex.Message);
-                return DateTime.MinValue;
-            }
-
-            return DateTime.MinValue;
         }
         //Fin//
 

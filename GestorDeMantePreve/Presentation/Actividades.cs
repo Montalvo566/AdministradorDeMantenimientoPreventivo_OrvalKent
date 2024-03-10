@@ -112,7 +112,7 @@ namespace Presentation
                     crud.IdUsuarioAsignado1 = Convert.ToInt32(cmbUsuarioAsignado.SelectedValue);
                     crud.FechaAsignado1 = dtpFechaAsignacion.Value.ToString("yyyy-MM-dd");
                     crud.PostActividades();
-                    MessageBox.Show("Usuario registrada con exito");
+                    MessageBox.Show("Actividad registrada con exito");
                     LimpiarCampos();
                     MostrarTablaActividades();
                 }
@@ -166,10 +166,10 @@ namespace Presentation
                 //Fin//
 
                 //Funcion para cargar los datos en los campos//
-                modal.cmbArea.Text = dgvActividadesTabla.CurrentRow.Cells[1].Value.ToString();
-                modal.cmbEquipo.Text = dgvActividadesTabla.CurrentRow.Cells[2].Value.ToString();
-                modal.cmbFrecuencia.Text = dgvActividadesTabla.CurrentRow.Cells[3].Value.ToString();
-                modal.tbActividad.Text = dgvActividadesTabla.CurrentRow.Cells["Actividad"].Value.ToString();
+                modal.tbActividad.Text = dgvActividadesTabla.CurrentRow.Cells[1].Value.ToString();
+                modal.cmbArea.Text = dgvActividadesTabla.CurrentRow.Cells[2].Value.ToString();
+                modal.cmbEquipo.Text = dgvActividadesTabla.CurrentRow.Cells[3].Value.ToString();
+                modal.cmbFrecuencia.Text = dgvActividadesTabla.CurrentRow.Cells[4].Value.ToString();  
                 modal.tbRegistro.Text = dgvActividadesTabla.CurrentRow.Cells["Registro"].Value.ToString();
                 modal.cmbEstatus.Text = dgvActividadesTabla.CurrentRow.Cells[6].Value.ToString();
                 modal.cmbUsuarioRegistra.Text = dgvActividadesTabla.CurrentRow.Cells[7].Value.ToString();

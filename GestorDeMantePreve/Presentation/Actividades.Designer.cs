@@ -39,6 +39,7 @@ namespace Presentation
             this.btnEliminar = new Guna.UI.WinForms.GunaButton();
             this.btnNuevo = new Guna.UI.WinForms.GunaButton();
             this.panelCrudActividad = new System.Windows.Forms.Panel();
+            this.dtpFechaAsignacion = new Guna.UI.WinForms.GunaDateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbUsuarioAsignado = new Guna.UI.WinForms.GunaComboBox();
             this.cmbUsuarioRegistra = new Guna.UI.WinForms.GunaComboBox();
@@ -58,7 +59,6 @@ namespace Presentation
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvActividadesTabla = new Guna.UI.WinForms.GunaDataGridView();
-            this.dtpFechaAsignacion = new Guna.UI.WinForms.GunaDateTimePicker();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelCrudActividad.SuspendLayout();
@@ -202,6 +202,32 @@ namespace Presentation
             this.panelCrudActividad.Name = "panelCrudActividad";
             this.panelCrudActividad.Size = new System.Drawing.Size(888, 330);
             this.panelCrudActividad.TabIndex = 28;
+            // 
+            // dtpFechaAsignacion
+            // 
+            this.dtpFechaAsignacion.BackColor = System.Drawing.Color.Transparent;
+            this.dtpFechaAsignacion.BaseColor = System.Drawing.Color.White;
+            this.dtpFechaAsignacion.BorderColor = System.Drawing.Color.Black;
+            this.dtpFechaAsignacion.BorderSize = 0;
+            this.dtpFechaAsignacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpFechaAsignacion.CustomFormat = null;
+            this.dtpFechaAsignacion.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpFechaAsignacion.FocusedColor = System.Drawing.Color.White;
+            this.dtpFechaAsignacion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaAsignacion.ForeColor = System.Drawing.Color.Black;
+            this.dtpFechaAsignacion.Location = new System.Drawing.Point(324, 274);
+            this.dtpFechaAsignacion.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpFechaAsignacion.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpFechaAsignacion.Name = "dtpFechaAsignacion";
+            this.dtpFechaAsignacion.OnHoverBaseColor = System.Drawing.Color.White;
+            this.dtpFechaAsignacion.OnHoverBorderColor = System.Drawing.Color.Blue;
+            this.dtpFechaAsignacion.OnHoverForeColor = System.Drawing.Color.Blue;
+            this.dtpFechaAsignacion.OnPressedColor = System.Drawing.Color.Black;
+            this.dtpFechaAsignacion.Radius = 5;
+            this.dtpFechaAsignacion.Size = new System.Drawing.Size(559, 31);
+            this.dtpFechaAsignacion.TabIndex = 22;
+            this.dtpFechaAsignacion.Text = "jueves, 29 de febrero de 2024";
+            this.dtpFechaAsignacion.Value = new System.DateTime(2024, 2, 29, 23, 37, 17, 999);
             // 
             // label1
             // 
@@ -517,8 +543,8 @@ namespace Presentation
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvActividadesTabla.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvActividadesTabla.EnableHeadersVisualStyles = false;
@@ -557,34 +583,8 @@ namespace Presentation
             this.dgvActividadesTabla.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvActividadesTabla.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvActividadesTabla.ThemeStyle.RowsStyle.Height = 22;
-            this.dgvActividadesTabla.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvActividadesTabla.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // dtpFechaAsignacion
-            // 
-            this.dtpFechaAsignacion.BackColor = System.Drawing.Color.Transparent;
-            this.dtpFechaAsignacion.BaseColor = System.Drawing.Color.White;
-            this.dtpFechaAsignacion.BorderColor = System.Drawing.Color.Black;
-            this.dtpFechaAsignacion.BorderSize = 0;
-            this.dtpFechaAsignacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpFechaAsignacion.CustomFormat = null;
-            this.dtpFechaAsignacion.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpFechaAsignacion.FocusedColor = System.Drawing.Color.White;
-            this.dtpFechaAsignacion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaAsignacion.ForeColor = System.Drawing.Color.Black;
-            this.dtpFechaAsignacion.Location = new System.Drawing.Point(324, 274);
-            this.dtpFechaAsignacion.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpFechaAsignacion.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpFechaAsignacion.Name = "dtpFechaAsignacion";
-            this.dtpFechaAsignacion.OnHoverBaseColor = System.Drawing.Color.White;
-            this.dtpFechaAsignacion.OnHoverBorderColor = System.Drawing.Color.Blue;
-            this.dtpFechaAsignacion.OnHoverForeColor = System.Drawing.Color.Blue;
-            this.dtpFechaAsignacion.OnPressedColor = System.Drawing.Color.Black;
-            this.dtpFechaAsignacion.Radius = 5;
-            this.dtpFechaAsignacion.Size = new System.Drawing.Size(559, 31);
-            this.dtpFechaAsignacion.TabIndex = 22;
-            this.dtpFechaAsignacion.Text = "jueves, 29 de febrero de 2024";
-            this.dtpFechaAsignacion.Value = new System.DateTime(2024, 2, 29, 23, 37, 17, 999);
+            this.dgvActividadesTabla.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvActividadesTabla.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
             // Actividades
             // 
