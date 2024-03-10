@@ -105,9 +105,9 @@ namespace DataAccess
 
                 // Agrega el parámetro para filtrar por usuario
                 command.Parameters.AddWithValue("@IdUsuario", idUsuario);
-
                 leer = command.ExecuteReader();
                 tablaActividades.Load(leer);
+                command.Parameters.Clear();
                 leer.Close();
             }
             catch (Exception ex)

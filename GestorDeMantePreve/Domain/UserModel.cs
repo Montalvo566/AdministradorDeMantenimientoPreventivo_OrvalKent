@@ -32,10 +32,10 @@ namespace Domain
 
 
         //Funcion para resetear el estado de las actividades//
-        public void ResetearEstadoActividades()
+        public void ResetearEstadoActividadesSiFechaVencida()
         {
             UserDao userDao = new UserDao();
-            userDao.ResetearEstadoActividades();
+            userDao.ResetearEstadoActividadesSiFechaVencida();
         }
         //Fin//
     }

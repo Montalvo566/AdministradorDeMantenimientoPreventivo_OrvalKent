@@ -64,7 +64,7 @@ namespace Presentation.ModalesFormulario
             this.panel1.Controls.Add(this.btnCerrarTarea);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 655);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(777, 63);
             this.panel1.TabIndex = 3;
@@ -87,7 +87,7 @@ namespace Presentation.ModalesFormulario
             this.btnCerrarTarea.Image = null;
             this.btnCerrarTarea.ImageSize = new System.Drawing.Size(20, 20);
             this.btnCerrarTarea.Location = new System.Drawing.Point(21, 9);
-            this.btnCerrarTarea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrarTarea.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrarTarea.Name = "btnCerrarTarea";
             this.btnCerrarTarea.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCerrarTarea.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -107,7 +107,7 @@ namespace Presentation.ModalesFormulario
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(777, 47);
             this.panel2.TabIndex = 4;
@@ -137,7 +137,8 @@ namespace Presentation.ModalesFormulario
             this.tbActividad.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tbActividad.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbActividad.Location = new System.Drawing.Point(161, 73);
-            this.tbActividad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbActividad.Margin = new System.Windows.Forms.Padding(4);
+            this.tbActividad.Multiline = true;
             this.tbActividad.Name = "tbActividad";
             this.tbActividad.PasswordChar = '\0';
             this.tbActividad.Radius = 5;
@@ -167,7 +168,7 @@ namespace Presentation.ModalesFormulario
             this.panelActividades.Controls.Add(this.tbActividad);
             this.panelActividades.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelActividades.Location = new System.Drawing.Point(0, 47);
-            this.panelActividades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelActividades.Margin = new System.Windows.Forms.Padding(4);
             this.panelActividades.Name = "panelActividades";
             this.panelActividades.Size = new System.Drawing.Size(777, 601);
             this.panelActividades.TabIndex = 5;
@@ -197,7 +198,7 @@ namespace Presentation.ModalesFormulario
             this.tbEstatus.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tbEstatus.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEstatus.Location = new System.Drawing.Point(459, 535);
-            this.tbEstatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbEstatus.Margin = new System.Windows.Forms.Padding(4);
             this.tbEstatus.Name = "tbEstatus";
             this.tbEstatus.PasswordChar = '\0';
             this.tbEstatus.Radius = 5;
@@ -231,7 +232,7 @@ namespace Presentation.ModalesFormulario
             this.tbFechaAsignado.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tbFechaAsignado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFechaAsignado.Location = new System.Drawing.Point(161, 479);
-            this.tbFechaAsignado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbFechaAsignado.Margin = new System.Windows.Forms.Padding(4);
             this.tbFechaAsignado.Name = "tbFechaAsignado";
             this.tbFechaAsignado.PasswordChar = '\0';
             this.tbFechaAsignado.Radius = 5;
@@ -264,7 +265,7 @@ namespace Presentation.ModalesFormulario
             this.tbUsuarioAsignado.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tbUsuarioAsignado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUsuarioAsignado.Location = new System.Drawing.Point(161, 422);
-            this.tbUsuarioAsignado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbUsuarioAsignado.Margin = new System.Windows.Forms.Padding(4);
             this.tbUsuarioAsignado.Name = "tbUsuarioAsignado";
             this.tbUsuarioAsignado.PasswordChar = '\0';
             this.tbUsuarioAsignado.Radius = 5;
@@ -297,7 +298,7 @@ namespace Presentation.ModalesFormulario
             this.tbRegistro.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tbRegistro.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRegistro.Location = new System.Drawing.Point(161, 367);
-            this.tbRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbRegistro.Margin = new System.Windows.Forms.Padding(4);
             this.tbRegistro.Name = "tbRegistro";
             this.tbRegistro.PasswordChar = '\0';
             this.tbRegistro.Radius = 5;
@@ -330,7 +331,7 @@ namespace Presentation.ModalesFormulario
             this.tbFrecuencia.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tbFrecuencia.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFrecuencia.Location = new System.Drawing.Point(161, 313);
-            this.tbFrecuencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbFrecuencia.Margin = new System.Windows.Forms.Padding(4);
             this.tbFrecuencia.Name = "tbFrecuencia";
             this.tbFrecuencia.PasswordChar = '\0';
             this.tbFrecuencia.Radius = 5;
@@ -363,7 +364,7 @@ namespace Presentation.ModalesFormulario
             this.tbEquipo.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tbEquipo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEquipo.Location = new System.Drawing.Point(161, 257);
-            this.tbEquipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbEquipo.Margin = new System.Windows.Forms.Padding(4);
             this.tbEquipo.Name = "tbEquipo";
             this.tbEquipo.PasswordChar = '\0';
             this.tbEquipo.Radius = 5;
@@ -396,7 +397,7 @@ namespace Presentation.ModalesFormulario
             this.tbArea.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tbArea.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbArea.Location = new System.Drawing.Point(161, 203);
-            this.tbArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbArea.Margin = new System.Windows.Forms.Padding(4);
             this.tbArea.Name = "tbArea";
             this.tbArea.PasswordChar = '\0';
             this.tbArea.Radius = 5;
@@ -429,7 +430,7 @@ namespace Presentation.ModalesFormulario
             this.tbId.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tbId.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbId.Location = new System.Drawing.Point(161, 21);
-            this.tbId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbId.Margin = new System.Windows.Forms.Padding(4);
             this.tbId.Name = "tbId";
             this.tbId.PasswordChar = '\0';
             this.tbId.Radius = 5;
@@ -461,7 +462,7 @@ namespace Presentation.ModalesFormulario
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MostrarActividadesModal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MostrarActividadesModal";

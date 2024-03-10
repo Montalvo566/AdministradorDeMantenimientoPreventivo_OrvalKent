@@ -61,6 +61,32 @@ namespace Presentation
         //Fin//
 
 
+        //Funcion para reestablecer los campos de los filtros//
+        private void btnMostrarTareas_Click(object sender, EventArgs e)
+        {
+            if (gdgvTablaActividades.SelectedRows.Count > 0)
+            {
+                ModalesFormulario.MostrarActividadesModal modal = new ModalesFormulario.MostrarActividadesModal();
+                modal.tbId.Text = gdgvTablaActividades.CurrentRow.Cells[0].Value.ToString();
+                modal.tbActividad.Text = gdgvTablaActividades.CurrentRow.Cells["Actividad"].Value.ToString();
+                modal.tbArea.Text = gdgvTablaActividades.CurrentRow.Cells["Area"].Value.ToString();
+                modal.tbEquipo.Text = gdgvTablaActividades.CurrentRow.Cells["Equipo"].Value.ToString();
+                modal.tbFrecuencia.Text = gdgvTablaActividades.CurrentRow.Cells["Frecuencia"].Value.ToString();
+                modal.tbRegistro.Text = gdgvTablaActividades.CurrentRow.Cells["Registro"].Value.ToString();
+                modal.tbEstatus.Text = gdgvTablaActividades.CurrentRow.Cells["Estatus"].Value.ToString();
+                modal.tbUsuarioAsignado.Text = gdgvTablaActividades.CurrentRow.Cells["UsuarioAsignado"].Value.ToString();
+                DateTime fechaAsignado = Convert.ToDateTime(gdgvTablaActividades.CurrentRow.Cells["FechaAsignado"].Value);
+                modal.tbFechaAsignado.Text = fechaAsignado.ToString("dd/MM/yyyy");
+                modal.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el registro para visualizarlo");
+            }
+        }
+        //Fin//
+
+
         //Botones para ejecutar la funcion y cancelarla//
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
@@ -133,32 +159,6 @@ namespace Presentation
                 return cantidadRegistros;
             }
             return int.MaxValue;
-        }
-        //Fin//
-
-
-        //Funcion para reestablecer los campos de los filtros//
-        private void btnMostrarTareas_Click(object sender, EventArgs e)
-        {
-            if (gdgvTablaActividades.SelectedRows.Count > 0)
-            {
-                ModalesFormulario.MostrarActividadesModal modal = new ModalesFormulario.MostrarActividadesModal();
-                modal.tbId.Text = gdgvTablaActividades.CurrentRow.Cells[0].Value.ToString();
-                modal.tbArea.Text = gdgvTablaActividades.CurrentRow.Cells[1].Value.ToString();
-                modal.tbEquipo.Text = gdgvTablaActividades.CurrentRow.Cells[2].Value.ToString();
-                modal.tbFrecuencia.Text = gdgvTablaActividades.CurrentRow.Cells[3].Value.ToString();
-                modal.tbActividad.Text = gdgvTablaActividades.CurrentRow.Cells[4].Value.ToString();
-                modal.tbRegistro.Text = gdgvTablaActividades.CurrentRow.Cells[5].Value.ToString();
-                modal.tbEstatus.Text = gdgvTablaActividades.CurrentRow.Cells[6].Value.ToString();
-                modal.tbUsuarioAsignado.Text = gdgvTablaActividades.CurrentRow.Cells[8].Value.ToString();
-                DateTime fechaAsignado = Convert.ToDateTime(gdgvTablaActividades.CurrentRow.Cells[9].Value);
-                modal.tbFechaAsignado.Text = fechaAsignado.ToString("dd/MM/yyyy");
-                modal.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Seleccione el registro para visualizarlo");
-            }
         }
         //Fin//
     }

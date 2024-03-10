@@ -129,7 +129,7 @@ namespace DataAccess
 
 
         //Resetear el estado de las actividades cada dia//
-        public void ResetearEstadoActividades()
+        public void ResetearEstadoActividadesSiFechaVencida()
         {
             try
             {
@@ -143,7 +143,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al resetear el estado de las actividades: " + ex.ToString());
+                Console.WriteLine("Error al resetear el estado de las actividades si la fecha está vencida: " + ex.ToString());
                 throw; // Lanza la excepción para que sea manejada en la capa de presentación
             }
             finally

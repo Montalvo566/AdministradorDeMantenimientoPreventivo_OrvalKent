@@ -31,7 +31,6 @@ namespace Presentation
         }
         private StringBuilder codigoBarrasBuffer = new StringBuilder();
         private bool capturaCodigoBarrasHabilitada = true;
-        private Timer dailyTimer;
 
 
         public MenuPrincipal()
@@ -49,30 +48,7 @@ namespace Presentation
             keyMessageFilter = new KeyMessageFilter();
             keyMessageFilter.KeyPressed += KeyMessageFilter_KeyPressed;
             Application.AddMessageFilter(keyMessageFilter);
-
-            // Configurar el temporizador para que se ejecute diariamente a medianoche
-            dailyTimer = new Timer();
-            dailyTimer.Interval = (int)(DateTime.Now.Date.AddDays(1) - DateTime.Now).TotalMilliseconds;
-            dailyTimer.Tick += (s, e) => ResetearEstadoActividades();
-            dailyTimer.Start();
         }
-
-
-        //Funcion para resetear el estado de las actividades//
-        private void ResetearEstadoActividades()
-        {
-            try
-            {
-                UserModel userModel = new UserModel();
-                userModel.ResetearEstadoActividades();
-                MostrarActividadesUsuario();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al resetear el estado de las actividades: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        //Fin//
 
 
         //Permisos de usuarios//
@@ -292,6 +268,24 @@ namespace Presentation
             cargarDatosUsuario();
             ValdiacionesTipoCampo();
             MostrarActividadesUsuario();
+            ResetearEstadoActividadesSiFechaVencida();
+        }
+        //Fin//
+
+
+        //Funcion para resetear el estado de las actividades//
+        private void ResetearEstadoActividadesSiFechaVencida()
+        {
+            try
+            {
+                UserModel userModel = new UserModel();
+                userModel.ResetearEstadoActividadesSiFechaVencida();
+                MostrarActividadesUsuario();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al resetear el estado de las actividades: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         //Fin//
 

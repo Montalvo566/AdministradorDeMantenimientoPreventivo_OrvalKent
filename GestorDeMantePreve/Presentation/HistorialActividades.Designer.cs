@@ -47,7 +47,7 @@ namespace Presentation
             this.panelRAHeader.Controls.Add(this.label1);
             this.panelRAHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRAHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelRAHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelRAHeader.Margin = new System.Windows.Forms.Padding(4);
             this.panelRAHeader.Name = "panelRAHeader";
             this.panelRAHeader.Size = new System.Drawing.Size(1103, 66);
             this.panelRAHeader.TabIndex = 0;
@@ -71,6 +71,9 @@ namespace Presentation
             this.gdgvHistorialActividades.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.gdgvHistorialActividades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.gdgvHistorialActividades.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gdgvHistorialActividades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gdgvHistorialActividades.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.gdgvHistorialActividades.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -93,11 +96,10 @@ namespace Presentation
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gdgvHistorialActividades.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gdgvHistorialActividades.Dock = System.Windows.Forms.DockStyle.Top;
             this.gdgvHistorialActividades.EnableHeadersVisualStyles = false;
             this.gdgvHistorialActividades.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.gdgvHistorialActividades.Location = new System.Drawing.Point(0, 66);
-            this.gdgvHistorialActividades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gdgvHistorialActividades.Margin = new System.Windows.Forms.Padding(4);
             this.gdgvHistorialActividades.Name = "gdgvHistorialActividades";
             this.gdgvHistorialActividades.ReadOnly = true;
             this.gdgvHistorialActividades.RowHeadersVisible = false;
@@ -133,7 +135,7 @@ namespace Presentation
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 732);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1103, 22);
             this.panel1.TabIndex = 1;
@@ -149,7 +151,7 @@ namespace Presentation
             this.Controls.Add(this.panelRAHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HistorialActividades";
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.HistorialActividades_Load);
