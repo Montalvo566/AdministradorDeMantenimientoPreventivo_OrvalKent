@@ -46,6 +46,32 @@ namespace Presentation
         {
             gdgvTablaActividades.RowTemplate.Height = 50;
             gdgvTablaActividades.ColumnHeadersHeight = 50;
+            gdgvTablaActividades.CellFormatting += dgvActividadesTabla_CellFormatting;
+        }
+        //Fin//
+
+
+        //Funcion para cambiar el color del estatus en referencia al estatus//
+        private void dgvActividadesTabla_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == gdgvTablaActividades.Columns["Estatus"].Index && e.Value != null)
+            {
+                string estatusTexto = e.Value.ToString();
+                switch (estatusTexto)
+                {
+                    case "Terminado":
+                        e.CellStyle.ForeColor = Color.Green;
+                        break;
+                    case "En revisión":
+                        e.CellStyle.ForeColor = Color.Blue;
+                        break;
+                    case "Pendiente":
+                        e.CellStyle.ForeColor = Color.Red;
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
         //Fin//
 

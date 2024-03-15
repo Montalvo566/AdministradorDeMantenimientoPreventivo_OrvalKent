@@ -26,6 +26,7 @@ namespace DataAccess
         private int IdUsuarioRegistra;
         private int IdUsuarioAsignado;
         private string FechaAsignado;
+        private DateTime FechaFinalizacion;
 
         //Funcion GET, SET
         public int IdArea1 { get => IdArea; set => IdArea = value; }
@@ -38,6 +39,7 @@ namespace DataAccess
         public int IdUsuarioAsignado1 { get => IdUsuarioAsignado; set => IdUsuarioAsignado = value; }
         public string FechaAsignado1 { get => FechaAsignado; set => FechaAsignado = value; }
         public int Id1 { get => Id; set => Id = value; }
+        public DateTime FechaFinalizacion1 { get => FechaFinalizacion; set => FechaFinalizacion = value; }
         //Fin//
 
         //Funciones pra listar datos en el combobox/
@@ -224,6 +226,7 @@ namespace DataAccess
                 command.Parameters.AddWithValue("@IdUsuarioRegistra", IdUsuarioRegistra);
                 command.Parameters.AddWithValue("@IdUsuarioAsignado", IdUsuarioAsignado);
                 command.Parameters.AddWithValue("@FechaAsignado", FechaAsignado);
+                command.Parameters.AddWithValue("@FechaFinalizacion", FechaFinalizacion);
                 //Fin//
                 command.ExecuteNonQuery();
                 command.Parameters.Clear();
@@ -259,6 +262,7 @@ namespace DataAccess
                 command.Parameters.AddWithValue("@IdUsuarioAsignado", IdUsuarioAsignado);
                 command.Parameters.AddWithValue("@FechaAsignado", FechaAsignado);
                 command.Parameters.AddWithValue("@Id", Id);
+                command.Parameters.AddWithValue("@FechaFinalizacion", FechaFinalizacion);
                 //Fin//
                 command.ExecuteNonQuery();
                 command.Parameters.Clear();
@@ -297,5 +301,46 @@ namespace DataAccess
             }
         }
         //Fin//
+
+
+        // Función para obtener la FechaFinalizacion actual
+        public DateTime ObtenerFechaFinalizacionActual(int idActividad)
+        {
+            DateTime fechaFinalizacionActual = DateTime.MinValue;
+
+            try
+            {
+                command.Connection = conexion.AbrirConexion();
+                command.CommandText = "SELECT FechaFinalizacion FROM Actividades WHERE Id = @Id";
+                command.CommandType = CommandType.Text;
+                command.Parameters.AddWithValue("@Id", idActividad);
+
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        // Verificar si el campo FechaFinalizacion no es DBNull
+                        if (!reader.IsDBNull(reader.GetOrdinal("FechaFinalizacion")))
+                        {
+                            fechaFinalizacionActual = reader.GetDateTime(reader.GetOrdinal("FechaFinalizacion"));
+                        }
+                    }
+                }
+
+                command.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+                string msj = ex.ToString();
+            }
+            finally
+            {
+                command.Connection = conexion.CerrarConexion();
+            }
+
+            return fechaFinalizacionActual;
+        }
+        //Fin//
+
     }
 }

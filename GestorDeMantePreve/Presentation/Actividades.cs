@@ -86,6 +86,32 @@ namespace Presentation
         private void ConfigurarDataGridView()
         {
             dgvActividadesTabla.RowTemplate.Height = 50;
+            dgvActividadesTabla.CellFormatting += dgvActividadesTabla_CellFormatting;
+        }
+        //Fin//
+
+
+        //Funcion para cambiar el color del estatus en referencia al estatus//
+        private void dgvActividadesTabla_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == dgvActividadesTabla.Columns["Estatus"].Index && e.Value != null)
+            {
+                string estatusTexto = e.Value.ToString();
+                switch (estatusTexto)
+                {
+                    case "Terminado":
+                        e.CellStyle.ForeColor = Color.Green;
+                        break;
+                    case "En revisión":
+                        e.CellStyle.ForeColor = Color.Blue;
+                        break;
+                    case "Pendiente":
+                        e.CellStyle.ForeColor = Color.Red;
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
         //Fin//
 
@@ -111,6 +137,7 @@ namespace Presentation
                     crud.IdUsuarioRegistra1 = Convert.ToInt32(cmbUsuarioRegistra.SelectedValue);
                     crud.IdUsuarioAsignado1 = Convert.ToInt32(cmbUsuarioAsignado.SelectedValue);
                     crud.FechaAsignado1 = dtpFechaAsignacion.Value.ToString("yyyy-MM-dd");
+                    crud.FechaFinalizacion1 = DateTime.Now;
                     crud.PostActividades();
                     MessageBox.Show("Actividad registrada con exito");
                     LimpiarCampos();

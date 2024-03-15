@@ -110,6 +110,18 @@ namespace Presentation.ModalesFormulario
                         crud.FechaAsignado1 = dtpFechaAsignacion.Value.ToString("yyyy-MM-dd");
                         crud.Id1 = Convert.ToInt32(idActividad);
 
+                        DateTime fechaFinalizacionActual = crud.ObtenerFechaFinalizacionActual(crud.Id1);
+
+                        if (crud.Estatus1 == 1) // Estado "Terminado"
+                        {
+                            crud.FechaFinalizacion1 = DateTime.Now;
+                        }
+                        else
+                        {
+                            // No actualiza la FechaFinalizacion si no es "Terminado"
+                            crud.FechaFinalizacion1 = fechaFinalizacionActual;
+                        }
+
                         crud.PutActividades();
 
                         MessageBox.Show("Actividad actualizada con exito");
@@ -156,7 +168,5 @@ namespace Presentation.ModalesFormulario
             return true;
         }
         //Fin//
-
-
     }
 }

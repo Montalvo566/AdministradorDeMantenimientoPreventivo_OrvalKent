@@ -215,11 +215,11 @@ namespace Presentation
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Presentation.Properties.Resources.UserDeafault;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 8);
+            this.pictureBox1.Image = global::Presentation.Properties.Resources.Resers_Logo_Standard;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 33);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(462, 570);
+            this.pictureBox1.Size = new System.Drawing.Size(464, 514);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -240,12 +240,12 @@ namespace Presentation
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(53, 576);
+            this.label4.Location = new System.Drawing.Point(10, 488);
             this.label4.Margin = new System.Windows.Forms.Padding(4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(388, 27);
+            this.label4.Size = new System.Drawing.Size(467, 34);
             this.label4.TabIndex = 6;
             this.label4.Text = "Departamento de Mantenimiento";
             // 
@@ -300,10 +300,10 @@ namespace Presentation
             this.btnSinUso.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.btnSinUso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.btnSinUso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSinUso.IconChar = FontAwesome.Sharp.IconChar.Lock;
+            this.btnSinUso.IconChar = FontAwesome.Sharp.IconChar.UserLock;
             this.btnSinUso.IconColor = System.Drawing.Color.White;
             this.btnSinUso.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSinUso.IconSize = 110;
+            this.btnSinUso.IconSize = 130;
             this.btnSinUso.Location = new System.Drawing.Point(0, 0);
             this.btnSinUso.Name = "btnSinUso";
             this.btnSinUso.Size = new System.Drawing.Size(746, 155);

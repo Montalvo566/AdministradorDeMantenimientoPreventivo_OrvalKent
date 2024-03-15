@@ -429,13 +429,14 @@ namespace Presentation
 
                 dgvMostrarActividadesUsuarios.CellContentClick -= dgvMostrarActividadesUsuarios_CellContentClick;
                 dgvMostrarActividadesUsuarios.CellContentClick += dgvMostrarActividadesUsuarios_CellContentClick;
+                dgvMostrarActividadesUsuarios.CellFormatting += dgvActividadesTabla_CellFormatting;
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error al mostrar actividades de usuario: " + ex.Message);
             }
         }
-        
+
         //Funcion que asignar la funcion de cambiar el estado de la aplicacion sin que se repita la funcion//
         private void dgvMostrarActividadesUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -451,6 +452,29 @@ namespace Presentation
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al realizar la acción: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        //Funcion para cambiar el color del estatus en referencia al estatus//
+        private void dgvActividadesTabla_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == dgvMostrarActividadesUsuarios.Columns["Estatus"].Index && e.Value != null)
+            {
+                string estatusTexto = e.Value.ToString();
+                switch (estatusTexto)
+                {
+                    case "Terminado":
+                        e.CellStyle.ForeColor = Color.Green;
+                        break;
+                    case "En revisión":
+                        e.CellStyle.ForeColor = Color.Blue;
+                        break;
+                    case "Pendiente":
+                        e.CellStyle.ForeColor = Color.Red;
+                        break;
+                    default:
+                        break;
                 }
             }
         }

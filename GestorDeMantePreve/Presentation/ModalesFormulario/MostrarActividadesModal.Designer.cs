@@ -196,14 +196,14 @@ namespace Presentation.ModalesFormulario
             this.tbEstatus.FocusedBaseColor = System.Drawing.Color.White;
             this.tbEstatus.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tbEstatus.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbEstatus.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEstatus.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEstatus.Location = new System.Drawing.Point(459, 535);
             this.tbEstatus.Margin = new System.Windows.Forms.Padding(4);
             this.tbEstatus.Name = "tbEstatus";
             this.tbEstatus.PasswordChar = '\0';
             this.tbEstatus.Radius = 5;
             this.tbEstatus.SelectedText = "";
-            this.tbEstatus.Size = new System.Drawing.Size(293, 52);
+            this.tbEstatus.Size = new System.Drawing.Size(293, 63);
             this.tbEstatus.TabIndex = 39;
             this.tbEstatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -466,6 +466,7 @@ namespace Presentation.ModalesFormulario
             this.Name = "MostrarActividadesModal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MostrarActividadesModal";
+            this.Load += new System.EventHandler(this.MostrarActividadesModal_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -55,7 +55,7 @@ namespace Presentation
             this.panelRAHeader.Controls.Add(this.label1);
             this.panelRAHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRAHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelRAHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelRAHeader.Margin = new System.Windows.Forms.Padding(4);
             this.panelRAHeader.Name = "panelRAHeader";
             this.panelRAHeader.Size = new System.Drawing.Size(1103, 50);
             this.panelRAHeader.TabIndex = 1;
@@ -90,7 +90,7 @@ namespace Presentation
             this.btnMostrarTareas.Image = null;
             this.btnMostrarTareas.ImageSize = new System.Drawing.Size(20, 20);
             this.btnMostrarTareas.Location = new System.Drawing.Point(1013, 4);
-            this.btnMostrarTareas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMostrarTareas.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrarTareas.Name = "btnMostrarTareas";
             this.btnMostrarTareas.OnHoverBaseColor = System.Drawing.Color.DarkGreen;
             this.btnMostrarTareas.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -109,6 +109,7 @@ namespace Presentation
             this.gdgvTablaActividades.AllowUserToAddRows = false;
             this.gdgvTablaActividades.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gdgvTablaActividades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gdgvTablaActividades.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -118,9 +119,9 @@ namespace Presentation
             this.gdgvTablaActividades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gdgvTablaActividades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gdgvTablaActividades.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -128,18 +129,18 @@ namespace Presentation
             this.gdgvTablaActividades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gdgvTablaActividades.ColumnHeadersHeight = 4;
             this.gdgvTablaActividades.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gdgvTablaActividades.DefaultCellStyle = dataGridViewCellStyle3;
             this.gdgvTablaActividades.EnableHeadersVisualStyles = false;
             this.gdgvTablaActividades.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gdgvTablaActividades.Location = new System.Drawing.Point(16, 174);
-            this.gdgvTablaActividades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gdgvTablaActividades.Margin = new System.Windows.Forms.Padding(4);
             this.gdgvTablaActividades.Name = "gdgvTablaActividades";
             this.gdgvTablaActividades.ReadOnly = true;
             this.gdgvTablaActividades.RowHeadersVisible = false;
@@ -149,7 +150,7 @@ namespace Presentation
             this.gdgvTablaActividades.TabIndex = 3;
             this.gdgvTablaActividades.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.gdgvTablaActividades.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gdgvTablaActividades.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.gdgvTablaActividades.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gdgvTablaActividades.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.gdgvTablaActividades.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.gdgvTablaActividades.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
@@ -157,18 +158,18 @@ namespace Presentation
             this.gdgvTablaActividades.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gdgvTablaActividades.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gdgvTablaActividades.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gdgvTablaActividades.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.gdgvTablaActividades.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gdgvTablaActividades.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.gdgvTablaActividades.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gdgvTablaActividades.ThemeStyle.HeaderStyle.Height = 4;
             this.gdgvTablaActividades.ThemeStyle.ReadOnly = true;
             this.gdgvTablaActividades.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.gdgvTablaActividades.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gdgvTablaActividades.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.gdgvTablaActividades.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gdgvTablaActividades.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gdgvTablaActividades.ThemeStyle.RowsStyle.Height = 22;
-            this.gdgvTablaActividades.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gdgvTablaActividades.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gdgvTablaActividades.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            this.gdgvTablaActividades.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
             // panelFiltro
             // 
@@ -181,7 +182,7 @@ namespace Presentation
             this.panelFiltro.Controls.Add(this.cmbUsuario);
             this.panelFiltro.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFiltro.Location = new System.Drawing.Point(0, 50);
-            this.panelFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.panelFiltro.Name = "panelFiltro";
             this.panelFiltro.Size = new System.Drawing.Size(1103, 116);
             this.panelFiltro.TabIndex = 4;
@@ -203,7 +204,7 @@ namespace Presentation
             this.btnCancelar.Image = null;
             this.btnCancelar.ImageSize = new System.Drawing.Size(20, 20);
             this.btnCancelar.Location = new System.Drawing.Point(1013, 78);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCancelar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -243,7 +244,7 @@ namespace Presentation
             this.cmbCantidadRegistros.ForeColor = System.Drawing.Color.Black;
             this.cmbCantidadRegistros.FormattingEnabled = true;
             this.cmbCantidadRegistros.Location = new System.Drawing.Point(516, 38);
-            this.cmbCantidadRegistros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCantidadRegistros.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCantidadRegistros.Name = "cmbCantidadRegistros";
             this.cmbCantidadRegistros.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbCantidadRegistros.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -281,7 +282,7 @@ namespace Presentation
             this.btnFiltrar.Image = null;
             this.btnFiltrar.ImageSize = new System.Drawing.Size(20, 20);
             this.btnFiltrar.Location = new System.Drawing.Point(1013, 41);
-            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnFiltrar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -308,7 +309,7 @@ namespace Presentation
             this.cmbUsuario.ForeColor = System.Drawing.Color.Black;
             this.cmbUsuario.FormattingEnabled = true;
             this.cmbUsuario.Location = new System.Drawing.Point(16, 38);
-            this.cmbUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.cmbUsuario.Name = "cmbUsuario";
             this.cmbUsuario.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbUsuario.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -327,7 +328,7 @@ namespace Presentation
             this.Controls.Add(this.panelRAHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TareasAsignadas";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.TareasAsignadas_Load);
