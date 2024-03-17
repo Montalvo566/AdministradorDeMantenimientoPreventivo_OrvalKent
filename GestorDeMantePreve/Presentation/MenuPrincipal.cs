@@ -297,16 +297,10 @@ namespace Presentation
 
             try
             {
-                // Verificar si la propiedad Foto está disponible
                 if (!string.IsNullOrEmpty(UserLoginCache.Foto) && File.Exists(UserLoginCache.Foto))
                 {
-                    // Cargar la imagen original
                     Image originalImage = Image.FromFile(UserLoginCache.Foto);
-
-                    // Redondear la imagen
                     Image roundedImage = RoundImage(originalImage);
-
-                    // Mostrar la imagen redondeada en el PictureBox
                     pbUsuario.Image = roundedImage;
                 }
                 else
@@ -321,21 +315,14 @@ namespace Presentation
         }
         private Image RoundImage(Image originalImage)
         {
-            // Crear un Bitmap redondeado con el mismo tamaño que la imagen original
             Bitmap roundedImage = new Bitmap(originalImage.Width, originalImage.Height);
 
             using (Graphics g = Graphics.FromImage(roundedImage))
             {
                 g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-
-                // Crear un path redondeado
                 GraphicsPath path = new GraphicsPath();
                 path.AddEllipse(0, 0, roundedImage.Width - 1, roundedImage.Height - 1);
-
-                // Aplicar el path al área de recorte del gráfico
                 g.SetClip(path);
-
-                // Dibujar la imagen original en el gráfico redondeado
                 g.DrawImage(originalImage, 0, 0);
             }
 

@@ -61,7 +61,7 @@ namespace Presentation.ModalesFormulario
             btnCerrarModal.IconFont = FontAwesome.Sharp.IconFont.Solid;
             btnCerrarModal.IconSize = 55;
             btnCerrarModal.Location = new System.Drawing.Point(1083, 0);
-            btnCerrarModal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            btnCerrarModal.Margin = new System.Windows.Forms.Padding(4);
             btnCerrarModal.Name = "btnCerrarModal";
             btnCerrarModal.Size = new System.Drawing.Size(97, 74);
             btnCerrarModal.TabIndex = 5;
@@ -75,7 +75,7 @@ namespace Presentation.ModalesFormulario
             this.panelRAHeader.Controls.Add(this.label1);
             this.panelRAHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRAHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelRAHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelRAHeader.Margin = new System.Windows.Forms.Padding(4);
             this.panelRAHeader.Name = "panelRAHeader";
             this.panelRAHeader.Size = new System.Drawing.Size(1180, 74);
             this.panelRAHeader.TabIndex = 2;
@@ -100,7 +100,7 @@ namespace Presentation.ModalesFormulario
             this.panel1.Controls.Add(this.tbCodigoSupervisor);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 454);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1180, 180);
             this.panel1.TabIndex = 3;
@@ -131,7 +131,7 @@ namespace Presentation.ModalesFormulario
             this.tbCodigoSupervisor.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tbCodigoSupervisor.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCodigoSupervisor.Location = new System.Drawing.Point(24, 92);
-            this.tbCodigoSupervisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCodigoSupervisor.Margin = new System.Windows.Forms.Padding(4);
             this.tbCodigoSupervisor.Name = "tbCodigoSupervisor";
             this.tbCodigoSupervisor.PasswordChar = '\0';
             this.tbCodigoSupervisor.Radius = 5;
@@ -202,7 +202,7 @@ namespace Presentation.ModalesFormulario
             this.Controls.Add(this.panelRAHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FinalizarTareasModal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FinalizarTareasModal";

@@ -89,7 +89,7 @@ namespace Presentation
             this.panelSeccionTareas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSeccionTareas.Location = new System.Drawing.Point(0, 395);
             this.panelSeccionTareas.Name = "panelSeccionTareas";
-            this.panelSeccionTareas.Size = new System.Drawing.Size(221, 315);
+            this.panelSeccionTareas.Size = new System.Drawing.Size(221, 311);
             this.panelSeccionTareas.TabIndex = 0;
             // 
             // btnAreas
@@ -305,7 +305,7 @@ namespace Presentation
             this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarSesion.IconSize = 30;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 710);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 706);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(221, 60);
@@ -466,7 +466,7 @@ namespace Presentation
             this.dgvMostrarActividadesUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -476,7 +476,7 @@ namespace Presentation
             this.dgvMostrarActividadesUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
@@ -502,14 +502,14 @@ namespace Presentation
             this.dgvMostrarActividadesUsuarios.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.HeaderStyle.Height = 70;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.ReadOnly = true;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.Height = 22;
             this.dgvMostrarActividadesUsuarios.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.DodgerBlue;
@@ -546,10 +546,8 @@ namespace Presentation
 
         private System.Windows.Forms.Panel pMenuLateral;
         private FontAwesome.Sharp.IconButton btnActividades;
-        private FontAwesome.Sharp.IconButton btnMenuPrincipal;
         private System.Windows.Forms.Panel pLogo;
         private FontAwesome.Sharp.IconButton btnUsuarios;
-        private System.Windows.Forms.Panel panelFormularioHijo;
         private FontAwesome.Sharp.IconButton btnTareasAsignadas;
         private System.Windows.Forms.PictureBox pbUsuario;
         private FontAwesome.Sharp.IconButton btnCerrarSesion;
@@ -564,6 +562,8 @@ namespace Presentation
         private Guna.UI.WinForms.GunaButton btnFinalizarTareas;
         private System.Windows.Forms.Label label1;
         public Guna.UI.WinForms.GunaTextBox tbCodigoBarras;
+        public FontAwesome.Sharp.IconButton btnMenuPrincipal;
+        private System.Windows.Forms.Panel panelFormularioHijo;
     }
 }
 

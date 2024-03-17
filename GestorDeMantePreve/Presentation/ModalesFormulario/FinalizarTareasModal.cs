@@ -20,6 +20,13 @@ namespace Presentation.ModalesFormulario
         public FinalizarTareasModal()
         {
             InitializeComponent();
+            this.Shown += FinalizarTareasModal_Shown;
+        }
+
+        private void FinalizarTareasModal_Shown(object sender, EventArgs e)
+        {
+            tbCodigoSupervisor.Focus();
+            this.Focus();
         }
 
         //Funcion para cerrar la ventana//
@@ -31,7 +38,6 @@ namespace Presentation.ModalesFormulario
                 formularioPrincipal.HabilitarCapturaCodigoBarras(true);
             }
             this.Close();
-
         }
         //Fin//
 
@@ -54,7 +60,6 @@ namespace Presentation.ModalesFormulario
                                 int idUsuario = UserLoginCache.Id;
                                 historial.RegistrarEnHistorialEnRevision(idUsuario);
                                 MessageBox.Show("Tareas finalizadas con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                this.Close();
                                 MenuPrincipal formularioPrincipal = this.Owner as MenuPrincipal;
                                 if (formularioPrincipal != null)
                                 {

@@ -66,3 +66,4 @@ C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalK
 C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presenta.BC777DBE.Up2Date
 C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Gestor de actividades.exe
 C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Gestor de actividades.pdb
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.ModalesFormulario.MostrarHistorial.resources

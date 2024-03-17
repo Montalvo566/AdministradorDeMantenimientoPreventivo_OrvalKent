@@ -124,6 +124,12 @@
     <Compile Include="ModalesFormulario\MostrarActividadesModal.Designer.cs">
       <DependentUpon>MostrarActividadesModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModalesFormulario\MostrarHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalesFormulario\MostrarHistorial.Designer.cs">
+      <DependentUpon>MostrarHistorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModalesFormulario\MostrarActividadesModal.resx">
       <DependentUpon>MostrarActividadesModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalesFormulario\MostrarHistorial.resx">
+      <DependentUpon>MostrarHistorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TareasAsignadas.resx">
       <DependentUpon>TareasAsignadas.cs</DependentUpon>
