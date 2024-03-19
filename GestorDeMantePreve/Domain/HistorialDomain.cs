@@ -24,6 +24,16 @@ namespace Domain
         //Fin//
 
 
+        //Funcion para filtrar los registros//
+        public DataTable FiltroActividadesUsuarios(int idUsuario)
+        {
+            DataTable tablaHistorial = new DataTable();
+            tablaHistorial = userDao.FiltrarActividadesPorUsuario(idUsuario);
+            return tablaHistorial;
+        }
+        //Fin//
+
+
         //Funcion para obtener el puesto del empleado//
         public int ObtenerPuestoPorNumeroEmpleado(int numeroEmpleado)
         {

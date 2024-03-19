@@ -42,6 +42,34 @@ namespace DataAccess
         //Fin//
 
 
+        //Funcion para filtrar por el usuario asignado//
+        public DataTable FiltrarActividadesPorUsuario(int idUsuario)
+        {
+            try
+            {
+                command.Connection = conexion.AbrirConexion();
+                command.CommandText = "Sp_FiltrarHistorialUsuarios";
+                command.CommandType = CommandType.StoredProcedure;
+                // Agrega el parámetro para filtrar por usuario
+                command.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                leer = command.ExecuteReader();
+                tablaUsuarios.Load(leer);
+                command.Parameters.Clear();
+                leer.Close();
+            }
+            catch (Exception ex)
+            {
+                string msj = ex.ToString();
+            }
+            finally
+            {
+                command.Connection = conexion.CerrarConexion();
+            }
+            return tablaUsuarios;
+        }
+        //Fin//
+
+
         //Funcion para optener el numero de empleado mediante el codigo de barras//
         public int ObtenerPuestoPorNumeroEmpleado(int numeroEmpleado)
         {

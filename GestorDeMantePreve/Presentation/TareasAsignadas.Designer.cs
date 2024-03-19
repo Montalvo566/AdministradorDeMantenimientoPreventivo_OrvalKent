@@ -44,9 +44,16 @@ namespace Presentation
             this.label8 = new System.Windows.Forms.Label();
             this.btnFiltrar = new Guna.UI.WinForms.GunaButton();
             this.cmbUsuario = new Guna.UI.WinForms.GunaComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panelRAHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdgvTablaActividades)).BeginInit();
             this.panelFiltro.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelRAHeader
@@ -89,7 +96,7 @@ namespace Presentation
             this.btnMostrarTareas.ForeColor = System.Drawing.Color.White;
             this.btnMostrarTareas.Image = null;
             this.btnMostrarTareas.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnMostrarTareas.Location = new System.Drawing.Point(1013, 4);
+            this.btnMostrarTareas.Location = new System.Drawing.Point(4, 4);
             this.btnMostrarTareas.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrarTareas.Name = "btnMostrarTareas";
             this.btnMostrarTareas.OnHoverBaseColor = System.Drawing.Color.DarkGreen;
@@ -98,7 +105,7 @@ namespace Presentation
             this.btnMostrarTareas.OnHoverImage = null;
             this.btnMostrarTareas.OnPressedColor = System.Drawing.Color.Black;
             this.btnMostrarTareas.Radius = 10;
-            this.btnMostrarTareas.Size = new System.Drawing.Size(85, 31);
+            this.btnMostrarTareas.Size = new System.Drawing.Size(270, 60);
             this.btnMostrarTareas.TabIndex = 29;
             this.btnMostrarTareas.Text = "Mostrar tarea";
             this.btnMostrarTareas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -139,14 +146,14 @@ namespace Presentation
             this.gdgvTablaActividades.DefaultCellStyle = dataGridViewCellStyle3;
             this.gdgvTablaActividades.EnableHeadersVisualStyles = false;
             this.gdgvTablaActividades.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gdgvTablaActividades.Location = new System.Drawing.Point(16, 174);
+            this.gdgvTablaActividades.Location = new System.Drawing.Point(16, 196);
             this.gdgvTablaActividades.Margin = new System.Windows.Forms.Padding(4);
             this.gdgvTablaActividades.Name = "gdgvTablaActividades";
             this.gdgvTablaActividades.ReadOnly = true;
             this.gdgvTablaActividades.RowHeadersVisible = false;
             this.gdgvTablaActividades.RowHeadersWidth = 51;
             this.gdgvTablaActividades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gdgvTablaActividades.Size = new System.Drawing.Size(1071, 575);
+            this.gdgvTablaActividades.Size = new System.Drawing.Size(1071, 528);
             this.gdgvTablaActividades.TabIndex = 3;
             this.gdgvTablaActividades.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.gdgvTablaActividades.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -173,18 +180,14 @@ namespace Presentation
             // 
             // panelFiltro
             // 
-            this.panelFiltro.Controls.Add(this.btnMostrarTareas);
-            this.panelFiltro.Controls.Add(this.btnCancelar);
-            this.panelFiltro.Controls.Add(this.label2);
-            this.panelFiltro.Controls.Add(this.cmbCantidadRegistros);
-            this.panelFiltro.Controls.Add(this.label8);
-            this.panelFiltro.Controls.Add(this.btnFiltrar);
-            this.panelFiltro.Controls.Add(this.cmbUsuario);
+            this.panelFiltro.Controls.Add(this.panel2);
+            this.panelFiltro.Controls.Add(this.panel1);
+            this.panelFiltro.Controls.Add(this.panel3);
             this.panelFiltro.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFiltro.Location = new System.Drawing.Point(0, 50);
             this.panelFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.panelFiltro.Name = "panelFiltro";
-            this.panelFiltro.Size = new System.Drawing.Size(1103, 116);
+            this.panelFiltro.Size = new System.Drawing.Size(1103, 138);
             this.panelFiltro.TabIndex = 4;
             // 
             // btnCancelar
@@ -203,7 +206,7 @@ namespace Presentation
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Image = null;
             this.btnCancelar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnCancelar.Location = new System.Drawing.Point(1013, 78);
+            this.btnCancelar.Location = new System.Drawing.Point(4, 71);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -212,7 +215,7 @@ namespace Presentation
             this.btnCancelar.OnHoverImage = null;
             this.btnCancelar.OnPressedColor = System.Drawing.Color.Black;
             this.btnCancelar.Radius = 10;
-            this.btnCancelar.Size = new System.Drawing.Size(85, 31);
+            this.btnCancelar.Size = new System.Drawing.Size(270, 60);
             this.btnCancelar.TabIndex = 29;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -224,12 +227,12 @@ namespace Presentation
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(511, 10);
+            this.label2.Location = new System.Drawing.Point(12, 71);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(212, 22);
+            this.label2.Size = new System.Drawing.Size(303, 22);
             this.label2.TabIndex = 29;
-            this.label2.Text = "Cantidad de registros:";
+            this.label2.Text = "Cantidad de registros a mostrar:";
             // 
             // cmbCantidadRegistros
             // 
@@ -243,13 +246,13 @@ namespace Presentation
             this.cmbCantidadRegistros.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.cmbCantidadRegistros.ForeColor = System.Drawing.Color.Black;
             this.cmbCantidadRegistros.FormattingEnabled = true;
-            this.cmbCantidadRegistros.Location = new System.Drawing.Point(516, 38);
+            this.cmbCantidadRegistros.Location = new System.Drawing.Point(16, 97);
             this.cmbCantidadRegistros.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCantidadRegistros.Name = "cmbCantidadRegistros";
             this.cmbCantidadRegistros.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbCantidadRegistros.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cmbCantidadRegistros.Radius = 5;
-            this.cmbCantidadRegistros.Size = new System.Drawing.Size(491, 31);
+            this.cmbCantidadRegistros.Size = new System.Drawing.Size(520, 31);
             this.cmbCantidadRegistros.TabIndex = 23;
             // 
             // label8
@@ -258,12 +261,12 @@ namespace Presentation
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(11, 10);
+            this.label8.Location = new System.Drawing.Point(12, 6);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 22);
+            this.label8.Size = new System.Drawing.Size(185, 22);
             this.label8.TabIndex = 23;
-            this.label8.Text = "Usuarios:";
+            this.label8.Text = "Usuarios asignados:";
             // 
             // btnFiltrar
             // 
@@ -281,7 +284,7 @@ namespace Presentation
             this.btnFiltrar.ForeColor = System.Drawing.Color.White;
             this.btnFiltrar.Image = null;
             this.btnFiltrar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnFiltrar.Location = new System.Drawing.Point(1013, 41);
+            this.btnFiltrar.Location = new System.Drawing.Point(4, 4);
             this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -290,7 +293,7 @@ namespace Presentation
             this.btnFiltrar.OnHoverImage = null;
             this.btnFiltrar.OnPressedColor = System.Drawing.Color.Transparent;
             this.btnFiltrar.Radius = 10;
-            this.btnFiltrar.Size = new System.Drawing.Size(85, 31);
+            this.btnFiltrar.Size = new System.Drawing.Size(270, 60);
             this.btnFiltrar.TabIndex = 28;
             this.btnFiltrar.Text = "Filtrar tareas";
             this.btnFiltrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -308,14 +311,55 @@ namespace Presentation
             this.cmbUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.cmbUsuario.ForeColor = System.Drawing.Color.Black;
             this.cmbUsuario.FormattingEnabled = true;
-            this.cmbUsuario.Location = new System.Drawing.Point(16, 38);
+            this.cmbUsuario.Location = new System.Drawing.Point(16, 32);
             this.cmbUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.cmbUsuario.Name = "cmbUsuario";
             this.cmbUsuario.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbUsuario.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cmbUsuario.Radius = 5;
-            this.cmbUsuario.Size = new System.Drawing.Size(491, 31);
+            this.cmbUsuario.Size = new System.Drawing.Size(520, 31);
             this.cmbUsuario.TabIndex = 22;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnCancelar);
+            this.panel1.Controls.Add(this.btnFiltrar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(825, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(278, 138);
+            this.panel1.TabIndex = 30;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnMostrarTareas);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(547, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(278, 138);
+            this.panel2.TabIndex = 31;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.cmbUsuario);
+            this.panel3.Controls.Add(this.cmbCantidadRegistros);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(541, 138);
+            this.panel3.TabIndex = 32;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 732);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1103, 22);
+            this.panel4.TabIndex = 5;
             // 
             // TareasAsignadas
             // 
@@ -323,6 +367,7 @@ namespace Presentation
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1103, 754);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelFiltro);
             this.Controls.Add(this.gdgvTablaActividades);
             this.Controls.Add(this.panelRAHeader);
@@ -336,7 +381,10 @@ namespace Presentation
             this.panelRAHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdgvTablaActividades)).EndInit();
             this.panelFiltro.ResumeLayout(false);
-            this.panelFiltro.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -354,5 +402,9 @@ namespace Presentation
         private Guna.UI.WinForms.GunaComboBox cmbCantidadRegistros;
         private Guna.UI.WinForms.GunaButton btnCancelar;
         private Guna.UI.WinForms.GunaButton btnMostrarTareas;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
