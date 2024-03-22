@@ -15,36 +15,45 @@ namespace Presentation.ModalesFormulario
 {
     public partial class FinalizarTareasModal : Form
     {
-        HistorialDomain historial = new HistorialDomain();
+        private HistorialDomain historial = new HistorialDomain();
+        private DateTime ultimaEntrada = DateTime.MinValue;
+        private const int umbralEscaneo = 150; // Milisegundos
+        private Timer temporizador;
 
         public FinalizarTareasModal()
         {
             InitializeComponent();
-            this.Shown += FinalizarTareasModal_Shown;
+            this.Load += FinalizarTareasModal_Load;
+
+            //Temporizador
+            temporizador = new Timer();
+            temporizador.Interval = 150;
+            temporizador.Tick += Temporizador_Tick;
         }
 
-        private void FinalizarTareasModal_Shown(object sender, EventArgs e)
+        private void FinalizarTareasModal_Load(object sender, EventArgs e)
         {
             tbCodigoSupervisor.Focus();
-            this.Focus();
+            temporizador.Start();
         }
 
-        //Funcion para cerrar la ventana//
-        private void btnCerrarModal_Click(object sender, EventArgs e)
+
+        //Temporizador//
+        private void Temporizador_Tick(object sender, EventArgs e)
         {
-            MenuPrincipal formularioPrincipal = this.Owner as MenuPrincipal;
-            if (formularioPrincipal != null)
+            TimeSpan tiempoTranscurrido = DateTime.Now - ultimaEntrada;
+            if (tiempoTranscurrido.TotalMilliseconds > umbralEscaneo)
             {
-                formularioPrincipal.HabilitarCapturaCodigoBarras(true);
+                tbCodigoSupervisor.Clear();
             }
-            this.Close();
         }
         //Fin//
 
 
-        //Funcion para cambiar el estado de las actividades y hacer el historial//
+        //Funcion del lector de codigo de barras y la finalizacion de las actividades//
         private void tbCodigoSupervisor_KeyPress(object sender, KeyPressEventArgs e)
         {
+            ultimaEntrada = DateTime.Now;
             if (e.KeyChar == (char)Keys.Enter)
             {
                 string codigoBarras = tbCodigoSupervisor.Text;
@@ -60,6 +69,7 @@ namespace Presentation.ModalesFormulario
                                 int idUsuario = UserLoginCache.Id;
                                 historial.RegistrarEnHistorialEnRevision(idUsuario);
                                 MessageBox.Show("Tareas finalizadas con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                                 MenuPrincipal formularioPrincipal = this.Owner as MenuPrincipal;
                                 if (formularioPrincipal != null)
                                 {
@@ -86,10 +96,32 @@ namespace Presentation.ModalesFormulario
                 }
                 else
                 {
-                    MessageBox.Show("Código de barras no válido. Por favor, escanee un código válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se permite la entrada manual, porfavor escanee su codigo de barras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
         //Fin//
+
+
+        //Funcion para cerrar el formulario//
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal formularioPrincipal = this.Owner as MenuPrincipal;
+            if (formularioPrincipal != null)
+            {
+                formularioPrincipal.HabilitarCapturaCodigoBarras(true);
+            }
+            this.Close();
+        }
+        //Fin//
+
+
+        //Detener el temporizador al cerrar el formulario//
+        private void FinalizarTareasModal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            temporizador.Stop();
+            temporizador.Dispose();
+        }
+        //Detener el temporizador al cerrar el formulario//
     }
 }

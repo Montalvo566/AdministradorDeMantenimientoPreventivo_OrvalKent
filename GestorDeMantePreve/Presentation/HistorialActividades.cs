@@ -57,6 +57,7 @@ namespace Presentation
                 DataTable tablaOrdenada = dv.ToTable();
                 listViewHistorial.Clear();
                 listViewHistorial.View = View.Details;
+                listViewHistorial.HeaderStyle = ColumnHeaderStyle.None;
 
                 // Agregar columnas al ListView
                 listViewHistorial.Columns.Add("Id", 50);
@@ -67,6 +68,7 @@ namespace Presentation
                 listViewHistorial.Columns.Add("Equipo", 120);
                 listViewHistorial.Columns.Add("Usuario Asignado", 120);
                 listViewHistorial.Columns.Add("Finalización", 120);
+
                 DateTime fechaActual = DateTime.MinValue;
                 ListViewGroup grupoActual = null;
 
@@ -88,6 +90,7 @@ namespace Presentation
                     item.SubItems.Add(fila["UsuarioAsignado"].ToString());
                     item.SubItems.Add(fila["Finalizacion"].ToString());
                     item.Group = grupoActual;
+
                     listViewHistorial.Items.Add(item);
                 }
             }
