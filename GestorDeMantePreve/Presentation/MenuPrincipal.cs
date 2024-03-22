@@ -15,7 +15,6 @@ using System.IO;
 using System.Drawing.Drawing2D;
 using Guna.UI.WinForms;
 using System.Globalization;
-using Presentation.ModalesFormulario;
 
 namespace Presentation
 {
@@ -236,21 +235,6 @@ namespace Presentation
             {
                 this.Close();
             }
-        }
-        //Fin//
-
-
-        //Funcion para abrir el modal en el cual se finalizara las tareas//
-        private void btnFinalizarTareas_Click(object sender, EventArgs e)
-        {
-            FinalizarTareasModal formularioModal = new FinalizarTareasModal();
-            formularioModal.Owner = this;
-            abrirFormularioHijo(formularioModal);
-            capturaCodigoBarrasHabilitada = false;
-        }
-        public void HabilitarCapturaCodigoBarras(bool habilitado)
-        {
-            capturaCodigoBarrasHabilitada = habilitado;
         }
         //Fin//
 
@@ -491,6 +475,21 @@ namespace Presentation
             userDao.Id1 = idActividad;
             userDao.Estatus1 = 3;
             userDao.CambiarEstadoActividad();
+        }
+        //Fin//
+
+
+        //Funcion para abrir el modal en el cual se finalizara las tareas//
+        private void btnFinalizarTareas_Click(object sender, EventArgs e)
+        {
+            ModalesFormulario.FinalizarTareasModal modal = new ModalesFormulario.FinalizarTareasModal();
+            modal.Owner = this;
+            capturaCodigoBarrasHabilitada = false;
+            modal.ShowDialog();
+        }
+        public void HabilitarCapturaCodigoBarras(bool habilitado)
+        {
+            capturaCodigoBarrasHabilitada = habilitado;
         }
         //Fin//
 

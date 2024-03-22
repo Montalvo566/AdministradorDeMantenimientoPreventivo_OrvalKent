@@ -161,8 +161,7 @@ namespace Presentation
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
             this.btnNuevo.Image = null;
-            this.btnNuevo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnNuevo.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnNuevo.ImageSize = new System.Drawing.Size(20, 20);
             this.btnNuevo.Location = new System.Drawing.Point(4, 20);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
