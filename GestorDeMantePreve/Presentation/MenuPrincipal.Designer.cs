@@ -485,6 +485,7 @@ namespace Presentation
             this.dgvMostrarActividadesUsuarios.EnableHeadersVisualStyles = false;
             this.dgvMostrarActividadesUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
             this.dgvMostrarActividadesUsuarios.Location = new System.Drawing.Point(8, 78);
+            this.dgvMostrarActividadesUsuarios.MultiSelect = false;
             this.dgvMostrarActividadesUsuarios.Name = "dgvMostrarActividadesUsuarios";
             this.dgvMostrarActividadesUsuarios.ReadOnly = true;
             this.dgvMostrarActividadesUsuarios.RowHeadersVisible = false;

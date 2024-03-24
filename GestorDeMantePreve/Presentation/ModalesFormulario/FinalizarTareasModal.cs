@@ -96,7 +96,7 @@ namespace Presentation.ModalesFormulario
                 }
                 else
                 {
-                    MessageBox.Show("No se permite la entrada manual, porfavor escanee su codigo de barras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Porfavor escanee su codigo de barras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

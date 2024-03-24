@@ -430,6 +430,9 @@ namespace Presentation
                 botonAcciones.UseColumnTextForButtonValue = true;
                 dgvMostrarActividadesUsuarios.Columns.Add(botonAcciones);
 
+                // Habilitar y deshabilitar los botones en base al estado
+                ActivarDesactivarBotones();
+
                 dgvMostrarActividadesUsuarios.CellContentClick -= dgvMostrarActividadesUsuarios_CellContentClick;
                 dgvMostrarActividadesUsuarios.CellContentClick += dgvMostrarActividadesUsuarios_CellContentClick;
                 dgvMostrarActividadesUsuarios.CellFormatting += dgvActividadesTabla_CellFormatting;
@@ -480,6 +483,45 @@ namespace Presentation
                         break;
                 }
             }
+        }
+        //Fin//
+
+
+        //Validacion para activar y desactivar los botones//
+        private void ActivarDesactivarBotones()
+        {
+            foreach (DataGridViewRow row in dgvMostrarActividadesUsuarios.Rows)
+            {
+                string estado = row.Cells["Estatus"].Value.ToString();
+                DataGridViewButtonCell buttonCell = row.Cells["Acciones"] as DataGridViewButtonCell;
+
+                if (estado == "En revisión" || estado == "Terminado")
+                {
+                    DeshabilitarBoton(buttonCell);
+                }
+                else
+                {
+                    HabilitarBoton(buttonCell);
+                }
+            }
+        }
+        // Función para deshabilitar un botón
+        private void DeshabilitarBoton(DataGridViewButtonCell buttonCell)
+        {
+            buttonCell.FlatStyle = FlatStyle.Flat;
+            buttonCell.Style.ForeColor = Color.Gray;
+            buttonCell.Style.BackColor = Color.LightGray;
+            buttonCell.Style.SelectionBackColor = Color.LightGray;
+            buttonCell.Style.SelectionForeColor = Color.Gray;
+        }
+        // Función para habilitar un botón
+        private void HabilitarBoton(DataGridViewButtonCell buttonCell)
+        {
+            buttonCell.FlatStyle = FlatStyle.Popup;
+            buttonCell.Style.ForeColor = Color.White;
+            buttonCell.Style.BackColor = Color.Blue;
+            buttonCell.Style.SelectionBackColor = Color.Blue;
+            buttonCell.Style.SelectionForeColor = Color.White;
         }
         //Fin//
 
