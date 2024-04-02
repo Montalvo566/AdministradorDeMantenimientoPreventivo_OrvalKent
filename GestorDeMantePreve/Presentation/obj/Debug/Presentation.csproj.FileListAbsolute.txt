@@ -33,6 +33,8 @@ C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.ModalesFormulario.MostrarActividadesModal.resources
 C:\Users\ANGEL MONTALVO\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.ModalesFormulario.FinalizarTareasModal.resources
 C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\bin\Debug\Gestor de actividades.exe.config
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\bin\Debug\Gestor de actividades.exe.manifest
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\bin\Debug\Gestor de actividades.application
 C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\bin\Debug\Gestor de actividades.exe
 C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\bin\Debug\Gestor de actividades.pdb
 C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\bin\Debug\Common.dll
@@ -64,6 +66,8 @@ C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalK
 C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.Properties.Resources.resources
 C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.csproj.GenerateResource.cache
 C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presentation.csproj.CoreCompileInputs.cache
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Gestor de actividades.exe.manifest
+C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Gestor de actividades.application
 C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Presenta.BC777DBE.Up2Date
 C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Gestor de actividades.exe
 C:\Users\Montalvo\Documents\GitHub\AdministradorDeMantenimientoPreventivo_OrvalKent\GestorDeMantePreve\Presentation\obj\Debug\Gestor de actividades.pdb
